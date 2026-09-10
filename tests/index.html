@@ -41,10 +41,14 @@
 <script src="../js/app.js"></script>
 <script src="selftest.js"></script>
 <script>
-  // The app modules expect the planner's DOM. The tests only call pure functions,
-  // so any render that fires on load is irrelevant — swallow it rather than let it
-  // stop the suite before a single assertion runs.
+  // The app modules expect the planner's DOM, and app.js kicks off init() on load.
+  // Here there is no planner to render into, so init() throws — expected, and
+  // irrelevant: the suite only calls pure functions. Both handlers are needed
+  // because init() is async, so its failure arrives as a rejected promise rather
+  // than an error event. Swallowing them keeps the console clean, which matters:
+  // a console full of expected noise is a console where a real error hides.
   window.addEventListener("error", (e) => { e.preventDefault(); }, true);
+  window.addEventListener("unhandledrejection", (e) => { e.preventDefault(); });
 
   const r = runSelfTest();
   const out = document.getElementById("out");
