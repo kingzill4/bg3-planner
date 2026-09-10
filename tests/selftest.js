@@ -142,6 +142,21 @@ const SelfTest = (() => {
     });
     check("References", "every icon path is set", () =>
       [...ITEMS, ...SPELLS].filter((x) => !x.icon).map((x) => x.id));
+    // GitHub Pages serves everything with max-age=600, so for ten minutes after a
+    // deploy a returning visitor runs the previous js/*.js out of their own cache
+    // without asking the server. That is how a change can be live and invisible at
+    // once — it happened, and cost a quarter of an hour of chasing a phantom.
+    // The content hash in each URL is what makes a changed file a different file.
+    check("References", "every local script and stylesheet is version-stamped", () => {
+      const doc = typeof document === "undefined" ? null : document;
+      if (!doc) return true;
+      const local = [...doc.querySelectorAll("script[src], link[rel=stylesheet]")]
+        .map((e) => e.getAttribute("src") || e.getAttribute("href"))
+        .filter((u) => u && !/^https?:/i.test(u));
+      // the test page loads the app with ../ paths and is not the deployed document
+      if (!local.some((u) => /^(js|data)\//.test(u))) return true;
+      return local.filter((u) => !/\?v=[0-9a-f]{6,}$/.test(u));
+    });
 
     // ---- 3. Shape ---------------------------------------------------------
     check("Shape", "spell levels are 0-9", () =>
