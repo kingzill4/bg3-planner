@@ -23,7 +23,9 @@ foreach ($set in $sets) {
     $iconDir = Join-Path $root ("icons\" + $set.dir)
     if (-not (Test-Path $iconDir)) { New-Item -ItemType Directory -Path $iconDir -Force | Out-Null }
 
-    $done = 0; $skipped = 0; $missing = 0
+    $done = 0; $skipped = 0; $missing = 0; $deduped = 0
+    # hash -> path, so a second entry resolving to identical bytes reuses the first
+    $seenHash = @{}
     foreach ($it in $items) {
         $page = Join-Path $root ("cache\" + $set.cache + $it.id + ".html")
         if (-not (Test-Path $page)) { $missing++; continue }
@@ -41,9 +43,24 @@ foreach ($set in $sets) {
                 Start-Sleep -Milliseconds 150
             } catch { $missing++; continue }
         }
-        $it | Add-Member -NotePropertyName icon -NotePropertyValue ("icons/" + $set.dir + "/" + $it.id + $ext) -Force
+
+        # A subrace whose page redirects to the species page returns that page's
+        # og:image, so the ten dragonborn colours all downloaded the same badge —
+        # eleven byte-identical copies at 51 KB each. The wiki has no per-colour
+        # badge, and pretending otherwise costs half a megabyte, so an exact
+        # duplicate is dropped and its entry points at the file already there.
+        $rel = "icons/" + $set.dir + "/" + $it.id + $ext
+        $hash = (Get-FileHash $dest -Algorithm MD5).Hash
+        if ($seenHash.ContainsKey($hash) -and $seenHash[$hash] -ne $rel) {
+            Remove-Item $dest -Force
+            $rel = $seenHash[$hash]
+            $deduped++
+        } else {
+            $seenHash[$hash] = $rel
+        }
+        $it | Add-Member -NotePropertyName icon -NotePropertyValue $rel -Force
     }
     $items | ConvertTo-Json -Depth 8 | Set-Content $path -Encoding utf8
-    Write-Host ("  {0,-18} {1} telechargees, {2} deja presentes, {3} sans image" -f $set.json, $done, $skipped, $missing)
+    Write-Host ("  {0,-18} {1} telechargees, {2} deja presentes, {3} sans image, {4} dedoublonnees" -f $set.json, $done, $skipped, $missing, $deduped)
 }
 Write-Host "`nIcones de fiche ecrites dans data\*.json — relancer les build-*.ps1"

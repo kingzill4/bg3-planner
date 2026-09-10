@@ -29,7 +29,8 @@ const RACES = [
         "d": "Select an additional Skill to be Proficient in. Your carrying capacity is increased by a quarter."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Human"
+    "wiki": "https://bg3.wiki/wiki/Human",
+    "icon": "icons/races/human.png"
   },
   {
     "id": "githyanki",
@@ -68,7 +69,8 @@ const RACES = [
         "d": "A lifetime of relentless training gave you Armour proficiency with Light armour and Medium armour , as well as Proficiency with Shortswords , Longswords , and Greatswords ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Githyanki"
+    "wiki": "https://bg3.wiki/wiki/Githyanki",
+    "icon": "icons/races/githyanki.png"
   },
   {
     "id": "half-orc",
@@ -104,7 +106,8 @@ const RACES = [
         "d": "When you land a Critical Hit with a melee weapon attack, you deal an extra die of weapon damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Half-Orc"
+    "wiki": "https://bg3.wiki/wiki/Half-Orc",
+    "icon": "icons/races/half-orc.webp"
   },
   {
     "id": "dragonborn",
@@ -124,7 +127,8 @@ const RACES = [
         "d": "Medium"
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "black-dragonborn",
@@ -154,7 +158,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Acid damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Black_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Black_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "blue-dragonborn",
@@ -184,7 +189,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Lightning damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Blue_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Blue_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "brass-dragonborn",
@@ -214,7 +220,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Fire damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Brass_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Brass_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "bronze-dragonborn",
@@ -244,7 +251,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Lightning damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Bronze_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Bronze_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "copper-dragonborn",
@@ -274,7 +282,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Acid damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Copper_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Copper_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "gold-dragonborn",
@@ -304,7 +313,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Fire damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Gold_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Gold_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "green-dragonborn",
@@ -334,7 +344,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Poison damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Green_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Green_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "red-dragonborn",
@@ -364,7 +375,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Fire damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Red_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Red_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "silver-dragonborn",
@@ -394,7 +406,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Cold damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Silver_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/Silver_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "white-dragonborn",
@@ -424,7 +437,8 @@ const RACES = [
         "d": "The blood of ancient dragons flow through your veins. You are Resistant to Cold damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/White_Dragonborn"
+    "wiki": "https://bg3.wiki/wiki/White_Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
   },
   {
     "id": "high-elf",
@@ -465,7 +479,8 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/High_Elf"
+    "wiki": "https://bg3.wiki/wiki/High_Elf",
+    "icon": "icons/races/high-elf.png"
   },
   {
     "id": "wood-elf",
@@ -510,7 +525,8 @@ const RACES = [
         "d": "Your Movement Speed is increased by 1.5 m (5 ft)."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Wood_Elf"
+    "wiki": "https://bg3.wiki/wiki/Wood_Elf",
+    "icon": "icons/races/high-elf.png"
   },
   {
     "id": "half-elf",
@@ -545,7 +561,8 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Half-Elf"
+    "wiki": "https://bg3.wiki/wiki/Half-Elf",
+    "icon": "icons/races/half-elf.png"
   },
   {
     "id": "high-half-elf",
@@ -580,7 +597,8 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/High_Half-Elf"
+    "wiki": "https://bg3.wiki/wiki/High_Half-Elf",
+    "icon": "icons/races/half-elf.png"
   },
   {
     "id": "wood-half-elf",
@@ -619,7 +637,8 @@ const RACES = [
         "d": "Your Movement Speed is further increased by 1.5 m (5 ft)."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Wood_Half-Elf"
+    "wiki": "https://bg3.wiki/wiki/Wood_Half-Elf",
+    "icon": "icons/races/half-elf.png"
   },
   {
     "id": "drow-half-elf",
@@ -654,7 +673,8 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Drow_Half-Elf"
+    "wiki": "https://bg3.wiki/wiki/Drow_Half-Elf",
+    "icon": "icons/races/half-elf.png"
   },
   {
     "id": "lolth-sworn-drow",
@@ -702,7 +722,8 @@ const RACES = [
         "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Lolth-Sworn_Drow"
+    "wiki": "https://bg3.wiki/wiki/Lolth-Sworn_Drow",
+    "icon": "icons/races/lolth-sworn-drow.jpg"
   },
   {
     "id": "seldarine-drow",
@@ -750,7 +771,8 @@ const RACES = [
         "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Seldarine_Drow"
+    "wiki": "https://bg3.wiki/wiki/Seldarine_Drow",
+    "icon": "icons/races/lolth-sworn-drow.jpg"
   },
   {
     "id": "lightfoot-halfling",
@@ -782,7 +804,8 @@ const RACES = [
         "d": "Your nimble nature makes you skilled at concealment. You have Advantage on Stealth Checks ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Lightfoot_Halfling"
+    "wiki": "https://bg3.wiki/wiki/Lightfoot_Halfling",
+    "icon": "icons/races/lightfoot-halfling.jpg"
   },
   {
     "id": "strongheart-halfling",
@@ -816,7 +839,8 @@ const RACES = [
         "d": "You have Advantage on Saving Throws against being Poisoned and Resistance to Poison damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Strongheart_Halfling"
+    "wiki": "https://bg3.wiki/wiki/Strongheart_Halfling",
+    "icon": "icons/races/lightfoot-halfling.jpg"
   },
   {
     "id": "gold-dwarf",
@@ -859,7 +883,8 @@ const RACES = [
         "d": "You have 1 extra maximum Hit Point per level."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Gold_Dwarf"
+    "wiki": "https://bg3.wiki/wiki/Gold_Dwarf",
+    "icon": "icons/races/gold-dwarf.jpg"
   },
   {
     "id": "shield-dwarf",
@@ -905,7 +930,8 @@ const RACES = [
         "d": "You have Armour Proficiency with Light armour and Medium armour ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Shield_Dwarf"
+    "wiki": "https://bg3.wiki/wiki/Shield_Dwarf",
+    "icon": "icons/races/gold-dwarf.jpg"
   },
   {
     "id": "duergar",
@@ -960,7 +986,8 @@ const RACES = [
         "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Duergar"
+    "wiki": "https://bg3.wiki/wiki/Duergar",
+    "icon": "icons/races/gold-dwarf.jpg"
   },
   {
     "id": "forest-gnome",
@@ -996,7 +1023,8 @@ const RACES = [
         "d": "Gain the ability to comprehend and communicate with beasts. Recharge: Long rest ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Forest_Gnome"
+    "wiki": "https://bg3.wiki/wiki/Forest_Gnome",
+    "icon": "icons/races/forest-gnome.png"
   },
   {
     "id": "rock-gnome",
@@ -1032,7 +1060,8 @@ const RACES = [
         "d": "Add twice your Proficiency Bonus to History checks."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Rock_Gnome"
+    "wiki": "https://bg3.wiki/wiki/Rock_Gnome",
+    "icon": "icons/races/forest-gnome.png"
   },
   {
     "id": "deep-gnome",
@@ -1068,7 +1097,8 @@ const RACES = [
         "d": "You have Advantage on Stealth checks."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Deep_Gnome"
+    "wiki": "https://bg3.wiki/wiki/Deep_Gnome",
+    "icon": "icons/races/forest-gnome.png"
   },
   {
     "id": "asmodeus-tiefling",
@@ -1098,7 +1128,8 @@ const RACES = [
         "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Asmodeus_Tiefling"
+    "wiki": "https://bg3.wiki/wiki/Asmodeus_Tiefling",
+    "icon": "icons/races/asmodeus-tiefling.png"
   },
   {
     "id": "mephistopheles-tiefling",
@@ -1128,7 +1159,8 @@ const RACES = [
         "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Mephistopheles_Tiefling"
+    "wiki": "https://bg3.wiki/wiki/Mephistopheles_Tiefling",
+    "icon": "icons/races/asmodeus-tiefling.png"
   },
   {
     "id": "zariel-tiefling",
@@ -1158,7 +1190,8 @@ const RACES = [
         "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Zariel_Tiefling"
+    "wiki": "https://bg3.wiki/wiki/Zariel_Tiefling",
+    "icon": "icons/races/asmodeus-tiefling.png"
   }
 ]
 ;
