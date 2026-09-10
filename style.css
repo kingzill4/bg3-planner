@@ -405,6 +405,7 @@ a.wikilink:hover { text-decoration: underline; }
   .combat-panel-col { grid-column: auto; }
 }
 
+
 .combat-panel-col {
   background: linear-gradient(180deg, var(--bg-panel-2), var(--bg-panel));
   border: 1px solid var(--border);
@@ -1832,3 +1833,58 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
 }
 .cond-toggle .cond-name:hover { color: var(--gold-bright); text-decoration: underline; }
 .cond-row.binary .cond-effect { margin-top: 5px; padding-left: 2px; }
+
+/* --- narrow screens ---------------------------------------------------------
+   The single-column stack above was not enough on a phone: the page still
+   scrolled sideways by ~150px on every tab. Three separate causes, none of them
+   the grid definition itself.
+
+   1. A grid item defaults to `min-width: auto`, which refuses to shrink below its
+      content's min-content width. So `1fr` resolved to 518px inside a 320px
+      container — the column was wider than the grid. `min-width: 0` lets 1fr
+      actually mean "the space available".
+   2. `.derived-grid` asked for four fixed columns. Four tiles reading "ARMOUR
+      CLASS" and "SPELL SAVE DC" cannot fit across a phone, so they set the
+      min-content width that pushed everything out. They reflow now.
+   3. The tab bar is a flex row that never wrapped, so five tabs plus the
+      scroll-mode button ran off the edge. */
+@media (max-width: 700px) {
+  .planner > * { min-width: 0; }
+  .stats-panel, .doll-panel, .combat-panel-col { min-width: 0; }
+
+  .derived-grid { grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); }
+
+  nav.tabs { flex-wrap: wrap; row-gap: 4px; }
+  nav.tabs button { flex: 0 1 auto; }
+  .scroll-mode { margin-left: 0; }
+
+  /* The doll's three columns stack, and each column's slots reflow into as many
+     as fit. Laying the slots out as a flex *row* was the wrong instinct: a slot
+     has a 52px icon plus its label, so a row of them is wider than the phone, not
+     narrower. A grid that can drop to one column per row is what actually fits. */
+  .paperdoll { grid-template-columns: 1fr; gap: 12px; }
+  .doll-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  .doll-center { min-width: 0; }
+  .slot { min-height: 54px; padding: 6px 8px; gap: 8px; min-width: 0; }
+  .slot-icon { width: 40px; height: 40px; flex: 0 0 auto; }
+  .slot-text { min-width: 0; }
+
+  .combat-controls { grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); }
+  header.top .title { font-size: 20px; }
+
+  /* The party overview is a six-column table: name, class, AC, HP, damage, gear.
+     Those columns read well side by side on a desktop and cannot fit on a phone,
+     so each row becomes a card — who it is across the top, the numbers wrapping
+     underneath — and the header row is hidden, since it only labels columns that
+     no longer exist. */
+  .party-row {
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+    row-gap: 6px;
+  }
+  .party-who { grid-column: 1 / -1; }
+  .party-head { display: none; }
+}
