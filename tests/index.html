@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Self-test — BG3 Build Planner</title>
+<style>
+  body { font: 13px/1.5 system-ui, sans-serif; background: #0f1620; color: #c9d4e0;
+         margin: 0; padding: 24px; }
+  h1 { font-size: 18px; margin: 0 0 4px; color: #d4af6a; }
+  .meta { color: #93a3b8; opacity: .8; margin-bottom: 18px; }
+  .score { font-size: 26px; font-weight: 700; margin: 10px 0 18px; }
+  .ok { color: #8fd98f; } .bad { color: #e08b7a; }
+  .group { margin-top: 18px; font-size: 10px; text-transform: uppercase;
+           letter-spacing: .1em; color: #93a3b8; border-bottom: 1px solid #223040;
+           padding-bottom: 4px; }
+  .row { display: grid; grid-template-columns: 20px 1fr; gap: 8px; padding: 3px 0;
+         align-items: baseline; }
+  .detail { grid-column: 2; color: #e08b7a; font-size: 11.5px; font-family: ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<h1>Self-test</h1>
+<div class="meta">Loads the real data and the real functions, then asserts what must hold.
+  Every failure here is a bug in the app or the scraped data, not in the test.</div>
+<div id="out">Running…</div>
+
+<script src="../data/classes.js"></script>
+<script src="../data/companions.js"></script>
+<script src="../data/subclasses.js"></script>
+<script src="../data/fighting-styles.js"></script>
+<script src="../data/feats.js"></script>
+<script src="../data/races.js"></script>
+<script src="../data/sets.js"></script>
+<script src="../data/spells.js"></script>
+<script src="../data/items.js"></script>
+<script src="../js/core.js"></script>
+<script src="../js/panels.js"></script>
+<script src="../js/character.js"></script>
+<script src="../js/combat.js"></script>
+<script src="../js/sheet.js"></script>
+<script src="../js/app.js"></script>
+<script src="selftest.js"></script>
+<script>
+  // The app modules expect the planner's DOM. The tests only call pure functions,
+  // so any render that fires on load is irrelevant — swallow it rather than let it
+  // stop the suite before a single assertion runs.
+  window.addEventListener("error", (e) => { e.preventDefault(); }, true);
+
+  const r = runSelfTest();
+  const out = document.getElementById("out");
+  out.innerHTML = "";
+  const score = document.createElement("div");
+  score.className = "score " + (r.failed ? "bad" : "ok");
+  score.textContent = r.passed + " / " + r.total + " passed" +
+    (r.failed ? "  ·  " + r.failed + " FAILED" : "  ·  all green");
+  out.appendChild(score);
+
+  let group = null;
+  r.results.forEach((t) => {
+    if (t.group !== group) {
+      group = t.group;
+      const g = document.createElement("div");
+      g.className = "group"; g.textContent = group;
+      out.appendChild(g);
+    }
+    const row = document.createElement("div");
+    row.className = "row";
+    const mark = document.createElement("span");
+    mark.className = t.pass ? "ok" : "bad";
+    mark.textContent = t.pass ? "✓" : "✗";
+    const name = document.createElement("span");
+    name.textContent = t.name;
+    row.appendChild(mark); row.appendChild(name);
+    if (!t.pass && t.detail) {
+      const d = document.createElement("div");
+      d.className = "detail"; d.textContent = t.detail;
+      row.appendChild(d);
+    }
+    out.appendChild(row);
+  });
+</script>
+</body>
+</html>
