@@ -816,6 +816,9 @@ function renderStyles() {
 // blind and reading the description afterwards. This is a listbox instead: the
 // description sits in every row, so scrolling *is* the preview. Arrow keys move
 // the highlight and Enter commits, so it stays usable without a mouse.
+// ids have to be unique across the page, and several pickers are rendered at once
+let optionPickerSeq = 0;
+
 function optionPicker(opts) {
   const wrap = el("div", { class: "opt-picker" });
   const current = opts.options.find((o) => o.value === opts.value);
@@ -843,11 +846,20 @@ function optionPicker(opts) {
     opts.onSelect(value);
   };
 
-  opts.options.forEach((o) => {
+  // Each option needs an id so the listbox can point at the highlighted one with
+  // aria-activedescendant. Focus stays on the list while the arrows move a purely
+  // visual highlight, so without this a screen reader is never told which option
+  // is current — a sighted keyboard user sees it move, a blind one hears nothing.
+  const listId = "optlist-" + (optionPickerSeq++);
+  list.id = listId;
+
+  opts.options.forEach((o, i) => {
     const row = el("div", {
       class: "opt-row" + (o.value === opts.value ? " selected" : "") + (o.disabled ? " disabled" : ""),
+      id: listId + "-opt" + i,
       role: "option",
       "aria-selected": o.value === opts.value ? "true" : "false",
+      "aria-disabled": o.disabled ? "true" : null,
       onclick: () => { if (!o.disabled) commit(o.value); }
     });
     const head = el("div", { class: "opt-row-head" });
@@ -877,6 +889,8 @@ function optionPicker(opts) {
     if (!rows.length) return;
     active = Math.max(0, Math.min(rows.length - 1, i));
     rows.forEach((r, n) => r.classList.toggle("active", n === active));
+    // the same move, announced: the class is for eyes, this is for everything else
+    list.setAttribute("aria-activedescendant", rows[active].id);
     rows[active].scrollIntoView({ block: "nearest" });
   }
 

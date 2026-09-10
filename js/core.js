@@ -621,10 +621,33 @@ function initTabs() {
   // Only the buttons that name a panel: nav.tabs also holds the scroll-mode
   // toggle, which has no data-tab and must not be treated as a tab.
   const tabs = document.querySelectorAll("nav.tabs button[data-tab]");
+
+  // These are the app's primary navigation, and to a screen reader they were five
+  // unrelated buttons: no tablist, no tab role, nothing saying which one is current
+  // or which panel it controls. The roles are applied here rather than written into
+  // the HTML so the selected state stays in step with the click handler below — an
+  // aria-selected set once and never updated is worse than none at all.
+  const nav = document.querySelector("nav.tabs");
+  if (nav) nav.setAttribute("role", "tablist");
+  tabs.forEach((btn) => {
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-controls", btn.dataset.tab);
+    btn.setAttribute("aria-selected", btn.classList.contains("active") ? "true" : "false");
+    const panel = document.getElementById(btn.dataset.tab);
+    if (panel) {
+      panel.setAttribute("role", "tabpanel");
+      panel.setAttribute("aria-labelledby", btn.id || (btn.id = "tabbtn-" + btn.dataset.tab));
+    }
+  });
+
   tabs.forEach((btn) => {
     btn.addEventListener("click", () => {
-      tabs.forEach((b) => b.classList.remove("active"));
+      tabs.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
       btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
       document.querySelectorAll(".tab-panel").forEach((p) => (p.hidden = true));
       document.getElementById(btn.dataset.tab).hidden = false;
       if (btn.dataset.tab === "tab-library") renderEquipTargetBar();
