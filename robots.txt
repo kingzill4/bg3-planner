@@ -1,0 +1,13 @@
+# Everything here is meant to be found.
+User-agent: *
+Allow: /
+
+# NOTE: this is a GitHub Pages *project* site, so it lives at
+# kingzill4.github.io/bg3-planner/ and this file is served at /bg3-planner/robots.txt.
+# Crawlers only read robots.txt at the domain root — which belongs to the
+# kingzill4.github.io user site, not to this repo. So this file is inert here.
+#
+# It is kept because it costs nothing and becomes real the day a custom domain is
+# added. Until then, submit the sitemap directly in Google Search Console rather
+# than relying on the line below.
+Sitemap: https://kingzill4.github.io/bg3-planner/sitemap.xml

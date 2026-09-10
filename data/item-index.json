@@ -1,0 +1,6290 @@
+[
+  {
+    "id": "magic-ring",
+    "name": "'Magic' Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/%27Magic%27_Ring"
+  },
+  {
+    "id": "1-breastplate",
+    "name": "+1 Breastplate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/+1_Breastplate"
+  },
+  {
+    "id": "a-sparking-promise",
+    "name": "A Sparking Promise",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/A_Sparking_Promise"
+  },
+  {
+    "id": "abdels-trusted-shield",
+    "name": "Abdel's Trusted Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Abdel%27s_Trusted_Shield"
+  },
+  {
+    "id": "aberration-hunters-amulet",
+    "name": "Aberration Hunters' Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Aberration_Hunters%27_Amulet"
+  },
+  {
+    "id": "absolute-confidence-amulet",
+    "name": "Absolute Confidence Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Absolute_Confidence_Amulet"
+  },
+  {
+    "id": "absolutes-protector",
+    "name": "Absolute's Protector",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Absolute%27s_Protector"
+  },
+  {
+    "id": "absolutes-smite",
+    "name": "Absolute's Smite",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Absolute%27s_Smite"
+  },
+  {
+    "id": "absolutes-talisman",
+    "name": "Absolute's Talisman",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Absolute%27s_Talisman"
+  },
+  {
+    "id": "absolutes-warboard",
+    "name": "Absolute's Warboard",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Absolute%27s_Warboard"
+  },
+  {
+    "id": "abyss-beckoners",
+    "name": "Abyss Beckoners",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Abyss_Beckoners"
+  },
+  {
+    "id": "acrobat-shoes",
+    "name": "Acrobat Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Acrobat_Shoes"
+  },
+  {
+    "id": "adamantine-longsword",
+    "name": "Adamantine Longsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Adamantine_Longsword"
+  },
+  {
+    "id": "adamantine-mace",
+    "name": "Adamantine Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Adamantine_Mace"
+  },
+  {
+    "id": "adamantine-scale-mail",
+    "name": "Adamantine Scale Mail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Adamantine_Scale_Mail"
+  },
+  {
+    "id": "adamantine-scimitar",
+    "name": "Adamantine Scimitar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Adamantine_Scimitar"
+  },
+  {
+    "id": "adamantine-shield",
+    "name": "Adamantine Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Adamantine_Shield"
+  },
+  {
+    "id": "adamantine-splint-armour",
+    "name": "Adamantine Splint Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Adamantine_Splint_Armour"
+  },
+  {
+    "id": "adjustable-steel-helm",
+    "name": "Adjustable Steel Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Adjustable_Steel_Helm"
+  },
+  {
+    "id": "after-death-do-us-part",
+    "name": "After Death Do Us Part",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/After_Death_Do_Us_Part"
+  },
+  {
+    "id": "alfiras-lute",
+    "name": "Alfira's Lute",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Alfira%27s_Lute"
+  },
+  {
+    "id": "allandras-whelm",
+    "name": "Allandra's Whelm",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Allandra%27s_Whelm"
+  },
+  {
+    "id": "ambusher",
+    "name": "Ambusher",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ambusher"
+  },
+  {
+    "id": "amethyst-ring",
+    "name": "Amethyst Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Amethyst_Ring"
+  },
+  {
+    "id": "amulet-of-bhaal",
+    "name": "Amulet of Bhaal",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Bhaal"
+  },
+  {
+    "id": "amulet-of-branding",
+    "name": "Amulet of Branding",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Branding"
+  },
+  {
+    "id": "amulet-of-elemental-torment",
+    "name": "Amulet of Elemental Torment",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Elemental_Torment"
+  },
+  {
+    "id": "amulet-of-greater-health",
+    "name": "Amulet of Greater Health",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Greater_Health"
+  },
+  {
+    "id": "amulet-of-misty-step",
+    "name": "Amulet of Misty Step",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Misty_Step"
+  },
+  {
+    "id": "amulet-of-restoration",
+    "name": "Amulet of Restoration",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Restoration"
+  },
+  {
+    "id": "amulet-of-sel-nes-chosen",
+    "name": "Amulet of Selûne's Chosen",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Selûne%27s_Chosen"
+  },
+  {
+    "id": "amulet-of-silvanus",
+    "name": "Amulet of Silvanus",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Silvanus"
+  },
+  {
+    "id": "amulet-of-the-absolute",
+    "name": "Amulet of the Absolute",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_the_Absolute"
+  },
+  {
+    "id": "amulet-of-the-devout",
+    "name": "Amulet of the Devout",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_the_Devout"
+  },
+  {
+    "id": "amulet-of-the-drunkard",
+    "name": "Amulet of the Drunkard",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_the_Drunkard"
+  },
+  {
+    "id": "amulet-of-the-harpers",
+    "name": "Amulet of the Harpers",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_the_Harpers"
+  },
+  {
+    "id": "amulet-of-the-unworthy",
+    "name": "Amulet of the Unworthy",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_the_Unworthy"
+  },
+  {
+    "id": "amulet-of-windrider",
+    "name": "Amulet of Windrider",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Amulet_of_Windrider"
+  },
+  {
+    "id": "angelic-plume-helmet",
+    "name": "Angelic Plume Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Angelic_Plume_Helmet"
+  },
+  {
+    "id": "appreciably-cared-for-boots",
+    "name": "Appreciably-Cared-For Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Appreciably-Cared-For_Boots"
+  },
+  {
+    "id": "arcane-absorption-dagger",
+    "name": "Arcane Absorption Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Arcane_Absorption_Dagger"
+  },
+  {
+    "id": "arduous-flame-blade",
+    "name": "Arduous Flame Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Arduous_Flame_Blade"
+  },
+  {
+    "id": "argument-solver",
+    "name": "Argument Solver",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Argument_Solver"
+  },
+  {
+    "id": "armour-of-agility",
+    "name": "Armour of Agility",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Armour_of_Agility"
+  },
+  {
+    "id": "armour-of-devotion",
+    "name": "Armour of Devotion",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Armour_of_Devotion"
+  },
+  {
+    "id": "armour-of-landfall",
+    "name": "Armour of Landfall",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Armour_of_Landfall"
+  },
+  {
+    "id": "armour-of-moonbasking",
+    "name": "Armour of Moonbasking",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Armour_of_Moonbasking"
+  },
+  {
+    "id": "armour-of-persistence",
+    "name": "Armour of Persistence",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Armour_of_Persistence"
+  },
+  {
+    "id": "armour-of-the-sporekeeper",
+    "name": "Armour of the Sporekeeper",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Armour_of_the_Sporekeeper"
+  },
+  {
+    "id": "armour-of-uninhibited-kushigo",
+    "name": "Armour of Uninhibited Kushigo",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Armour_of_Uninhibited_Kushigo"
+  },
+  {
+    "id": "artificial-leech",
+    "name": "Artificial Leech",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Artificial_Leech"
+  },
+  {
+    "id": "artificial-leech-1",
+    "name": "Artificial Leech (+1)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Artificial_Leech_(+1)"
+  },
+  {
+    "id": "assassin-of-bhaal-cowl",
+    "name": "Assassin of Bhaal Cowl",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Assassin_of_Bhaal_Cowl"
+  },
+  {
+    "id": "assassins-shortsword",
+    "name": "Assassin's Shortsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Assassin%27s_Shortsword"
+  },
+  {
+    "id": "assassins-touch",
+    "name": "Assassin's Touch",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Assassin%27s_Touch"
+  },
+  {
+    "id": "azer-warhammer",
+    "name": "Azer Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Azer_Warhammer"
+  },
+  {
+    "id": "baldurans-giantslayer",
+    "name": "Balduran's Giantslayer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Balduran%27s_Giantslayer"
+  },
+  {
+    "id": "band-of-the-mystic-scoundrel",
+    "name": "Band of the Mystic Scoundrel",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Band_of_the_Mystic_Scoundrel"
+  },
+  {
+    "id": "bandits-armour",
+    "name": "Bandit's Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Bandit%27s_Armour"
+  },
+  {
+    "id": "barbarian-clothes",
+    "name": "Barbarian Clothes",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Barbarian_Clothes"
+  },
+  {
+    "id": "barkskin-armour",
+    "name": "Barkskin Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Barkskin_Armour"
+  },
+  {
+    "id": "barnabus-collar",
+    "name": "Barnabus' Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Barnabus%27_Collar"
+  },
+  {
+    "id": "battered-lute",
+    "name": "Battered Lute",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Battered_Lute"
+  },
+  {
+    "id": "battle-worn-blade",
+    "name": "Battle-Worn Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Battle-Worn_Blade"
+  },
+  {
+    "id": "battleaxe-1",
+    "name": "Battleaxe +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Battleaxe_+1"
+  },
+  {
+    "id": "beastmasters-chain",
+    "name": "Beastmaster's Chain",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Beastmaster%27s_Chain"
+  },
+  {
+    "id": "belm",
+    "name": "Belm",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Belm"
+  },
+  {
+    "id": "bhaalist-armour",
+    "name": "Bhaalist Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Bhaalist_Armour"
+  },
+  {
+    "id": "bhaalist-gloves",
+    "name": "Bhaalist Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Bhaalist_Gloves"
+  },
+  {
+    "id": "bicorne-of-the-sea-beast",
+    "name": "Bicorne of the Sea Beast",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Bicorne_of_the_Sea_Beast"
+  },
+  {
+    "id": "bided-time",
+    "name": "Bided Time",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Bided_Time"
+  },
+  {
+    "id": "bigboys-chew-toy",
+    "name": "Bigboy's Chew Toy",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Bigboy%27s_Chew_Toy"
+  },
+  {
+    "id": "birthright",
+    "name": "Birthright",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Birthright"
+  },
+  {
+    "id": "blackguards-gauntlets",
+    "name": "Blackguard's Gauntlets",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Blackguard%27s_Gauntlets"
+  },
+  {
+    "id": "blackguards-greaves",
+    "name": "Blackguard's Greaves",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Blackguard%27s_Greaves"
+  },
+  {
+    "id": "blackguards-plate",
+    "name": "Blackguard's Plate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Blackguard%27s_Plate"
+  },
+  {
+    "id": "blackguards-sword",
+    "name": "Blackguard's Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Blackguard%27s_Sword"
+  },
+  {
+    "id": "blackplume-helm",
+    "name": "Blackplume Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Blackplume_Helm"
+  },
+  {
+    "id": "blade-of-oppressed-souls",
+    "name": "Blade of Oppressed Souls",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Blade_of_Oppressed_Souls"
+  },
+  {
+    "id": "blaze-portyrs-ceremonial-flaming-fist-helm",
+    "name": "Blaze Portyr's Ceremonial Flaming Fist Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Blaze_Portyr%27s_Ceremonial_Flaming_Fist_Helm"
+  },
+  {
+    "id": "blazer-of-benevolence",
+    "name": "Blazer of Benevolence",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Blazer_of_Benevolence"
+  },
+  {
+    "id": "blightbringer",
+    "name": "Blightbringer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Blightbringer"
+  },
+  {
+    "id": "blood-bound-blade",
+    "name": "Blood-Bound Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Blood-Bound_Blade"
+  },
+  {
+    "id": "blooded-greataxe",
+    "name": "Blooded Greataxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Blooded_Greataxe"
+  },
+  {
+    "id": "bloodguzzler-garb",
+    "name": "Bloodguzzler Garb",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Bloodguzzler_Garb"
+  },
+  {
+    "id": "bloodthirst",
+    "name": "Bloodthirst",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Bloodthirst"
+  },
+  {
+    "id": "bloody-amulet",
+    "name": "Bloody Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Bloody_Amulet"
+  },
+  {
+    "id": "bloody-signet-ring",
+    "name": "Bloody Signet Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Bloody_Signet_Ring"
+  },
+  {
+    "id": "bonesaw",
+    "name": "Bonesaw",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Bonesaw"
+  },
+  {
+    "id": "bonesaw-1",
+    "name": "Bonesaw (+1)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Bonesaw_(+1)"
+  },
+  {
+    "id": "bonespike-boots",
+    "name": "Bonespike Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Bonespike_Boots"
+  },
+  {
+    "id": "bonespike-garb",
+    "name": "Bonespike Garb",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Bonespike_Garb"
+  },
+  {
+    "id": "bonespike-gloves",
+    "name": "Bonespike Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Bonespike_Gloves"
+  },
+  {
+    "id": "bonespike-helmet",
+    "name": "Bonespike Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Bonespike_Helmet"
+  },
+  {
+    "id": "boooals-arms",
+    "name": "BOOOAL's Arms",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/BOOOAL%27s_Arms"
+  },
+  {
+    "id": "boots-of-aid-and-comfort",
+    "name": "Boots of Aid and Comfort",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Aid_and_Comfort"
+  },
+  {
+    "id": "boots-of-apparent-death",
+    "name": "Boots of Apparent Death",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Apparent_Death"
+  },
+  {
+    "id": "boots-of-arcane-bolstering",
+    "name": "Boots of Arcane Bolstering",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Arcane_Bolstering"
+  },
+  {
+    "id": "boots-of-brilliance",
+    "name": "Boots of Brilliance",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Brilliance"
+  },
+  {
+    "id": "boots-of-elemental-momentum",
+    "name": "Boots of Elemental Momentum",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Elemental_Momentum"
+  },
+  {
+    "id": "boots-of-genial-striding",
+    "name": "Boots of Genial Striding",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Genial_Striding"
+  },
+  {
+    "id": "boots-of-persistence",
+    "name": "Boots of Persistence",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Persistence"
+  },
+  {
+    "id": "boots-of-psionic-movement",
+    "name": "Boots of Psionic Movement",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Psionic_Movement"
+  },
+  {
+    "id": "boots-of-speed",
+    "name": "Boots of Speed",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Speed"
+  },
+  {
+    "id": "boots-of-stormy-clamour",
+    "name": "Boots of Stormy Clamour",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Stormy_Clamour"
+  },
+  {
+    "id": "boots-of-striding",
+    "name": "Boots of Striding",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Striding"
+  },
+  {
+    "id": "boots-of-uninhibited-kushigo",
+    "name": "Boots of Uninhibited Kushigo",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Uninhibited_Kushigo"
+  },
+  {
+    "id": "boots-of-very-fast-blinking",
+    "name": "Boots of Very Fast Blinking",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Boots_of_Very_Fast_Blinking"
+  },
+  {
+    "id": "bow-of-awareness",
+    "name": "Bow of Awareness",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Bow_of_Awareness"
+  },
+  {
+    "id": "bow-of-the-banshee",
+    "name": "Bow of the Banshee",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Bow_of_the_Banshee"
+  },
+  {
+    "id": "bracers-of-defence",
+    "name": "Bracers of Defence",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Bracers_of_Defence"
+  },
+  {
+    "id": "bracing-band",
+    "name": "Bracing Band",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Bracing_Band"
+  },
+  {
+    "id": "braindrain-cape",
+    "name": "Braindrain Cape",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Braindrain_Cape"
+  },
+  {
+    "id": "braindrain-gloves",
+    "name": "Braindrain Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Braindrain_Gloves"
+  },
+  {
+    "id": "brass-locket",
+    "name": "Brass Locket",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Brass_Locket"
+  },
+  {
+    "id": "brass-locket-common",
+    "name": "Brass Locket (Common)",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Brass_Locket_(Common)"
+  },
+  {
+    "id": "breaching-pikestaff",
+    "name": "Breaching Pikestaff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Breaching_Pikestaff"
+  },
+  {
+    "id": "breastplate",
+    "name": "Breastplate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Breastplate"
+  },
+  {
+    "id": "breastplate-1",
+    "name": "Breastplate +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Breastplate_+1"
+  },
+  {
+    "id": "breastplate-2",
+    "name": "Breastplate +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Breastplate_+2"
+  },
+  {
+    "id": "brewing-ladle",
+    "name": "Brewing Ladle",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Brewing_Ladle"
+  },
+  {
+    "id": "brimmed-hat",
+    "name": "Brimmed Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Brimmed_Hat"
+  },
+  {
+    "id": "briskwind-boots",
+    "name": "Briskwind Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Briskwind_Boots"
+  },
+  {
+    "id": "broken-club",
+    "name": "Broken Club",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Broken_Club"
+  },
+  {
+    "id": "broken-padded-armour",
+    "name": "Broken Padded Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Broken_Padded_Armour"
+  },
+  {
+    "id": "broken-pike",
+    "name": "Broken Pike",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Broken_Pike"
+  },
+  {
+    "id": "broken-shield",
+    "name": "Broken Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Broken_Shield"
+  },
+  {
+    "id": "broken-spear",
+    "name": "Broken spear",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Broken_spear"
+  },
+  {
+    "id": "bronze-necklace",
+    "name": "Bronze Necklace",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Bronze_Necklace"
+  },
+  {
+    "id": "bronze-pendant",
+    "name": "Bronze Pendant",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Bronze_Pendant"
+  },
+  {
+    "id": "bronze-ring",
+    "name": "Bronze Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Bronze_Ring"
+  },
+  {
+    "id": "broodmothers-revenge",
+    "name": "Broodmother's Revenge",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Broodmother%27s_Revenge"
+  },
+  {
+    "id": "browbeaten-circlet",
+    "name": "Browbeaten Circlet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Browbeaten_Circlet"
+  },
+  {
+    "id": "burnished-necklace",
+    "name": "Burnished Necklace",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Burnished_Necklace"
+  },
+  {
+    "id": "burnished-ring",
+    "name": "Burnished Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Burnished_Ring"
+  },
+  {
+    "id": "bycocket",
+    "name": "Bycocket",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Bycocket"
+  },
+  {
+    "id": "cacophony",
+    "name": "Cacophony",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Cacophony"
+  },
+  {
+    "id": "caitiff-staff",
+    "name": "Caitiff Staff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Caitiff_Staff"
+  },
+  {
+    "id": "callous-glow-ring",
+    "name": "Callous Glow Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Callous_Glow_Ring"
+  },
+  {
+    "id": "camp-clothing",
+    "name": "Camp Clothing",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Camp_Clothing"
+  },
+  {
+    "id": "cap-and-bells",
+    "name": "Cap and Bells",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Cap_and_Bells"
+  },
+  {
+    "id": "cap-of-curing",
+    "name": "Cap of Curing",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Cap_of_Curing"
+  },
+  {
+    "id": "cap-of-wrath",
+    "name": "Cap of Wrath",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Cap_of_Wrath"
+  },
+  {
+    "id": "cape-of-the-red-prince",
+    "name": "Cape of the Red Prince",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cape_of_the_Red_Prince"
+  },
+  {
+    "id": "carnelian-ring",
+    "name": "Carnelian Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Carnelian_Ring"
+  },
+  {
+    "id": "caustic-band",
+    "name": "Caustic Band",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Caustic_Band"
+  },
+  {
+    "id": "cemetery-blue-torch",
+    "name": "Cemetery-Blue Torch",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Cemetery-Blue_Torch"
+  },
+  {
+    "id": "cerebral-citadel-armour",
+    "name": "Cerebral Citadel Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Cerebral_Citadel_Armour"
+  },
+  {
+    "id": "cerebral-citadel-gloves",
+    "name": "Cerebral Citadel Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Cerebral_Citadel_Gloves"
+  },
+  {
+    "id": "ceremonial-battleaxe",
+    "name": "Ceremonial Battleaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ceremonial_Battleaxe"
+  },
+  {
+    "id": "ceremonial-longsword",
+    "name": "Ceremonial Longsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ceremonial_Longsword"
+  },
+  {
+    "id": "ceremonial-mace",
+    "name": "Ceremonial Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ceremonial_Mace"
+  },
+  {
+    "id": "ceremonial-warhammer",
+    "name": "Ceremonial Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ceremonial_Warhammer"
+  },
+  {
+    "id": "chain-mail",
+    "name": "Chain Mail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Chain_Mail"
+  },
+  {
+    "id": "chain-mail-1",
+    "name": "Chain Mail +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Chain_Mail_+1"
+  },
+  {
+    "id": "chain-mail-2",
+    "name": "Chain Mail +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Chain_Mail_+2"
+  },
+  {
+    "id": "chain-of-liberation",
+    "name": "Chain of Liberation",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Chain_of_Liberation"
+  },
+  {
+    "id": "chain-shirt",
+    "name": "Chain Shirt",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Chain_Shirt"
+  },
+  {
+    "id": "chain-shirt-1",
+    "name": "Chain Shirt +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Chain_Shirt_+1"
+  },
+  {
+    "id": "chain-shirt-2",
+    "name": "Chain Shirt +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Chain_Shirt_+2"
+  },
+  {
+    "id": "champions-chain",
+    "name": "Champion's Chain",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Champion%27s_Chain"
+  },
+  {
+    "id": "chancers-carcanet",
+    "name": "Chancer's Carcanet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Chancer%27s_Carcanet"
+  },
+  {
+    "id": "chaos-flail",
+    "name": "Chaos Flail",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Chaos_Flail"
+  },
+  {
+    "id": "charge-bound-warhammer",
+    "name": "Charge-Bound Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Charge-Bound_Warhammer"
+  },
+  {
+    "id": "chessas-practice-sword",
+    "name": "Chessa's Practice Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Chessa%27s_Practice_Sword"
+  },
+  {
+    "id": "cinder-shoes",
+    "name": "Cinder Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Cinder_Shoes"
+  },
+  {
+    "id": "cindermoth-cloak",
+    "name": "Cindermoth Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cindermoth_Cloak"
+  },
+  {
+    "id": "cindersnap-gloves",
+    "name": "Cindersnap Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Cindersnap_Gloves"
+  },
+  {
+    "id": "circle-of-bones",
+    "name": "Circle of Bones",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Circle_of_Bones"
+  },
+  {
+    "id": "circlet",
+    "name": "Circlet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Circlet"
+  },
+  {
+    "id": "circlet-of-blasting",
+    "name": "Circlet of Blasting",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Circlet_of_Blasting"
+  },
+  {
+    "id": "circlet-of-fire",
+    "name": "Circlet of Fire",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Circlet_of_Fire"
+  },
+  {
+    "id": "circlet-of-hunting",
+    "name": "Circlet of Hunting",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Circlet_of_Hunting"
+  },
+  {
+    "id": "circlet-of-mental-anguish",
+    "name": "Circlet of Mental Anguish",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Circlet_of_Mental_Anguish"
+  },
+  {
+    "id": "circlet-of-psionic-revenge",
+    "name": "Circlet of Psionic Revenge",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Circlet_of_Psionic_Revenge"
+  },
+  {
+    "id": "cleaver",
+    "name": "Cleaver",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Cleaver"
+  },
+  {
+    "id": "cleverly-cobbled-boots",
+    "name": "Cleverly Cobbled Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Cleverly_Cobbled_Boots"
+  },
+  {
+    "id": "cloak-of-avarice",
+    "name": "Cloak of Avarice",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cloak_of_Avarice"
+  },
+  {
+    "id": "cloak-of-cunning-brume",
+    "name": "Cloak of Cunning Brume",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cloak_of_Cunning_Brume"
+  },
+  {
+    "id": "cloak-of-displacement",
+    "name": "Cloak of Displacement",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cloak_of_Displacement"
+  },
+  {
+    "id": "cloak-of-elemental-absorption",
+    "name": "Cloak of Elemental Absorption",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cloak_of_Elemental_Absorption"
+  },
+  {
+    "id": "cloak-of-protection",
+    "name": "Cloak of Protection",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cloak_of_Protection"
+  },
+  {
+    "id": "cloak-of-the-weave",
+    "name": "Cloak of the Weave",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Cloak_of_the_Weave"
+  },
+  {
+    "id": "cloth-armour",
+    "name": "Cloth Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Cloth_Armour"
+  },
+  {
+    "id": "cloth-of-authority",
+    "name": "Cloth of Authority",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Cloth_of_Authority"
+  },
+  {
+    "id": "clothes",
+    "name": "Clothes",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Clothes"
+  },
+  {
+    "id": "clown-hammer",
+    "name": "Clown Hammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Clown_Hammer"
+  },
+  {
+    "id": "club-1",
+    "name": "Club +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Club_+1"
+  },
+  {
+    "id": "club-of-hill-giant-strength",
+    "name": "Club of Hill Giant Strength",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Club_of_Hill_Giant_Strength"
+  },
+  {
+    "id": "cold-snap",
+    "name": "Cold Snap",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Cold_Snap"
+  },
+  {
+    "id": "coldbrim-hat",
+    "name": "Coldbrim Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Coldbrim_Hat"
+  },
+  {
+    "id": "combination-axe",
+    "name": "Combination Axe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Combination_Axe"
+  },
+  {
+    "id": "comeback-handaxe",
+    "name": "Comeback Handaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Comeback_Handaxe"
+  },
+  {
+    "id": "copper-band",
+    "name": "Copper Band",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Copper_Band"
+  },
+  {
+    "id": "copper-ring",
+    "name": "Copper Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Copper_Ring"
+  },
+  {
+    "id": "corellons-grace",
+    "name": "Corellon's Grace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Corellon%27s_Grace"
+  },
+  {
+    "id": "corpsegrinder",
+    "name": "Corpsegrinder",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Corpsegrinder"
+  },
+  {
+    "id": "corrosive-flail",
+    "name": "Corrosive Flail",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Corrosive_Flail"
+  },
+  {
+    "id": "coruscation-ring",
+    "name": "Coruscation Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Coruscation_Ring"
+  },
+  {
+    "id": "corvid-token",
+    "name": "Corvid Token",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Corvid_Token"
+  },
+  {
+    "id": "covert-cowl",
+    "name": "Covert Cowl",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Covert_Cowl"
+  },
+  {
+    "id": "cracked-helm-of-shar",
+    "name": "Cracked Helm of Shar",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Cracked_Helm_of_Shar"
+  },
+  {
+    "id": "craterflesh-gloves",
+    "name": "Craterflesh Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Craterflesh_Gloves"
+  },
+  {
+    "id": "creations-echo",
+    "name": "Creation's Echo",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Creation%27s_Echo"
+  },
+  {
+    "id": "crimson-mischief",
+    "name": "Crimson Mischief",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Crimson_Mischief"
+  },
+  {
+    "id": "crossbow-of-arcane-force",
+    "name": "Crossbow of Arcane Force",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Crossbow_of_Arcane_Force"
+  },
+  {
+    "id": "crude-mace",
+    "name": "Crude Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Crude_Mace"
+  },
+  {
+    "id": "cruel-sting",
+    "name": "Cruel Sting",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Cruel_Sting"
+  },
+  {
+    "id": "crushers-ring",
+    "name": "Crusher's Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Crusher%27s_Ring"
+  },
+  {
+    "id": "crypt-lord-ring",
+    "name": "Crypt Lord Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Crypt_Lord_Ring"
+  },
+  {
+    "id": "cultist-brand",
+    "name": "Cultist Brand",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Cultist_Brand"
+  },
+  {
+    "id": "curled-toe-boots",
+    "name": "Curled-Toe Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Curled-Toe_Boots"
+  },
+  {
+    "id": "dads-axe",
+    "name": "Dad's Axe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dad%27s_Axe"
+  },
+  {
+    "id": "dagger-1",
+    "name": "Dagger +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dagger_+1"
+  },
+  {
+    "id": "dagger-2",
+    "name": "Dagger +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dagger_+2"
+  },
+  {
+    "id": "dagger-of-shar",
+    "name": "Dagger of Shar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dagger_of_Shar"
+  },
+  {
+    "id": "damaged-dark-justiciar-armour",
+    "name": "Damaged Dark Justiciar Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Damaged_Dark_Justiciar_Armour"
+  },
+  {
+    "id": "damaged-scale-mail",
+    "name": "Damaged Scale Mail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Damaged_Scale_Mail"
+  },
+  {
+    "id": "daredevil-gloves",
+    "name": "Daredevil Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Daredevil_Gloves"
+  },
+  {
+    "id": "dark-displacement-gloves",
+    "name": "Dark Displacement Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Dark_Displacement_Gloves"
+  },
+  {
+    "id": "dark-justiciar-boots",
+    "name": "Dark Justiciar Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Boots"
+  },
+  {
+    "id": "dark-justiciar-gauntlets-rare",
+    "name": "Dark Justiciar Gauntlets (Rare)",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Gauntlets_(Rare)"
+  },
+  {
+    "id": "dark-justiciar-gauntlets-uncommon",
+    "name": "Dark Justiciar Gauntlets (Uncommon)",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Gauntlets_(Uncommon)"
+  },
+  {
+    "id": "dark-justiciar-half-plate-rare",
+    "name": "Dark Justiciar Half-Plate (Rare)",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Half-Plate_(Rare)"
+  },
+  {
+    "id": "dark-justiciar-half-plate-very-rare",
+    "name": "Dark Justiciar Half-Plate (Very Rare)",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Half-Plate_(Very_Rare)"
+  },
+  {
+    "id": "dark-justiciar-helm",
+    "name": "Dark Justiciar Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Helm"
+  },
+  {
+    "id": "dark-justiciar-helmet",
+    "name": "Dark Justiciar Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Helmet"
+  },
+  {
+    "id": "dark-justiciar-mail",
+    "name": "Dark Justiciar Mail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Mail"
+  },
+  {
+    "id": "dark-justiciar-mask",
+    "name": "Dark Justiciar Mask",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_Mask"
+  },
+  {
+    "id": "dark-ring",
+    "name": "Dark Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Dark_Ring"
+  },
+  {
+    "id": "darkblade",
+    "name": "Darkblade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Darkblade"
+  },
+  {
+    "id": "darkfire-shortbow",
+    "name": "Darkfire Shortbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Darkfire_Shortbow"
+  },
+  {
+    "id": "dart-1",
+    "name": "Dart +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dart_+1"
+  },
+  {
+    "id": "dart-2",
+    "name": "Dart +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dart_+2"
+  },
+  {
+    "id": "dauntless-amulet",
+    "name": "Dauntless Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Dauntless_Amulet"
+  },
+  {
+    "id": "deadly-channeller-gloves",
+    "name": "Deadly Channeller Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Deadly_Channeller_Gloves"
+  },
+  {
+    "id": "deep-delver",
+    "name": "Deep Delver",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Deep_Delver"
+  },
+  {
+    "id": "defender-flail",
+    "name": "Defender Flail",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Defender_Flail"
+  },
+  {
+    "id": "defender-greataxe",
+    "name": "Defender Greataxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Defender_Greataxe"
+  },
+  {
+    "id": "derivation-cloak",
+    "name": "Derivation Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Derivation_Cloak"
+  },
+  {
+    "id": "despair-of-athkatla",
+    "name": "Despair of Athkatla",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Despair_of_Athkatla"
+  },
+  {
+    "id": "destroyed-kill-collar",
+    "name": "Destroyed Kill Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Destroyed_Kill_Collar"
+  },
+  {
+    "id": "deva-mace",
+    "name": "Deva Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Deva_Mace"
+  },
+  {
+    "id": "devilfoil-mask",
+    "name": "Devilfoil Mask",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Devilfoil_Mask"
+  },
+  {
+    "id": "devotees-mace",
+    "name": "Devotee's Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Devotee%27s_Mace"
+  },
+  {
+    "id": "diadem-of-arcane-synergy",
+    "name": "Diadem of Arcane Synergy",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Diadem_of_Arcane_Synergy"
+  },
+  {
+    "id": "disintegrating-night-walkers",
+    "name": "Disintegrating Night Walkers",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Disintegrating_Night_Walkers"
+  },
+  {
+    "id": "djinni-ring",
+    "name": "Djinni Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Djinni_Ring"
+  },
+  {
+    "id": "djinni-scimitar",
+    "name": "Djinni Scimitar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Djinni_Scimitar"
+  },
+  {
+    "id": "dog-collar",
+    "name": "Dog Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Dog_Collar"
+  },
+  {
+    "id": "dolor-amarus",
+    "name": "Dolor Amarus",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dolor_Amarus"
+  },
+  {
+    "id": "doom-axe",
+    "name": "Doom Axe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Doom_Axe"
+  },
+  {
+    "id": "doom-hammer",
+    "name": "Doom Hammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Doom_Hammer"
+  },
+  {
+    "id": "dostrealts-piccolo",
+    "name": "Dostrealt's Piccolo",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dostrealt%27s_Piccolo"
+  },
+  {
+    "id": "dowry-ring",
+    "name": "Dowry Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Dowry_Ring"
+  },
+  {
+    "id": "dragons-grasp",
+    "name": "Dragon's Grasp",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dragon%27s_Grasp"
+  },
+  {
+    "id": "drakethroat-glaive",
+    "name": "Drakethroat Glaive",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Drakethroat_Glaive"
+  },
+  {
+    "id": "dread-iron-dagger",
+    "name": "Dread Iron Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dread_Iron_Dagger"
+  },
+  {
+    "id": "dreamsome-boots",
+    "name": "Dreamsome Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Dreamsome_Boots"
+  },
+  {
+    "id": "dreamwalker-plate",
+    "name": "Dreamwalker Plate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Dreamwalker_Plate"
+  },
+  {
+    "id": "drow-leather-boots",
+    "name": "Drow Leather Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Drow_Leather_Boots"
+  },
+  {
+    "id": "drow-leather-gloves",
+    "name": "Drow Leather Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Drow_Leather_Gloves"
+  },
+  {
+    "id": "drow-studded-leather-armour",
+    "name": "Drow Studded Leather Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Drow_Studded_Leather_Armour"
+  },
+  {
+    "id": "druid-leather-armour",
+    "name": "Druid Leather Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Druid_Leather_Armour"
+  },
+  {
+    "id": "druid-quarterstaff",
+    "name": "Druid Quarterstaff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Druid_Quarterstaff"
+  },
+  {
+    "id": "druidic-armour",
+    "name": "Druidic Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Druidic_Armour"
+  },
+  {
+    "id": "druidic-bracers",
+    "name": "Druidic Bracers",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Druidic_Bracers"
+  },
+  {
+    "id": "drunk-purple-torch",
+    "name": "Drunk-Purple Torch",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Drunk-Purple_Torch"
+  },
+  {
+    "id": "drunken-cloth",
+    "name": "Drunken Cloth",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Drunken_Cloth"
+  },
+  {
+    "id": "duellists-prerogative",
+    "name": "Duellist's Prerogative",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Duellist%27s_Prerogative"
+  },
+  {
+    "id": "duke-ravengards-longsword",
+    "name": "Duke Ravengard's Longsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Duke_Ravengard%27s_Longsword"
+  },
+  {
+    "id": "dwarven-splintmail",
+    "name": "Dwarven Splintmail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Dwarven_Splintmail"
+  },
+  {
+    "id": "dwarven-thrower",
+    "name": "Dwarven Thrower",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Dwarven_Thrower"
+  },
+  {
+    "id": "elegant-studded-leather",
+    "name": "Elegant Studded Leather",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Elegant_Studded_Leather"
+  },
+  {
+    "id": "elven-chain",
+    "name": "Elven Chain",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Elven_Chain"
+  },
+  {
+    "id": "emblazoned-plate-of-the-marshal",
+    "name": "Emblazoned Plate of the Marshal",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Emblazoned_Plate_of_the_Marshal"
+  },
+  {
+    "id": "embroidered-bycocket",
+    "name": "Embroidered Bycocket",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Embroidered_Bycocket"
+  },
+  {
+    "id": "embroidered-hat",
+    "name": "Embroidered Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Embroidered_Hat"
+  },
+  {
+    "id": "emerald-ring",
+    "name": "Emerald Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Emerald_Ring"
+  },
+  {
+    "id": "enforcer-club",
+    "name": "Enforcer Club",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Enforcer_Club"
+  },
+  {
+    "id": "enforcer-helmet",
+    "name": "Enforcer Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Enforcer_Helmet"
+  },
+  {
+    "id": "enforcer-shield",
+    "name": "Enforcer Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Enforcer_Shield"
+  },
+  {
+    "id": "enraging-heart-garb",
+    "name": "Enraging Heart Garb",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Enraging_Heart_Garb"
+  },
+  {
+    "id": "envoys-amulet",
+    "name": "Envoy's Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Envoy%27s_Amulet"
+  },
+  {
+    "id": "evasive-shoes",
+    "name": "Evasive Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Evasive_Shoes"
+  },
+  {
+    "id": "everburn-blade",
+    "name": "Everburn Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Everburn_Blade"
+  },
+  {
+    "id": "eversight-ring",
+    "name": "Eversight Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Eversight_Ring"
+  },
+  {
+    "id": "executioner-sword",
+    "name": "Executioner Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Executioner_Sword"
+  },
+  {
+    "id": "explorers-ring",
+    "name": "Explorer's Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Explorer%27s_Ring"
+  },
+  {
+    "id": "exterminators-axe",
+    "name": "Exterminator's Axe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Exterminator%27s_Axe"
+  },
+  {
+    "id": "fabricated-arbalest",
+    "name": "Fabricated Arbalest",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Fabricated_Arbalest"
+  },
+  {
+    "id": "faded-drow-leather-armour",
+    "name": "Faded Drow Leather Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Faded_Drow_Leather_Armour"
+  },
+  {
+    "id": "faithbreaker",
+    "name": "Faithbreaker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Faithbreaker"
+  },
+  {
+    "id": "falataeric-cli-lyre",
+    "name": "Falataeric Cli Lyre",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Falataeric_Cli_Lyre"
+  },
+  {
+    "id": "false-spear-of-the-night",
+    "name": "False Spear of the Night",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/False_Spear_of_the_Night"
+  },
+  {
+    "id": "family-ring",
+    "name": "Family Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Family_Ring"
+  },
+  {
+    "id": "featherlight-boots",
+    "name": "Featherlight Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Featherlight_Boots"
+  },
+  {
+    "id": "fetish-of-callarduran-smoothhands",
+    "name": "Fetish of Callarduran Smoothhands",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Fetish_of_Callarduran_Smoothhands"
+  },
+  {
+    "id": "fey-semblance-amulet",
+    "name": "Fey Semblance Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Fey_Semblance_Amulet"
+  },
+  {
+    "id": "fierce-golden-helm",
+    "name": "Fierce Golden Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Fierce_Golden_Helm"
+  },
+  {
+    "id": "fireheart",
+    "name": "Fireheart",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Fireheart"
+  },
+  {
+    "id": "firestoker",
+    "name": "Firestoker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Firestoker"
+  },
+  {
+    "id": "firm-soled-boots",
+    "name": "Firm-Soled Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Firm-Soled_Boots"
+  },
+  {
+    "id": "firzus-ring-of-trading",
+    "name": "Firzu's Ring of Trading",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Firzu%27s_Ring_of_Trading"
+  },
+  {
+    "id": "fistbreaker-helm",
+    "name": "Fistbreaker Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Fistbreaker_Helm"
+  },
+  {
+    "id": "flail-1",
+    "name": "Flail +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flail_+1"
+  },
+  {
+    "id": "flail-2",
+    "name": "Flail +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flail_+2"
+  },
+  {
+    "id": "flail-of-ages",
+    "name": "Flail of Ages",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flail_of_Ages"
+  },
+  {
+    "id": "flail-of-dread-skulls",
+    "name": "Flail of Dread Skulls",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flail_of_Dread_Skulls"
+  },
+  {
+    "id": "flail-of-myrkul",
+    "name": "Flail of Myrkul",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flail_of_Myrkul"
+  },
+  {
+    "id": "flail-of-the-vortex",
+    "name": "Flail of the Vortex",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flail_of_the_Vortex"
+  },
+  {
+    "id": "flame-blade-weapon",
+    "name": "Flame Blade (weapon)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flame_Blade_(weapon)"
+  },
+  {
+    "id": "flame-enamelled-armour",
+    "name": "Flame Enamelled Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Flame_Enamelled_Armour"
+  },
+  {
+    "id": "flaming-fist-helmet",
+    "name": "Flaming Fist Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Flaming_Fist_Helmet"
+  },
+  {
+    "id": "flawed-helldusk-armour",
+    "name": "Flawed Helldusk Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Flawed_Helldusk_Armour"
+  },
+  {
+    "id": "flawed-helldusk-gloves",
+    "name": "Flawed Helldusk Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Flawed_Helldusk_Gloves"
+  },
+  {
+    "id": "flawed-helldusk-helmet",
+    "name": "Flawed Helldusk Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Flawed_Helldusk_Helmet"
+  },
+  {
+    "id": "fleetfingers",
+    "name": "Fleetfingers",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Fleetfingers"
+  },
+  {
+    "id": "fleshmelter-cloak",
+    "name": "Fleshmelter Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Fleshmelter_Cloak"
+  },
+  {
+    "id": "fleshrender",
+    "name": "Fleshrender",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Fleshrender"
+  },
+  {
+    "id": "flute",
+    "name": "Flute",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Flute"
+  },
+  {
+    "id": "foebreaker",
+    "name": "Foebreaker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Foebreaker"
+  },
+  {
+    "id": "formidable-helmet",
+    "name": "Formidable Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Formidable_Helmet"
+  },
+  {
+    "id": "fossilised-shell",
+    "name": "Fossilised Shell",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Fossilised_Shell"
+  },
+  {
+    "id": "frayed-drow-hood",
+    "name": "Frayed Drow Hood",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Frayed_Drow_Hood"
+  },
+  {
+    "id": "frost-prince",
+    "name": "Frost Prince",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Frost_Prince"
+  },
+  {
+    "id": "frumpy-hat",
+    "name": "Frumpy Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Frumpy_Hat"
+  },
+  {
+    "id": "gandrels-aspiration",
+    "name": "Gandrel's Aspiration",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Gandrel%27s_Aspiration"
+  },
+  {
+    "id": "garb-of-the-land-and-sky",
+    "name": "Garb of the Land and Sky",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Garb_of_the_Land_and_Sky"
+  },
+  {
+    "id": "gargoyle-boots",
+    "name": "Gargoyle Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Gargoyle_Boots"
+  },
+  {
+    "id": "garnet-ring",
+    "name": "Garnet Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Garnet_Ring"
+  },
+  {
+    "id": "gauntlet-of-the-tyrant",
+    "name": "Gauntlet of the Tyrant",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gauntlet_of_the_Tyrant"
+  },
+  {
+    "id": "gauntlets-of-hill-giant-strength",
+    "name": "Gauntlets of Hill Giant Strength",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gauntlets_of_Hill_Giant_Strength"
+  },
+  {
+    "id": "gauntlets-of-surging-accuracy",
+    "name": "Gauntlets of Surging Accuracy",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gauntlets_of_Surging_Accuracy"
+  },
+  {
+    "id": "gauntlets-of-the-warmaster",
+    "name": "Gauntlets of the Warmaster",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gauntlets_of_the_Warmaster"
+  },
+  {
+    "id": "gemini-gloves",
+    "name": "Gemini Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gemini_Gloves"
+  },
+  {
+    "id": "giantbreaker",
+    "name": "Giantbreaker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Giantbreaker"
+  },
+  {
+    "id": "gibus-of-the-worshipful-servant",
+    "name": "Gibus of the Worshipful Servant",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Gibus_of_the_Worshipful_Servant"
+  },
+  {
+    "id": "githyanki-boots",
+    "name": "Githyanki Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Boots"
+  },
+  {
+    "id": "githyanki-breastplate",
+    "name": "Githyanki Breastplate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Breastplate"
+  },
+  {
+    "id": "githyanki-crossbow",
+    "name": "Githyanki Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Crossbow"
+  },
+  {
+    "id": "githyanki-greatsword",
+    "name": "Githyanki Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Greatsword"
+  },
+  {
+    "id": "githyanki-greatsword-psionic",
+    "name": "Githyanki Greatsword (Psionic)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Greatsword_(Psionic)"
+  },
+  {
+    "id": "githyanki-half-plate",
+    "name": "Githyanki Half Plate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Half_Plate"
+  },
+  {
+    "id": "githyanki-longsword",
+    "name": "Githyanki Longsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Longsword"
+  },
+  {
+    "id": "githyanki-longsword-1",
+    "name": "Githyanki Longsword (+1)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Longsword_(+1)"
+  },
+  {
+    "id": "githyanki-longsword-psionic",
+    "name": "Githyanki Longsword (Psionic)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Longsword_(Psionic)"
+  },
+  {
+    "id": "githyanki-shortsword",
+    "name": "Githyanki Shortsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Shortsword"
+  },
+  {
+    "id": "githyanki-shortsword-1",
+    "name": "Githyanki Shortsword (+1)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Githyanki_Shortsword_(+1)"
+  },
+  {
+    "id": "glaive-1",
+    "name": "Glaive +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Glaive_+1"
+  },
+  {
+    "id": "glaive-2",
+    "name": "Glaive +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Glaive_+2"
+  },
+  {
+    "id": "gleamdance-dagger",
+    "name": "Gleamdance Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Gleamdance_Dagger"
+  },
+  {
+    "id": "glimmergads-selgaunt-fiddle",
+    "name": "Glimmergad's Selgaunt Fiddle",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Glimmergad%27s_Selgaunt_Fiddle"
+  },
+  {
+    "id": "gloomstrand-shield",
+    "name": "Gloomstrand Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Gloomstrand_Shield"
+  },
+  {
+    "id": "gloves-equipment",
+    "name": "Gloves (Equipment)",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_(Equipment)"
+  },
+  {
+    "id": "gloves-of-archery",
+    "name": "Gloves of Archery",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Archery"
+  },
+  {
+    "id": "gloves-of-baneful-striking",
+    "name": "Gloves of Baneful Striking",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Baneful_Striking"
+  },
+  {
+    "id": "gloves-of-battlemages-power",
+    "name": "Gloves of Battlemage's Power",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Battlemage%27s_Power"
+  },
+  {
+    "id": "gloves-of-belligerent-skies",
+    "name": "Gloves of Belligerent Skies",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Belligerent_Skies"
+  },
+  {
+    "id": "gloves-of-cinder-and-sizzle",
+    "name": "Gloves of Cinder and Sizzle",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Cinder_and_Sizzle"
+  },
+  {
+    "id": "gloves-of-crushing",
+    "name": "Gloves of Crushing",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Crushing"
+  },
+  {
+    "id": "gloves-of-dexterity",
+    "name": "Gloves of Dexterity",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Dexterity"
+  },
+  {
+    "id": "gloves-of-fire-resistance",
+    "name": "Gloves of Fire Resistance",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Fire_Resistance"
+  },
+  {
+    "id": "gloves-of-flint-and-steel",
+    "name": "Gloves of Flint and Steel",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Flint_and_Steel"
+  },
+  {
+    "id": "gloves-of-hail-of-thorns",
+    "name": "Gloves of Hail of Thorns",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Hail_of_Thorns"
+  },
+  {
+    "id": "gloves-of-heroism",
+    "name": "Gloves of Heroism",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Heroism"
+  },
+  {
+    "id": "gloves-of-missile-snaring",
+    "name": "Gloves of Missile Snaring",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Missile_Snaring"
+  },
+  {
+    "id": "gloves-of-power",
+    "name": "Gloves of Power",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Power"
+  },
+  {
+    "id": "gloves-of-soul-catching",
+    "name": "Gloves of Soul Catching",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Soul_Catching"
+  },
+  {
+    "id": "gloves-of-succour",
+    "name": "Gloves of Succour",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Succour"
+  },
+  {
+    "id": "gloves-of-the-automaton",
+    "name": "Gloves of the Automaton",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_the_Automaton"
+  },
+  {
+    "id": "gloves-of-the-balanced-hands",
+    "name": "Gloves of the Balanced Hands",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_the_Balanced_Hands"
+  },
+  {
+    "id": "gloves-of-the-duellist",
+    "name": "Gloves of The Duellist",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_The_Duellist"
+  },
+  {
+    "id": "gloves-of-the-growling-underdog",
+    "name": "Gloves of the Growling Underdog",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_the_Growling_Underdog"
+  },
+  {
+    "id": "gloves-of-thievery",
+    "name": "Gloves of Thievery",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Thievery"
+  },
+  {
+    "id": "gloves-of-uninhibited-kushigo",
+    "name": "Gloves of Uninhibited Kushigo",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Gloves_of_Uninhibited_Kushigo"
+  },
+  {
+    "id": "glowing-shield",
+    "name": "Glowing Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Glowing_Shield"
+  },
+  {
+    "id": "gnarled-tree-branch",
+    "name": "Gnarled Tree Branch",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Gnarled_Tree_Branch"
+  },
+  {
+    "id": "goblin-bow",
+    "name": "Goblin Bow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Goblin_Bow"
+  },
+  {
+    "id": "goblin-scimitar",
+    "name": "Goblin Scimitar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Goblin_Scimitar"
+  },
+  {
+    "id": "goblinbane-dagger",
+    "name": "Goblinbane Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Goblinbane_Dagger"
+  },
+  {
+    "id": "gold-band",
+    "name": "Gold Band",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Gold_Band"
+  },
+  {
+    "id": "gold-necklace",
+    "name": "Gold Necklace",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Gold_Necklace"
+  },
+  {
+    "id": "gold-pendant",
+    "name": "Gold Pendant",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Gold_Pendant"
+  },
+  {
+    "id": "gold-ring",
+    "name": "Gold Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Gold_Ring"
+  },
+  {
+    "id": "gold-wyrmling-staff",
+    "name": "Gold Wyrmling Staff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Gold_Wyrmling_Staff"
+  },
+  {
+    "id": "goldgloss-heraldic-helm",
+    "name": "Goldgloss Heraldic Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Goldgloss_Heraldic_Helm"
+  },
+  {
+    "id": "gontr-mael",
+    "name": "Gontr Mael",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Gontr_Mael"
+  },
+  {
+    "id": "gordis-dog-collar",
+    "name": "Gordis' Dog Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Gordis%27_Dog_Collar"
+  },
+  {
+    "id": "greataxe-1",
+    "name": "Greataxe +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Greataxe_+1"
+  },
+  {
+    "id": "greataxe-2",
+    "name": "Greataxe +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Greataxe_+2"
+  },
+  {
+    "id": "greatclub-minotaur",
+    "name": "Greatclub (Minotaur)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Greatclub_(Minotaur)"
+  },
+  {
+    "id": "greatclub-1",
+    "name": "Greatclub +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Greatclub_+1"
+  },
+  {
+    "id": "greatclub-2",
+    "name": "Greatclub +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Greatclub_+2"
+  },
+  {
+    "id": "greatsword-1",
+    "name": "Greatsword +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Greatsword_+1"
+  },
+  {
+    "id": "greatsword-1-common",
+    "name": "Greatsword +1 (Common)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Greatsword_+1_(Common)"
+  },
+  {
+    "id": "grovetender-boots",
+    "name": "Grovetender Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Grovetender_Boots"
+  },
+  {
+    "id": "grymskull-helm",
+    "name": "Grymskull Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Grymskull_Helm"
+  },
+  {
+    "id": "guiding-light",
+    "name": "Guiding Light",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Guiding_Light"
+  },
+  {
+    "id": "guild-ring",
+    "name": "Guild Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Guild_Ring"
+  },
+  {
+    "id": "hags-ring",
+    "name": "Hag's Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Hag%27s_Ring"
+  },
+  {
+    "id": "halberd-1",
+    "name": "Halberd +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Halberd_+1"
+  },
+  {
+    "id": "halberd-of-vigilance",
+    "name": "Halberd of Vigilance",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Halberd_of_Vigilance"
+  },
+  {
+    "id": "half-plate-armour",
+    "name": "Half Plate Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Half_Plate_Armour"
+  },
+  {
+    "id": "half-plate-armour-1",
+    "name": "Half Plate Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Half_Plate_Armour_+1"
+  },
+  {
+    "id": "half-plate-armour-2",
+    "name": "Half Plate Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Half_Plate_Armour_+2"
+  },
+  {
+    "id": "hamarhraft",
+    "name": "Hamarhraft",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hamarhraft"
+  },
+  {
+    "id": "hammer-of-the-just",
+    "name": "Hammer of the Just",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hammer_of_the_Just"
+  },
+  {
+    "id": "hammergrim-mist-amulet",
+    "name": "Hammergrim Mist Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Hammergrim_Mist_Amulet"
+  },
+  {
+    "id": "hand-crossbow-yurgir",
+    "name": "Hand Crossbow (Yurgir)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hand_Crossbow_(Yurgir)"
+  },
+  {
+    "id": "hand-crossbow-1",
+    "name": "Hand Crossbow +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hand_Crossbow_+1"
+  },
+  {
+    "id": "hand-crossbow-2",
+    "name": "Hand Crossbow +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hand_Crossbow_+2"
+  },
+  {
+    "id": "hand-drum",
+    "name": "Hand Drum",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hand_Drum"
+  },
+  {
+    "id": "handaxe-1",
+    "name": "Handaxe +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Handaxe_+1"
+  },
+  {
+    "id": "handmaidens-mace",
+    "name": "Handmaiden's Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Handmaiden%27s_Mace"
+  },
+  {
+    "id": "hardily-constructed-boots",
+    "name": "Hardily Constructed Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Hardily_Constructed_Boots"
+  },
+  {
+    "id": "harmonic-dueller",
+    "name": "Harmonic Dueller",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Harmonic_Dueller"
+  },
+  {
+    "id": "harmonium-halberd",
+    "name": "Harmonium Halberd",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Harmonium_Halberd"
+  },
+  {
+    "id": "harold",
+    "name": "Harold",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Harold"
+  },
+  {
+    "id": "harper-blade",
+    "name": "Harper Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Harper_Blade"
+  },
+  {
+    "id": "harper-sacredstriker",
+    "name": "Harper Sacredstriker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Harper_Sacredstriker"
+  },
+  {
+    "id": "haste-helm",
+    "name": "Haste Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Haste_Helm"
+  },
+  {
+    "id": "hat-of-eminent-giggles",
+    "name": "Hat of Eminent Giggles",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Hat_of_Eminent_Giggles"
+  },
+  {
+    "id": "hat-of-fire-acuity",
+    "name": "Hat of Fire Acuity",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Hat_of_Fire_Acuity"
+  },
+  {
+    "id": "hat-of-storm-scions-power",
+    "name": "Hat of Storm Scion's Power",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Hat_of_Storm_Scion%27s_Power"
+  },
+  {
+    "id": "hat-of-the-sharp-caster",
+    "name": "Hat of the Sharp Caster",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Hat_of_the_Sharp_Caster"
+  },
+  {
+    "id": "hat-of-uninhibited-kushigo",
+    "name": "Hat of Uninhibited Kushigo",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Hat_of_Uninhibited_Kushigo"
+  },
+  {
+    "id": "hat-of-uproarious-laughter",
+    "name": "Hat Of Uproarious Laughter",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Hat_Of_Uproarious_Laughter"
+  },
+  {
+    "id": "headband-of-intellect",
+    "name": "Headband of Intellect",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Headband_of_Intellect"
+  },
+  {
+    "id": "heavy-boots",
+    "name": "Heavy Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Heavy_Boots"
+  },
+  {
+    "id": "heavy-crossbow-1",
+    "name": "Heavy Crossbow +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Heavy_Crossbow_+1"
+  },
+  {
+    "id": "heavy-spiked-club",
+    "name": "Heavy Spiked Club",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Heavy_Spiked_Club"
+  },
+  {
+    "id": "hedge-wanderer-armour",
+    "name": "Hedge Wanderer Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Hedge_Wanderer_Armour"
+  },
+  {
+    "id": "hellbeard-halberd",
+    "name": "Hellbeard Halberd",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hellbeard_Halberd"
+  },
+  {
+    "id": "helldusk-armour",
+    "name": "Helldusk Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Helldusk_Armour"
+  },
+  {
+    "id": "helldusk-boots",
+    "name": "Helldusk Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Helldusk_Boots"
+  },
+  {
+    "id": "helldusk-gloves",
+    "name": "Helldusk Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Helldusk_Gloves"
+  },
+  {
+    "id": "helldusk-helmet",
+    "name": "Helldusk Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Helldusk_Helmet"
+  },
+  {
+    "id": "hellfire-engine-crossbow",
+    "name": "Hellfire Engine Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hellfire_Engine_Crossbow"
+  },
+  {
+    "id": "hellfire-greataxe",
+    "name": "Hellfire Greataxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hellfire_Greataxe"
+  },
+  {
+    "id": "hellfire-hand-crossbow",
+    "name": "Hellfire Hand Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hellfire_Hand_Crossbow"
+  },
+  {
+    "id": "hellrider-longbow",
+    "name": "Hellrider Longbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hellrider_Longbow"
+  },
+  {
+    "id": "hellriders-pride",
+    "name": "Hellrider's Pride",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Hellrider%27s_Pride"
+  },
+  {
+    "id": "helm-of-arcane-gate",
+    "name": "Helm of Arcane Gate",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Helm_of_Arcane_Gate"
+  },
+  {
+    "id": "helm-of-balduran",
+    "name": "Helm of Balduran",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Helm_of_Balduran"
+  },
+  {
+    "id": "helmet-of-arcane-acuity",
+    "name": "Helmet of Arcane Acuity",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Helmet_of_Arcane_Acuity"
+  },
+  {
+    "id": "helmet-of-autonomy",
+    "name": "Helmet of Autonomy",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Helmet_of_Autonomy"
+  },
+  {
+    "id": "helmet-of-grit",
+    "name": "Helmet of Grit",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Helmet_of_Grit"
+  },
+  {
+    "id": "helmet-of-smiting",
+    "name": "Helmet of Smiting",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Helmet_of_Smiting"
+  },
+  {
+    "id": "herbalists-gloves",
+    "name": "Herbalist's Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Herbalist%27s_Gloves"
+  },
+  {
+    "id": "hide-armour",
+    "name": "Hide Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Hide_Armour"
+  },
+  {
+    "id": "hide-armour-1",
+    "name": "Hide Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Hide_Armour_+1"
+  },
+  {
+    "id": "hide-armour-2",
+    "name": "Hide Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Hide_Armour_+2"
+  },
+  {
+    "id": "hoarfrost-boots",
+    "name": "Hoarfrost Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Hoarfrost_Boots"
+  },
+  {
+    "id": "hollows-staff",
+    "name": "Hollow's Staff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hollow%27s_Staff"
+  },
+  {
+    "id": "holy-lance-helm",
+    "name": "Holy Lance Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Holy_Lance_Helm"
+  },
+  {
+    "id": "hood-of-the-weave",
+    "name": "Hood of the Weave",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Hood_of_the_Weave"
+  },
+  {
+    "id": "hoppy",
+    "name": "Hoppy",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hoppy"
+  },
+  {
+    "id": "horns-of-the-berserker",
+    "name": "Horns of the Berserker",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Horns_of_the_Berserker"
+  },
+  {
+    "id": "hracknir-bracers",
+    "name": "Hr'a'cknir Bracers",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Hr%27a%27cknir_Bracers"
+  },
+  {
+    "id": "humbly-cobbled-shoes",
+    "name": "Humbly Cobbled Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Humbly_Cobbled_Shoes"
+  },
+  {
+    "id": "hunters-dagger",
+    "name": "Hunter's Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hunter%27s_Dagger"
+  },
+  {
+    "id": "hunting-shortbow",
+    "name": "Hunting Shortbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Hunting_Shortbow"
+  },
+  {
+    "id": "icebite-robe",
+    "name": "Icebite Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Icebite_Robe"
+  },
+  {
+    "id": "ichorous-gloves",
+    "name": "Ichorous Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Ichorous_Gloves"
+  },
+  {
+    "id": "ignoble-hat",
+    "name": "Ignoble Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Ignoble_Hat"
+  },
+  {
+    "id": "ilmaters-aid",
+    "name": "Ilmater's Aid",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Ilmater%27s_Aid"
+  },
+  {
+    "id": "incandescent-staff",
+    "name": "Incandescent Staff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Incandescent_Staff"
+  },
+  {
+    "id": "infernal-longsword",
+    "name": "Infernal Longsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Longsword"
+  },
+  {
+    "id": "infernal-mace",
+    "name": "Infernal Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Mace"
+  },
+  {
+    "id": "infernal-mace-uncommon",
+    "name": "Infernal Mace (Uncommon)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Mace_(Uncommon)"
+  },
+  {
+    "id": "infernal-mask",
+    "name": "Infernal Mask",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Mask"
+  },
+  {
+    "id": "infernal-rapier",
+    "name": "Infernal Rapier",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Rapier"
+  },
+  {
+    "id": "infernal-robe",
+    "name": "Infernal Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Robe"
+  },
+  {
+    "id": "infernal-spear",
+    "name": "Infernal Spear",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Spear"
+  },
+  {
+    "id": "infernal-warhammer",
+    "name": "Infernal Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Infernal_Warhammer"
+  },
+  {
+    "id": "intransigent-warhammer",
+    "name": "Intransigent Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Intransigent_Warhammer"
+  },
+  {
+    "id": "iron-banded-shield",
+    "name": "Iron-Banded Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Iron-Banded_Shield"
+  },
+  {
+    "id": "iron-banded-shield-1",
+    "name": "Iron-Banded Shield +1",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Iron-Banded_Shield_+1"
+  },
+  {
+    "id": "ironvine-shield",
+    "name": "Ironvine Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Ironvine_Shield"
+  },
+  {
+    "id": "ironwood-breastplate",
+    "name": "Ironwood Breastplate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Ironwood_Breastplate"
+  },
+  {
+    "id": "ironwood-club",
+    "name": "Ironwood Club",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ironwood_Club"
+  },
+  {
+    "id": "jagged-spear",
+    "name": "Jagged Spear",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Jagged_Spear"
+  },
+  {
+    "id": "jaheiras-boots",
+    "name": "Jaheira's Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Jaheira%27s_Boots"
+  },
+  {
+    "id": "jannaths-hat",
+    "name": "Jannath's Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Jannath%27s_Hat"
+  },
+  {
+    "id": "javelin-1",
+    "name": "Javelin +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Javelin_+1"
+  },
+  {
+    "id": "jhannyls-gloves",
+    "name": "Jhannyl's Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Jhannyl%27s_Gloves"
+  },
+  {
+    "id": "jorgorals-greatsword",
+    "name": "Jorgoral's Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Jorgoral%27s_Greatsword"
+  },
+  {
+    "id": "justiciar-helmet",
+    "name": "Justiciar Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Justiciar_Helmet"
+  },
+  {
+    "id": "justiciars-greatshield",
+    "name": "Justiciar's Greatshield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Justiciar%27s_Greatshield"
+  },
+  {
+    "id": "justiciars-scimitar",
+    "name": "Justiciar's Scimitar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Justiciar%27s_Scimitar"
+  },
+  {
+    "id": "karlachs-boots",
+    "name": "Karlach's Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Karlach%27s_Boots"
+  },
+  {
+    "id": "kass-practice-sword",
+    "name": "Kass' Practice Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Kass%27_Practice_Sword"
+  },
+  {
+    "id": "katana",
+    "name": "Katana",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Katana"
+  },
+  {
+    "id": "keepsake-ring",
+    "name": "Keepsake Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Keepsake_Ring"
+  },
+  {
+    "id": "ketherics-shield",
+    "name": "Ketheric's Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Ketheric%27s_Shield"
+  },
+  {
+    "id": "ketherics-warhammer",
+    "name": "Ketheric's Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ketheric%27s_Warhammer"
+  },
+  {
+    "id": "key-of-the-ancients",
+    "name": "Key of the Ancients",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Key_of_the_Ancients"
+  },
+  {
+    "id": "khalids-gift",
+    "name": "Khalid's Gift",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Khalid%27s_Gift"
+  },
+  {
+    "id": "kiam-godas-kilat-drum",
+    "name": "Kiam Goda's Kilat Drum",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Kiam_Goda%27s_Kilat_Drum"
+  },
+  {
+    "id": "kill-collar",
+    "name": "Kill Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Kill_Collar"
+  },
+  {
+    "id": "killers-sweetheart",
+    "name": "Killer's Sweetheart",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Killer%27s_Sweetheart"
+  },
+  {
+    "id": "kings-knife",
+    "name": "King's Knife",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/King%27s_Knife"
+  },
+  {
+    "id": "knife-of-the-undermountain-king",
+    "name": "Knife of the Undermountain King",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Knife_of_the_Undermountain_King"
+  },
+  {
+    "id": "knock-knuckle-gloves",
+    "name": "Knock Knuckle Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Knock_Knuckle_Gloves"
+  },
+  {
+    "id": "komiras-locket",
+    "name": "Komira's Locket",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Komira%27s_Locket"
+  },
+  {
+    "id": "kruznabirs-asylum-amulet",
+    "name": "Kruznabir's Asylum Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Kruznabir%27s_Asylum_Amulet"
+  },
+  {
+    "id": "kurwins-cauteriser",
+    "name": "Kurwin's Cauteriser",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Kurwin%27s_Cauteriser"
+  },
+  {
+    "id": "lantern",
+    "name": "Lantern",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Lantern"
+  },
+  {
+    "id": "larethians-wrath",
+    "name": "Larethian's Wrath",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Larethian%27s_Wrath"
+  },
+  {
+    "id": "least-expected",
+    "name": "Least Expected",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Least_Expected"
+  },
+  {
+    "id": "leather-armour",
+    "name": "Leather Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Leather_Armour"
+  },
+  {
+    "id": "leather-armour-1",
+    "name": "Leather Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Leather_Armour_+1"
+  },
+  {
+    "id": "leather-armour-2",
+    "name": "Leather Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Leather_Armour_+2"
+  },
+  {
+    "id": "leather-boots",
+    "name": "Leather Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Leather_Boots"
+  },
+  {
+    "id": "leather-boots-barbarian",
+    "name": "Leather Boots (Barbarian)",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Leather_Boots_(Barbarian)"
+  },
+  {
+    "id": "leather-bracers",
+    "name": "Leather Bracers",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Leather_Bracers"
+  },
+  {
+    "id": "leather-gloves",
+    "name": "Leather Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Leather_Gloves"
+  },
+  {
+    "id": "leather-helmet",
+    "name": "Leather Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Leather_Helmet"
+  },
+  {
+    "id": "leatherstring-helmet",
+    "name": "Leatherstring Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Leatherstring_Helmet"
+  },
+  {
+    "id": "legacy-of-the-masters",
+    "name": "Legacy of the Masters",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Legacy_of_the_Masters"
+  },
+  {
+    "id": "light-crossbow-1",
+    "name": "Light Crossbow +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Light_Crossbow_+1"
+  },
+  {
+    "id": "light-crossbow-of-speed",
+    "name": "Light Crossbow of Speed",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Light_Crossbow_of_Speed"
+  },
+  {
+    "id": "light-hammer-1",
+    "name": "Light Hammer +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Light_Hammer_+1"
+  },
+  {
+    "id": "light-of-creation",
+    "name": "Light of Creation",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Light_of_Creation"
+  },
+  {
+    "id": "lightning-jabber",
+    "name": "Lightning Jabber",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Lightning_Jabber"
+  },
+  {
+    "id": "lihalas-lute",
+    "name": "Lihala's Lute",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Lihala%27s_Lute"
+  },
+  {
+    "id": "linebreaker-boots",
+    "name": "Linebreaker Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Linebreaker_Boots"
+  },
+  {
+    "id": "lofty-sorcerers-amulet",
+    "name": "Lofty Sorcerer's Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Lofty_Sorcerer%27s_Amulet"
+  },
+  {
+    "id": "lonely-left-boot-of-elvenkind",
+    "name": "Lonely Left Boot of Elvenkind",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Lonely_Left_Boot_of_Elvenkind"
+  },
+  {
+    "id": "longbow-1",
+    "name": "Longbow +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Longbow_+1"
+  },
+  {
+    "id": "longbow-2",
+    "name": "Longbow +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Longbow_+2"
+  },
+  {
+    "id": "longsword-1",
+    "name": "Longsword +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Longsword_+1"
+  },
+  {
+    "id": "longsword-2",
+    "name": "Longsword +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Longsword_+2"
+  },
+  {
+    "id": "loviatars-scourge",
+    "name": "Loviatar's Scourge",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Loviatar%27s_Scourge"
+  },
+  {
+    "id": "luminous-armour",
+    "name": "Luminous Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Luminous_Armour"
+  },
+  {
+    "id": "luminous-gloves",
+    "name": "Luminous Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Luminous_Gloves"
+  },
+  {
+    "id": "lute",
+    "name": "Lute",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Lute"
+  },
+  {
+    "id": "lute-of-the-merryweather-bard",
+    "name": "Lute of the Merryweather Bard",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Lute_of_the_Merryweather_Bard"
+  },
+  {
+    "id": "lyre",
+    "name": "Lyre",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Lyre"
+  },
+  {
+    "id": "mace-1",
+    "name": "Mace +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Mace_+1"
+  },
+  {
+    "id": "mace-2",
+    "name": "Mace +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Mace_+2"
+  },
+  {
+    "id": "mages-friend",
+    "name": "Mage's Friend",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Mage%27s_Friend"
+  },
+  {
+    "id": "magical-hand-crossbow",
+    "name": "Magical Hand Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Magical_Hand_Crossbow"
+  },
+  {
+    "id": "magical-pike",
+    "name": "Magical Pike",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Magical_Pike"
+  },
+  {
+    "id": "makeshift-bow",
+    "name": "Makeshift Bow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Makeshift_Bow"
+  },
+  {
+    "id": "makeshift-spear",
+    "name": "Makeshift Spear",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Makeshift_Spear"
+  },
+  {
+    "id": "mantle-of-the-holy-warrior",
+    "name": "Mantle of the Holy Warrior",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Mantle_of_the_Holy_Warrior"
+  },
+  {
+    "id": "markoheshkir",
+    "name": "Markoheshkir",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Markoheshkir"
+  },
+  {
+    "id": "marksmanship-hat",
+    "name": "Marksmanship Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Marksmanship_Hat"
+  },
+  {
+    "id": "martial-exertion-gloves",
+    "name": "Martial Exertion Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Martial_Exertion_Gloves"
+  },
+  {
+    "id": "mask-of-soul-perception",
+    "name": "Mask of Soul Perception",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Mask_of_Soul_Perception"
+  },
+  {
+    "id": "mask-of-the-shapeshifter",
+    "name": "Mask of the Shapeshifter",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Mask_of_the_Shapeshifter"
+  },
+  {
+    "id": "maul-1",
+    "name": "Maul +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Maul_+1"
+  },
+  {
+    "id": "mayrinas-locket",
+    "name": "Mayrina's Locket",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Mayrina%27s_Locket"
+  },
+  {
+    "id": "melfs-first-staff",
+    "name": "Melf's First Staff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Melf%27s_First_Staff"
+  },
+  {
+    "id": "merregon-halberd",
+    "name": "Merregon Halberd",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Merregon_Halberd"
+  },
+  {
+    "id": "metal-shield",
+    "name": "Metal Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Metal_Shield"
+  },
+  {
+    "id": "metallic-boots",
+    "name": "Metallic Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Metallic_Boots"
+  },
+  {
+    "id": "metallic-gloves",
+    "name": "Metallic Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Metallic_Gloves"
+  },
+  {
+    "id": "metallic-gloves-dream-guardian",
+    "name": "Metallic Gloves (Dream Guardian)",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Metallic_Gloves_(Dream_Guardian)"
+  },
+  {
+    "id": "mind-sundering-dagger",
+    "name": "Mind Sundering Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Mind_Sundering_Dagger"
+  },
+  {
+    "id": "minsc-cloak",
+    "name": "Minsc Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Minsc_Cloak"
+  },
+  {
+    "id": "monastic-boots",
+    "name": "Monastic Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Monastic_Boots"
+  },
+  {
+    "id": "monastic-robes",
+    "name": "Monastic Robes",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Monastic_Robes"
+  },
+  {
+    "id": "monster-slayer-glaive",
+    "name": "Monster Slayer Glaive",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Monster_Slayer_Glaive"
+  },
+  {
+    "id": "moon-devotion-robe",
+    "name": "Moon Devotion Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Moon_Devotion_Robe"
+  },
+  {
+    "id": "moonblade",
+    "name": "Moonblade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Moonblade"
+  },
+  {
+    "id": "moondrop-pendant",
+    "name": "Moondrop Pendant",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Moondrop_Pendant"
+  },
+  {
+    "id": "moonlantern",
+    "name": "Moonlantern",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Moonlantern"
+  },
+  {
+    "id": "moonlight-glaive",
+    "name": "Moonlight Glaive",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Moonlight_Glaive"
+  },
+  {
+    "id": "morningstar-1",
+    "name": "Morningstar +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Morningstar_+1"
+  },
+  {
+    "id": "mourning-frost",
+    "name": "Mourning Frost",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Mourning_Frost"
+  },
+  {
+    "id": "murderous-cut",
+    "name": "Murderous Cut",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Murderous_Cut"
+  },
+  {
+    "id": "mutilated-carapace",
+    "name": "Mutilated Carapace",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Mutilated_Carapace"
+  },
+  {
+    "id": "myrkulite-scourge",
+    "name": "Myrkulite Scourge",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Myrkulite_Scourge"
+  },
+  {
+    "id": "mystras-grace",
+    "name": "Mystra's Grace",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Mystra%27s_Grace"
+  },
+  {
+    "id": "natures-snare",
+    "name": "Nature's Snare",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Nature%27s_Snare"
+  },
+  {
+    "id": "neer-misser",
+    "name": "Ne'er Misser",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ne%27er_Misser"
+  },
+  {
+    "id": "necklace-of-elemental-augmentation",
+    "name": "Necklace of Elemental Augmentation",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Necklace_of_Elemental_Augmentation"
+  },
+  {
+    "id": "needle-of-the-outlaw-rogue",
+    "name": "Needle of the Outlaw Rogue",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Needle_of_the_Outlaw_Rogue"
+  },
+  {
+    "id": "netherstone-pommelled-bloodthirst",
+    "name": "Netherstone-Pommelled Bloodthirst",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Netherstone-Pommelled_Bloodthirst"
+  },
+  {
+    "id": "netherstone-studded-gauntlet",
+    "name": "Netherstone-Studded Gauntlet",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Netherstone-Studded_Gauntlet"
+  },
+  {
+    "id": "netties-gloves",
+    "name": "Nettie's Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Nettie%27s_Gloves"
+  },
+  {
+    "id": "nightsingers-half-plate",
+    "name": "Nightsinger's Half-Plate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Nightsinger%27s_Half-Plate"
+  },
+  {
+    "id": "nightsong-boots",
+    "name": "Nightsong Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Nightsong_Boots"
+  },
+  {
+    "id": "nightsong-gloves",
+    "name": "Nightsong Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Nightsong_Gloves"
+  },
+  {
+    "id": "nightsong-helmet",
+    "name": "Nightsong Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Nightsong_Helmet"
+  },
+  {
+    "id": "nightsongs-armour",
+    "name": "Nightsong's Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Nightsong%27s_Armour"
+  },
+  {
+    "id": "nimblefinger-gloves",
+    "name": "Nimblefinger Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Nimblefinger_Gloves"
+  },
+  {
+    "id": "nymph-cloak",
+    "name": "Nymph Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Nymph_Cloak"
+  },
+  {
+    "id": "nyrulna",
+    "name": "Nyrulna",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Nyrulna"
+  },
+  {
+    "id": "oathbreaker-knight-armour",
+    "name": "Oathbreaker Knight Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Oathbreaker_Knight_Armour"
+  },
+  {
+    "id": "oathbreaker-knight-boots",
+    "name": "Oathbreaker Knight Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Oathbreaker_Knight_Boots"
+  },
+  {
+    "id": "oathbreaker-knight-gloves",
+    "name": "Oathbreaker Knight Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Oathbreaker_Knight_Gloves"
+  },
+  {
+    "id": "oathbreaker-knight-helmet",
+    "name": "Oathbreaker Knight Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Oathbreaker_Knight_Helmet"
+  },
+  {
+    "id": "obsidian-laced-robe",
+    "name": "Obsidian Laced Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Obsidian_Laced_Robe"
+  },
+  {
+    "id": "old-floppy-hat",
+    "name": "Old Floppy Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Old_Floppy_Hat"
+  },
+  {
+    "id": "onyx-ring",
+    "name": "Onyx Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Onyx_Ring"
+  },
+  {
+    "id": "opulent-helmet",
+    "name": "Opulent Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Opulent_Helmet"
+  },
+  {
+    "id": "organic-shield",
+    "name": "Organic Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Organic_Shield"
+  },
+  {
+    "id": "orphic-hammer",
+    "name": "Orphic Hammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Orphic_Hammer"
+  },
+  {
+    "id": "orphic-ring",
+    "name": "Orphic Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Orphic_Ring"
+  },
+  {
+    "id": "pactbound-battleaxe",
+    "name": "Pactbound Battleaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Battleaxe"
+  },
+  {
+    "id": "pactbound-flail",
+    "name": "Pactbound Flail",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Flail"
+  },
+  {
+    "id": "pactbound-glaive",
+    "name": "Pactbound Glaive",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Glaive"
+  },
+  {
+    "id": "pactbound-greatsword",
+    "name": "Pactbound Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Greatsword"
+  },
+  {
+    "id": "pactbound-maul",
+    "name": "Pactbound Maul",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Maul"
+  },
+  {
+    "id": "pactbound-rapier",
+    "name": "Pactbound Rapier",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Rapier"
+  },
+  {
+    "id": "pactbound-sickle",
+    "name": "Pactbound Sickle",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Sickle"
+  },
+  {
+    "id": "pactbound-trident",
+    "name": "Pactbound Trident",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Trident"
+  },
+  {
+    "id": "pactbound-warhammer",
+    "name": "Pactbound Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pactbound_Warhammer"
+  },
+  {
+    "id": "padded-armour",
+    "name": "Padded Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Padded_Armour"
+  },
+  {
+    "id": "padded-armour-1",
+    "name": "Padded Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Padded_Armour_+1"
+  },
+  {
+    "id": "padded-armour-2",
+    "name": "Padded Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Padded_Armour_+2"
+  },
+  {
+    "id": "pale-oak",
+    "name": "Pale Oak",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pale_Oak"
+  },
+  {
+    "id": "pale-widow-gloves",
+    "name": "Pale Widow Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Pale_Widow_Gloves"
+  },
+  {
+    "id": "pearl-necklace",
+    "name": "Pearl Necklace",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Pearl_Necklace"
+  },
+  {
+    "id": "pearl-of-power-amulet",
+    "name": "Pearl of Power Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Pearl_of_Power_Amulet"
+  },
+  {
+    "id": "pelorsun-blade",
+    "name": "Pelorsun Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pelorsun_Blade"
+  },
+  {
+    "id": "penumbral-armour",
+    "name": "Penumbral Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Penumbral_Armour"
+  },
+  {
+    "id": "periapt-of-wound-closure",
+    "name": "Periapt of Wound Closure",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Periapt_of_Wound_Closure"
+  },
+  {
+    "id": "peridot-ring",
+    "name": "Peridot Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Peridot_Ring"
+  },
+  {
+    "id": "phalar-aluve",
+    "name": "Phalar Aluve",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Phalar_Aluve"
+  },
+  {
+    "id": "phasmid-cloak",
+    "name": "Phasmid Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Phasmid_Cloak"
+  },
+  {
+    "id": "pickaxe",
+    "name": "Pickaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pickaxe"
+  },
+  {
+    "id": "pike-1",
+    "name": "Pike +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pike_+1"
+  },
+  {
+    "id": "pitchfork",
+    "name": "Pitchfork",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Pitchfork"
+  },
+  {
+    "id": "plague-green-torch",
+    "name": "Plague-Green Torch",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Plague-Green_Torch"
+  },
+  {
+    "id": "plain-boots",
+    "name": "Plain Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Plain_Boots"
+  },
+  {
+    "id": "planeslayer-flail",
+    "name": "Planeslayer Flail",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Planeslayer_Flail"
+  },
+  {
+    "id": "plate-armour",
+    "name": "Plate Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Plate_Armour"
+  },
+  {
+    "id": "plate-armour-1",
+    "name": "Plate Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Plate_Armour_+1"
+  },
+  {
+    "id": "plate-armour-2",
+    "name": "Plate Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Plate_Armour_+2"
+  },
+  {
+    "id": "poisoners-gloves",
+    "name": "Poisoner's Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Poisoner%27s_Gloves"
+  },
+  {
+    "id": "poisoners-ring",
+    "name": "Poisoner's Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Poisoner%27s_Ring"
+  },
+  {
+    "id": "poisoners-robe",
+    "name": "Poisoner's Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Poisoner%27s_Robe"
+  },
+  {
+    "id": "polished-dagger",
+    "name": "Polished Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Polished_Dagger"
+  },
+  {
+    "id": "polished-necklace",
+    "name": "Polished Necklace",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Polished_Necklace"
+  },
+  {
+    "id": "polished-ring",
+    "name": "Polished Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Polished_Ring"
+  },
+  {
+    "id": "poo-scraper",
+    "name": "Poo-Scraper",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Poo-Scraper"
+  },
+  {
+    "id": "potent-robe",
+    "name": "Potent Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Potent_Robe"
+  },
+  {
+    "id": "practice-sword",
+    "name": "Practice Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Practice_Sword"
+  },
+  {
+    "id": "promise",
+    "name": "Promise",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Promise"
+  },
+  {
+    "id": "protective-plate",
+    "name": "Protective Plate",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Protective_Plate"
+  },
+  {
+    "id": "psionic-ward-armour",
+    "name": "Psionic Ward Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Psionic_Ward_Armour"
+  },
+  {
+    "id": "psychic-spark",
+    "name": "Psychic Spark",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Psychic_Spark"
+  },
+  {
+    "id": "punch-drunk-bastard",
+    "name": "Punch-Drunk Bastard",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Punch-Drunk_Bastard"
+  },
+  {
+    "id": "pyroquickness-hat",
+    "name": "Pyroquickness Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Pyroquickness_Hat"
+  },
+  {
+    "id": "quarterstaff-1",
+    "name": "Quarterstaff +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Quarterstaff_+1"
+  },
+  {
+    "id": "quarterstaff-2",
+    "name": "Quarterstaff +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Quarterstaff_+2"
+  },
+  {
+    "id": "quickspell-gloves",
+    "name": "Quickspell Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Quickspell_Gloves"
+  },
+  {
+    "id": "quite-fashionable-boots",
+    "name": "Quite Fashionable Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Quite_Fashionable_Boots"
+  },
+  {
+    "id": "rain-dancer",
+    "name": "Rain Dancer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rain_Dancer"
+  },
+  {
+    "id": "rapier-1",
+    "name": "Rapier +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rapier_+1"
+  },
+  {
+    "id": "rapier-2",
+    "name": "Rapier +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rapier_+2"
+  },
+  {
+    "id": "rat-bat",
+    "name": "Rat Bat",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rat_Bat"
+  },
+  {
+    "id": "raven-gloves",
+    "name": "Raven Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Raven_Gloves"
+  },
+  {
+    "id": "ravengards-scourger",
+    "name": "Ravengard's Scourger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ravengard%27s_Scourger"
+  },
+  {
+    "id": "reapers-embrace",
+    "name": "Reaper's Embrace",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Reaper%27s_Embrace"
+  },
+  {
+    "id": "reasons-grasp",
+    "name": "Reason's Grasp",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Reason%27s_Grasp"
+  },
+  {
+    "id": "rebound-battleaxe",
+    "name": "Rebound Battleaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rebound_Battleaxe"
+  },
+  {
+    "id": "red-carmine-mask",
+    "name": "Red Carmine Mask",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Red_Carmine_Mask"
+  },
+  {
+    "id": "regal-helm",
+    "name": "Regal Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Regal_Helm"
+  },
+  {
+    "id": "reinforced-greatsword",
+    "name": "Reinforced Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Reinforced_Greatsword"
+  },
+  {
+    "id": "reinforced-helmet",
+    "name": "Reinforced Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Reinforced_Helmet"
+  },
+  {
+    "id": "render-of-mind-and-body",
+    "name": "Render of Mind and Body",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Render_of_Mind_and_Body"
+  },
+  {
+    "id": "render-of-scrumptious-flesh",
+    "name": "Render of Scrumptious Flesh",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Render_of_Scrumptious_Flesh"
+  },
+  {
+    "id": "returning-pike",
+    "name": "Returning Pike",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Returning_Pike"
+  },
+  {
+    "id": "reverse-rain-cloak",
+    "name": "Reverse Rain Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Reverse_Rain_Cloak"
+  },
+  {
+    "id": "rhapsody",
+    "name": "Rhapsody",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rhapsody"
+  },
+  {
+    "id": "rich-arcanist-helmet",
+    "name": "Rich Arcanist Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Rich_Arcanist_Helmet"
+  },
+  {
+    "id": "ring-mail-armour",
+    "name": "Ring Mail Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Ring_Mail_Armour"
+  },
+  {
+    "id": "ring-mail-armour-1",
+    "name": "Ring Mail Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Ring_Mail_Armour_+1"
+  },
+  {
+    "id": "ring-mail-armour-2",
+    "name": "Ring Mail Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Ring_Mail_Armour_+2"
+  },
+  {
+    "id": "ring-of-absolute-force",
+    "name": "Ring of Absolute Force",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Absolute_Force"
+  },
+  {
+    "id": "ring-of-arcane-synergy",
+    "name": "Ring of Arcane Synergy",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Arcane_Synergy"
+  },
+  {
+    "id": "ring-of-beguiling",
+    "name": "Ring of Beguiling",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Beguiling"
+  },
+  {
+    "id": "ring-of-being-really-invisible",
+    "name": "Ring of Being Really Invisible",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Being_Really_Invisible"
+  },
+  {
+    "id": "ring-of-blink",
+    "name": "Ring of Blink",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Blink"
+  },
+  {
+    "id": "ring-of-colour-spray",
+    "name": "Ring of Colour Spray",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Colour_Spray"
+  },
+  {
+    "id": "ring-of-crabsight",
+    "name": "Ring of Crabsight",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Crabsight"
+  },
+  {
+    "id": "ring-of-elemental-infusion",
+    "name": "Ring of Elemental Infusion",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Elemental_Infusion"
+  },
+  {
+    "id": "ring-of-evasion",
+    "name": "Ring of Evasion",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Evasion"
+  },
+  {
+    "id": "ring-of-exalted-marrow",
+    "name": "Ring of Exalted Marrow",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Exalted_Marrow"
+  },
+  {
+    "id": "ring-of-feywild-sparks",
+    "name": "Ring of Feywild Sparks",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Feywild_Sparks"
+  },
+  {
+    "id": "ring-of-fire",
+    "name": "Ring of Fire",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Fire"
+  },
+  {
+    "id": "ring-of-flinging",
+    "name": "Ring of Flinging",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Flinging"
+  },
+  {
+    "id": "ring-of-free-action",
+    "name": "Ring of Free Action",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Free_Action"
+  },
+  {
+    "id": "ring-of-geniality",
+    "name": "Ring of Geniality",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Geniality"
+  },
+  {
+    "id": "ring-of-infinite-wishes",
+    "name": "Ring of Infinite Wishes",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Infinite_Wishes"
+  },
+  {
+    "id": "ring-of-jumping",
+    "name": "Ring of Jumping",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Jumping"
+  },
+  {
+    "id": "ring-of-mental-inhibition",
+    "name": "Ring of Mental Inhibition",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Mental_Inhibition"
+  },
+  {
+    "id": "ring-of-mind-shielding",
+    "name": "Ring of Mind-Shielding",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Mind-Shielding"
+  },
+  {
+    "id": "ring-of-murderous-opportunity",
+    "name": "Ring of Murderous Opportunity",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Murderous_Opportunity"
+  },
+  {
+    "id": "ring-of-poison-resistance",
+    "name": "Ring of Poison Resistance",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Poison_Resistance"
+  },
+  {
+    "id": "ring-of-protection",
+    "name": "Ring of Protection",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Protection"
+  },
+  {
+    "id": "ring-of-regeneration",
+    "name": "Ring of Regeneration",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Regeneration"
+  },
+  {
+    "id": "ring-of-resistance-to-ants",
+    "name": "Ring of Resistance to Ants",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Resistance_to_Ants"
+  },
+  {
+    "id": "ring-of-restorative-gravity",
+    "name": "Ring of Restorative Gravity",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Restorative_Gravity"
+  },
+  {
+    "id": "ring-of-salving",
+    "name": "Ring of Salving",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Salving"
+  },
+  {
+    "id": "ring-of-self-immolation",
+    "name": "Ring of Self Immolation",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Self_Immolation"
+  },
+  {
+    "id": "ring-of-shadows",
+    "name": "Ring of Shadows",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Shadows"
+  },
+  {
+    "id": "ring-of-spiteful-thunder",
+    "name": "Ring of Spiteful Thunder",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Spiteful_Thunder"
+  },
+  {
+    "id": "ring-of-the-lekinesus",
+    "name": "Ring of the Lekinesus",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_the_Lekinesus"
+  },
+  {
+    "id": "ring-of-truthfulness",
+    "name": "Ring of Truthfulness",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Truthfulness"
+  },
+  {
+    "id": "ring-of-twilight",
+    "name": "Ring of Twilight",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ring_of_Twilight"
+  },
+  {
+    "id": "rippling-force-mail",
+    "name": "Rippling Force Mail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Rippling_Force_Mail"
+  },
+  {
+    "id": "risky-ring",
+    "name": "Risky Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Risky_Ring"
+  },
+  {
+    "id": "ritual-axe",
+    "name": "Ritual Axe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ritual_Axe"
+  },
+  {
+    "id": "ritual-dagger",
+    "name": "Ritual Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ritual_Dagger"
+  },
+  {
+    "id": "ritual-dagger-of-shar",
+    "name": "Ritual Dagger of Shar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ritual_Dagger_of_Shar"
+  },
+  {
+    "id": "ritual-staff",
+    "name": "Ritual Staff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Ritual_Staff"
+  },
+  {
+    "id": "robe",
+    "name": "Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robe"
+  },
+  {
+    "id": "robe-1",
+    "name": "Robe +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robe_+1"
+  },
+  {
+    "id": "robe-of-exquisite-focus",
+    "name": "Robe of Exquisite Focus",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robe_of_Exquisite_Focus"
+  },
+  {
+    "id": "robe-of-spell-resistance",
+    "name": "Robe of Spell Resistance",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robe_of_Spell_Resistance"
+  },
+  {
+    "id": "robe-of-summer",
+    "name": "Robe of Summer",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robe_of_Summer"
+  },
+  {
+    "id": "robe-of-supreme-defences",
+    "name": "Robe of Supreme Defences",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robe_of_Supreme_Defences"
+  },
+  {
+    "id": "robe-of-the-weave",
+    "name": "Robe of the Weave",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robe_of_the_Weave"
+  },
+  {
+    "id": "robust-chain-shirt",
+    "name": "Robust Chain Shirt",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Robust_Chain_Shirt"
+  },
+  {
+    "id": "rockys-dog-collar",
+    "name": "Rocky's Dog Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Rocky%27s_Dog_Collar"
+  },
+  {
+    "id": "rod-of-resurrection",
+    "name": "Rod of Resurrection",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rod_of_Resurrection"
+  },
+  {
+    "id": "ruby-ring",
+    "name": "Ruby Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Ruby_Ring"
+  },
+  {
+    "id": "rufflesome-blaggart-hat",
+    "name": "Rufflesome Blaggart Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Rufflesome_Blaggart_Hat"
+  },
+  {
+    "id": "rupturing-blade",
+    "name": "Rupturing Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rupturing_Blade"
+  },
+  {
+    "id": "rusted-blade",
+    "name": "Rusted Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusted_Blade"
+  },
+  {
+    "id": "rusty-battleaxe",
+    "name": "Rusty Battleaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Battleaxe"
+  },
+  {
+    "id": "rusty-dagger",
+    "name": "Rusty Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Dagger"
+  },
+  {
+    "id": "rusty-flail",
+    "name": "Rusty Flail",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Flail"
+  },
+  {
+    "id": "rusty-glaive",
+    "name": "Rusty Glaive",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Glaive"
+  },
+  {
+    "id": "rusty-greataxe",
+    "name": "Rusty Greataxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Greataxe"
+  },
+  {
+    "id": "rusty-greatsword",
+    "name": "Rusty Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Greatsword"
+  },
+  {
+    "id": "rusty-halberd",
+    "name": "Rusty Halberd",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Halberd"
+  },
+  {
+    "id": "rusty-hand-crossbow",
+    "name": "Rusty Hand Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Hand_Crossbow"
+  },
+  {
+    "id": "rusty-handaxe",
+    "name": "Rusty Handaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Handaxe"
+  },
+  {
+    "id": "rusty-heavy-crossbow",
+    "name": "Rusty Heavy Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Heavy_Crossbow"
+  },
+  {
+    "id": "rusty-light-crossbow",
+    "name": "Rusty Light Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Light_Crossbow"
+  },
+  {
+    "id": "rusty-light-hammer",
+    "name": "Rusty Light Hammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Light_Hammer"
+  },
+  {
+    "id": "rusty-longsword",
+    "name": "Rusty Longsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Longsword"
+  },
+  {
+    "id": "rusty-mace",
+    "name": "Rusty Mace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Mace"
+  },
+  {
+    "id": "rusty-maul",
+    "name": "Rusty Maul",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Maul"
+  },
+  {
+    "id": "rusty-morningstar",
+    "name": "Rusty Morningstar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Morningstar"
+  },
+  {
+    "id": "rusty-pike",
+    "name": "Rusty Pike",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Pike"
+  },
+  {
+    "id": "rusty-rapier",
+    "name": "Rusty Rapier",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Rapier"
+  },
+  {
+    "id": "rusty-scimitar",
+    "name": "Rusty Scimitar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Scimitar"
+  },
+  {
+    "id": "rusty-shortsword",
+    "name": "Rusty Shortsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Shortsword"
+  },
+  {
+    "id": "rusty-sickle",
+    "name": "Rusty Sickle",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Sickle"
+  },
+  {
+    "id": "rusty-spear",
+    "name": "Rusty Spear",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Spear"
+  },
+  {
+    "id": "rusty-studded-shield",
+    "name": "Rusty Studded Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Studded_Shield"
+  },
+  {
+    "id": "rusty-trident",
+    "name": "Rusty Trident",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Trident"
+  },
+  {
+    "id": "rusty-war-pick",
+    "name": "Rusty War Pick",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_War_Pick"
+  },
+  {
+    "id": "rusty-warhammer",
+    "name": "Rusty Warhammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Rusty_Warhammer"
+  },
+  {
+    "id": "safeguard-shield",
+    "name": "Safeguard Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Safeguard_Shield"
+  },
+  {
+    "id": "sahuagin-longbow",
+    "name": "Sahuagin Longbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sahuagin_Longbow"
+  },
+  {
+    "id": "sahuagin-spear",
+    "name": "Sahuagin Spear",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sahuagin_Spear"
+  },
+  {
+    "id": "salami",
+    "name": "Salami",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Salami"
+  },
+  {
+    "id": "salty-scimitar-rrr",
+    "name": "Salty Scimitar(rrr)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Salty_Scimitar(rrr)"
+  },
+  {
+    "id": "sandthiefs-ring",
+    "name": "Sandthief's Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Sandthief%27s_Ring"
+  },
+  {
+    "id": "sanguine-blade",
+    "name": "Sanguine Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sanguine_Blade"
+  },
+  {
+    "id": "sarevoks-horned-helmet",
+    "name": "Sarevok's Horned Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Sarevok%27s_Horned_Helmet"
+  },
+  {
+    "id": "sarevoks-wretched-armour",
+    "name": "Sarevok's Wretched Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Sarevok%27s_Wretched_Armour"
+  },
+  {
+    "id": "scabby-pugilist-circlet",
+    "name": "Scabby Pugilist Circlet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Scabby_Pugilist_Circlet"
+  },
+  {
+    "id": "scale-mail",
+    "name": "Scale Mail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail"
+  },
+  {
+    "id": "scale-mail-1",
+    "name": "Scale Mail +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail_+1"
+  },
+  {
+    "id": "scale-mail-2",
+    "name": "Scale Mail +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail_+2"
+  },
+  {
+    "id": "scale-mail-armour-1",
+    "name": "Scale Mail Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail_Armour_+1"
+  },
+  {
+    "id": "scale-mail-of-devotion",
+    "name": "Scale Mail of Devotion",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail_of_Devotion"
+  },
+  {
+    "id": "scale-mail-of-the-ancients",
+    "name": "Scale Mail of the Ancients",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail_of_the_Ancients"
+  },
+  {
+    "id": "scale-mail-of-the-crown",
+    "name": "Scale Mail of the Crown",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail_of_the_Crown"
+  },
+  {
+    "id": "scale-mail-of-vengeance",
+    "name": "Scale Mail of Vengeance",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scale_Mail_of_Vengeance"
+  },
+  {
+    "id": "scalpel",
+    "name": "Scalpel",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Scalpel"
+  },
+  {
+    "id": "scalpspike-helm",
+    "name": "Scalpspike Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Scalpspike_Helm"
+  },
+  {
+    "id": "scarab-of-protection",
+    "name": "Scarab of Protection",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Scarab_of_Protection"
+  },
+  {
+    "id": "scarlet-leather-armour",
+    "name": "Scarlet Leather Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Scarlet_Leather_Armour"
+  },
+  {
+    "id": "scimitar-akabi",
+    "name": "Scimitar (Akabi)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Scimitar_(Akabi)"
+  },
+  {
+    "id": "scimitar-sharran",
+    "name": "Scimitar (Sharran)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Scimitar_(Sharran)"
+  },
+  {
+    "id": "scimitar-1",
+    "name": "Scimitar +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Scimitar_+1"
+  },
+  {
+    "id": "scimitar-2",
+    "name": "Scimitar +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Scimitar_+2"
+  },
+  {
+    "id": "scimitar-of-cinder",
+    "name": "Scimitar of Cinder",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Scimitar_of_Cinder"
+  },
+  {
+    "id": "scorpion-helmet",
+    "name": "Scorpion Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Scorpion_Helmet"
+  },
+  {
+    "id": "scrapwood-shield",
+    "name": "Scrapwood Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Scrapwood_Shield"
+  },
+  {
+    "id": "scythe-of-myrkul",
+    "name": "Scythe of Myrkul",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Scythe_of_Myrkul"
+  },
+  {
+    "id": "seemingly-gleaming-ring",
+    "name": "Seemingly Gleaming Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Seemingly_Gleaming_Ring"
+  },
+  {
+    "id": "sel-nes-spear-of-night",
+    "name": "Selûne's Spear of Night",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Selûne%27s_Spear_of_Night"
+  },
+  {
+    "id": "sel-nite-amulet",
+    "name": "Selûnite Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Selûnite_Amulet"
+  },
+  {
+    "id": "sel-nite-robe",
+    "name": "Selûnite Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Selûnite_Robe"
+  },
+  {
+    "id": "sentient-amulet-rare",
+    "name": "Sentient Amulet (Rare)",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Sentient_Amulet_(Rare)"
+  },
+  {
+    "id": "sentient-amulet-very-rare",
+    "name": "Sentient Amulet (Very Rare)",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Sentient_Amulet_(Very_Rare)"
+  },
+  {
+    "id": "sentinel-shield",
+    "name": "Sentinel Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Sentinel_Shield"
+  },
+  {
+    "id": "seraphic-pugilist-gloves",
+    "name": "Seraphic Pugilist Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Seraphic_Pugilist_Gloves"
+  },
+  {
+    "id": "servitor-of-the-black-hand-gloves",
+    "name": "Servitor of the Black Hand Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Servitor_of_the_Black_Hand_Gloves"
+  },
+  {
+    "id": "sethan",
+    "name": "Sethan",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sethan"
+  },
+  {
+    "id": "shade-slayer-cloak",
+    "name": "Shade-Slayer Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Shade-Slayer_Cloak"
+  },
+  {
+    "id": "shadeclinger-armour",
+    "name": "Shadeclinger Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Shadeclinger_Armour"
+  },
+  {
+    "id": "shadow-battleaxe",
+    "name": "Shadow Battleaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shadow_Battleaxe"
+  },
+  {
+    "id": "shadow-blade-weapon",
+    "name": "Shadow Blade (weapon)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shadow_Blade_(weapon)"
+  },
+  {
+    "id": "shadow-blade-ring",
+    "name": "Shadow Blade Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Shadow_Blade_Ring"
+  },
+  {
+    "id": "shadow-lantern",
+    "name": "Shadow Lantern",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shadow_Lantern"
+  },
+  {
+    "id": "shadow-of-menzoberranzan",
+    "name": "Shadow of Menzoberranzan",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Shadow_of_Menzoberranzan"
+  },
+  {
+    "id": "shadow-cloaked-ring",
+    "name": "Shadow-Cloaked Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Shadow-Cloaked_Ring"
+  },
+  {
+    "id": "shadowstep-boots",
+    "name": "Shadowstep Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Shadowstep_Boots"
+  },
+  {
+    "id": "shapeshifter-hat",
+    "name": "Shapeshifter Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Shapeshifter_Hat"
+  },
+  {
+    "id": "shapeshifters-boon-ring",
+    "name": "Shapeshifter's Boon Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Shapeshifter%27s_Boon_Ring"
+  },
+  {
+    "id": "shar-headwear",
+    "name": "Shar Headwear",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Shar_Headwear"
+  },
+  {
+    "id": "shars-spear-of-evening",
+    "name": "Shar's Spear of Evening",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shar%27s_Spear_of_Evening"
+  },
+  {
+    "id": "shars-sting",
+    "name": "Shar's Sting",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shar%27s_Sting"
+  },
+  {
+    "id": "shars-temptation",
+    "name": "Shar's Temptation",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Shar%27s_Temptation"
+  },
+  {
+    "id": "sharpened-snare-cuirass",
+    "name": "Sharpened Snare Cuirass",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Sharpened_Snare_Cuirass"
+  },
+  {
+    "id": "sharran-crossbow",
+    "name": "Sharran Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sharran_Crossbow"
+  },
+  {
+    "id": "shattered-flail",
+    "name": "Shattered Flail",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shattered_Flail"
+  },
+  {
+    "id": "shelter-of-athkatla",
+    "name": "Shelter of Athkatla",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Shelter_of_Athkatla"
+  },
+  {
+    "id": "shield-hope",
+    "name": "Shield (Hope)",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_(Hope)"
+  },
+  {
+    "id": "shield-item",
+    "name": "Shield (item)",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_(item)"
+  },
+  {
+    "id": "shield-1",
+    "name": "Shield +1",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_+1"
+  },
+  {
+    "id": "shield-2",
+    "name": "Shield +2",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_+2"
+  },
+  {
+    "id": "shield-of-devotion",
+    "name": "Shield of Devotion",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_of_Devotion"
+  },
+  {
+    "id": "shield-of-returning",
+    "name": "Shield of Returning",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_of_Returning"
+  },
+  {
+    "id": "shield-of-scorching-reprisal",
+    "name": "Shield of Scorching Reprisal",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_of_Scorching_Reprisal"
+  },
+  {
+    "id": "shield-of-shielding",
+    "name": "Shield of Shielding",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_of_Shielding"
+  },
+  {
+    "id": "shield-of-the-undevout",
+    "name": "Shield of the Undevout",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Shield_of_the_Undevout"
+  },
+  {
+    "id": "shifting-corpus-ring",
+    "name": "Shifting Corpus Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Shifting_Corpus_Ring"
+  },
+  {
+    "id": "shining-staver-of-skulls",
+    "name": "Shining Staver-of-Skulls",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shining_Staver-of-Skulls"
+  },
+  {
+    "id": "shortbow-1",
+    "name": "Shortbow +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shortbow_+1"
+  },
+  {
+    "id": "shortsword-yurgir",
+    "name": "Shortsword (Yurgir)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shortsword_(Yurgir)"
+  },
+  {
+    "id": "shortsword-1",
+    "name": "Shortsword +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shortsword_+1"
+  },
+  {
+    "id": "shortsword-2",
+    "name": "Shortsword +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shortsword_+2"
+  },
+  {
+    "id": "shortsword-of-first-blood",
+    "name": "Shortsword of First Blood",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Shortsword_of_First_Blood"
+  },
+  {
+    "id": "sickle-redcap",
+    "name": "Sickle (Redcap)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sickle_(Redcap)"
+  },
+  {
+    "id": "sickle-of-boooal",
+    "name": "Sickle of BOOOAL",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sickle_of_BOOOAL"
+  },
+  {
+    "id": "silver-amulet",
+    "name": "Silver Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Silver_Amulet"
+  },
+  {
+    "id": "silver-band",
+    "name": "Silver Band",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Silver_Band"
+  },
+  {
+    "id": "silver-locket",
+    "name": "Silver Locket",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Silver_Locket"
+  },
+  {
+    "id": "silver-necklace",
+    "name": "Silver Necklace",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Silver_Necklace"
+  },
+  {
+    "id": "silver-pendant",
+    "name": "Silver Pendant",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Silver_Pendant"
+  },
+  {
+    "id": "silver-sword-of-the-astral-plane",
+    "name": "Silver Sword of the Astral Plane",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Silver_Sword_of_the_Astral_Plane"
+  },
+  {
+    "id": "simple-boots",
+    "name": "Simple Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Simple_Boots"
+  },
+  {
+    "id": "simple-jerkin",
+    "name": "Simple Jerkin",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Simple_Jerkin"
+  },
+  {
+    "id": "simple-robe",
+    "name": "Simple Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Simple_Robe"
+  },
+  {
+    "id": "singing-sword",
+    "name": "Singing Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Singing_Sword"
+  },
+  {
+    "id": "skybreaker",
+    "name": "Skybreaker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Skybreaker"
+  },
+  {
+    "id": "slicing-shortsword",
+    "name": "Slicing Shortsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Slicing_Shortsword"
+  },
+  {
+    "id": "slinging-shoes",
+    "name": "Slinging Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Slinging_Shoes"
+  },
+  {
+    "id": "slippery-chain-shirt",
+    "name": "Slippery Chain Shirt",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Slippery_Chain_Shirt"
+  },
+  {
+    "id": "smarmy-swaggerer-boots",
+    "name": "Smarmy Swaggerer Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Smarmy_Swaggerer_Boots"
+  },
+  {
+    "id": "smugglers-ring",
+    "name": "Smuggler's Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Smuggler%27s_Ring"
+  },
+  {
+    "id": "snakeskin-hat",
+    "name": "Snakeskin Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Snakeskin_Hat"
+  },
+  {
+    "id": "snow-dusted-monastery-gloves",
+    "name": "Snow-Dusted Monastery Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Snow-Dusted_Monastery_Gloves"
+  },
+  {
+    "id": "snowburst-ring",
+    "name": "Snowburst Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Snowburst_Ring"
+  },
+  {
+    "id": "soft-and-comfortable-shoes",
+    "name": "Soft and Comfortable Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Soft_and_Comfortable_Shoes"
+  },
+  {
+    "id": "sorcerer-robe",
+    "name": "Sorcerer Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Sorcerer_Robe"
+  },
+  {
+    "id": "sorrow",
+    "name": "Sorrow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sorrow"
+  },
+  {
+    "id": "soulbreaker-greatsword",
+    "name": "Soulbreaker Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Soulbreaker_Greatsword"
+  },
+  {
+    "id": "spaceshunt-boots",
+    "name": "Spaceshunt Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Spaceshunt_Boots"
+  },
+  {
+    "id": "spear-1",
+    "name": "Spear +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Spear_+1"
+  },
+  {
+    "id": "spear-2",
+    "name": "Spear +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Spear_+2"
+  },
+  {
+    "id": "spear-of-night",
+    "name": "Spear of Night",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Spear_of_Night"
+  },
+  {
+    "id": "speedy-reply",
+    "name": "Speedy Reply",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Speedy_Reply"
+  },
+  {
+    "id": "spell-savant-amulet",
+    "name": "Spell Savant Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Spell_Savant_Amulet"
+  },
+  {
+    "id": "spellcrux-amulet",
+    "name": "Spellcrux Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Spellcrux_Amulet"
+  },
+  {
+    "id": "spellmight-gloves",
+    "name": "Spellmight Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Spellmight_Gloves"
+  },
+  {
+    "id": "spellseeking-gloves",
+    "name": "Spellseeking Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Spellseeking_Gloves"
+  },
+  {
+    "id": "spellthief",
+    "name": "Spellthief",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Spellthief"
+  },
+  {
+    "id": "spiders-lyre",
+    "name": "Spider's Lyre",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Spider%27s_Lyre"
+  },
+  {
+    "id": "spidersilk-armour",
+    "name": "Spidersilk Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Spidersilk_Armour"
+  },
+  {
+    "id": "spiderstep-boots",
+    "name": "Spiderstep Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Spiderstep_Boots"
+  },
+  {
+    "id": "spiderstep-staff",
+    "name": "Spiderstep Staff",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Spiderstep_Staff"
+  },
+  {
+    "id": "spiked-shield",
+    "name": "Spiked Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Spiked_Shield"
+  },
+  {
+    "id": "spineshudder-amulet",
+    "name": "Spineshudder Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Spineshudder_Amulet"
+  },
+  {
+    "id": "splint-armour",
+    "name": "Splint Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Splint_Armour"
+  },
+  {
+    "id": "splint-armour-1",
+    "name": "Splint Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Splint_Armour_+1"
+  },
+  {
+    "id": "splint-armour-2",
+    "name": "Splint Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Splint_Armour_+2"
+  },
+  {
+    "id": "springstep-boots",
+    "name": "Springstep Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Springstep_Boots"
+  },
+  {
+    "id": "spurred-band",
+    "name": "Spurred Band",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Spurred_Band"
+  },
+  {
+    "id": "staff-of-a-mumbling-wizard",
+    "name": "Staff of a Mumbling Wizard",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_a_Mumbling_Wizard"
+  },
+  {
+    "id": "staff-of-accretion",
+    "name": "Staff of Accretion",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_Accretion"
+  },
+  {
+    "id": "staff-of-arcane-blessing",
+    "name": "Staff of Arcane Blessing",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_Arcane_Blessing"
+  },
+  {
+    "id": "staff-of-cherished-necromancy",
+    "name": "Staff of Cherished Necromancy",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_Cherished_Necromancy"
+  },
+  {
+    "id": "staff-of-crones",
+    "name": "Staff of Crones",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_Crones"
+  },
+  {
+    "id": "staff-of-interruption",
+    "name": "Staff of Interruption",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_Interruption"
+  },
+  {
+    "id": "staff-of-spellpower",
+    "name": "Staff of Spellpower",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_Spellpower"
+  },
+  {
+    "id": "staff-of-the-emperor",
+    "name": "Staff of the Emperor",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_the_Emperor"
+  },
+  {
+    "id": "staff-of-the-moonmaiden",
+    "name": "Staff of the Moonmaiden",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_the_Moonmaiden"
+  },
+  {
+    "id": "staff-of-the-ram",
+    "name": "Staff of the Ram",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Staff_of_the_Ram"
+  },
+  {
+    "id": "stalker-gloves",
+    "name": "Stalker Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Stalker_Gloves"
+  },
+  {
+    "id": "steadfast-maul",
+    "name": "Steadfast Maul",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Steadfast_Maul"
+  },
+  {
+    "id": "steelforged-sword",
+    "name": "Steelforged Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Steelforged_Sword"
+  },
+  {
+    "id": "steelwatcher-helmet",
+    "name": "Steelwatcher Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Steelwatcher_Helmet"
+  },
+  {
+    "id": "stiffly-shod-boots",
+    "name": "Stiffly-Shod Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Stiffly-Shod_Boots"
+  },
+  {
+    "id": "stillmaker",
+    "name": "Stillmaker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Stillmaker"
+  },
+  {
+    "id": "stolyarofs-table-lute",
+    "name": "Stolyarof's Table Lute",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Stolyarof%27s_Table_Lute"
+  },
+  {
+    "id": "strange-conduit-ring",
+    "name": "Strange Conduit Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Strange_Conduit_Ring"
+  },
+  {
+    "id": "strange-tendril-amulet",
+    "name": "Strange Tendril Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Strange_Tendril_Amulet"
+  },
+  {
+    "id": "studded-leather-armour",
+    "name": "Studded Leather Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Studded_Leather_Armour"
+  },
+  {
+    "id": "studded-leather-armour-1",
+    "name": "Studded Leather Armour +1",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Studded_Leather_Armour_+1"
+  },
+  {
+    "id": "studded-leather-armour-2",
+    "name": "Studded Leather Armour +2",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Studded_Leather_Armour_+2"
+  },
+  {
+    "id": "studded-shield",
+    "name": "Studded Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Studded_Shield"
+  },
+  {
+    "id": "studded-shield-1",
+    "name": "Studded Shield +1",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Studded_Shield_+1"
+  },
+  {
+    "id": "sunwalkers-gift",
+    "name": "Sunwalker's Gift",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Sunwalker%27s_Gift"
+  },
+  {
+    "id": "surgeons-subjugation-amulet",
+    "name": "Surgeon's Subjugation Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Surgeon%27s_Subjugation_Amulet"
+  },
+  {
+    "id": "sussur-dagger",
+    "name": "Sussur Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sussur_Dagger"
+  },
+  {
+    "id": "sussur-greatsword",
+    "name": "Sussur Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sussur_Greatsword"
+  },
+  {
+    "id": "sussur-sickle",
+    "name": "Sussur Sickle",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sussur_Sickle"
+  },
+  {
+    "id": "svartlebees-woundseeker",
+    "name": "Svartlebee's Woundseeker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Svartlebee%27s_Woundseeker"
+  },
+  {
+    "id": "swires-sledboard",
+    "name": "Swires' Sledboard",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Swires%27_Sledboard"
+  },
+  {
+    "id": "swiresy-shoes",
+    "name": "Swiresy Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Swiresy_Shoes"
+  },
+  {
+    "id": "sword-of-chaos",
+    "name": "Sword of Chaos",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sword_of_Chaos"
+  },
+  {
+    "id": "sword-of-clutching-umbra",
+    "name": "Sword of Clutching Umbra",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sword_of_Clutching_Umbra"
+  },
+  {
+    "id": "sword-of-justice",
+    "name": "Sword of Justice",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sword_of_Justice"
+  },
+  {
+    "id": "sword-of-life-stealing",
+    "name": "Sword of Life Stealing",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sword_of_Life_Stealing"
+  },
+  {
+    "id": "sword-of-screams",
+    "name": "Sword of Screams",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sword_of_Screams"
+  },
+  {
+    "id": "sword-of-the-emperor",
+    "name": "Sword of the Emperor",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sword_of_the_Emperor"
+  },
+  {
+    "id": "swordmaster-gloves",
+    "name": "Swordmaster Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Swordmaster_Gloves"
+  },
+  {
+    "id": "sylvan-scimitar",
+    "name": "Sylvan Scimitar",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Sylvan_Scimitar"
+  },
+  {
+    "id": "synaptic-needle-amulet",
+    "name": "Synaptic Needle Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Synaptic_Needle_Amulet"
+  },
+  {
+    "id": "syringe",
+    "name": "Syringe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Syringe"
+  },
+  {
+    "id": "syringe-1",
+    "name": "Syringe (+1)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Syringe_(+1)"
+  },
+  {
+    "id": "szarr-family-ring",
+    "name": "Szarr Family Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Szarr_Family_Ring"
+  },
+  {
+    "id": "tarnished-charm",
+    "name": "Tarnished Charm",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Tarnished_Charm"
+  },
+  {
+    "id": "tarnished-locket",
+    "name": "Tarnished Locket",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Tarnished_Locket"
+  },
+  {
+    "id": "tarnished-pendant",
+    "name": "Tarnished Pendant",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Tarnished_Pendant"
+  },
+  {
+    "id": "tarnished-ring",
+    "name": "Tarnished Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Tarnished_Ring"
+  },
+  {
+    "id": "tarnished-wedding-ring",
+    "name": "Tarnished Wedding Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Tarnished_Wedding_Ring"
+  },
+  {
+    "id": "tenacious-boots",
+    "name": "Tenacious Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Tenacious_Boots"
+  },
+  {
+    "id": "the-amulet-of-lost-voices",
+    "name": "The Amulet of Lost Voices",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/The_Amulet_of_Lost_Voices"
+  },
+  {
+    "id": "the-baneful",
+    "name": "The Baneful",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Baneful"
+  },
+  {
+    "id": "the-blast-pendant",
+    "name": "The Blast Pendant",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/The_Blast_Pendant"
+  },
+  {
+    "id": "the-blood-of-lathander",
+    "name": "The Blood of Lathander",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Blood_of_Lathander"
+  },
+  {
+    "id": "the-clover",
+    "name": "The Clover",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Clover"
+  },
+  {
+    "id": "the-dancing-breeze",
+    "name": "The Dancing Breeze",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Dancing_Breeze"
+  },
+  {
+    "id": "the-dead-shot",
+    "name": "The Dead Shot",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Dead_Shot"
+  },
+  {
+    "id": "the-deathstalker-mantle",
+    "name": "The Deathstalker Mantle",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/The_Deathstalker_Mantle"
+  },
+  {
+    "id": "the-ever-seeing-eye",
+    "name": "The Ever-Seeing Eye",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/The_Ever-Seeing_Eye"
+  },
+  {
+    "id": "the-fork-lightning-fingers",
+    "name": "The Fork-Lightning Fingers",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/The_Fork-Lightning_Fingers"
+  },
+  {
+    "id": "the-graceful-cloth",
+    "name": "The Graceful Cloth",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/The_Graceful_Cloth"
+  },
+  {
+    "id": "the-impaler",
+    "name": "The Impaler",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Impaler"
+  },
+  {
+    "id": "the-joltshooter",
+    "name": "The Joltshooter",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Joltshooter"
+  },
+  {
+    "id": "the-jolty-vest",
+    "name": "The Jolty Vest",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/The_Jolty_Vest"
+  },
+  {
+    "id": "the-lifebringer",
+    "name": "The Lifebringer",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/The_Lifebringer"
+  },
+  {
+    "id": "the-long-arm-of-the-gur",
+    "name": "The Long Arm of the Gur",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Long_Arm_of_the_Gur"
+  },
+  {
+    "id": "the-mighty-cloth",
+    "name": "The Mighty Cloth",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/The_Mighty_Cloth"
+  },
+  {
+    "id": "the-oak-fathers-embrace",
+    "name": "The Oak Father's Embrace",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/The_Oak_Father%27s_Embrace"
+  },
+  {
+    "id": "the-pointy-hat",
+    "name": "The Pointy Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/The_Pointy_Hat"
+  },
+  {
+    "id": "the-protecty-sparkswall",
+    "name": "The Protecty Sparkswall",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/The_Protecty_Sparkswall"
+  },
+  {
+    "id": "the-real-sparky-sparkswall",
+    "name": "The Real Sparky Sparkswall",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/The_Real_Sparky_Sparkswall"
+  },
+  {
+    "id": "the-reviving-hands",
+    "name": "The Reviving Hands",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/The_Reviving_Hands"
+  },
+  {
+    "id": "the-sacred-star",
+    "name": "The Sacred Star",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Sacred_Star"
+  },
+  {
+    "id": "the-shadespell-circlet",
+    "name": "The Shadespell Circlet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/The_Shadespell_Circlet"
+  },
+  {
+    "id": "the-skinburster",
+    "name": "The Skinburster",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Skinburster"
+  },
+  {
+    "id": "the-sparkle-hands",
+    "name": "The Sparkle Hands",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/The_Sparkle_Hands"
+  },
+  {
+    "id": "the-sparkswall",
+    "name": "The Sparkswall",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/The_Sparkswall"
+  },
+  {
+    "id": "the-sparky-points",
+    "name": "The Sparky Points",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Sparky_Points"
+  },
+  {
+    "id": "the-spectator-eyes",
+    "name": "The Spectator Eyes",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/The_Spectator_Eyes"
+  },
+  {
+    "id": "the-speedy-lightfeet",
+    "name": "The Speedy Lightfeet",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/The_Speedy_Lightfeet"
+  },
+  {
+    "id": "the-spellsparkler",
+    "name": "The Spellsparkler",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Spellsparkler"
+  },
+  {
+    "id": "the-undead-bane",
+    "name": "The Undead Bane",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Undead_Bane"
+  },
+  {
+    "id": "the-watchers-guide",
+    "name": "The Watcher's Guide",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/The_Watcher%27s_Guide"
+  },
+  {
+    "id": "the-watersparkers",
+    "name": "The Watersparkers",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/The_Watersparkers"
+  },
+  {
+    "id": "the-whispering-promise",
+    "name": "The Whispering Promise",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/The_Whispering_Promise"
+  },
+  {
+    "id": "thermoarcanic-gloves",
+    "name": "Thermoarcanic Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Thermoarcanic_Gloves"
+  },
+  {
+    "id": "thermodynamo-axe",
+    "name": "Thermodynamo Axe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Thermodynamo_Axe"
+  },
+  {
+    "id": "thin-soled-shoes",
+    "name": "Thin-Soled Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Thin-Soled_Shoes"
+  },
+  {
+    "id": "thorn-blade",
+    "name": "Thorn Blade",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Thorn_Blade"
+  },
+  {
+    "id": "thunderpalm-strikers",
+    "name": "Thunderpalm Strikers",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Thunderpalm_Strikers"
+  },
+  {
+    "id": "thunderskin-cloak",
+    "name": "Thunderskin Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Thunderskin_Cloak"
+  },
+  {
+    "id": "tidy-slender-boots",
+    "name": "Tidy Slender Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Tidy_Slender_Boots"
+  },
+  {
+    "id": "tightening-orbit-helm",
+    "name": "Tightening Orbit Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Tightening_Orbit_Helm"
+  },
+  {
+    "id": "till-death-do-us-part",
+    "name": "Till Death Do Us Part",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Till_Death_Do_Us_Part"
+  },
+  {
+    "id": "titanstring-bow",
+    "name": "Titanstring Bow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Titanstring_Bow"
+  },
+  {
+    "id": "torch-of-revocation",
+    "name": "Torch of Revocation",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Torch_of_Revocation"
+  },
+  {
+    "id": "torment-drinker-armour",
+    "name": "Torment Drinker Armour",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Torment_Drinker_Armour"
+  },
+  {
+    "id": "tough-shoes",
+    "name": "Tough Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Tough_Shoes"
+  },
+  {
+    "id": "tough-sunrises",
+    "name": "Tough Sunrises",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Tough_Sunrises"
+  },
+  {
+    "id": "tough-soled-shoes",
+    "name": "Tough-Soled Shoes",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Tough-Soled_Shoes"
+  },
+  {
+    "id": "tourmaline-ring",
+    "name": "Tourmaline Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Tourmaline_Ring"
+  },
+  {
+    "id": "training-shield",
+    "name": "Training Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Training_Shield"
+  },
+  {
+    "id": "treacleflow-amulet",
+    "name": "Treacleflow Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Treacleflow_Amulet"
+  },
+  {
+    "id": "trepan",
+    "name": "Trepan",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Trepan"
+  },
+  {
+    "id": "trepan-1",
+    "name": "Trepan (+1)",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Trepan_(+1)"
+  },
+  {
+    "id": "tressym-collar",
+    "name": "Tressym Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Tressym_Collar"
+  },
+  {
+    "id": "trident-1",
+    "name": "Trident +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Trident_+1"
+  },
+  {
+    "id": "trident-2",
+    "name": "Trident +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Trident_+2"
+  },
+  {
+    "id": "trident-of-the-depths",
+    "name": "Trident of the Depths",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Trident_of_the_Depths"
+  },
+  {
+    "id": "trident-of-the-waves",
+    "name": "Trident of the Waves",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Trident_of_the_Waves"
+  },
+  {
+    "id": "triumphal-helm",
+    "name": "Triumphal Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Triumphal_Helm"
+  },
+  {
+    "id": "true-loves-caress",
+    "name": "True Love's Caress",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/True_Love%27s_Caress"
+  },
+  {
+    "id": "true-loves-embrace",
+    "name": "True Love's Embrace",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/True_Love%27s_Embrace"
+  },
+  {
+    "id": "twist-of-fortune",
+    "name": "Twist of Fortune",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Twist_of_Fortune"
+  },
+  {
+    "id": "twisted-oak-crook",
+    "name": "Twisted Oak Crook",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Twisted_Oak_Crook"
+  },
+  {
+    "id": "twisting-branch",
+    "name": "Twisting Branch",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Twisting_Branch"
+  },
+  {
+    "id": "tyrannical-jackboots",
+    "name": "Tyrannical Jackboots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Tyrannical_Jackboots"
+  },
+  {
+    "id": "uncovered-mysteries",
+    "name": "Uncovered Mysteries",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Uncovered_Mysteries"
+  },
+  {
+    "id": "undead-slayer-crossbow",
+    "name": "Undead Slayer Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Undead_Slayer_Crossbow"
+  },
+  {
+    "id": "unflinching-protector-amulet",
+    "name": "Unflinching Protector Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Unflinching_Protector_Amulet"
+  },
+  {
+    "id": "unlucky-thiefs-gloves",
+    "name": "Unlucky Thief's Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Unlucky_Thief%27s_Gloves"
+  },
+  {
+    "id": "unseen-menace",
+    "name": "Unseen Menace",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Unseen_Menace"
+  },
+  {
+    "id": "unwanted-masterwork-gauntlets",
+    "name": "Unwanted Masterwork Gauntlets",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Unwanted_Masterwork_Gauntlets"
+  },
+  {
+    "id": "unwanted-masterwork-greaves",
+    "name": "Unwanted Masterwork Greaves",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Unwanted_Masterwork_Greaves"
+  },
+  {
+    "id": "unwanted-masterwork-scalemail",
+    "name": "Unwanted Masterwork Scalemail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Unwanted_Masterwork_Scalemail"
+  },
+  {
+    "id": "vampiric-dagger",
+    "name": "Vampiric Dagger",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Vampiric_Dagger"
+  },
+  {
+    "id": "vampiric-gloves",
+    "name": "Vampiric Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Vampiric_Gloves"
+  },
+  {
+    "id": "varsh-kokuus-boots",
+    "name": "Varsh Ko'kuu's Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Varsh_Ko%27kuu%27s_Boots"
+  },
+  {
+    "id": "veil-of-the-morning",
+    "name": "Veil of the Morning",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Veil_of_the_Morning"
+  },
+  {
+    "id": "verdelite-ring",
+    "name": "Verdelite Ring",
+    "type": "ring",
+    "wiki": "https://bg3.wiki/wiki/Verdelite_Ring"
+  },
+  {
+    "id": "verminsign",
+    "name": "Verminsign",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Verminsign"
+  },
+  {
+    "id": "very-heavy-greataxe",
+    "name": "Very Heavy Greataxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Very_Heavy_Greataxe"
+  },
+  {
+    "id": "vest-of-soul-rejuvenation",
+    "name": "Vest of Soul Rejuvenation",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Vest_of_Soul_Rejuvenation"
+  },
+  {
+    "id": "vicious-battleaxe",
+    "name": "Vicious Battleaxe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Vicious_Battleaxe"
+  },
+  {
+    "id": "vicious-shortbow",
+    "name": "Vicious Shortbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Vicious_Shortbow"
+  },
+  {
+    "id": "vicious-shortsword",
+    "name": "Vicious Shortsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Vicious_Shortsword"
+  },
+  {
+    "id": "viconias-priestess-robe",
+    "name": "Viconia's Priestess Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Viconia%27s_Priestess_Robe"
+  },
+  {
+    "id": "viconias-walking-fortress",
+    "name": "Viconia's Walking Fortress",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Viconia%27s_Walking_Fortress"
+  },
+  {
+    "id": "violin",
+    "name": "Violin",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Violin"
+  },
+  {
+    "id": "vision-of-the-absolute",
+    "name": "Vision of the Absolute",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Vision_of_the_Absolute"
+  },
+  {
+    "id": "vital-conduit-boots",
+    "name": "Vital Conduit Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Vital_Conduit_Boots"
+  },
+  {
+    "id": "vivacious-cloak",
+    "name": "Vivacious Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Vivacious_Cloak"
+  },
+  {
+    "id": "voss-silver-sword",
+    "name": "Voss' Silver Sword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Voss%27_Silver_Sword"
+  },
+  {
+    "id": "wakeful-amulet",
+    "name": "Wakeful Amulet",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Wakeful_Amulet"
+  },
+  {
+    "id": "wapiras-crown",
+    "name": "Wapira's Crown",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Wapira%27s_Crown"
+  },
+  {
+    "id": "war-pick-1",
+    "name": "War Pick +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/War_Pick_+1"
+  },
+  {
+    "id": "warhammer-1",
+    "name": "Warhammer +1",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Warhammer_+1"
+  },
+  {
+    "id": "warhammer-2",
+    "name": "Warhammer +2",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Warhammer_+2"
+  },
+  {
+    "id": "warped-headband-of-intellect",
+    "name": "Warped Headband of Intellect",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Warped_Headband_of_Intellect"
+  },
+  {
+    "id": "watchs-helmet",
+    "name": "Watch's Helmet",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Watch%27s_Helmet"
+  },
+  {
+    "id": "watcher-crossbow",
+    "name": "Watcher Crossbow",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Watcher_Crossbow"
+  },
+  {
+    "id": "watcher-greatsword",
+    "name": "Watcher Greatsword",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Watcher_Greatsword"
+  },
+  {
+    "id": "watchers-shield",
+    "name": "Watcher's Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Watcher%27s_Shield"
+  },
+  {
+    "id": "wavemothers-boots",
+    "name": "Wavemother's Boots",
+    "type": "boots",
+    "wiki": "https://bg3.wiki/wiki/Wavemother%27s_Boots"
+  },
+  {
+    "id": "wavemothers-cloak",
+    "name": "Wavemother's Cloak",
+    "type": "cloak",
+    "wiki": "https://bg3.wiki/wiki/Wavemother%27s_Cloak"
+  },
+  {
+    "id": "wavemothers-robe",
+    "name": "Wavemother's Robe",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Wavemother%27s_Robe"
+  },
+  {
+    "id": "wavemothers-sickle",
+    "name": "Wavemother's Sickle",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Wavemother%27s_Sickle"
+  },
+  {
+    "id": "well-crated-helm",
+    "name": "Well Crated Helm",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Well_Crated_Helm"
+  },
+  {
+    "id": "whipping-cane",
+    "name": "Whipping Cane",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Whipping_Cane"
+  },
+  {
+    "id": "whispering-mask",
+    "name": "Whispering Mask",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Whispering_Mask"
+  },
+  {
+    "id": "wide-brimmed-hat",
+    "name": "Wide-Brimmed Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Wide-Brimmed_Hat"
+  },
+  {
+    "id": "winkling-gloves",
+    "name": "Winkling Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Winkling_Gloves"
+  },
+  {
+    "id": "winters-clutches",
+    "name": "Winter's Clutches",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Winter%27s_Clutches"
+  },
+  {
+    "id": "witchbreaker",
+    "name": "Witchbreaker",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Witchbreaker"
+  },
+  {
+    "id": "wizard-hat",
+    "name": "Wizard Hat",
+    "type": "head",
+    "wiki": "https://bg3.wiki/wiki/Wizard_Hat"
+  },
+  {
+    "id": "woe",
+    "name": "Woe",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Woe"
+  },
+  {
+    "id": "wondrous-gloves",
+    "name": "Wondrous Gloves",
+    "type": "gloves",
+    "wiki": "https://bg3.wiki/wiki/Wondrous_Gloves"
+  },
+  {
+    "id": "wood-woad-shield",
+    "name": "Wood Woad Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Wood_Woad_Shield"
+  },
+  {
+    "id": "wooden-shield",
+    "name": "Wooden Shield",
+    "type": "shield",
+    "wiki": "https://bg3.wiki/wiki/Wooden_Shield"
+  },
+  {
+    "id": "worgfang",
+    "name": "Worgfang",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Worgfang"
+  },
+  {
+    "id": "wulbrens-hammer",
+    "name": "Wulbren's Hammer",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Wulbren%27s_Hammer"
+  },
+  {
+    "id": "xyanyde",
+    "name": "Xyanyde",
+    "type": "weapon",
+    "wiki": "https://bg3.wiki/wiki/Xyanyde"
+  },
+  {
+    "id": "yuan-ti-scale-mail",
+    "name": "Yuan-Ti Scale Mail",
+    "type": "armor",
+    "wiki": "https://bg3.wiki/wiki/Yuan-Ti_Scale_Mail"
+  },
+  {
+    "id": "zinas-dog-collar",
+    "name": "Zina's Dog Collar",
+    "type": "amulet",
+    "wiki": "https://bg3.wiki/wiki/Zina%27s_Dog_Collar"
+  }
+]

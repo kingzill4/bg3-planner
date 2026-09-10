@@ -1,0 +1,944 @@
+[
+  {
+    "id": "absolute-set",
+    "name": "Absolute set",
+    "desc": "The Absolute set is a set of armour and equipment themed around the Cult of the Absolute . They provide bonuses to characters who bear the Brand of the Absolute , except for the Vision of the Absolute .",
+    "items": [
+      "vision-of-the-absolute",
+      "absolutes-protector",
+      "absolutes-talisman",
+      "absolutes-warboard",
+      "gloves-of-power",
+      "ring-of-absolute-force"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Absolute_set"
+  },
+  {
+    "id": "acid-set",
+    "name": "Acid set",
+    "desc": "The Acid set is a set of equipment that helps the user do Acid damage. Syngerizes with items from the Elemental set , which are not duplicated here. It consists of the following pieces:",
+    "items": [
+      "caustic-band",
+      "corrosive-flail",
+      "fleshmelter-cloak",
+      "ichorous-gloves",
+      "melfs-first-staff",
+      "varsh-kokuus-boots"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Acid_set"
+  },
+  {
+    "id": "adamantine-set",
+    "name": "Adamantine set",
+    "desc": "The Adamantine set is a set of armour and equipment from the Adamantine Forge (location) and related to the Adamantine Forge (quest) .",
+    "items": [
+      "adamantine-scale-mail",
+      "adamantine-splint-armour",
+      "adamantine-shield",
+      "adamantine-longsword",
+      "adamantine-mace",
+      "adamantine-scimitar",
+      "grymskull-helm"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Adamantine_set"
+  },
+  {
+    "id": "bard-set",
+    "name": "Bard set",
+    "desc": "The Bard set includes items that interact with Bard mechanics.",
+    "items": [
+      "blazer-of-benevolence",
+      "boots-of-brilliance",
+      "cap-of-curing",
+      "wondrous-gloves"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Bard_set"
+  },
+  {
+    "id": "bhaalist-set",
+    "name": "Bhaalist set",
+    "desc": "The Bhaalist Set is a set of Unholy Assasins gear. These items provide the user myriad benefits relating to murder and assassination, including piercing vulnerability aura, ability to use Garrotte , and inflict bleedi...",
+    "items": [
+      "amulet-of-bhaal",
+      "assassin-of-bhaal-cowl",
+      "bhaalist-armour",
+      "bhaalist-gloves"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Bhaalist_set"
+  },
+  {
+    "id": "blackguard-set",
+    "name": "Blackguard set",
+    "desc": "The Blackguard equipment is a set of armour themed around Oathbreaker Paladins . See also Paladin set .",
+    "items": [
+      "blackguards-gauntlets",
+      "blackguards-greaves",
+      "blackguards-plate",
+      "blackguards-sword",
+      "shield-of-the-undevout"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Blackguard_set"
+  },
+  {
+    "id": "bonespike-set",
+    "name": "Bonespike set",
+    "desc": "Bonespike is a proper set of equipment pieces which generally provide their user benefits while raging , or provide new abilities or passives when worn. They have no proficiency requirements.",
+    "items": [
+      "bonespike-boots",
+      "bonespike-garb",
+      "bonespike-gloves",
+      "bonespike-helmet"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Bonespike_set"
+  },
+  {
+    "id": "cantrip-set",
+    "name": "Cantrip set",
+    "desc": "The Cantrip set enhances damaging cantrips or grants access to them. Synergizes with items from the Elemental set and Sparkstruck set , which are not duplicated here.",
+    "items": [
+      "circlet-of-mental-anguish",
+      "gemini-gloves",
+      "gold-wyrmling-staff",
+      "helldusk-gloves",
+      "hellfire-greataxe",
+      "incandescent-staff",
+      "moon-devotion-robe",
+      "mourning-frost",
+      "potent-robe",
+      "quickspell-gloves",
+      "ring-of-arcane-synergy",
+      "sorrow",
+      "spellseeking-gloves",
+      "staff-of-a-mumbling-wizard"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Cantrip_set"
+  },
+  {
+    "id": "ceremonial-set",
+    "name": "Ceremonial set",
+    "desc": "Ceremonial weapons are a set of weapons used in the quest Find the Blood of Lathander . They are Uncommon versions of their respective weapon types with a +1 Enchantment and no other special effects. They also glow wh...",
+    "items": [
+      "ceremonial-battleaxe",
+      "ceremonial-longsword",
+      "ceremonial-mace",
+      "ceremonial-warhammer"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Ceremonial_set"
+  },
+  {
+    "id": "charisma-set",
+    "name": "Charisma set",
+    "desc": "The Charisma set includes items that increase Charisma . The abilities page explains the priority by which ability score increases are applied.",
+    "items": [
+      "birthright",
+      "duke-ravengards-longsword"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Charisma_set"
+  },
+  {
+    "id": "cleric-set",
+    "name": "Cleric set",
+    "desc": "The Cleric set includes items which interact with Cleric mechanics, are only obtainable by clerics, or inflict the Turned condition.",
+    "items": [
+      "amulet-of-the-devout",
+      "circlet-of-hunting",
+      "devotees-mace",
+      "gandrels-aspiration",
+      "the-sacred-star",
+      "veil-of-the-morning"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Cleric_set"
+  },
+  {
+    "id": "cold-set",
+    "name": "Cold set",
+    "desc": "The Frost set is a set of equipment that helps the user deal Cold damage and inflict the conditions Wet , Chilled , Encrusted with Frost or Frozen . Syngerizes with items from the Elemental set , which are not duplica...",
+    "items": [
+      "absolutes-protector",
+      "coldbrim-hat",
+      "cold-snap",
+      "emblazoned-plate-of-the-marshal",
+      "frost-prince",
+      "hoarfrost-boots",
+      "icebite-robe",
+      "mourning-frost",
+      "robe-of-summer",
+      "snow-dusted-monastery-gloves",
+      "snowburst-ring",
+      "trident-of-the-waves",
+      "wavemothers-robe",
+      "wavemothers-sickle",
+      "winters-clutches"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Cold_set"
+  },
+  {
+    "id": "constitution-set",
+    "name": "Constitution set",
+    "desc": "The Constitution set includes items that increase Constitution . Items listed below do not have synergy amongst themselves or other items. The abilities page explains the priority by which ability score increases are...",
+    "items": [
+      "amulet-of-greater-health",
+      "dwarven-splintmail",
+      "enraging-heart-garb",
+      "gloves-of-soul-catching"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Constitution_set"
+  },
+  {
+    "id": "dark-justiciar-set",
+    "name": "Dark Justiciar set",
+    "desc": "The Dark Justiciar equipment is a set of armour themed after Shar's Dark Justiciars . Their bonuses revolve around being obscured .",
+    "items": [
+      "cracked-helm-of-shar",
+      "damaged-dark-justiciar-armour",
+      "dark-justiciar-gauntlets-uncommon",
+      "dark-justiciar-half-plate-rare",
+      "dark-justiciar-helm",
+      "dark-justiciar-helmet",
+      "dark-justiciar-mail",
+      "dark-justiciar-mask",
+      "justiciars-greatshield",
+      "justiciars-scimitar",
+      "shar-headwear",
+      "dark-justiciar-boots",
+      "dark-justiciar-gauntlets-rare",
+      "dark-justiciar-half-plate-very-rare"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Dark_Justiciar_set"
+  },
+  {
+    "id": "dexterity-set",
+    "name": "Dexterity set",
+    "desc": "The Dexterity set includes items that increase Dexterity . Items listed below do not have synergy amongst themselves or other items. The abilities page explains the priority by which ability score increases are applied.",
+    "items": [
+      "gloves-of-dexterity",
+      "nimblefinger-gloves",
+      "the-graceful-cloth"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Dexterity_set"
+  },
+  {
+    "id": "druid-set",
+    "name": "Druid set",
+    "desc": "The Druid set includes items that interact with Druid mechanics or enhance shapeshifting and disguise.",
+    "items": [
+      "armour-of-landfall",
+      "armour-of-moonbasking",
+      "armour-of-the-sporekeeper",
+      "ironwood-club",
+      "ironvine-shield",
+      "mutilated-carapace",
+      "pale-oak",
+      "shapeshifter-hat",
+      "shapeshifters-boon-ring"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Druid_set"
+  },
+  {
+    "id": "drunk-set",
+    "name": "Drunk set",
+    "desc": "The Drunk set includes items that interact with Alcohol mechanics.",
+    "items": [
+      "amulet-of-the-drunkard",
+      "drunken-cloth",
+      "punch-drunk-bastard"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Drunk_set"
+  },
+  {
+    "id": "elemental-set",
+    "name": "Elemental set",
+    "desc": "The Elemental Set confers bonuses when dealing elemental ( Acid , Cold , Fire , Force , Lightning , Necrotic , Poison , Psychic , Radiant , or Thunder ) damage or adds additional elemental damage. As such, this set sy...",
+    "items": [
+      "amulet-of-elemental-torment",
+      "boots-of-elemental-momentum",
+      "cloak-of-elemental-absorption",
+      "cloak-of-the-weave",
+      "creations-echo",
+      "drakethroat-glaive",
+      "flail-of-ages",
+      "markoheshkir",
+      "necklace-of-elemental-augmentation",
+      "ring-of-elemental-infusion"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Elemental_set"
+  },
+  {
+    "id": "fighter-set",
+    "name": "Fighter set",
+    "desc": "The Fighter set includes items that interact with Fighter mechanics.",
+    "items": [
+      "charge-bound-warhammer",
+      "gauntlets-of-surging-accuracy",
+      "gauntlets-of-the-warmaster"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Fighter_set"
+  },
+  {
+    "id": "fire-set",
+    "name": "Fire set",
+    "desc": "The Fire Set is a set of equipment that deals Fire damage and inflicts the Burning condition. Synergizes with items from the Heat Set , Helldusk Set , and Elemental set , which are not duplicated here. It consists of...",
+    "items": [
+      "cindermoth-cloak",
+      "circlet-of-blasting",
+      "dragons-grasp",
+      "emblazoned-plate-of-the-marshal",
+      "everburn-blade",
+      "exterminators-axe",
+      "flame-enamelled-armour",
+      "gloves-of-cinder-and-sizzle",
+      "gold-wyrmling-staff",
+      "hat-of-fire-acuity",
+      "hellfire-hand-crossbow",
+      "incandescent-staff",
+      "infernal-robe",
+      "kurwins-cauteriser",
+      "obsidian-laced-robe",
+      "pyroquickness-hat",
+      "rupturing-blade",
+      "shield-of-scorching-reprisal",
+      "skybreaker",
+      "staff-of-a-mumbling-wizard"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Fire_set"
+  },
+  {
+    "id": "force-set",
+    "name": "Force set",
+    "desc": "The Force set is a set of equipment that helps the user deal Force damage and gain the Force Conduit condition. The set consists of the following pieces:",
+    "items": [
+      "breaching-pikestaff",
+      "craterflesh-gloves",
+      "crossbow-of-arcane-force",
+      "garb-of-the-land-and-sky",
+      "gauntlet-of-the-tyrant",
+      "gloves-of-soul-catching",
+      "faithbreaker",
+      "halberd-of-vigilance",
+      "harper-sacredstriker",
+      "neer-misser",
+      "psychic-spark",
+      "rippling-force-mail",
+      "servitor-of-the-black-hand-gloves",
+      "sethan",
+      "stalker-gloves",
+      "swires-sledboard",
+      "the-skinburster",
+      "viconias-walking-fortress",
+      "wulbrens-hammer"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Force_set"
+  },
+  {
+    "id": "gish-hybrid-set",
+    "name": "Gish (hybrid) set",
+    "desc": "The Gish (hybrid) set comprises of equipment that benefits both spellcasters and martial characters. Items that boost Initiative , Critical hit , off-hand attacks , all attack rolls (thereby including the Sparkstruck...",
+    "items": [
+      "band-of-the-mystic-scoundrel",
+      "callous-glow-ring",
+      "daredevil-gloves",
+      "diadem-of-arcane-synergy",
+      "ironwood-club",
+      "ironvine-shield",
+      "elven-chain",
+      "gauntlet-of-the-tyrant",
+      "gloves-of-baneful-striking",
+      "gloves-of-battlemages-power",
+      "hat-of-uninhibited-kushigo",
+      "helldusk-armour",
+      "helmet-of-arcane-acuity",
+      "infernal-rapier",
+      "ring-of-arcane-synergy",
+      "ring-of-elemental-infusion",
+      "sorrow",
+      "spellthief",
+      "strange-conduit-ring",
+      "sylvan-scimitar",
+      "thorn-blade",
+      "vivacious-cloak"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Gish_(hybrid)_set"
+  },
+  {
+    "id": "githyanki-set",
+    "name": "Githyanki set",
+    "desc": "The following items are related to the Githyanki in terms of game mechanics, or thematically.",
+    "items": [
+      "aberration-hunters-amulet",
+      "boots-of-psionic-movement",
+      "circlet-of-psionic-revenge",
+      "crossbow-of-arcane-force",
+      "githyanki-crossbow",
+      "githyanki-boots",
+      "githyanki-greatsword",
+      "githyanki-greatsword-psionic",
+      "githyanki-half-plate",
+      "githyanki-longsword",
+      "githyanki-longsword-1",
+      "githyanki-shortsword",
+      "githyanki-shortsword-1",
+      "hracknir-bracers",
+      "psionic-ward-armour",
+      "silver-sword-of-the-astral-plane",
+      "soulbreaker-greatsword",
+      "voss-silver-sword"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Githyanki_set"
+  },
+  {
+    "id": "healing-set",
+    "name": "Healing set",
+    "desc": "The Healing set is a set of equipment that increases the effects of healing , offers bonuses when you heal/are healed, and provides ways to heal allies or grant them temporary hit points . Interacts with the Self-Heal...",
+    "items": [
+      "absolutes-warboard",
+      "amulet-of-restoration",
+      "amulet-of-sel-nes-chosen",
+      "boots-of-aid-and-comfort",
+      "cap-of-curing",
+      "devotees-mace",
+      "duke-ravengards-longsword",
+      "hellriders-pride",
+      "herbalists-gloves",
+      "ring-of-salving",
+      "slippery-chain-shirt",
+      "the-blood-of-lathander",
+      "the-reviving-hands",
+      "the-whispering-promise",
+      "wapiras-crown",
+      "till-death-do-us-part"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Healing_set"
+  },
+  {
+    "id": "heat-set",
+    "name": "Heat set",
+    "desc": "The Heat Set is a set of equipment that helps the user with the Heat condition. Synergizes with items from the Fire set , which are not duplicated here. The set consists of the following pieces :",
+    "items": [
+      "cinder-shoes",
+      "fireheart",
+      "hellfire-greataxe",
+      "ring-of-self-immolation",
+      "thermoarcanic-gloves",
+      "thermodynamo-axe"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Heat_set"
+  },
+  {
+    "id": "helldusk-set",
+    "name": "Helldusk set",
+    "desc": "Helldusk armour is a set of equipment that revolves around resisting and dealing Fire damage. It is forged from Infernal Iron or Infernal Alloy .",
+    "items": [
+      "flawed-helldusk-armour",
+      "flawed-helldusk-helmet",
+      "flawed-helldusk-gloves",
+      "helldusk-armour",
+      "helldusk-boots",
+      "helldusk-gloves",
+      "helldusk-helmet"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Helldusk_set"
+  },
+  {
+    "id": "hiding-set",
+    "name": "Hiding set",
+    "desc": "The Hiding Set is a set of equipment that helps enhances Hiding . Synergizes with items from the Dark Justiciar set and Obscured set , which are not duplicated here.",
+    "items": [
+      "dread-iron-dagger",
+      "hellfire-hand-crossbow",
+      "rhapsody",
+      "shade-slayer-cloak"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Hiding_set"
+  },
+  {
+    "id": "kushigo-set",
+    "name": "Kushigo set",
+    "desc": "Kushigo is a set of equipment. Kushigo equipment generally boosts unarmed and unarmoured characters, such as those classed into Monk . See also Monk set , Soul set , Unarmed set , and List of features and items that i...",
+    "items": [
+      "armour-of-uninhibited-kushigo",
+      "boots-of-uninhibited-kushigo",
+      "gloves-of-uninhibited-kushigo",
+      "hat-of-uninhibited-kushigo",
+      "garb-of-the-land-and-sky"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Kushigo_set"
+  },
+  {
+    "id": "lightning-set",
+    "name": "Lightning set",
+    "desc": "The Lightning set is a set of equipment that helps the user deal or resist Lightning damage. It synergizes with items from the Sparkstruck set and Elemental set , which are not duplicated here.",
+    "items": [
+      "charge-bound-warhammer",
+      "gloves-of-belligerent-skies",
+      "gloves-of-the-automaton",
+      "hellfire-engine-crossbow",
+      "light-of-creation",
+      "lightning-jabber"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Lightning_set"
+  },
+  {
+    "id": "low-hp-set",
+    "name": "Low HP set",
+    "desc": "The Low HP set is a group of equipment that benefits from having a small number of hit points and includes items that damage the wielder to more easily reach those low HP values. The self-burn from the Heat Set also h...",
+    "items": [
+      "after-death-do-us-part",
+      "blooded-greataxe",
+      "cap-of-wrath",
+      "comeback-handaxe",
+      "glowing-shield",
+      "helmet-of-grit",
+      "horns-of-the-berserker",
+      "loviatars-scourge",
+      "martial-exertion-gloves",
+      "moondrop-pendant",
+      "nyrulna",
+      "ritual-axe",
+      "ritual-dagger",
+      "rupturing-blade",
+      "spurred-band",
+      "the-oak-fathers-embrace",
+      "the-watersparkers",
+      "true-loves-embrace",
+      "true-loves-caress",
+      "viconias-walking-fortress"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Low_HP_set"
+  },
+  {
+    "id": "luminous-set",
+    "name": "Luminous set",
+    "desc": "The Luminous set is a set of equipment that inflicts Radiating Orb when the wearer deals Radiant damage. Synergizes with items from the Radiant set , which are not duplicated here.",
+    "items": [
+      "coruscation-ring",
+      "fabricated-arbalest",
+      "luminous-armour",
+      "luminous-gloves",
+      "the-sacred-star"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Luminous_set"
+  },
+  {
+    "id": "modify-ability-score-set",
+    "name": "Modify Ability Score set",
+    "desc": "The Modify Ability Score set includes items that increase an ability score by a specified amount, rather than setting the score to a fixed value. For the latter, see Set Ability Score set .",
+    "items": [
+      "birthright",
+      "devilfoil-mask",
+      "duke-ravengards-longsword",
+      "dwarven-splintmail",
+      "enraging-heart-garb",
+      "gloves-of-soul-catching",
+      "harmonium-halberd",
+      "khalids-gift",
+      "nimblefinger-gloves",
+      "the-graceful-cloth",
+      "the-mighty-cloth"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Modify_Ability_Score_set"
+  },
+  {
+    "id": "monk-set",
+    "name": "Monk set",
+    "desc": "The Monk set includes items that interact with Monk mechanics and, in addition to the set listed below, includes the Kushigo set , Soul set , Unarmed set and Drunk set .",
+    "items": [
+      "garb-of-the-land-and-sky",
+      "sentient-amulet-rare",
+      "sentient-amulet-very-rare"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Monk_set"
+  },
+  {
+    "id": "necrotic-set",
+    "name": "Necrotic set",
+    "desc": "The Necrotic set is a set of equipment that helps the user deal or resist Necrotic damage. Synergizes with items from the Dark Justiciar Set , Helldusk Set and the Blackguard Set , which are not duplicated here. The s...",
+    "items": [
+      "ambusher",
+      "armour-of-the-sporekeeper",
+      "artificial-leech-1",
+      "assassins-touch",
+      "bonesaw-1",
+      "creations-echo",
+      "crimson-mischief",
+      "crypt-lord-ring",
+      "dread-iron-dagger",
+      "duellists-prerogative",
+      "fleshrender",
+      "hollows-staff",
+      "hoppy",
+      "horns-of-the-berserker",
+      "loviatars-scourge",
+      "myrkulite-scourge",
+      "protective-plate",
+      "ritual-dagger-of-shar",
+      "staff-of-cherished-necromancy",
+      "sword-of-chaos",
+      "sword-of-life-stealing",
+      "the-spectator-eyes",
+      "trepan-1",
+      "torch-of-revocation",
+      "woe"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Necrotic_set"
+  },
+  {
+    "id": "obscured-set",
+    "name": "Obscured set",
+    "desc": "The Obscured set is a set of equipment that primarily benefits from the wearer or their target being lightly or heavily obscured . Also includes items that grant magical darkvision and blind immunity as they enhance w...",
+    "items": [
+      "cloak-of-cunning-brume",
+      "covert-cowl",
+      "eversight-ring",
+      "hammergrim-mist-amulet",
+      "helldusk-helmet",
+      "justiciars-scimitar",
+      "knife-of-the-undermountain-king",
+      "least-expected",
+      "penumbral-armour",
+      "ring-of-twilight",
+      "shadeclinger-armour",
+      "shadow-blade-ring",
+      "shadow-blade-weapon",
+      "shadow-cloaked-ring",
+      "shars-spear-of-evening",
+      "steelwatcher-helmet",
+      "the-shadespell-circlet",
+      "viconias-priestess-robe"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Obscured_set"
+  },
+  {
+    "id": "off-hand-set",
+    "name": "Off-hand set",
+    "desc": "The off-hand set contains equipment designed to enhance weapons in the off-hand slot.",
+    "items": [
+      "bloodthirst",
+      "cold-snap",
+      "crimson-mischief",
+      "gleamdance-dagger",
+      "gloves-of-the-balanced-hands"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Off-hand_set"
+  },
+  {
+    "id": "paladin-set",
+    "name": "Paladin set",
+    "desc": "The Paladin set includes items that interact with Paladin mechanics. The Blackguard set is part of it, but its items are not reproduced here.",
+    "items": [
+      "armour-of-devotion",
+      "gloves-of-heroism",
+      "helmet-of-smiting"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Paladin_set"
+  },
+  {
+    "id": "poison-set",
+    "name": "Poison set",
+    "desc": "The Poison set is a set of equipment that helps the user do Poison damage or inflict Poisoned . It consists of the following pieces:",
+    "items": [
+      "argument-solver",
+      "armour-of-the-sporekeeper",
+      "broodmothers-revenge",
+      "cruel-sting",
+      "derivation-cloak",
+      "handmaidens-mace",
+      "hellbeard-halberd",
+      "infernal-mace",
+      "infernal-spear",
+      "poisoners-gloves",
+      "poisoners-ring",
+      "poisoners-robe",
+      "staff-of-crones",
+      "syringe-1",
+      "thorn-blade"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Poison_set"
+  },
+  {
+    "id": "psychic-set",
+    "name": "Psychic set",
+    "desc": "The Psychic set is a set of equipment that deals or synergizes with Psychic damage and inflicts Mental Fatigue . The set consists of the following pieces:",
+    "items": [
+      "blade-of-oppressed-souls",
+      "bonespike-helmet",
+      "boots-of-psionic-movement",
+      "braindrain-gloves",
+      "circlet-of-psionic-revenge",
+      "githyanki-greatsword-psionic",
+      "justiciars-scimitar",
+      "ketherics-warhammer",
+      "psionic-ward-armour",
+      "render-of-mind-and-body",
+      "ring-of-mental-inhibition",
+      "shadow-blade-ring",
+      "silver-sword-of-the-astral-plane",
+      "slinging-shoes",
+      "soulbreaker-greatsword",
+      "strange-conduit-ring",
+      "sword-of-clutching-umbra",
+      "sword-of-screams",
+      "voss-silver-sword"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Psychic_set"
+  },
+  {
+    "id": "radiant-set",
+    "name": "Radiant set",
+    "desc": "The Radiant set is a set of equipment that helps the user deal Radiant damage. Synergizes with items from the Luminous set , which are not duplicated here.",
+    "items": [
+      "callous-glow-ring",
+      "devotees-mace",
+      "gloves-of-belligerent-skies",
+      "gontr-mael",
+      "hammer-of-the-just",
+      "holy-lance-helm",
+      "mantle-of-the-holy-warrior",
+      "moon-devotion-robe",
+      "moonlight-glaive",
+      "pelorsun-blade",
+      "seraphic-pugilist-gloves",
+      "sel-nes-spear-of-night",
+      "shining-staver-of-skulls",
+      "the-blood-of-lathander",
+      "the-oak-fathers-embrace"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Radiant_set"
+  },
+  {
+    "id": "reverberation-set",
+    "name": "Reverberation set",
+    "desc": "The Reverberation set is a set of equipment that applies or interacts with Reverberation . Synergizes with items from the Thunder set .",
+    "items": [
+      "boots-of-stormy-clamour",
+      "gloves-of-belligerent-skies",
+      "markoheshkir",
+      "spineshudder-amulet",
+      "ring-of-absolute-force",
+      "ring-of-spiteful-thunder",
+      "thunderskin-cloak"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Reverberation_set"
+  },
+  {
+    "id": "self-heal-set",
+    "name": "Self-Heal set",
+    "desc": "The Self-Heal set is a set of equipment that focuses on healing and providing temporary hit points to the wearer. Some items also grant additional benefits when healed. Interacts with the Healing set , which is not du...",
+    "items": [
+      "absolutes-talisman",
+      "after-death-do-us-part",
+      "amulet-of-the-drunkard",
+      "armour-of-landfall",
+      "armour-of-moonbasking",
+      "baldurans-giantslayer",
+      "blazer-of-benevolence",
+      "bonespike-garb",
+      "broodmothers-revenge",
+      "circlet-of-mental-anguish",
+      "derivation-cloak",
+      "drunken-cloth",
+      "gloves-of-soul-catching",
+      "glowing-shield",
+      "helm-of-balduran",
+      "helmet-of-smiting",
+      "hoppy",
+      "icebite-robe",
+      "khalids-gift",
+      "periapt-of-wound-closure",
+      "potent-robe",
+      "psionic-ward-armour",
+      "reasons-grasp",
+      "rhapsody",
+      "ring-of-regeneration",
+      "robe-of-the-weave",
+      "shattered-flail",
+      "shield-of-devotion",
+      "sword-of-chaos",
+      "sword-of-life-stealing",
+      "the-lifebringer",
+      "vest-of-soul-rejuvenation",
+      "vital-conduit-boots",
+      "vivacious-cloak",
+      "wavemothers-robe",
+      "woe"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Self-Heal_set"
+  },
+  {
+    "id": "set-ability-score-set",
+    "name": "Set Ability Score set",
+    "desc": "The Set Ability Score set includes items that increase an ability to a fixed score, rather than increasing the score with a specified value. For the latter, see Modify Ability Score set .",
+    "items": [
+      "amulet-of-greater-health",
+      "club-of-hill-giant-strength",
+      "gauntlets-of-hill-giant-strength",
+      "gloves-of-dexterity",
+      "handmaidens-mace",
+      "warped-headband-of-intellect"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Set_Ability_Score_set"
+  },
+  {
+    "id": "sorcerer-set",
+    "name": "Sorcerer set",
+    "desc": "The Sorcerer set includes items that interact with Sorcerer mechanics.",
+    "items": [
+      "ring-of-feywild-sparks",
+      "spellseeking-gloves"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Sorcerer_set"
+  },
+  {
+    "id": "soul-set",
+    "name": "Soul set",
+    "desc": "Soul is a set of equipment that primarily benefits those classed into Monk , with improvements to unarmed attacks. See also Kushigo set , Monk set , Unarmed set , and List of features and items that interact with unar...",
+    "items": [
+      "gloves-of-soul-catching",
+      "mask-of-soul-perception",
+      "vest-of-soul-rejuvenation"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Soul_set"
+  },
+  {
+    "id": "sparkstruck-set",
+    "name": "Sparkstruck set",
+    "desc": "The Sparkstruck set consists of of items which grant or interact with Lightning Charges and / or were invented by Yrre the Sparkstruck. Synergizes with items from the Lightning set , which are not duplicated here.",
+    "items": [
+      "the-joltshooter",
+      "the-sparkle-hands",
+      "the-sparky-points",
+      "markoheshkir",
+      "the-speedy-lightfeet",
+      "the-spellsparkler",
+      "the-watersparkers",
+      "the-blast-pendant",
+      "the-jolty-vest",
+      "the-lifebringer",
+      "the-protecty-sparkswall",
+      "the-real-sparky-sparkswall",
+      "the-sparkswall"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Sparkstruck_set"
+  },
+  {
+    "id": "strength-set",
+    "name": "Strength set",
+    "desc": "The Strength set includes items that increase Strength . With the exception of Devilfoil Masks, items listed below do not have synergy amongst themselves or other items.",
+    "items": [
+      "club-of-hill-giant-strength",
+      "devilfoil-mask",
+      "gauntlets-of-hill-giant-strength",
+      "handmaidens-mace",
+      "harmonium-halberd",
+      "the-mighty-cloth"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Strength_set"
+  },
+  {
+    "id": "threatened-set",
+    "name": "Threatened set",
+    "desc": "The Threatened set is a set of equipment that applies or interacts with Threatened . Synergises with Arcane Charge The set consists of the following pieces:",
+    "items": [
+      "browbeaten-circlet",
+      "daredevil-gloves",
+      "vivacious-cloak"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Threatened_set"
+  },
+  {
+    "id": "thunder-set",
+    "name": "Thunder set",
+    "desc": "The Thunder Set is a set of equipment that helps the user deal Thunder damage. Synergizes with items from the Reverberation set and Elemental set , which are not duplicated here. It consists of the following pieces :",
+    "items": [
+      "cacophony",
+      "corpsegrinder",
+      "hamarhraft",
+      "hat-of-storm-scions-power",
+      "nyrulna",
+      "phalar-aluve",
+      "punch-drunk-bastard",
+      "ring-of-absolute-force",
+      "sentient-amulet-rare",
+      "sentient-amulet-very-rare",
+      "thunderpalm-strikers"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Thunder_set"
+  },
+  {
+    "id": "unarmed-set",
+    "name": "Unarmed set",
+    "desc": "The unarmed set enhances unarmed attacks. The Kushigo set and Soul set are part of this set, but they are not duplicated here. See also List of features and items that interact with unarmed strikes and Monk set .",
+    "items": [
+      "corellons-grace",
+      "flawed-helldusk-gloves",
+      "gauntlet-of-the-tyrant",
+      "gloves-of-cinder-and-sizzle",
+      "gloves-of-crushing",
+      "helldusk-gloves",
+      "horns-of-the-berserker",
+      "scabby-pugilist-circlet",
+      "seraphic-pugilist-gloves",
+      "servitor-of-the-black-hand-gloves",
+      "shadow-cloaked-ring",
+      "snow-dusted-monastery-gloves",
+      "the-sparkle-hands",
+      "thunderpalm-strikers"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Unarmed_set"
+  },
+  {
+    "id": "unwanted-set",
+    "name": "Unwanted set",
+    "desc": "The Unwanted Set is a set of masterwork armour. It consists of the following pieces:",
+    "items": [
+      "unwanted-masterwork-gauntlets",
+      "unwanted-masterwork-greaves",
+      "unwanted-masterwork-scalemail"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Unwanted_set"
+  },
+  {
+    "id": "warlock-set",
+    "name": "Warlock set",
+    "desc": "The Warlock set includes items that interact with Warlock mechanics.",
+    "items": [
+      "caitiff-staff",
+      "charge-bound-warhammer",
+      "the-baneful"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Warlock_set"
+  },
+  {
+    "id": "weave-set",
+    "name": "Weave set",
+    "desc": "The Weave Set is a set that boosts its wearer's spell-related rolls through Arcane Enchantment : Gain bonus to Spell Save DC and Spell Attack Rolls . Previously worn by wizard Tenser and Edith Cluckle.",
+    "items": [
+      "cloak-of-the-weave",
+      "hood-of-the-weave",
+      "robe-of-the-weave"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Weave_set"
+  },
+  {
+    "id": "wizard-set",
+    "name": "Wizard set",
+    "desc": "The Wizard set includes items that interact with Wizard mechanics.",
+    "items": [
+      "the-pointy-hat",
+      "warped-headband-of-intellect"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Wizard_set"
+  },
+  {
+    "id": "wrath-set",
+    "name": "Wrath set",
+    "desc": "The Wrath set is a set of equipment that generates Wrath , a stacking condition that grants up to +7 melee damage bonus.",
+    "items": [
+      "cap-of-wrath",
+      "bloodguzzler-garb",
+      "linebreaker-boots",
+      "enraging-heart-garb",
+      "reasons-grasp"
+    ],
+    "wiki": "https://bg3.wiki/wiki/Wrath_set"
+  }
+]

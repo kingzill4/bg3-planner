@@ -1,0 +1,196 @@
+[
+  {
+    "id": "archery",
+    "name": "Archery",
+    "desc": "You gain a +2 bonus to Attack Rolls you make with ranged Weapons .",
+    "notes": [],
+    "available": [
+      {
+        "source": "Fighter",
+        "level": 1
+      },
+      {
+        "source": "Ranger",
+        "level": 2
+      },
+      {
+        "source": "Champion",
+        "level": 10
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Archery"
+  },
+  {
+    "id": "defence",
+    "name": "Defence",
+    "desc": "You gain a +1 bonus to Armour Class while wearing armour .",
+    "notes": [
+      "This effect is active while wearing anything marked as light, medium, or heavy armour in any equipment slot.",
+      "This fighting style is generally considered weaker than other, more specialized fighting styles such as Duelling or Archery . However, it is useful for Champion Fighters who can choose a second fighting style.",
+      "Since the benefit of Great Weapon Fighting becomes less effective when paired with Savage Attacker or Brace (Melee) , a warrior using two-handed weapons may instead want to take Defence."
+    ],
+    "available": [
+      {
+        "source": "Fighter",
+        "level": 1
+      },
+      {
+        "source": "Paladin",
+        "level": 2
+      },
+      {
+        "source": "Ranger",
+        "level": 2
+      },
+      {
+        "source": "Champion",
+        "level": 10
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Defence"
+  },
+  {
+    "id": "duelling",
+    "name": "Duelling",
+    "desc": "When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon. You can carry a shield in your free hand and still gain this bonus.",
+    "notes": [
+      "This passive adds its damage to Throw attacks with Thrown weapons that hit while wielding a qualifying weapon with the melee weapon set selected. The Thrown weapon cannot be equipped prior to Throwing it, unless it is dual wielded and in the main hand. If the Thrown weapon is in the off-hand, it does not receive the bonus damage unless no ranged weapon is equipped.",
+      "The bonus damage is added even if the Thrown weapon is Two-Handed .",
+      "This feature is tedious to use when Throwing homing weapons , as the weapon always returns to the off-hand when being dual wielded. Gaining the bonus damage of Duelling requires a character to unequip the homing weapon after each Throw and then switch back to their melee weapon set before Throwing it again.",
+      "Prior to Patch 8, the description implied that Versatile weapons could not be used to gain the bonus damage."
+    ],
+    "available": [
+      {
+        "source": "Fighter",
+        "level": 1
+      },
+      {
+        "source": "Paladin",
+        "level": 2
+      },
+      {
+        "source": "Ranger",
+        "level": 2
+      },
+      {
+        "source": "College of Swords",
+        "level": 3
+      },
+      {
+        "source": "Champion",
+        "level": 10
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Duelling"
+  },
+  {
+    "id": "great-weapon-fighting",
+    "name": "Great Weapon Fighting",
+    "desc": "When you roll a 1 or 2 on a damage die for an attack with a Two-Handed melee weapon, that die is rerolled once.",
+    "notes": [
+      "This also applies to Versatile weapons when off-hand is empty.",
+      "Unlike in 5th Edition rules, added damage dice from sources like Superiority Die , Divine Smite , and a Fire or Simple Toxin -dipped weapon may also be rerolled.",
+      "This feature increases the average of a dice with x sides by 1 − 2 x , e.g. by 0.5 for a d4, by 0.666... for a d6, and so on.",
+      "When used in combination with Savage Attacker (Or Brace (Melee) ), Great Weapon Fighting is applied before selecting the highest damage roll. So on the first roll any 1 or 2 is rerolled, then each dice is rolled one more time and uses the highest result. If used with both Brace and Savage Attacker, the dice are rolled one more time at the end and the highest result is chosen. The tooltip is showing 3-4 rolls but it appears to be a bug as of patch 6."
+    ],
+    "available": [
+      {
+        "source": "Fighter",
+        "level": 1
+      },
+      {
+        "source": "Paladin",
+        "level": 2
+      },
+      {
+        "source": "Champion",
+        "level": 10
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Great_Weapon_Fighting"
+  },
+  {
+    "id": "protection",
+    "name": "Protection",
+    "desc": "When you have a Shield , impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5 m (5 ft). You must be able to see the enemy. Details Cost: Reaction UID FightingStyle_Protection",
+    "notes": [
+      "Characters cannot use this on themselves."
+    ],
+    "available": [
+      {
+        "source": "Fighter",
+        "level": 1
+      },
+      {
+        "source": "Paladin",
+        "level": 2
+      },
+      {
+        "source": "Champion",
+        "level": 10
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Protection"
+  },
+  {
+    "id": "two-weapon-fighting",
+    "name": "Two-Weapon Fighting",
+    "desc": "When you make an offhand attack, you can add your Ability Score Modifier to the damage of the attack.",
+    "notes": [
+      "Multiple sources of Two-Weapon Fighting do not provide additional damage to off-hand attacks.",
+      "Not to be confused with the Dual Wielder feat.",
+      "During level up, the character will always have only one weapon visible at their back, even if two are equipped.",
+      "Unlike tabletop 5e, the Two-Weapon Fighting Style provides no benefit to Thrown weapons in Baldur's Gate 3. While dual-wielding still allows for an off-hand throw attack via Bonus Action , BG3's game engine automatically adds the user's Ability Modifier to throw damage by default. Therefore, this Fighting Style – which grants the same modifier to off-hand strikes – is redundant for throwing. In tabletop D&D, this style is required to add Ability Modifier damage to an off-hand throw (PHB, p. 195).",
+      "Great Weapon Fighting",
+      "Two-Weapon Fighting",
+      "Commander's Strike",
+      "Disarming Attack",
+      "Distracting Strike",
+      "Evasive Footwork",
+      "Manoeuvring Attack",
+      "Precision Attack",
+      "Enfeebling Arrow",
+      "Improved Critical Hit",
+      "Improved Extra Attack",
+      "Improved Combat Superiority",
+      "Remarkable Athlete: Jump",
+      "Remarkable Athlete: Proficiency",
+      "Escape the Horde",
+      "Multiattack Defence",
+      "Keeper of the Veil",
+      "Sanctified Stalker",
+      "Cloud of Jellyfish Mighty",
+      "Flurry of Moths Mighty",
+      "Legion of Bees Mighty",
+      "Wasteland Wanderer Cold",
+      "Companion's Bond",
+      "Dread Ambusher Melee",
+      "Exceptional Training",
+      "Hide in Plain Sight",
+      "Land's Stride: Difficult Terrain",
+      "Ranger's Companion",
+      "Stalker's Flurry",
+      "Superior Darkvision",
+      "Whirlwind Attack"
+    ],
+    "available": [
+      {
+        "source": "Fighter",
+        "level": 1
+      },
+      {
+        "source": "Ranger",
+        "level": 2
+      },
+      {
+        "source": "College of Swords",
+        "level": 3
+      },
+      {
+        "source": "Champion",
+        "level": 10
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Two-Weapon_Fighting"
+  }
+]

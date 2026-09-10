@@ -1,0 +1,357 @@
+// BG3 Build Planner — Origin companions, derived stats and fighting styles.
+//
+// Loaded as a classic script, like the generated data files: these share one
+// global scope, in the order index.html lists them. Not ES modules, because
+// those are blocked over file:// and the page has to keep opening by itself.
+"use strict";
+
+// ---------------------------------------------------------------
+// Origin companions: start from the stats the game ships, then respec
+// ---------------------------------------------------------------
+const SUBCLASS_LIST = typeof SUBCLASSES !== "undefined" ? SUBCLASSES : [];
+const subclassById = {};
+SUBCLASS_LIST.forEach((s) => (subclassById[s.id] = s));
+// BG3 has no mechanical set bonuses; these are the wiki's thematic groupings,
+// which happen to be exactly the synergy families people build around.
+const SET_LIST = typeof SETS !== "undefined" ? SETS : [];
+const setsByItem = {};
+SET_LIST.forEach((s) => {
+  (s.items || []).forEach((id) => {
+    if (!setsByItem[id]) setsByItem[id] = [];
+    setsByItem[id].push(s);
+  });
+});
+
+const RACE_LIST = typeof RACES !== "undefined" ? RACES : [];
+const raceById = {};
+RACE_LIST.forEach((r) => (raceById[r.id] = r));
+const COMPANION_LIST = typeof COMPANIONS !== "undefined" ? COMPANIONS : [];
+const companionById = {};
+COMPANION_LIST.forEach((c) => (companionById[c.id] = c));
+
+const CLASS_KEY_BY_LABEL = {};
+Object.entries(CLASSES).forEach(([k, c]) => (CLASS_KEY_BY_LABEL[c.label.toLowerCase()] = k));
+
+// Minthara's infobox carries no background, but the Backgrounds article lists
+// her under Noble. This fallback covers only what the companion page omits;
+// everything else now comes from the scraped data.
+const ORIGIN_BACKGROUND_FALLBACK = { minthara: "Noble" };
+
+const BACKGROUND_KEY_BY_LABEL = {};
+Object.entries(BACKGROUNDS).forEach(([k, b]) =>
+  (BACKGROUND_KEY_BY_LABEL[b.label.toLowerCase()] = k));
+const SUBCLASS_ID_BY_NAME = {};
+SUBCLASS_LIST.forEach((s) => (SUBCLASS_ID_BY_NAME[s.name.toLowerCase()] = s.id));
+
+// Returns the shipped baseline without touching the member, so the sheet can
+// always be rebuilt from it: COMPANIONS is static data, never overwritten by
+// edits, which is what makes "reset to origin" reliable at any point.
+function originBaseline(companionId) {
+  const c = companionById[companionId];
+  if (!c) return null;
+  const clsKey = CLASS_KEY_BY_LABEL[(c.class || "").toLowerCase()] || null;
+  // The subrace is what carries traits, darkvision and cantrips — "Elf" alone
+  // carries none of them — so it wins over the broad race when the wiki has it.
+  const wanted = c.subrace || c.race;
+  const race = wanted
+    ? (RACE_LIST.find((r) => r.name.toLowerCase() === wanted.toLowerCase()) || {}).id || null
+    : null;
+  const bgLabel = c.background || ORIGIN_BACKGROUND_FALLBACK[companionId] || null;
+  return {
+    name: c.name, cls: clsKey, race,
+    subclass: SUBCLASS_ID_BY_NAME[(c.subclass || "").toLowerCase()] || null,
+    background: bgLabel ? BACKGROUND_KEY_BY_LABEL[bgLabel.toLowerCase()] || null : null,
+    scores: c.scores ? { ...c.scores } : null
+  };
+}
+
+// reset=false keeps whatever the player has already built on top (skills,
+// feats, subclass, levels); reset=true rebuilds the whole sheet from the
+// baseline, the way starting over from the companion's own version would.
+function applyCompanion(member, companionId, reset) {
+  const base = originBaseline(companionId);
+  member.companion = companionId || null;
+  if (!base) return;
+  member.name = base.name;
+  if (base.cls) {
+    member.cls = base.cls;
+    const levels = reset ? MAX_LEVEL : (totalLevel(member) || MAX_LEVEL);
+    member.classes = [{ cls: base.cls, subclass: base.subclass, levels }];
+    member.subclass = base.subclass;
+    member.level = levels;
+  }
+  member.race = base.race;
+  member.background = base.background;
+  if (base.scores) {
+    // the shipped array already includes racial bonuses, so hold it as-is
+    member.originScores = { ...base.scores };
+    member.useOrigin = true;
+  } else {
+    member.originScores = null;
+    member.useOrigin = false;
+    member.scores = presetScores(member.cls);
+  }
+  member.racial2 = null;
+  member.racial1 = null;
+  if (reset) {
+    member.skills = [];
+    member.expertise = [];
+    member.feats = [];
+    member.featBoosts = {};
+    member.notes = "";
+  }
+}
+
+// ---------------------------------------------------------------
+// Derived character stats (AC, HP, DCs) — what a build is judged on
+// ---------------------------------------------------------------
+// BG3 states hit points directly rather than as a die: "At level 1: 10, on level
+// up: 6". Using the wiki's own numbers avoids re-deriving them from a die size.
+const hpAtLevel1 = (clsKey) => (CLASSES[clsKey] || {}).hpLevel1 || 8;
+const hpPerLevel = (clsKey) => (CLASSES[clsKey] || {}).hpOnLevelUp || 5;
+const spellAbilityOf = (clsKey) => (CLASSES[clsKey] || {}).spellAbility || null;
+
+const equippedItems = (m) =>
+  SLOT_DEFS.map((s) => itemsById[gear(m)[s.key]]).filter(Boolean);
+
+// Armour caps how much Dexterity reaches your AC, exactly as in the game
+function armourCategory(item) {
+  if (!item) return null;
+  const req = (item.details || []).find((d) => /^Required Proficiency:/i.test(d));
+  if (req) {
+    if (/Heavy/i.test(req)) return "heavy";
+    if (/Medium/i.test(req)) return "medium";
+    if (/Light/i.test(req)) return "light";
+  }
+  return "clothing";
+}
+
+// ---------------------------------------------------------------
+// Fighting styles — permanently active class features
+// ---------------------------------------------------------------
+const STYLE_LIST = typeof FIGHTING_STYLES !== "undefined" ? FIGHTING_STYLES : [];
+const styleById = {};
+STYLE_LIST.forEach((s) => (styleById[s.id] = s));
+
+// A style is offered when one of the character's class entries has reached the
+// level the wiki records for it. Champion appears as its own source because a
+// Champion Fighter picks a *second* style at level 10 — the only way to have two
+// without multiclassing (bg3.wiki/wiki/Fighting_Style).
+function styleSources(member) {
+  const out = [];
+  memberClasses(member).forEach((entry) => {
+    const clsLabel = (CLASSES[entry.cls] || {}).label;
+    const subName = (subclassById[entry.subclass] || {}).name;
+    if (clsLabel) out.push({ name: clsLabel, levels: entry.levels });
+    if (subName) out.push({ name: subName, levels: entry.levels });
+  });
+  return out;
+}
+
+function availableStyles(member) {
+  const sources = styleSources(member);
+  return STYLE_LIST.filter((style) =>
+    (style.available || []).some((a) =>
+      sources.some((s) => s.name === a.source && s.levels >= a.level)));
+}
+
+// How many a character may pick: one per class that grants any style, plus one
+// more for a Champion Fighter at level 10.
+function styleSlots(member) {
+  const sources = styleSources(member);
+  let slots = 0;
+  memberClasses(member).forEach((entry) => {
+    const clsLabel = (CLASSES[entry.cls] || {}).label;
+    const subName = (subclassById[entry.subclass] || {}).name;
+    const grantsAt = (name) => STYLE_LIST
+      .flatMap((s) => s.available || [])
+      .filter((a) => a.source === name)
+      .reduce((min, a) => Math.min(min, a.level), 99);
+    if (clsLabel && entry.levels >= grantsAt(clsLabel)) slots += 1;
+    // the subclass slot is the extra one, and only when the class already gave one
+    if (subName && entry.levels >= grantsAt(subName) && grantsAt(subName) < 99) {
+      if (subName !== clsLabel) slots += 1;
+    }
+  });
+  void sources;
+  return slots;
+}
+
+const memberStyles = (member) =>
+  (member.styles || []).filter((s) => s && styleById[s]);
+
+const hasStyle = (member, id) => memberStyles(member).includes(id);
+
+// Rerolling changes what a die is worth, so the distribution is built once and
+// reused: Great Weapon Fighting rerolls 1s and 2s, Savage Attacker keeps the best
+// of two rolls, and a character can have both.
+function dieDistribution(size, rerollLowTwo) {
+  const p = new Array(size + 1).fill(0);
+  for (let v = 1; v <= size; v++) {
+    p[v] = (v >= 3 || !rerollLowTwo ? 1 / size : 0) +
+      (rerollLowTwo ? (2 / size) * (1 / size) : 0);
+  }
+  return p;
+}
+
+function dieExpected(size, rerollLowTwo, bestOfTwo) {
+  if (!size) return 0;
+  const p = dieDistribution(size, rerollLowTwo);
+  if (!bestOfTwo) {
+    let e = 0;
+    for (let v = 1; v <= size; v++) e += v * p[v];
+    return e;
+  }
+  // E[max of two] from the cumulative distribution
+  let cum = 0, prev = 0, e = 0;
+  for (let v = 1; v <= size; v++) {
+    cum += p[v];
+    e += v * (cum * cum - prev * prev);
+    prev = cum;
+  }
+  return e;
+}
+
+const diceExpected = (count, size, rerollLowTwo, bestOfTwo) =>
+  count * dieExpected(size, rerollLowTwo, bestOfTwo);
+
+function derivedStats(member) {
+  const finals = finalScores(member);
+  const dexMod = abilityModifier(finals.dex);
+  const conMod = abilityModifier(finals.con);
+  const items = equippedItems(member);
+  const chest = itemsById[gear(member).chest];
+  const category = armourCategory(chest);
+
+  let ac;
+  let acFormula;
+  if (chest && chest.ac) {
+    // Medium armour caps Dexterity at +2, raised to +3 by Medium Armour Master;
+    // heavy ignores it entirely (bg3.wiki/wiki/Armour_Class). Four "Exotic
+    // Material" medium armours lift the cap altogether — they say so in their
+    // own text, so the item is read rather than a list of ids maintained here.
+    const exotic = /full Dexterity Modifier|adds? (?:the wearer's|your) Dexterity Modifier|does(?:n't| not) limit/i
+      .test(itemStatText(chest));
+    if (category === "heavy") {
+      ac = chest.ac;
+      acFormula = "Heavy armour " + chest.ac + " (Dexterity ignored)";
+    } else if (category === "medium" && !exotic) {
+      const cap = memberFeats(member).includes("mediumArmourMaster") ? 3 : 2;
+      ac = chest.ac + Math.min(cap, dexMod);
+      acFormula = "Medium armour " + chest.ac + " + Dex " + fmtSigned(Math.min(cap, dexMod)) +
+        " (capped at +" + cap + ")";
+    } else {
+      ac = chest.ac + dexMod;
+      acFormula = (exotic ? "Exotic medium armour " : "Light armour ") + chest.ac +
+        " + Dex " + fmtSigned(dexMod);
+    }
+  } else {
+    // Unarmoured, a character uses whichever formula they have access to gives
+    // the highest AC (bg3.wiki/wiki/Armour_Class § Other formulas). Barbarian and
+    // Monk Unarmoured Defence and Draconic Resilience are the ones BG3 lists.
+    const classKeys = memberClasses(member).map((c) => c.cls);
+    const subNames = memberClasses(member)
+      .map((c) => (subclassById[c.subclass] || {}).name || "").join(" ");
+    const options = [{ v: 10 + dexMod, label: "Unarmoured 10 + Dex " + fmtSigned(dexMod) }];
+    if (classKeys.includes("barbarian")) {
+      options.push({ v: 10 + conMod + dexMod,
+        label: "Unarmoured Defence 10 + Con " + fmtSigned(conMod) + " + Dex " + fmtSigned(dexMod) });
+    }
+    // The Monk formula also stops working while a shield is carried.
+    const carriesShield = OFF_HAND_SLOTS
+      .some((k) => (itemsById[gear(member)[k]] || {}).type === "shield");
+    if (classKeys.includes("monk") && !carriesShield) {
+      options.push({ v: 10 + abilityModifier(finals.wis) + dexMod,
+        label: "Unarmoured Defence 10 + Wis " + fmtSigned(abilityModifier(finals.wis)) +
+               " + Dex " + fmtSigned(dexMod) });
+    }
+    if (/Draconic/i.test(subNames)) {
+      options.push({ v: 13 + dexMod, label: "Draconic Resilience 13 + Dex " + fmtSigned(dexMod) });
+    }
+    const best = options.reduce((a, b) => (b.v > a.v ? b : a));
+    ac = best.v;
+    acFormula = best.label;
+  }
+
+  // flat AC bonuses printed on gear (shields, rings, cloaks…)
+  let acBonus = 0;
+  items.forEach((it) => {
+    const text = itemStatText(it);
+    const re = /\+\s*(\d+)\s*(?:bonus\s*)?to\s*(?:your\s*)?Armou?r Class/gi;
+    let m;
+    while ((m = re.exec(text)) !== null) acBonus += parseInt(m[1], 10);
+    const acLine = (it.details || []).find((d) => /^Armou?r Class \+\d/i.test(d));
+    if (acLine) {
+      const n = /\+(\d+)/.exec(acLine);
+      if (n) acBonus += parseInt(n[1], 10);
+    }
+  });
+  // a shield's own AC value is its bonus (2 for a plain one, 3 when enchanted)
+  const shield = [gear(member).weapon2, gear(member).ranged2]
+    .map((id) => itemsById[id]).find((it) => it && it.type === "shield");
+  if (shield) acBonus += shield.ac || 2;
+  if (memberFeats(member).includes("dualWielder")) acBonus += 1;
+  // Defence: "+1 bonus to Armour Class while wearing Armour". The wiki's own note
+  // widens that to anything marked light, medium or heavy armour in ANY slot, so
+  // a helmet with an armour proficiency requirement is enough — not just a chest.
+  if (hasStyle(member, "defence") &&
+      items.some((it) => ["light", "medium", "heavy"].includes(armourCategory(it)))) {
+    acBonus += 1;
+  }
+
+  // hit points accumulate per class: a full die for the very first level,
+  // then the class average for every level after
+  const level = totalLevel(member);
+  let hp = 0;
+  let first = true;
+  memberClasses(member).forEach((entry) => {
+    // le wiki donne directement les PV par niveau, pas un de
+    for (let i = 0; i < entry.levels; i++) {
+      hp += (first ? hpAtLevel1(entry.cls) : hpPerLevel(entry.cls)) + conMod;
+      first = false;
+    }
+  });
+  if (memberFeats(member).includes("tough")) hp += 2 * level;
+
+  // The highest-level casting class drives the printed DC. A subclass can cast
+  // when its class does not — Arcane Trickster and Eldritch Knight both use
+  // Intelligence — so the subclass ability wins for that entry.
+  let spellAb = null;
+  let best = 0;
+  memberClasses(member).forEach((entry) => {
+    const sub = subclassById[entry.subclass];
+    const ab = (sub && sub.spellAbility) || spellAbilityOf(entry.cls);
+    if (ab && entry.levels > best) { best = entry.levels; spellAb = ab; }
+  });
+  const spellMod = spellAb ? abilityModifier(finals[spellAb]) : null;
+  const prof = proficiencyBonus(level);
+
+  // gear that boosts spellcasting has to reach the tile and the spell projection,
+  // not just the build summary
+  let spellDcBonus = 0;
+  let spellAttackBonus = 0;
+  items.forEach((it) => {
+    const text = itemStatText(it);
+    let m;
+    const dcRe = /\+\s*(\d+)\s*(?:bonus\s*)?to\s*(?:your\s*)?Spell Save DC/gi;
+    while ((m = dcRe.exec(text)) !== null) spellDcBonus += parseInt(m[1], 10);
+    const atkRe = /\+\s*(\d+)\s*(?:bonus\s*)?to\s*(?:your\s*)?Spell Attack(?:\s*Rolls?)?/gi;
+    while ((m = atkRe.exec(text)) !== null) spellAttackBonus += parseInt(m[1], 10);
+  });
+
+  let initiative = dexMod;
+  if (memberFeats(member).includes("alert")) initiative += 5;
+  items.forEach((it) => {
+    const m = /\+\s*(\d+)\s*(?:bonus\s*)?to\s*Initiative/i.exec(itemStatText(it));
+    if (m) initiative += parseInt(m[1], 10);
+  });
+
+  return {
+    ac: ac + acBonus, acFormula, acBonus, hp, initiative, prof,
+    spellAbility: spellAb,
+    spellDc: spellMod === null ? null : 8 + prof + spellMod + spellDcBonus,
+    spellAttack: spellMod === null ? null : prof + spellMod + spellAttackBonus,
+    passiveArmour: category
+  };
+}
+

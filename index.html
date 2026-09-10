@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- The <title> is what Google shows and what people scan in a tab: brand first so
+     it is recognisable, then the words someone would actually type. Keep it under
+     ~60 characters or search results truncate it. -->
+<title>BG3 Build Planner — party gear &amp; damage calculator</title>
+<meta name="description" content="Plan gear for a party of four in Baldur's Gate 3. Every item, spell and class feature checked against bg3.wiki, with exact damage per turn, hit chance and stacking condition maths.">
+
+<!-- The one URL search engines should treat as real. If a custom domain is added
+     later, change this and og:url to it so the pages.dev copy does not compete. -->
+<link rel="canonical" href="https://kingzill4.github.io/bg3-planner/">
+
+<meta name="theme-color" content="#0f1620">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<!-- How the link looks when someone drops it in Discord or Reddit, which for a fan
+     tool matters more than search ranking — that is how these actually spread. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BG3 Build Planner">
+<meta property="og:title" content="BG3 Build Planner — party gear &amp; damage calculator">
+<meta property="og:description" content="Plan gear for a party of four in Baldur's Gate 3, with exact damage per turn and every number checked against bg3.wiki.">
+<meta property="og:url" content="https://kingzill4.github.io/bg3-planner/">
+<!-- Make this a 1200x630 screenshot of the planner itself and drop it in assets/.
+     Use your own UI, not Larian's cover art: their artwork as your social card is
+     the kind of thing the Fan Content Policy asks you not to do. -->
+<meta property="og:image" content="https://kingzill4.github.io/bg3-planner/assets/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="banner-art" aria-hidden="true"></div>
+    <div class="banner-inner">
+      <a class="cover-frame" href="https://bg3.wiki" target="_blank" rel="noopener" title="Baldur's Gate 3 — art © Larian Studios">
+        <img src="assets/cover.webp" alt="Baldur's Gate 3 cover art">
+      </a>
+      <div class="banner-text">
+        <div class="title">BG3 Build Planner</div>
+        <div class="subtitle" id="app-subtitle"></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="active" data-tab="tab-planner">Build Planner</button>
+    <button data-tab="tab-library">Item Library</button>
+    <button data-tab="tab-spells">Spells</button>
+    <button data-tab="tab-party">Party</button>
+    <button data-tab="tab-pickup">Pickup List</button>
+    <button id="scroll-mode-btn" class="scroll-mode" type="button" aria-pressed="false"
+            title="Switch between three columns that each scroll on their own, and one page that scrolls as a whole."></button>
+  </nav>
+
+  <section id="tab-planner" class="tab-panel">
+    <div class="party-bar" id="party-bar"></div>
+    <div id="duplicate-warning" class="duplicate-warning" hidden></div>
+
+    <div class="planner">
+      <div class="stats-panel">
+        <h2>Character</h2>
+        <div class="companion-picker" id="companion-picker"></div>
+
+        <!-- Les statistiques derivees remontent en tete : ce sont les chiffres qu'on
+             regarde en boucle en optimisant, pas ceux qu'on cherche en bas de page. -->
+        <div id="derived-stats"></div>
+        <div id="pending-choices"></div>
+
+        <details class="sheet-section" open>
+          <summary><span>Identity</span></summary>
+          <div class="sheet-body">
+            <label class="char-field">
+              <span>Race</span>
+              <div id="char-race"></div>
+            </label>
+            <div id="race-traits" class="race-traits"></div>
+            <label class="char-field">
+              <span>Background</span>
+              <div id="char-background"></div>
+            </label>
+            <div id="background-detail" class="background-detail"></div>
+          </div>
+        </details>
+
+        <details class="sheet-section" open>
+          <summary>
+            <span>Classes</span>
+            <span id="total-level" class="sheet-badge"></span>
+          </summary>
+          <div class="sheet-body">
+            <div id="class-rows"></div>
+            <div id="level-path"></div>
+            <button id="add-class-btn" class="ghost add-class">+ Multiclass</button>
+          </div>
+        </details>
+
+        <details class="sheet-section" open>
+          <summary>
+            <span>Ability scores</span>
+            <span id="point-pool" class="sheet-badge"></span>
+          </summary>
+          <div class="sheet-body">
+            <div class="ability-header">
+              <button id="preset-btn" class="ghost">Class preset</button>
+            </div>
+            <div id="ability-list"></div>
+            <div class="racial-row meta">Click +2 / +1 to place your racial bonuses.</div>
+          </div>
+        </details>
+
+        <details class="sheet-section">
+          <summary>
+            <span>Skills</span>
+            <span id="skills-title" class="sheet-badge"></span>
+          </summary>
+          <div class="sheet-body"><div id="skill-list"></div></div>
+        </details>
+
+        <details class="sheet-section" id="styles-section">
+          <summary>
+            <span>Fighting style</span>
+            <span id="styles-title" class="sheet-badge"></span>
+          </summary>
+          <div class="sheet-body"><div id="style-list"></div></div>
+        </details>
+
+        <details class="sheet-section">
+          <summary>
+            <span>Feats</span>
+            <span id="feats-title" class="sheet-badge"></span>
+          </summary>
+          <div class="sheet-body"><div id="feat-list"></div></div>
+        </details>
+      </div>
+
+      <div class="doll-panel">
+        <div class="doll-header">
+          <h2 id="doll-title">Equipment</h2>
+          <div class="act-tabs" id="act-tabs"></div>
+        </div>
+        <div id="slots-container"></div>
+        <div id="proficiency-warnings"></div>
+
+        <!-- Build Summary and Equipped Effects were two panels in two columns
+             answering the same question: what is this gear giving me? They are
+             one block now, with the totals and the per-slot detail as two views
+             of it, sitting directly under the slots they describe. -->
+        <div class="doll-header" style="margin-top:18px">
+          <h2>Loadout</h2>
+          <div class="act-tabs" id="loadout-views" role="tablist">
+            <button class="act-tab active" data-view="totals" role="tab" aria-selected="true">Totals</button>
+            <button class="act-tab" data-view="slots" role="tab" aria-selected="false">By slot</button>
+          </div>
+        </div>
+        <div id="build-stats" class="scroll-region"></div>
+        <div class="effects-list scroll-region" id="effects-list" hidden></div>
+      </div>
+
+      <div class="combat-panel-col">
+        <h2>Combat</h2>
+        <div class="combat-controls">
+          <!-- These three describe the target, and they are three different
+               questions, not three versions of one: AC is what your attack roll
+               must beat, the saving throw is what the target adds against your
+               spell save DC, and the defence is what happens to the damage after
+               it lands. Calling them all "Target …" hid that, so each now says
+               what it is measured against. -->
+          <label class="char-field combat-ac">
+            <span>Armour Class <em class="field-sub">vs your attack rolls</em></span>
+            <input type="number" id="target-ac" value="15" min="1" max="30">
+          </label>
+          <label class="char-field combat-ac">
+            <span>Saving throw <em class="field-sub" id="target-save-hint">the target's bonus</em></span>
+            <input type="number" id="target-save" value="2" min="-5" max="15">
+          </label>
+          <label class="char-field combat-ac">
+            <span>Elevation</span>
+            <select id="combat-ground">
+              <option value="0">Level ground</option>
+              <option value="2">High ground (+2)</option>
+              <option value="-2">Low ground (−2)</option>
+            </select>
+          </label>
+          <!-- One control, not two checkboxes: in BG3 Advantage and Disadvantage
+               cancel out, so they are states of a single roll, never both at once. -->
+          <label class="char-field combat-ac">
+            <span>Attack roll</span>
+            <select id="combat-roll" title="Advantage rolls two d20 and keeps the best; Disadvantage keeps the worst. Both also move the chance of a critical hit.">
+              <option value="0">Straight d20</option>
+              <option value="1">Advantage</option>
+              <option value="-1">Disadvantage</option>
+            </select>
+          </label>
+          <!-- Off by default: the tool projects normal play. Of everything modelled
+               here, the only rule Honour mode actually changes is the one on the
+               Hastened page, so the tooltip says exactly that rather than implying
+               the whole calculator switches difficulty. -->
+          <label class="combat-toggle" title="Honour mode. Of the rules this calculator models, the only one it changes: a Hastened creature cannot use Extra Attack with its additional Action, so Haste's extra Action becomes a single swing."><input type="checkbox" id="combat-honour"> Honour mode</label>
+          <!-- One field, two selects: the damage type and what the target does about
+               it are a single sentence, and an empty label above the second one let
+               them wrap onto separate rows looking unrelated. -->
+          <div class="char-field combat-ac combat-defence">
+            <span>Defends against <em class="field-sub">applied after the damage lands</em></span>
+            <div class="combat-defence-pair">
+              <select id="combat-defence-type" aria-label="Damage type the target defends against"></select>
+              <select id="combat-defence-state" aria-label="How the target defends against it">
+                <option value="1">Normal</option>
+                <option value="0.5">Resistant (halved)</option>
+                <option value="2">Vulnerable (doubled)</option>
+                <option value="0">Immune (no damage)</option>
+              </select>
+            </div>
+          </div>
+          <div class="combat-conditions" id="combat-conditions"></div>
+        </div>
+        <div class="scroll-region" id="combat-panel"></div>
+
+        <div class="stats-subtitle">Spell projection</div>
+        <select id="combat-spell" class="spell-select" aria-label="Spell to project"></select>
+        <label class="char-field combat-slot-field" id="slot-level-wrap" hidden>
+          <span>Cast from slot</span>
+          <select id="combat-slot-level"></select>
+        </label>
+        <div id="spell-projection"></div>
+
+        <div class="compare-bar">
+          <button id="pin-build-btn" class="ghost">📌 Pin this build</button>
+          <span id="pin-label" class="meta"></span>
+          <button id="clear-pin-btn" class="ghost" hidden>Clear</button>
+        </div>
+        <div id="build-compare"></div>
+
+        <div class="notes-box">
+          <div class="meta">Build notes</div>
+          <textarea id="build-notes" aria-label="Build notes" placeholder="Class, subclass, strategy, target stats..."></textarea>
+        </div>
+
+        <h2 style="margin-top:18px">Party</h2>
+        <div class="build-tools">
+          <input type="text" id="build-name-input" aria-label="Party name" placeholder="Party name...">
+          <button class="primary" id="save-build-btn">Save</button>
+          <button class="danger" id="clear-build-btn">Clear</button>
+        </div>
+        <div class="build-tools">
+          <button class="primary" id="share-btn">Copy share link</button>
+          <button id="copy-card-btn">Copy build card</button>
+          <button id="export-build-btn">Export JSON</button>
+          <button id="import-build-btn">Import JSON</button>
+        </div>
+        <textarea id="import-export-area" aria-label="Party JSON for export or import" hidden placeholder="Paste a party JSON here to import it..."></textarea>
+
+        <h2 style="margin-top:16px">Saved Parties</h2>
+        <div class="saved-builds" id="saved-builds"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-library" class="tab-panel" hidden>
+    <div class="filters">
+      <input type="search" id="search-input" aria-label="Search items by name or effect" placeholder="Search an item (name, effect)...">
+      <select id="filter-type" aria-label="Filter by item type"><option value="">All types</option></select>
+      <select id="filter-rarity" aria-label="Filter by rarity"><option value="">All rarities</option></select>
+      <select id="filter-act" aria-label="Filter by act">
+        <option value="">All acts</option>
+        <option value="1">Act 1</option>
+        <option value="2">Act 2</option>
+        <option value="3">Act 3</option>
+      </select>
+      <button id="reset-filters-btn">Reset</button>
+    </div>
+    <div class="equip-target-bar" id="equip-target-bar"></div>
+    <div class="meta" id="result-count" style="margin-bottom:10px"></div>
+    <div class="item-grid" id="item-grid"></div>
+  </section>
+
+  <section id="tab-spells" class="tab-panel" hidden>
+    <div class="filters">
+      <input type="search" id="spell-search" aria-label="Search spells by name or effect" placeholder="Search a spell (name, effect)...">
+      <select id="spell-class" aria-label="Filter spells by class"><option value="">All classes</option></select>
+      <select id="spell-level" aria-label="Filter spells by level"><option value="">All levels</option></select>
+      <select id="spell-school" aria-label="Filter spells by school"><option value="">All schools</option></select>
+      <label class="combat-toggle" title="Hides NPC abilities, item-granted casts and sub-actions of other spells — everything no player character can learn."><input type="checkbox" id="spell-learnable" checked> Learnable only</label>
+      <label class="combat-toggle"><input type="checkbox" id="spell-mine"> Only my class</label>
+    </div>
+    <div class="meta" id="spell-count" style="margin-bottom:10px"></div>
+    <div class="item-grid" id="spell-grid"></div>
+  </section>
+
+  <section id="tab-party" class="tab-panel" hidden>
+    <div class="meta" style="margin-bottom:14px">
+      Every character side by side: what they can take, what they can deal, and which skills
+      nobody in the party covers.
+    </div>
+    <div id="party-overview"></div>
+  </section>
+
+  <section id="tab-pickup" class="tab-panel" hidden>
+    <div class="meta" style="margin-bottom:14px">
+      Every item equipped across your party, grouped by act and location. Tick off what you have
+      already picked up in your run.
+    </div>
+    <div id="pickup-list"></div>
+  </section>
+
+  <!-- Attribution is a licence condition, not decoration: bg3.wiki publishes under
+       CC BY-NC-SA 4.0, which requires credit, a link to the licence, and that
+       derivative use stays non-commercial and shares alike. -->
+  <!-- Open source and free, with a tip jar that gates nothing. The Fan Content
+       Policy permits donations but forbids requiring payment to use fan content,
+       so this is a link in the footer and never a prompt, a modal or a locked
+       feature. The tip link is mirrored in .github/FUNDING.yml — change both
+       together, or drop it entirely; nothing depends on it. -->
+  <div class="foot-links">
+    <a href="https://github.com/kingzill4/bg3-planner" target="_blank" rel="noopener">
+      ⌥ Source on GitHub</a>
+    <span class="foot-sep">·</span>
+    <a href="https://streamelements.com/kingzill4/tip" target="_blank" rel="noopener">
+      ☕ Buy me a coffee</a>
+    <span class="foot-note">— entirely optional, everything here is free</span>
+  </div>
+
+  <footer class="foot">
+    Unofficial fan tool, free to use. Game data and icons come from
+    <a href="https://bg3.wiki" target="_blank" rel="noopener">bg3.wiki</a> — every item links back to
+    its source page — and are reused under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>;
+    this page is shared under the same licence. Baldur's Gate 3 is a trademark of Larian Studios.
+    Parties are saved locally in your browser (localStorage) — nothing is uploaded.
+    <br>
+    <!-- Verbatim wording required by the Wizards Fan Content Policy — it specifies
+         this exact statement, so it is quoted rather than paraphrased. -->
+    <span class="foot-fcp">BG3 Build Planner is unofficial Fan Content permitted under the
+    <a href="https://company.wizards.com/en/legal/fancontentpolicy" target="_blank" rel="noopener">Fan Content Policy</a>.
+    Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the
+    Coast. ©Wizards of the Coast LLC.</span>
+  </footer>
+</div>
+
+<script src="data/classes.js"></script>
+<script src="data/companions.js"></script>
+<script src="data/subclasses.js"></script>
+<script src="data/fighting-styles.js"></script>
+<script src="data/feats.js"></script>
+<script src="data/races.js"></script>
+<script src="data/sets.js"></script>
+<script src="data/spells.js"></script>
+<script src="data/items.js"></script>
+<script src="js/core.js"></script>
+<script src="js/panels.js"></script>
+<script src="js/character.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/sheet.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

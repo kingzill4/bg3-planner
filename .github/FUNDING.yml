@@ -1,0 +1,19 @@
+# Puts a "Sponsor" button on the repo page.
+#
+# StreamElements is not one of GitHub's 12 supported platform keys (github,
+# patreon, ko_fi, buy_me_a_coffee, liberapay, open_collective, polar, thanks_dev,
+# tidelift, issuehunt, community_bridge, custom), so it goes under `custom` as a
+# full URL. The quotes are required: GitHub's docs say a custom URL containing a
+# ":" must be wrapped in them, and every https:// URL does.
+#
+# Mirrored by the footer link in index.html — change both together.
+
+custom: ["https://streamelements.com/kingzill4/tip"]
+
+# Worth adding alongside it if you ever set it up — GitHub Sponsors takes no cut:
+# github: kingzill4
+
+# Whichever you use, the tool itself must stay completely free and ungated. The
+# Wizards Fan Content Policy permits donations but forbids requiring "payments,
+# surveys, downloads, subscriptions, or email registration" to use fan content.
+# See NOTICE.md.

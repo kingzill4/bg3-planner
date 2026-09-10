@@ -1,0 +1,147 @@
+Aasimar
+Aberration
+Adamantine Golem
+Air Elemental
+Alioramus
+Animated Armour
+Arcane Cannon
+Arcane Turret
+Automaton
+Azer
+Bat
+Bear
+Bird
+Blink Dog
+Bugbear
+Bulette
+Cambion
+Cat
+Cat (wild shape)
+Celestial
+Cheese Wheel
+Chicken
+Cloaker
+Conjured Spectre
+Countermeasure
+Crab
+Crawling Claw
+Dark Justiciar
+Death Knight
+Death Shepherd
+Deep Rothé
+Deva
+Deva (Banite)
+Displacer beast
+Djinni
+Dog
+Doppelganger
+Dragon
+Dragonborn
+Drider
+Drow
+Dryad
+Dwarf
+Earth Elemental
+Elemental
+Elf
+Ettercap
+Fetid Ooze
+Fiend
+Fire Elemental
+Flesh Golem
+Flying Ghoul
+Frog
+Full-illithid
+Fungal Zombie
+Ghast
+Ghost
+Ghoul
+Giant (creature type)
+Giant Eagle
+Githyanki
+Githzerai
+Gnoll
+Gnome
+Goblin
+Grease Elemental
+Greaseball
+Greater Zombie
+Gremishka
+Grim Visage
+Hag
+Half-Elf
+Half-Orc
+Halfling
+Harpy
+Hellsboar
+Hobgoblin
+Hollyphant
+Hook Horror
+Human
+Humanoid
+Hyena
+Imp
+Intellect Devourer
+Kobold
+Kuo-toa
+Lava Elemental
+Meazel
+Meenlock
+Mephit
+Merregon
+Mimic
+Mind flayers
+Minotaur
+Moonlight Sliver
+Mud Elemental
+Mummy
+Mummy Lord
+Myconid
+Myrmidon
+Ochre Jelly
+Ogre
+Orc
+Owlbear
+Owlbear Mate
+Ox
+Partial-illithid
+Phantasm
+Phase Spider
+Pixie
+Plant
+Poltergeist
+Rabbit
+Rat
+Raven
+Red Dragon
+Redcap
+Sahuagin
+Scrying Eye
+Shadar-kai
+Shadow
+Shadow Creeper
+Shadow Mastiff
+Shambling Mound
+Sheep
+Skeleton
+Spectator
+Spectral Flumph
+Spider
+Squirrel
+Steel Watcher
+Succubus &amp; Incubus
+Tiefling
+Undead
+Undead Dragon
+Vampire
+Vampire spawn
+Water Elemental
+Werewolf
+Winged Horror
+Wolf
+Wood Woad
+Worg
+Worg (white)
+Wraith
+Zombie
+Zombie (Animate Dead)

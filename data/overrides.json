@@ -1,0 +1,7 @@
+[
+  {
+    "_comment": "Manual corrections applied on top of scraped wiki data. Any of summary / location / act may be set; anything omitted keeps the scraped value. Matched by item id (see data/item-index.json). Re-run scripts/build-db.ps1 after editing.",
+    "id": "_example_",
+    "act": null
+  }
+]

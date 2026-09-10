@@ -1,0 +1,890 @@
+// GENERE par scripts/scrape-races.ps1 + build-races.ps1 — ne pas editer.
+const RACES = [
+  {
+    "id": "human",
+    "name": "Human",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [],
+    "armour": [
+      "Shields",
+      "Light Armour"
+    ],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Civil Militia",
+        "d": "You have weapon proficiency with: Spears Pikes Halberds Glaives Light armour Shields"
+      },
+      {
+        "n": "Human Versatility",
+        "d": "Select an additional Skill to be Proficient in. Your carrying capacity is increased by a quarter."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Human",
+    "icon": "icons/races/human.png"
+  },
+  {
+    "id": "githyanki",
+    "name": "Githyanki",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [],
+    "armour": [
+      "Light Armour",
+      "Medium Armour"
+    ],
+    "weapons": [
+      "Shortsword",
+      "Longsword",
+      "Greatsword"
+    ],
+    "traits": [
+      {
+        "n": "Base racial speed",
+        "d": "You can move 9 m (30 ft) per turn"
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Astral Knowledge",
+        "d": "Gain Proficiency in all Skills corresponding to a chosen Ability ( Recharge: Long rest )"
+      },
+      {
+        "n": "Githyanki Psionics",
+        "d": "You gain access to the following Spells : Cantrip: Githyanki Psionics: Mage Hand (Character level 1). Your Mage Hand is invisible when cast via Githyanki Psionics. Recharge: Long rest 1st Level Spell: Githyanki Psionics: Jump (Character level 3) Recharge: Long rest 2nd Level Spell: Misty Step (Character level 5) Recharge: Long rest"
+      },
+      {
+        "n": "Martial Prodigy",
+        "d": "A lifetime of relentless training gave you Armour proficiency with Light armour and Medium armour , as well as Proficiency with Shortswords , Longswords , and Greatswords ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Githyanki",
+    "icon": "icons/races/githyanki.png"
+  },
+  {
+    "id": "half-orc",
+    "name": "Half-Orc",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Menacing",
+        "d": "You gain Proficiency in the Intimidation skill."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Relentless Endurance",
+        "d": "If you reach 0 hit points , you regain 1 Hit Points instead of becoming Downed ."
+      },
+      {
+        "n": "Savage Attacks",
+        "d": "When you land a Critical Hit with a melee weapon attack, you deal an extra die of weapon damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Half-Orc",
+    "icon": "icons/races/half-orc.webp"
+  },
+  {
+    "id": "dragonborn",
+    "name": "Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Dragonborn",
+    "icon": "icons/races/dragonborn.webp"
+  },
+  {
+    "id": "high-elf",
+    "name": "High Elf",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [
+      "Shortsword",
+      "Longsword",
+      "Shortbow",
+      "Longbow"
+    ],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Keen Senses",
+        "d": "You gain Proficiency in the Perception skill."
+      },
+      {
+        "n": "Elven Weapon Training",
+        "d": "You have Proficiency with Longswords , Shortswords , Longbows , and Shortbows ."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/High_Elf",
+    "icon": "icons/races/high-elf.png"
+  },
+  {
+    "id": "wood-elf",
+    "name": "Wood Elf",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [
+      "Shortsword",
+      "Longsword",
+      "Shortbow",
+      "Longbow"
+    ],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Keen Senses",
+        "d": "You gain Proficiency in the Perception skill."
+      },
+      {
+        "n": "Elven Weapon Training",
+        "d": "You have Proficiency with Longswords , Shortswords , Longbows , and Shortbows ."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      },
+      {
+        "n": "Fleet of Foot",
+        "d": "Your Movement Speed is increased by 1.5 m (5 ft)."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Wood_Elf",
+    "icon": "icons/races/wood-elf.png"
+  },
+  {
+    "id": "half-elf",
+    "name": "Half-Elf",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [
+      "Shields",
+      "Light Armour"
+    ],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Civil Militia",
+        "d": "You have weapon proficiency with: Spears Pikes Halberds Glaives Light armour Shields"
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Half-Elf",
+    "icon": "icons/races/half-elf.png"
+  },
+  {
+    "id": "high-half-elf",
+    "name": "High Half-Elf",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [
+      "Shields",
+      "Light Armour"
+    ],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Civil Militia",
+        "d": "You have weapon proficiency with: Spears Pikes Halberds Glaives Light armour Shields"
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/High_Half-Elf",
+    "icon": "icons/races/high-half-elf.png"
+  },
+  {
+    "id": "wood-half-elf",
+    "name": "Wood Half-Elf",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [
+      "Shields",
+      "Light Armour"
+    ],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Civil Militia",
+        "d": "You have weapon proficiency with: Spears Pikes Halberds Glaives Light armour Shields"
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      },
+      {
+        "n": "Fleet of Foot :",
+        "d": "Your Movement Speed is further increased by 1.5 m (5 ft)."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Wood_Half-Elf",
+    "icon": "icons/races/wood-half-elf.png"
+  },
+  {
+    "id": "drow-half-elf",
+    "name": "Drow Half-Elf",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [
+      "Shields",
+      "Light Armour"
+    ],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Civil Militia",
+        "d": "You have weapon proficiency with: Spears Pikes Halberds Glaives Light armour Shields"
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Drow_Half-Elf",
+    "icon": "icons/races/drow-half-elf.png"
+  },
+  {
+    "id": "lolth-sworn-drow",
+    "name": "Lolth-Sworn Drow",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [
+      "Shortsword",
+      "Rapier",
+      "Hand Crossbow"
+    ],
+    "traits": [
+      {
+        "n": "Base racial speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Drow Weapon Training",
+        "d": "You have proficiency with Rapiers , Shortswords , and Hand Crossbows ."
+      },
+      {
+        "n": "Superior Darkvision",
+        "d": "Can see in the dark up to 24 m (80 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      },
+      {
+        "n": "Keen Senses",
+        "d": "You gain Proficiency in the Perception skill."
+      },
+      {
+        "n": "Drow Magic",
+        "d": "You gain access to the following Spells : Cantrip: Dancing Lights (at character Level 1) 1st Level Spell: Drow Magic: Faerie Fire (at character level 3) Recharge: Long rest 2nd Level Spell: Darkness (at character level 5) Recharge: Long rest"
+      },
+      {
+        "n": "Sunlight Sensitivity",
+        "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Lolth-Sworn_Drow",
+    "icon": "icons/races/lolth-sworn-drow.jpg"
+  },
+  {
+    "id": "seldarine-drow",
+    "name": "Seldarine Drow",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [
+      "Shortsword",
+      "Rapier",
+      "Hand Crossbow"
+    ],
+    "traits": [
+      {
+        "n": "Base racial speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Drow Weapon Training",
+        "d": "You have proficiency with Rapiers , Shortswords , and Hand Crossbows ."
+      },
+      {
+        "n": "Superior Darkvision",
+        "d": "Can see in the dark up to 24 m (80 ft)."
+      },
+      {
+        "n": "Fey Ancestry",
+        "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
+      },
+      {
+        "n": "Keen Senses",
+        "d": "You gain Proficiency in the Perception skill."
+      },
+      {
+        "n": "Drow Magic",
+        "d": "You gain access to the following Spells : Cantrip: Dancing Lights (at character Level 1) 1st Level Spell: Drow Magic: Faerie Fire (at character level 3) Recharge: Long rest 2nd Level Spell: Darkness (at character level 5) Recharge: Long rest"
+      },
+      {
+        "n": "Sunlight Sensitivity",
+        "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Seldarine_Drow",
+    "icon": "icons/races/seldarine-drow.jpg"
+  },
+  {
+    "id": "lightfoot-halfling",
+    "name": "Lightfoot Halfling",
+    "speed": 7.5,
+    "darkvision": false,
+    "resistances": [],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Small"
+      },
+      {
+        "n": "Halfling Luck",
+        "d": "When you roll a 1 for an Attack Roll , Ability Check , or Saving Throw , you can reroll the dice and must use the new roll."
+      },
+      {
+        "n": "Brave",
+        "d": "You have Advantage on Saving Throws against Frightened ."
+      },
+      {
+        "n": "Naturally Stealthy",
+        "d": "Your nimble nature makes you skilled at concealment. You have Advantage on Stealth Checks ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Lightfoot_Halfling",
+    "icon": "icons/races/lightfoot-halfling.jpg"
+  },
+  {
+    "id": "strongheart-halfling",
+    "name": "Strongheart Halfling",
+    "speed": 7.5,
+    "darkvision": false,
+    "resistances": [
+      "Poison"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Small"
+      },
+      {
+        "n": "Halfling Luck",
+        "d": "When you roll a 1 for an Attack Roll , Ability Check , or Saving Throw , you can reroll the dice and must use the new roll."
+      },
+      {
+        "n": "Brave",
+        "d": "You have Advantage on Saving Throws against Frightened ."
+      },
+      {
+        "n": "Strongheart Resilience",
+        "d": "You have Advantage on Saving Throws against being Poisoned and Resistance to Poison damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Strongheart_Halfling",
+    "icon": "icons/races/strongheart-halfling.jpg"
+  },
+  {
+    "id": "gold-dwarf",
+    "name": "Gold Dwarf",
+    "speed": 7.5,
+    "darkvision": true,
+    "resistances": [
+      "Poison"
+    ],
+    "armour": [],
+    "weapons": [
+      "Battleaxe",
+      "Handaxe",
+      "Light Hammer",
+      "Warhammer"
+    ],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Dwarven Combat Training",
+        "d": "You have Proficiency with Battleaxes , Handaxes , Light Hammers , and Warhammers ."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Dwarven Resilience",
+        "d": "You have Advantage on Saving Throws against being Poisoned and you have Resistance against Poison damage."
+      },
+      {
+        "n": "Dwarven Toughness",
+        "d": "You have 1 extra maximum Hit Point per level."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Gold_Dwarf",
+    "icon": "icons/races/gold-dwarf.jpg"
+  },
+  {
+    "id": "shield-dwarf",
+    "name": "Shield Dwarf",
+    "speed": 7.5,
+    "darkvision": true,
+    "resistances": [
+      "Poison"
+    ],
+    "armour": [
+      "Light Armour",
+      "Medium Armour"
+    ],
+    "weapons": [
+      "Battleaxe",
+      "Handaxe",
+      "Light Hammer",
+      "Warhammer"
+    ],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Dwarven Combat Training",
+        "d": "You have Proficiency with Battleaxes , Handaxes , Light Hammers , and Warhammers ."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Dwarven Resilience",
+        "d": "You have Advantage on Saving Throws against being Poisoned and you have Resistance against Poison damage."
+      },
+      {
+        "n": "Dwarven Armour Training",
+        "d": "You have Armour Proficiency with Light armour and Medium armour ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Shield_Dwarf",
+    "icon": "icons/races/shield-dwarf.jpg"
+  },
+  {
+    "id": "duergar",
+    "name": "Duergar",
+    "speed": 7.5,
+    "darkvision": true,
+    "resistances": [
+      "Poison"
+    ],
+    "armour": [],
+    "weapons": [
+      "Battleaxe",
+      "Handaxe",
+      "Light Hammer",
+      "Warhammer"
+    ],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Dwarven Combat Training",
+        "d": "You have Proficiency with Battleaxes , Handaxes , Light Hammers , and Warhammers ."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Dwarven Resilience",
+        "d": "You have Advantage on Saving Throws against being Poisoned and you have Resistance against Poison damage."
+      },
+      {
+        "n": "Superior Darkvision",
+        "d": "Can see in the dark up to 24 m (80 ft)."
+      },
+      {
+        "n": "Duergar Resilience",
+        "d": "An affected creature has Advantage on Saving Throws against Illusions and against being Charmed or Paralysed ."
+      },
+      {
+        "n": "Duergar Magic",
+        "d": "You gain the access to the following Cantrips : Level 3: Enlarge ( Recharge: Long rest , does not require Concentration and does not use Spell Slots). Level 5: Invisibility ( Recharge: Per combat, does not use Spell Slots)."
+      },
+      {
+        "n": "Sunlight Sensitivity",
+        "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Duergar",
+    "icon": "icons/races/duergar.jpg"
+  },
+  {
+    "id": "forest-gnome",
+    "name": "Forest Gnome",
+    "speed": 7.5,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Small"
+      },
+      {
+        "n": "Gnome Cunning",
+        "d": "You have Advantage on Intelligence, Wisdom, and Charisma Saving Throws ."
+      },
+      {
+        "n": "Shortened Stride",
+        "d": "Your movement speed is 7.5 m (25 ft)."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Speak with Animals",
+        "d": "Gain the ability to comprehend and communicate with beasts. Recharge: Long rest ."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Forest_Gnome",
+    "icon": "icons/races/forest-gnome.png"
+  },
+  {
+    "id": "rock-gnome",
+    "name": "Rock Gnome",
+    "speed": 7.5,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Small"
+      },
+      {
+        "n": "Gnome Cunning",
+        "d": "You have Advantage on Intelligence, Wisdom, and Charisma Saving Throws ."
+      },
+      {
+        "n": "Shortened Stride",
+        "d": "Your movement speed is 7.5 m (25 ft)."
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Artificer's Lore",
+        "d": "Add twice your Proficiency Bonus to History checks."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Rock_Gnome",
+    "icon": "icons/races/rock-gnome.png"
+  },
+  {
+    "id": "deep-gnome",
+    "name": "Deep Gnome",
+    "speed": 7.5,
+    "darkvision": true,
+    "resistances": [],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 7.5 m (25 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Small"
+      },
+      {
+        "n": "Gnome Cunning",
+        "d": "You have Advantage on Intelligence, Wisdom, and Charisma Saving Throws ."
+      },
+      {
+        "n": "Shortened Stride",
+        "d": "Your movement speed is 7.5 m (25 ft)."
+      },
+      {
+        "n": "Superior Darkvision",
+        "d": "Can see in the dark up to 24 m (80 ft)."
+      },
+      {
+        "n": "Stone Camouflage",
+        "d": "You have Advantage on Stealth checks."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Deep_Gnome",
+    "icon": "icons/races/deep-gnome.png"
+  },
+  {
+    "id": "asmodeus-tiefling",
+    "name": "Asmodeus Tiefling",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [
+      "Fire"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Hellish Resistance",
+        "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Asmodeus_Tiefling",
+    "icon": "icons/races/asmodeus-tiefling.png"
+  },
+  {
+    "id": "mephistopheles-tiefling",
+    "name": "Mephistopheles Tiefling",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [
+      "Fire"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Hellish Resistance",
+        "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Mephistopheles_Tiefling",
+    "icon": "icons/races/mephistopheles-tiefling.png"
+  },
+  {
+    "id": "zariel-tiefling",
+    "name": "Zariel Tiefling",
+    "speed": 9.0,
+    "darkvision": true,
+    "resistances": [
+      "Fire"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Darkvision",
+        "d": "Can see in the dark up to 12 m (40 ft)."
+      },
+      {
+        "n": "Hellish Resistance",
+        "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Zariel_Tiefling",
+    "icon": "icons/races/zariel-tiefling.png"
+  }
+]
+;
+
+if (typeof module !== "undefined") module.exports = RACES;
+

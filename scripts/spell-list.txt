@@ -1,0 +1,595 @@
+Absolute's Talisman: Aid
+Acid Splash
+Activate Call Lightning
+Activate Witch Bolt
+Aegis of the Absolute
+Aid
+Animal Friendship
+Animate Dead
+Animate Dead (Balthazar)
+Animate Dead (Duergar)
+Animate Dead: Flying Ghoul
+Animate Dead: Flying Ghoul Flock
+Animate Dead: Ghoul
+Animate Dead: Ghoul Pack
+Animate Dead: Skeleton
+Animate Dead: Skeleton Squad
+Animate Dead: Zombie
+Animate Dead: Zombie Battalion
+Arabella's Shadow Entangle
+Arcane Critical
+Arcane Gate
+Arcane Lock
+Armour of Agathys
+Arms of Hadar
+Astral Rift
+Bane (spell)
+Bane's Wrath
+Banishing Smite
+Banishing Smite (Melee)
+Banishing Smite (Ranged)
+Banishment
+Barkskin
+Beacon of Hope
+Bear's Endurance
+Beckoning Darkness
+Beguiling Rebuke
+Bestow Curse
+Bestow Curse: Additional Damage
+Bestow Curse: Attack Disadvantage
+Bestow Curse: Charisma Disadvantage
+Bestow Curse: Constitution Disadvantage
+Bestow Curse: Dexterity Disadvantage
+Bestow Curse: Dread
+Bestow Curse: Intelligence Disadvantage
+Bestow Curse: Strength Disadvantage
+Bestow Curse: Wisdom Disadvantage
+Blade Barrier
+Blade Ward
+Bless
+Blight
+Blinding Smite
+Blindness
+Blink
+Bludgeon the Weak
+Blur
+Bolts of Doom
+Bone Chill
+Bone-shaking Thunder
+Booming Blade
+Boon of Servitude
+Boots of Dimension Door
+Brand the Weak
+Branding Smite
+Branding Smite (Melee)
+Branding Smite (Ranged)
+Bull's Strength
+Burning Age
+Burning Hands
+Bursting Sinew
+Call Lightning
+Call of the Crustacean
+Calm Emotions
+Careful What You Wish For
+Carrion's Explosive Cloudkill
+Castigate Heartform
+Cat's Grace
+Celestial Haste
+Chain Lightning
+Charm Person
+Cheesy Smell
+Chromatic Orb
+Chromatic Orb: Acid
+Chromatic Orb: Cold
+Chromatic Orb: Fire
+Chromatic Orb: Lightning
+Chromatic Orb: Poison
+Chromatic Orb: Thunder
+Circle of Death
+Cloud of Daggers
+Cloudkill
+Colour Spray
+Command
+Command: Approach
+Command: Approach (Undead)
+Command: Drop
+Command: Drop (Undead)
+Command: Flee
+Command: Flee (Undead)
+Command: Grovel
+Command: Grovel (Undead)
+Command: Halt
+Command: Halt (Undead)
+Compelled Duel
+Cone of Cold
+Confusion
+Conjure Barrage
+Conjure Barrage: Melee Weapon
+Conjure Barrage: Ranged Weapon
+Conjure Elemental
+Conjure Elemental: Air Elemental
+Conjure Elemental: Air Myrmidon
+Conjure Elemental: Earth Elemental
+Conjure Elemental: Earth Myrmidon
+Conjure Elemental: Fire Elemental
+Conjure Elemental: Fire Myrmidon
+Conjure Elemental: Water Elemental
+Conjure Elemental: Water Myrmidon
+Conjure Minor Elemental
+Conjure Minor Elemental: Azer
+Conjure Minor Elemental: Ice Mephits
+Conjure Minor Elemental: Mud Mephits
+Conjure Shadow Lantern Wraith
+Conjure Us
+Conjure Woodland Being
+Contagion
+Contagion: Blinding Sickness
+Contagion: Filth Fever
+Contagion: Flesh Rot
+Contagion: Mindfire
+Contagion: Seizure
+Contagion: Slimy Doom
+Corrosive Age
+Cosmic Omen: Ability Check
+Counterspell
+Create Undead
+Create Water
+Create Water (variant)
+Create or Destroy Water
+Crown of Madness
+Crusader's Mantle
+Cure Wounds
+Curriculum of Strategy: Artistry of War
+Curse of Regret
+Curse of Terror
+Dancing Lights
+Danse Macabre
+Dark Celebration
+Darkness
+Darkvision (spell)
+Daylight
+Daylight: Enchant Item
+Daylight: Sphere
+Deadlier than Arsenic
+Death Ward
+Debilitating Infusion
+Destroy Water
+Destructive Wave
+Destructive Wave: Necrotic
+Destructive Wave: Radiant
+Detect Evil and Good
+Detect Thoughts
+Dethrone
+Diabolic Chains
+Dimension Door
+Dirty Trick: Vicious Mockery
+Disconcerting Visage
+Disconcerting Visage (Tactician)
+Disguise Self
+Disguise Self: Femme Dragonborn
+Disguise Self: Femme Drow
+Disguise Self: Femme Dwarf
+Disguise Self: Femme Elf
+Disguise Self: Femme Githyanki
+Disguise Self: Femme Gnome
+Disguise Self: Femme Half-Elf
+Disguise Self: Femme Half-Orc
+Disguise Self: Femme Halfling
+Disguise Self: Femme Human
+Disguise Self: Femme Strong Drow
+Disguise Self: Femme Strong Elf
+Disguise Self: Femme Strong Half-Elf
+Disguise Self: Femme Strong Human
+Disguise Self: Femme Strong Tiefling
+Disguise Self: Femme Tiefling
+Disguise Self: Masc Dragonborn
+Disguise Self: Masc Drow
+Disguise Self: Masc Dwarf
+Disguise Self: Masc Elf
+Disguise Self: Masc Githyanki
+Disguise Self: Masc Gnome
+Disguise Self: Masc Half-Elf
+Disguise Self: Masc Half-Orc
+Disguise Self: Masc Halfling
+Disguise Self: Masc Human
+Disguise Self: Masc Strong Drow
+Disguise Self: Masc Strong Elf
+Disguise Self: Masc Strong Half-Elf
+Disguise Self: Masc Strong Human
+Disguise Self: Masc Strong Tiefling
+Disguise Self: Masc Tiefling
+Disintegrate
+Dismiss Arcane Lock
+Dispel Evil And Good
+Dispel Evil And Good: Break Enchantment
+Dispel Magic
+Disrobing Blinkstep
+Dissonant Whispers
+Divine Favour
+Divine Revelry
+Dominate Beast
+Dominate Person
+Draconic Elemental Weapon
+Draconic Elemental Weapon: Acid
+Draconic Elemental Weapon: Cold
+Draconic Elemental Weapon: Fire
+Draconic Elemental Weapon: Lightning
+Draconic Elemental Weapon: Thunder
+Drow Magic: Faerie Fire
+Drunken Inhale
+Eagle's Splendour
+Eldritch Blast
+Elemental Age
+Elemental Retort
+Elemental Weapon
+Elemental Weapon: Acid
+Elemental Weapon: Cold
+Elemental Weapon: Fire
+Elemental Weapon: Lightning
+Elemental Weapon: Thunder
+Enhance Ability
+Enhance Leap
+Enlarge
+Enlarge (Duergar)
+Enlarge/Reduce
+Ensnaring Shock
+Ensnaring Strands
+Ensnaring Strike
+Ensnaring Strike (Melee)
+Ensnaring Strike (Ranged)
+Entangle
+Entangle (Dryad)
+Entangle (Wood Woad)
+Enthrall
+Ethel's Insect Plague
+Ethel's Ray of Sickness
+Evard's Black Tentacles
+Exhort the Risen
+Expeditious Retreat
+Eyebite
+Eyebite: Asleep
+Eyebite: Panicked
+Eyebite: Sickened
+Eyes of the Dark: Darkness
+Faerie Fire
+Faithwarden's Vines
+False Life
+Fanatic Retaliation
+Fear
+Feather Fall
+Feign Death
+Fiendish Charm
+Fiery Bolt
+Find Familiar
+Find Familiar: Boo
+Find Familiar: Cat
+Find Familiar: Cheeky Quasit
+Find Familiar: Crab
+Find Familiar: Frog
+Find Familiar: Imp
+Find Familiar: Quasit
+Find Familiar: Rat
+Find Familiar: Raven
+Find Familiar: Scratch
+Find Familiar: Spider
+Finger of Death
+Fire Bolt
+Fire Shield
+Fire Shield: Chill
+Fire Shield: Warm
+Fireball
+Fireball (Cazador)
+Firebolt?
+Flame Blade
+Flame Strike
+Flame of Wrath
+Flames of Avernus (spell)
+Flaming Sphere
+Fleeting Dream
+Flesh to Gold
+Flesh to Stone
+Fly (bonus action)
+Fog Cloud
+Forced Teleportation
+Formsculpt: Tressym
+Fox's Cunning
+Freedom of Movement
+Friends
+Frost of Dark Winter
+Gargoyle's Countenance
+Gaseous Form
+Ghoulish Touch
+Githborn: Flying Boots
+Githyanki Psionics: Jump
+Githyanki Psionics: Mage Hand
+Glacial Age
+Globe of Invulnerability
+Glyph of Warding
+Glyph of Warding: Acid
+Glyph of Warding: Cold
+Glyph of Warding: Detonation
+Glyph of Warding: Fire
+Glyph of Warding: Lightning
+Glyph of Warding: Sleep
+Glyph of Warding: Thunder
+Goodberry
+Grant Flight
+Grasping Vine
+Grave Repulsion
+Grease
+Greater Invisibility
+Greater Restoration
+Guardian of Faith
+Guidance
+Guiding Bolt
+Gust of Wind
+Hail of Thorns
+Harm
+Harvest Soul
+Haste
+Heal
+Healing Word
+Heartwrench
+Heat Metal
+Heat Metal: Reapply Damage
+Hellfire Curse
+Hellfire Orb
+Hellflame Cleave
+Hellish Rebuke
+Heroes' Feast
+Heroism
+Hex
+Hex (Charisma)
+Hex (Constitution)
+Hex (Dexterity)
+Hex (Intelligence)
+Hex (Strength)
+Hex (Wisdom)
+Hold Monster
+Hold Person
+Hordestrike
+Howl of the Dead
+Hunger of Hadar
+Hunter's Mark
+Hypnotic Pattern
+Ice Knife
+Ice Storm
+Igniting Spark
+Improved Minor Illusion
+Incinerate
+Incongruent Splash
+Infernal Legacy: Hellish Rebuke
+Infernal Salve
+Inflict Wounds
+Insect Plague
+Invigorating Flame
+Invisibility (Duergar)
+Invisibility (spell)
+Invocation of Eternal Debt
+Karsite Grip
+Karsus' Compulsion
+Keeper's Fee
+Kereska's Favour
+Khalid's Gift: Aid
+Knock
+Legacy of Avernus: Branding Smite
+Legacy of Avernus: Searing Smite
+Legacy of Cania: Burning Hands
+Legacy of Cania: Flame Blade
+Lesser Restoration
+Light
+Lightning Arrow
+Lightning Bolt
+Longstrider
+Lovely Assistant
+Luminous Arrow
+Lump's Command
+Lunar Bulwark
+Lunar Flare
+Lunar Smite
+Mage Armour
+Mage Hand
+Magic Missile
+Magic Missile (Illithid Arcanist)
+Magic Weapon
+Mapped Terror: Betrayal
+Mapped Terror: Ceremorphosis
+Mapped Terror: Darkness
+Mapped Terror: Disease
+Mapped Terror: Powerlessness
+Mapped Terror: Spiders
+Mapped Terror: Wolves
+Mark of Putrefaction
+Mass Cure Wounds
+Mass Healing Word
+Melf's Acid Arrow
+Mind Flayer Domination
+Mind Mastery
+Mind Spike
+Minor Illusion
+Mirror Image
+Misty Step
+Moonbeam
+Moonmote
+Move Moonbeam
+Murderous Cloud of Daggers
+Mystic Carrion's Vile Curse
+No Rest for the Wicked
+Obliging Assistant
+Otiluke's Conveniently Portable Freezing Sphere
+Otiluke's Freezing Sphere
+Otiluke's Freezing Sphere (Launch)
+Otiluke's Resilient Sphere
+Otto's Irresistible Dance
+Overwhelming Grief
+Owl's Wisdom
+Paralyzing Ray
+Pass Without Trace
+Perturbing Visage
+Phantasmal Force
+Phantasmal Killer
+Pierce the Weak
+Planar Ally
+Planar Ally: Cambion
+Planar Ally: Deva
+Planar Ally: Deva (Banite)
+Planar Ally: Djinni
+Planar Binding
+Plant Growth
+Poison Spray
+Polymorph
+Possession
+Power Word Kill
+Power Word: Ruin
+Prayer of Healing
+Produce Flame
+Produce Flame: Dismiss
+Produce Flame: Hurl
+Promise of Wealth
+Protection from Energy
+Protection from Energy: Acid
+Protection from Energy: Cold
+Protection from Energy: Fire
+Protection from Energy: Lightning
+Protection from Energy: Thunder
+Protection from Evil and Good
+Protection from Missiles
+Protection from Poison
+Psionic Suggestion: Drop
+Psionic Suggestion: Flee
+Psionic Suggestion: Grovel
+Psionic Suggestion: Halt
+Psionic Suggestion: Hush
+Psychic Rend
+Pulling Web
+Punish Divinity
+Ravaging Inferno
+Ray of Enfeeblement
+Ray of Fear
+Ray of Frost
+Ray of Sickness
+Rays of Fire
+Rays of Fire (Cantrip)
+Rays of Fire (Mol)
+Reach from Beyond
+Reapply Hunter's Mark
+Recast Speak with Dead
+Recast Sunbeam
+Reduce
+Reduce (Duergar)
+Remove Curse
+Resistance (Cantrip)
+Restore Vitality
+Revivify
+Revoke Guest Status
+Ride the Winds
+Rolan's Colour Spray
+Rolan's Fireball
+Rolan's Mage Armour
+Rolan's Magic Missile
+Rolan's Thunderwave
+Sacred Flame
+Sacrifice Soul
+Sanctuary
+Sanctuary of Loss
+Scorching Ray
+Searing Smite
+Searing Smite (Azer)
+See Invisibility (spell)
+Seeming
+Selûne's Dream
+Selûne's Ire (spell)
+Sethan: Reduce
+Sethan: Spiritual Greataxe
+Shadow Blade
+Shar's Aegis
+Shar's Darkness
+Share Untenable Secret
+Shatter
+Shield (spell)
+Shield of Devotion: Aid
+Shield of Faith
+Shield of Screams
+Shillelagh
+Shocking Grasp
+Sights of the Seelie: Summon Deva
+Silence
+Silvered Bulwark
+Sizzling Cataclysm
+Slash the Weak
+Sleep
+Sleet Storm
+Slow
+Smite
+Sorrowful Lash
+Soul Ascension
+Soul Drain
+Soul Offering
+Speak with Animals
+Speak with Dead
+Spike Growth
+Spindleweb Sanctuary
+Spirit Guardians
+Spirit Guardians (Necrotic)
+Spirit Guardians (Radiant)
+Spiritual Weapon
+Spiritual Weapon: Greataxe
+Spiritual Weapon: Greatsword
+Spiritual Weapon: Halberd
+Spiritual Weapon: Maul
+Spiritual Weapon: Spear
+Spiritual Weapon: Trident
+Staggering Smite
+Stand Like Stone
+Star Map: Guiding Bolt
+Stinking Cloud
+Stoneskin
+Strengthened Shillelagh
+Summon Eternal Debtor
+Summon Gilded Hellsboar
+Summon Quothe the Raven
+Sunbeam
+Tasha's Hideous Laughter
+Telekinesis
+Teleport to Submersible
+Terrifying Visage
+Terrifying Visage (Tactician)
+Thaumaturgy
+The Closed Fist of Bane
+The Dead Wastes
+Thorn Whip
+Thunderous Smite
+Thunderwave
+Tightening Orbit
+Toll the Dead
+True Resurrection
+True Strike
+Tyr's Protection
+Tyrant's Bindings
+Umberlee's Praise
+Umbral Ally
+Untenable Secret
+Vampiric Swarm
+Vampiric Touch
+Veil of the Weird
+Vicious Mockery
+Vicious Mockery (Auntie Ethel)
+Vicious Mockery (Milil)
+Wail of Loss (Assistant)
+Wall of Fire
+Wall of Ice
+Wall of Stone
+Wall of Thorns
+Warden of Vitality
+Warding Bond
+Web
+Whossa Large Fellow?
+Wicked Coercion
+Wind Walk
+Witch Bolt
+Withering Gift
+Withering Theft
+Withering Touch
+Woad's Ensnaring Strike
+Wounding Ray
+Wrathful Smite

@@ -1,0 +1,1421 @@
+[
+  {
+    "id": "barbarian",
+    "name": "Barbarian",
+    "hpLevel1": 12,
+    "hpOnLevelUp": 7,
+    "spellAbility": null,
+    "saves": [
+      "str",
+      "con"
+    ],
+    "armour": [
+      "Light Armour",
+      "Medium Armour",
+      "Shields"
+    ],
+    "weapons": [
+      "simple",
+      "martial"
+    ],
+    "weaponExceptions": [],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "Rage",
+          "Unarmoured Defence"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "Reckless Attack",
+          "Danger Sense"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "Choose a subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "Extra Attack",
+          "Fast Movement"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "Subclass feature"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "Feral Instinct"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "Brutal Critical"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "Subclass feature"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "Relentless Rage"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Animal Handling",
+      "Athletics",
+      "Intimidation",
+      "Nature",
+      "Perception",
+      "Survival"
+    ],
+    "multiclass": {
+      "armour": [
+        "Shields"
+      ],
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Barbarian",
+    "icon": "icons/classes/barbarian.png"
+  },
+  {
+    "id": "bard",
+    "name": "Bard",
+    "hpLevel1": 8,
+    "hpOnLevelUp": 5,
+    "spellAbility": "cha",
+    "saves": [
+      "cha",
+      "dex"
+    ],
+    "armour": [
+      "Light Armour"
+    ],
+    "weapons": [
+      "simple"
+    ],
+    "weaponExceptions": [
+      "Hand Crossbow",
+      "Longsword",
+      "Rapier",
+      "Shortsword"
+    ],
+    "skillPicks": 3,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Acrobatics",
+      "Animal Handling",
+      "Arcana",
+      "Athletics",
+      "Deception",
+      "History",
+      "Insight",
+      "Intimidation",
+      "Investigation",
+      "Medicine",
+      "Nature",
+      "Perception",
+      "Performance",
+      "Persuasion",
+      "Religion",
+      "Sleight of Hand",
+      "Stealth",
+      "Survival"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour"
+      ],
+      "weapons": [],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Bard",
+    "icon": "icons/classes/bard.png"
+  },
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "hpLevel1": 8,
+    "hpOnLevelUp": 5,
+    "spellAbility": "wis",
+    "saves": [
+      "cha",
+      "wis"
+    ],
+    "armour": [
+      "Light Armour",
+      "Medium Armour",
+      "Shields"
+    ],
+    "weapons": [
+      "simple"
+    ],
+    "weaponExceptions": [
+      "Flail",
+      "Morningstar"
+    ],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "-"
+        ]
+      }
+    ],
+    "skills": [
+      "History",
+      "Insight",
+      "Medicine",
+      "Persuasion",
+      "Religion"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour",
+        "Medium Armour",
+        "Shields"
+      ],
+      "weapons": [],
+      "weaponExceptions": [
+        "Flail",
+        "Morningstar"
+      ]
+    },
+    "wiki": "https://bg3.wiki/wiki/Cleric",
+    "icon": "icons/classes/cleric.png"
+  },
+  {
+    "id": "druid",
+    "name": "Druid",
+    "hpLevel1": 8,
+    "hpOnLevelUp": 5,
+    "spellAbility": "wis",
+    "saves": [
+      "int",
+      "wis"
+    ],
+    "armour": [
+      "Light Armour",
+      "Medium Armour",
+      "Shields"
+    ],
+    "weapons": [],
+    "weaponExceptions": [
+      "Dagger",
+      "Quarterstaff",
+      "Club",
+      "Javelin",
+      "Mace",
+      "Scimitar",
+      "Sickle",
+      "Spear"
+    ],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat",
+          "Wild Shape Improvement"
+        ]
+      }
+    ],
+    "skills": [
+      "Animal Handling",
+      "Arcana",
+      "Insight",
+      "Medicine",
+      "Nature",
+      "Perception",
+      "Religion",
+      "Survival"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour",
+        "Medium Armour",
+        "Shields"
+      ],
+      "weapons": [],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Druid",
+    "icon": "icons/classes/druid.png"
+  },
+  {
+    "id": "fighter",
+    "name": "Fighter",
+    "hpLevel1": 10,
+    "hpOnLevelUp": 6,
+    "spellAbility": null,
+    "saves": [
+      "str",
+      "con"
+    ],
+    "armour": [
+      "Light Armour",
+      "Medium Armour",
+      "Heavy Armour",
+      "Shields"
+    ],
+    "weapons": [
+      "simple",
+      "martial"
+    ],
+    "weaponExceptions": [],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "Second Wind",
+          "Fighting Style"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "Action Surge"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "Choose a subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "Extra Attack"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "Subclass feature"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "Indomitable"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "Subclass feature"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "Improved Extra Attack"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Acrobatics",
+      "Animal Handling",
+      "Athletics",
+      "History",
+      "Insight",
+      "Intimidation",
+      "Perception",
+      "Survival"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour",
+        "Medium Armour",
+        "Shields"
+      ],
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Fighter",
+    "icon": "icons/classes/fighter.png"
+  },
+  {
+    "id": "monk",
+    "name": "Monk",
+    "hpLevel1": 8,
+    "hpOnLevelUp": 5,
+    "spellAbility": null,
+    "saves": [
+      "str",
+      "dex"
+    ],
+    "armour": [],
+    "weapons": [
+      "simple"
+    ],
+    "weaponExceptions": [
+      "Shortsword"
+    ],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "+ 3 m / 10 ft"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "1d6"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "Feat",
+          "Slow Fall"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "Extra Attack",
+          "Stunning Strike (Melee)",
+          "Stunning Strike (Unarmed)"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "+ 4.5 m / 15 ft"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "Evasion",
+          "Stillness of Mind"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "1d8"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "+ 6 m / 20 ft"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "Subclass feature"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Acrobatics",
+      "Athletics",
+      "History",
+      "Insight",
+      "Religion",
+      "Stealth"
+    ],
+    "multiclass": {
+      "armour": [],
+      "weapons": [
+        "simple"
+      ],
+      "weaponExceptions": [
+        "Shortsword"
+      ]
+    },
+    "wiki": "https://bg3.wiki/wiki/Monk",
+    "icon": "icons/classes/monk.png"
+  },
+  {
+    "id": "paladin",
+    "name": "Paladin",
+    "hpLevel1": 10,
+    "hpOnLevelUp": 6,
+    "spellAbility": "cha",
+    "saves": [
+      "cha",
+      "wis"
+    ],
+    "armour": [
+      "Light Armour",
+      "Medium Armour",
+      "Heavy Armour",
+      "Shields"
+    ],
+    "weapons": [
+      "simple",
+      "martial"
+    ],
+    "weaponExceptions": [],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "Aura of Courage"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "Improved Divine Smite"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Athletics",
+      "Insight",
+      "Intimidation",
+      "Medicine",
+      "Persuasion",
+      "Religion"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour",
+        "Medium Armour",
+        "Shields"
+      ],
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Paladin",
+    "icon": "icons/classes/paladin.png"
+  },
+  {
+    "id": "ranger",
+    "name": "Ranger",
+    "hpLevel1": 10,
+    "hpOnLevelUp": 6,
+    "spellAbility": "wis",
+    "saves": [
+      "str",
+      "dex"
+    ],
+    "armour": [
+      "Light Armour",
+      "Medium Armour",
+      "Shields"
+    ],
+    "weapons": [
+      "simple",
+      "martial"
+    ],
+    "weaponExceptions": [],
+    "skillPicks": 3,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "Favoured Enemy",
+          "Natural Explorer",
+          "Hide in Plain Sight"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Animal Handling",
+      "Athletics",
+      "Insight",
+      "Investigation",
+      "Nature",
+      "Perception",
+      "Stealth",
+      "Survival"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour",
+        "Medium Armour",
+        "Shields"
+      ],
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Ranger",
+    "icon": "icons/classes/ranger.png"
+  },
+  {
+    "id": "rogue",
+    "name": "Rogue",
+    "hpLevel1": 8,
+    "hpOnLevelUp": 5,
+    "spellAbility": null,
+    "saves": [
+      "int",
+      "dex"
+    ],
+    "armour": [
+      "Light Armour"
+    ],
+    "weapons": [
+      "simple"
+    ],
+    "weaponExceptions": [
+      "Hand Crossbow",
+      "Longsword",
+      "Rapier",
+      "Shortsword"
+    ],
+    "skillPicks": 4,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "1d6"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "Cunning Action: Dash",
+          "Cunning Action: Disengage",
+          "Cunning Action: Hide"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "2d6"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "3d6"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "Expertise"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "4d6"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "5d6"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "Feat"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "6d6"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Acrobatics",
+      "Athletics",
+      "Deception",
+      "Insight",
+      "Intimidation",
+      "Investigation",
+      "Perception",
+      "Performance",
+      "Persuasion",
+      "Sleight of Hand",
+      "Stealth"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour"
+      ],
+      "weapons": [],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Rogue",
+    "icon": "icons/classes/rogue.png"
+  },
+  {
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "hpLevel1": 6,
+    "hpOnLevelUp": 4,
+    "spellAbility": "cha",
+    "saves": [
+      "cha",
+      "con"
+    ],
+    "armour": [],
+    "weapons": [],
+    "weaponExceptions": [
+      "Dagger",
+      "Quarterstaff",
+      "Light Crossbow"
+    ],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "Subclass feature"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Arcana",
+      "Deception",
+      "Insight",
+      "Intimidation",
+      "Persuasion",
+      "Religion"
+    ],
+    "multiclass": {
+      "armour": [],
+      "weapons": [],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Sorcerer",
+    "icon": "icons/classes/sorcerer.png"
+  },
+  {
+    "id": "warlock",
+    "name": "Warlock",
+    "hpLevel1": 8,
+    "hpOnLevelUp": 5,
+    "spellAbility": "cha",
+    "saves": [
+      "cha",
+      "wis"
+    ],
+    "armour": [
+      "Light Armour"
+    ],
+    "weapons": [
+      "simple"
+    ],
+    "weaponExceptions": [],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "-"
+        ]
+      }
+    ],
+    "skills": [
+      "Arcana",
+      "Deception",
+      "History",
+      "Intimidation",
+      "Investigation",
+      "Nature",
+      "Religion"
+    ],
+    "multiclass": {
+      "armour": [
+        "Light Armour"
+      ],
+      "weapons": [
+        "simple"
+      ],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Warlock",
+    "icon": "icons/classes/warlock.png"
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "hpLevel1": 6,
+    "hpOnLevelUp": 4,
+    "spellAbility": "int",
+    "saves": [
+      "int",
+      "wis"
+    ],
+    "armour": [],
+    "weapons": [],
+    "weaponExceptions": [
+      "Dagger",
+      "Quarterstaff",
+      "Light Crossbow"
+    ],
+    "skillPicks": 2,
+    "progression": [
+      {
+        "level": 1,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 2,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 3,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 4,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 5,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 6,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 7,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 8,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 9,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 10,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 11,
+        "features": [
+          "-"
+        ]
+      },
+      {
+        "level": 12,
+        "features": [
+          "Feat"
+        ]
+      }
+    ],
+    "skills": [
+      "Arcana",
+      "History",
+      "Insight",
+      "Investigation",
+      "Medicine",
+      "Religion"
+    ],
+    "multiclass": {
+      "armour": [],
+      "weapons": [],
+      "weaponExceptions": []
+    },
+    "wiki": "https://bg3.wiki/wiki/Wizard",
+    "icon": "icons/classes/wizard.png"
+  }
+]

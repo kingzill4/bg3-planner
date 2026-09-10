@@ -1,0 +1,22 @@
+# Cached copies of bg3.wiki pages (~103 MB). Unlike the extracted facts in data/,
+# these are wholesale copies of someone else's pages, so they stay local. Every
+# script reads the cache when it is present and re-fetches politely when it is not.
+cache/
+
+# icons/ and assets/ are NOT ignored, on purpose.
+#
+# They used to be, because they are regenerable — which was right while this was a
+# local-only tool. It stops being right once the site is published: a static host
+# serves what the repo contains, so leaving them out would publish 1720 broken
+# images. The alternative, re-fetching them in CI, would hit bg3.wiki on every
+# single deploy for files that never change. Committing them once is both smaller
+# on the wiki and simpler here: one repo, one deploy, nothing to rebuild.
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/

@@ -1,0 +1,58 @@
+Abjuration School
+Arcane Archer
+Arcane Trickster
+Assassin
+Battle Master
+Beast Master
+Berserker
+Bladesinging
+Champion
+Circle of the Land
+Circle of the Moon
+Circle of the Spores
+Circle of the Stars
+College of Glamour
+College of Lore
+College of Swords
+College of Valour
+Conjuration School
+Death Domain
+Divination School
+Draconic Bloodline
+Eldritch Knight
+Enchantment School
+Evocation School
+Giant (barbarian subclass)
+Gloom Stalker
+Hunter
+Illusion School
+Knowledge Domain
+Life Domain
+Light Domain
+Nature Domain
+Necromancy School
+Oath of Devotion
+Oath of Vengeance
+Oath of the Ancients
+Oath of the Crown
+Oathbreaker
+Shadow Magic
+Storm Sorcery
+Swarmkeeper
+Swashbuckler
+Tempest Domain
+The Archfey
+The Fiend
+The Great Old One
+The Hexblade
+Thief
+Transmutation School
+Trickery Domain
+War Domain
+Way of Shadow
+Way of the Drunken Master
+Way of the Four Elements
+Way of the Open Hand
+Wild Magic (barbarian subclass)
+Wild Magic (sorcerer subclass)
+Wildheart
