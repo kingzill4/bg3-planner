@@ -29,8 +29,7 @@ const RACES = [
         "d": "Select an additional Skill to be Proficient in. Your carrying capacity is increased by a quarter."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Human",
-    "icon": "icons/races/human.png"
+    "wiki": "https://bg3.wiki/wiki/Human"
   },
   {
     "id": "githyanki",
@@ -39,8 +38,8 @@ const RACES = [
     "darkvision": false,
     "resistances": [],
     "armour": [
-      "Light Armour",
-      "Medium Armour"
+      "Medium Armour",
+      "Light Armour"
     ],
     "weapons": [
       "Shortsword",
@@ -69,8 +68,7 @@ const RACES = [
         "d": "A lifetime of relentless training gave you Armour proficiency with Light armour and Medium armour , as well as Proficiency with Shortswords , Longswords , and Greatswords ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Githyanki",
-    "icon": "icons/races/githyanki.png"
+    "wiki": "https://bg3.wiki/wiki/Githyanki"
   },
   {
     "id": "half-orc",
@@ -106,8 +104,7 @@ const RACES = [
         "d": "When you land a Critical Hit with a melee weapon attack, you deal an extra die of weapon damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Half-Orc",
-    "icon": "icons/races/half-orc.webp"
+    "wiki": "https://bg3.wiki/wiki/Half-Orc"
   },
   {
     "id": "dragonborn",
@@ -127,8 +124,307 @@ const RACES = [
         "d": "Medium"
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Dragonborn",
-    "icon": "icons/races/dragonborn.webp"
+    "wiki": "https://bg3.wiki/wiki/Dragonborn"
+  },
+  {
+    "id": "black-dragonborn",
+    "name": "Black Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Acid"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Acid Breath",
+        "d": "Spew forth a column of acid, dealing 2d6 Acid damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Acid damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Black_Dragonborn"
+  },
+  {
+    "id": "blue-dragonborn",
+    "name": "Blue Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Lightning"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Lightning Breath",
+        "d": "Spew forth a column of lightning, dealing 2d6 Lightning damage"
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Lightning damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Blue_Dragonborn"
+  },
+  {
+    "id": "brass-dragonborn",
+    "name": "Brass Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Fire"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Fire Breath (Line)",
+        "d": "Spew forth a column of fire, dealing 2d6 Fire damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Fire damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Brass_Dragonborn"
+  },
+  {
+    "id": "bronze-dragonborn",
+    "name": "Bronze Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Lightning"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Lightning Breath",
+        "d": "Spew forth a column of lightning, dealing 2d6 Lightning damage"
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Lightning damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Bronze_Dragonborn"
+  },
+  {
+    "id": "copper-dragonborn",
+    "name": "Copper Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Acid"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Acid Breath",
+        "d": "Spew forth a column of acid, dealing 2d6 Acid damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Acid damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Copper_Dragonborn"
+  },
+  {
+    "id": "gold-dragonborn",
+    "name": "Gold Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Fire"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Fire Breath (Cone)",
+        "d": "Spew forth a cone of fire, dealing 2d6 Fire damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Fire damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Gold_Dragonborn"
+  },
+  {
+    "id": "green-dragonborn",
+    "name": "Green Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Poison"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Poison Breath",
+        "d": "Spew forth a cone of poison, dealing 2d6 Poison damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Poison damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Green_Dragonborn"
+  },
+  {
+    "id": "red-dragonborn",
+    "name": "Red Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Fire"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Fire Breath (Cone)",
+        "d": "Spew forth a cone of fire, dealing 2d6 Fire damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Fire damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Red_Dragonborn"
+  },
+  {
+    "id": "silver-dragonborn",
+    "name": "Silver Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Cold"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Frost Breath",
+        "d": "Spew forth a cone of ice, dealing 2d6 Cold damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Cold damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/Silver_Dragonborn"
+  },
+  {
+    "id": "white-dragonborn",
+    "name": "White Dragonborn",
+    "speed": 9.0,
+    "darkvision": false,
+    "resistances": [
+      "Cold"
+    ],
+    "armour": [],
+    "weapons": [],
+    "traits": [
+      {
+        "n": "Base Racial Speed",
+        "d": "You can move 9 m (30 ft) per turn."
+      },
+      {
+        "n": "Size",
+        "d": "Medium"
+      },
+      {
+        "n": "Frost Breath",
+        "d": "Spew forth a cone of ice, dealing 2d6 Cold damage."
+      },
+      {
+        "n": "Draconic Ancestry",
+        "d": "The blood of ancient dragons flow through your veins. You are Resistant to Cold damage."
+      }
+    ],
+    "wiki": "https://bg3.wiki/wiki/White_Dragonborn"
   },
   {
     "id": "high-elf",
@@ -169,8 +465,7 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/High_Elf",
-    "icon": "icons/races/high-elf.png"
+    "wiki": "https://bg3.wiki/wiki/High_Elf"
   },
   {
     "id": "wood-elf",
@@ -215,8 +510,7 @@ const RACES = [
         "d": "Your Movement Speed is increased by 1.5 m (5 ft)."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Wood_Elf",
-    "icon": "icons/races/wood-elf.png"
+    "wiki": "https://bg3.wiki/wiki/Wood_Elf"
   },
   {
     "id": "half-elf",
@@ -251,8 +545,7 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Half-Elf",
-    "icon": "icons/races/half-elf.png"
+    "wiki": "https://bg3.wiki/wiki/Half-Elf"
   },
   {
     "id": "high-half-elf",
@@ -287,8 +580,7 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/High_Half-Elf",
-    "icon": "icons/races/high-half-elf.png"
+    "wiki": "https://bg3.wiki/wiki/High_Half-Elf"
   },
   {
     "id": "wood-half-elf",
@@ -327,8 +619,7 @@ const RACES = [
         "d": "Your Movement Speed is further increased by 1.5 m (5 ft)."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Wood_Half-Elf",
-    "icon": "icons/races/wood-half-elf.png"
+    "wiki": "https://bg3.wiki/wiki/Wood_Half-Elf"
   },
   {
     "id": "drow-half-elf",
@@ -363,8 +654,7 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Drow_Half-Elf",
-    "icon": "icons/races/drow-half-elf.png"
+    "wiki": "https://bg3.wiki/wiki/Drow_Half-Elf"
   },
   {
     "id": "lolth-sworn-drow",
@@ -412,8 +702,7 @@ const RACES = [
         "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Lolth-Sworn_Drow",
-    "icon": "icons/races/lolth-sworn-drow.jpg"
+    "wiki": "https://bg3.wiki/wiki/Lolth-Sworn_Drow"
   },
   {
     "id": "seldarine-drow",
@@ -461,8 +750,7 @@ const RACES = [
         "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Seldarine_Drow",
-    "icon": "icons/races/seldarine-drow.jpg"
+    "wiki": "https://bg3.wiki/wiki/Seldarine_Drow"
   },
   {
     "id": "lightfoot-halfling",
@@ -494,8 +782,7 @@ const RACES = [
         "d": "Your nimble nature makes you skilled at concealment. You have Advantage on Stealth Checks ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Lightfoot_Halfling",
-    "icon": "icons/races/lightfoot-halfling.jpg"
+    "wiki": "https://bg3.wiki/wiki/Lightfoot_Halfling"
   },
   {
     "id": "strongheart-halfling",
@@ -529,8 +816,7 @@ const RACES = [
         "d": "You have Advantage on Saving Throws against being Poisoned and Resistance to Poison damage."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Strongheart_Halfling",
-    "icon": "icons/races/strongheart-halfling.jpg"
+    "wiki": "https://bg3.wiki/wiki/Strongheart_Halfling"
   },
   {
     "id": "gold-dwarf",
@@ -573,8 +859,7 @@ const RACES = [
         "d": "You have 1 extra maximum Hit Point per level."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Gold_Dwarf",
-    "icon": "icons/races/gold-dwarf.jpg"
+    "wiki": "https://bg3.wiki/wiki/Gold_Dwarf"
   },
   {
     "id": "shield-dwarf",
@@ -585,8 +870,8 @@ const RACES = [
       "Poison"
     ],
     "armour": [
-      "Light Armour",
-      "Medium Armour"
+      "Medium Armour",
+      "Light Armour"
     ],
     "weapons": [
       "Battleaxe",
@@ -620,8 +905,7 @@ const RACES = [
         "d": "You have Armour Proficiency with Light armour and Medium armour ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Shield_Dwarf",
-    "icon": "icons/races/shield-dwarf.jpg"
+    "wiki": "https://bg3.wiki/wiki/Shield_Dwarf"
   },
   {
     "id": "duergar",
@@ -676,8 +960,7 @@ const RACES = [
         "d": "While in sunlight, this creature has Disadvantage on Attack Rolls and Perception checks that rely on sight."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Duergar",
-    "icon": "icons/races/duergar.jpg"
+    "wiki": "https://bg3.wiki/wiki/Duergar"
   },
   {
     "id": "forest-gnome",
@@ -713,8 +996,7 @@ const RACES = [
         "d": "Gain the ability to comprehend and communicate with beasts. Recharge: Long rest ."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Forest_Gnome",
-    "icon": "icons/races/forest-gnome.png"
+    "wiki": "https://bg3.wiki/wiki/Forest_Gnome"
   },
   {
     "id": "rock-gnome",
@@ -750,8 +1032,7 @@ const RACES = [
         "d": "Add twice your Proficiency Bonus to History checks."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Rock_Gnome",
-    "icon": "icons/races/rock-gnome.png"
+    "wiki": "https://bg3.wiki/wiki/Rock_Gnome"
   },
   {
     "id": "deep-gnome",
@@ -787,8 +1068,7 @@ const RACES = [
         "d": "You have Advantage on Stealth checks."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Deep_Gnome",
-    "icon": "icons/races/deep-gnome.png"
+    "wiki": "https://bg3.wiki/wiki/Deep_Gnome"
   },
   {
     "id": "asmodeus-tiefling",
@@ -818,8 +1098,7 @@ const RACES = [
         "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Asmodeus_Tiefling",
-    "icon": "icons/races/asmodeus-tiefling.png"
+    "wiki": "https://bg3.wiki/wiki/Asmodeus_Tiefling"
   },
   {
     "id": "mephistopheles-tiefling",
@@ -849,8 +1128,7 @@ const RACES = [
         "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Mephistopheles_Tiefling",
-    "icon": "icons/races/mephistopheles-tiefling.png"
+    "wiki": "https://bg3.wiki/wiki/Mephistopheles_Tiefling"
   },
   {
     "id": "zariel-tiefling",
@@ -880,8 +1158,7 @@ const RACES = [
         "d": "Your blood protects you from flame, abyssal or otherwise. Gain Resistance to Fire damage, taking only half damage from it."
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Zariel_Tiefling",
-    "icon": "icons/races/zariel-tiefling.png"
+    "wiki": "https://bg3.wiki/wiki/Zariel_Tiefling"
   }
 ]
 ;

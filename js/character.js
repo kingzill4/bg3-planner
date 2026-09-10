@@ -29,6 +29,53 @@ const COMPANION_LIST = typeof COMPANIONS !== "undefined" ? COMPANIONS : [];
 const companionById = {};
 COMPANION_LIST.forEach((c) => (companionById[c.id] = c));
 
+// ---------------------------------------------------------------
+// Race families, for the two-step picker
+// ---------------------------------------------------------------
+// BG3's character creation asks for a race and then an ancestry, and the flat
+// list stopped scaling once Dragonborn brought ten colour subraces: thirty-three
+// rows, ten of them ending in the same word.
+//
+// The grouping is not guesswork. The companion infoboxes record exactly this
+// split — Astarion is race "Elf", subrace "High elf"; Karlach is "Tiefling" /
+// "Zariel tiefling"; Minthara is "Drow" / "Lolth-sworn drow". That is the game's
+// own answer to which families exist and that Drow is a race in its own right
+// rather than a kind of Elf. Names that carry their family as a suffix are split
+// on it; the handful that do not are listed, because "Duergar" does not contain
+// the word "Dwarf" and no rule could infer that it is one.
+const RACE_FAMILY_OVERRIDES = {
+  "duergar": "Dwarf",
+  "githyanki": "Githyanki",
+  "human": "Human",
+  "half-orc": "Half-Orc",
+  "dragonborn": "Dragonborn"
+};
+
+function raceFamilyOf(race) {
+  if (!race) return "";
+  const byId = RACE_FAMILY_OVERRIDES[race.id];
+  if (byId) return byId;
+  // "Drow Half-Elf" is a Half-Elf, not a Drow, so the *longest* trailing family
+  // name wins — matching on the first hit would file it under Drow.
+  const families = ["Half-Elf", "Half-Orc", "Dragonborn", "Tiefling", "Halfling",
+    "Dwarf", "Gnome", "Drow", "Elf"];
+  const hit = families.find((f) => new RegExp("\\b" + f + "$", "i").test(race.name));
+  return hit || race.name;
+}
+
+function raceFamilies() {
+  const seen = [];
+  RACE_LIST.forEach((r) => {
+    const f = raceFamilyOf(r);
+    if (!seen.includes(f)) seen.push(f);
+  });
+  return seen;
+}
+
+function raceFamilyMembers(family) {
+  return RACE_LIST.filter((r) => raceFamilyOf(r) === family);
+}
+
 const CLASS_KEY_BY_LABEL = {};
 Object.entries(CLASSES).forEach(([k, c]) => (CLASS_KEY_BY_LABEL[c.label.toLowerCase()] = k));
 

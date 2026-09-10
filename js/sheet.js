@@ -152,27 +152,82 @@ function withDetail(node, title, body, extras) {
 function renderRacePicker(m) {
   const box = document.getElementById("char-race");
   box.innerHTML = "";
+
+  const current = raceById[m.race] || null;
+  const family = current ? raceFamilyOf(current) : "";
+  const families = raceFamilies();
+
+  const describe = (r) => ({
+    icon: r.icon,
+    badge: r.darkvision ? "Darkvision" : "",
+    desc: (r.traits || []).filter((t) => !/^(Base Racial Speed|Size)$/i.test(t.n))
+      .map((t) => t.n).join(" · "),
+    grants: (r.resistances || []).map((x) => ({ n: x + " resistance" }))
+      .concat((r.armour || []).map((x) => ({ n: x })))
+      .concat((r.weapons || []).map((x) => ({ n: x })))
+  });
+
+  // First picker: the family, as the game's own character creation presents it.
+  // A flat list worked at 23 races; at 33 it is ten near-identical "… Dragonborn"
+  // rows buried among everything else, and the thing that actually differs — the
+  // ancestry damage type — is invisible until you read each one.
   box.appendChild(optionPicker({
     label: "Race",
     placeholder: "Choose a race…",
-    value: m.race || "",
-    options: [{ value: "", label: "— none —" }].concat(RACE_LIST.map((r) => ({
-      value: r.id,
-      label: r.name,
-      icon: r.icon,
-      badge: r.darkvision ? "Darkvision" : "",
-      desc: (r.traits || []).filter((t) => !/^(Base Racial Speed|Size)$/i.test(t.n))
-        .map((t) => t.n).join(" · "),
-      grants: (r.resistances || []).map((x) => ({ n: x + " resistance" }))
-        .concat((r.armour || []).map((x) => ({ n: x })))
-        .concat((r.weapons || []).map((x) => ({ n: x })))
-    }))),
+    value: family,
+    options: [{ value: "", label: "— none —" }].concat(families.map((f) => {
+      const members = raceFamilyMembers(f);
+      const lead = members[0];
+      return {
+        value: f,
+        label: f,
+        ...describe(lead),
+        badge: members.length > 1 ? members.length + " subraces"
+          : (lead.darkvision ? "Darkvision" : ""),
+        // for a family the traits differ per subrace, so summarise rather than
+        // show one member's list as if it spoke for all of them
+        desc: members.length > 1
+          ? members.map((r) => r.name.replace(new RegExp("\\s*" + f + "$", "i"), "").trim() || r.name).join(" · ")
+          : describe(lead).desc
+      };
+    })),
     onSelect: (value) => {
-      activeMember().race = value || null;
+      const mem = value ? raceFamilyMembers(value) : [];
+      // a family with one member is the race itself; otherwise wait for the subrace
+      activeMember().race = mem.length === 1 ? mem[0].id : null;
+      activeMember().raceFamily = value || null;
       saveCurrent();
       renderPlanner();
     }
   }));
+
+  // Second picker: only when the chosen family actually branches.
+  const chosenFamily = family || m.raceFamily || "";
+  // The bare "Dragonborn" entry is kept in the data so an older saved character
+  // still resolves, but it is not a choice anyone should make now — every real
+  // dragonborn has a colour. Hide it unless it is what this character already is.
+  const members = (chosenFamily ? raceFamilyMembers(chosenFamily) : [])
+    .filter((r) => r.name !== chosenFamily || r.id === m.race || raceFamilyMembers(chosenFamily).length === 1);
+  if (members.length > 1) {
+    const sub = el("div", { class: "subrace-picker" });
+    sub.appendChild(el("div", { class: "subrace-label" }, [chosenFamily + " ancestry"]));
+    sub.appendChild(optionPicker({
+      label: chosenFamily + " subrace",
+      placeholder: "Choose a " + chosenFamily.toLowerCase() + "…",
+      value: m.race || "",
+      options: members.map((r) => ({
+        value: r.id,
+        label: r.name.replace(new RegExp("\\s*" + chosenFamily + "$", "i"), "").trim() || r.name,
+        ...describe(r)
+      })),
+      onSelect: (value) => {
+        activeMember().race = value || null;
+        saveCurrent();
+        renderPlanner();
+      }
+    }));
+    box.appendChild(sub);
+  }
 }
 
 function renderBackgroundPicker(m) {

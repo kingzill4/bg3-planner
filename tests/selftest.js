@@ -178,6 +178,42 @@ const SelfTest = (() => {
         .map((i) => i.name));
     check("Shape", "every race has at least one trait", () =>
       RACES.filter((r) => !(r.traits || []).length).map((r) => r.name));
+    // Dragonborn showed no bonuses at all because its ten colour subraces were
+    // never scraped: the wiki keeps Draconic Ancestry, the breath weapon and the
+    // resistance under each colour's section, and "Racial features" holds only
+    // speed and size. Anything with speed and size and nothing else is that bug.
+    check("Shape", "no race has only speed and size", () =>
+      RACES.filter((r) => {
+        const real = (r.traits || []).filter((t) => !/^(Base Racial Speed|Size)$/i.test(t.n));
+        return real.length === 0 && r.name !== "Dragonborn";
+      }).map((r) => r.name));
+    check("Shape", "every dragonborn colour has a breath and a resistance", () => {
+      const colours = RACES.filter((r) => /Dragonborn$/.test(r.name) && r.name !== "Dragonborn");
+      if (colours.length !== 10) return "expected 10 colours, found " + colours.length;
+      return colours.filter((r) =>
+        !(r.resistances || []).length ||
+        !(r.traits || []).some((t) => /Breath/i.test(t.n))
+      ).map((r) => r.name);
+    });
+
+    check("References", "every race belongs to exactly one family", () => {
+      const covered = raceFamilies().reduce((s, f) => s + raceFamilyMembers(f).length, 0);
+      return covered === RACES.length ? true : covered + " of " + RACES.length + " races grouped";
+    });
+    // "Drow Half-Elf" is a Half-Elf, not a Drow. Matching the first family name
+    // found instead of the longest trailing one files it under the wrong parent.
+    check("References", "a Drow Half-Elf is filed under Half-Elf", () => {
+      const r = RACES.find((x) => x.name === "Drow Half-Elf");
+      if (!r) return true;
+      const f = raceFamilyOf(r);
+      return f === "Half-Elf" ? true : "filed under " + f;
+    });
+    check("References", "Duergar is filed under Dwarf", () => {
+      const r = RACES.find((x) => x.id === "duergar");
+      if (!r) return true;
+      const f = raceFamilyOf(r);
+      return f === "Dwarf" ? true : "filed under " + f;
+    });
 
     // ---- 4. Arithmetic ----------------------------------------------------
     const weapon = ITEMS.find((i) => i.type === "weapon" && i.damage &&
@@ -318,9 +354,34 @@ const SelfTest = (() => {
       if (!canCast(scratchMember("wizard", 5), fb)) return "withheld from Wizard 5";
       return true;
     });
+    // Wet is the mechanic BG3 combos are built on, and the easy version of it is
+    // wrong. "Vulnerable to Lightning and Cold" is not a flat doubling: the page
+    // adds that a target already resistant to those has "their resistances negated
+    // instead of becoming vulnerable". Getting that backwards would overstate a
+    // lightning build against precisely the enemies it exists to beat.
+    check("Rules", "Wet halves Fire and doubles Lightning and Cold", () => {
+      const saved = conditionState.wet;
+      conditionState.wet = 1;
+      const d = { type: "", mult: 1, wet: true };
+      const got = ["Fire", "Lightning", "Cold", "Slashing"].map((t) => t + "=" + defenceMult(d, t));
+      conditionState.wet = saved;
+      const want = ["Fire=0.5", "Lightning=2", "Cold=2", "Slashing=1"];
+      return got.join(",") === want.join(",") ? true : got.join(", ");
+    });
+    check("Rules", "Wet negates an existing resistance rather than doubling", () => {
+      const d = { type: "Lightning", mult: 0.5, wet: true };
+      const v = defenceMult(d, "Lightning");
+      return v === 1 ? true : "resistant + Wet gave x" + v + ", expected x1";
+    });
+    check("Rules", "Wet does not break through immunity", () => {
+      const d = { type: "Cold", mult: 0, wet: true };
+      const v = defenceMult(d, "Cold");
+      return v === 0 ? true : "immune + Wet gave x" + v;
+    });
+
     check("Rules", "binary conditions have max 1, stacking ones more", () => {
       const expect = { acuity: 10, bless: 1, charges: 5, reverb: 5, bane: 1,
-        restrained: 1, prone: 1, orb: 10 };
+        restrained: 1, prone: 1, wet: 1, orb: 10 };
       return CONDITIONS.filter((c) => expect[c.key] !== c.max)
         .map((c) => c.key + "=" + c.max + " (expected " + expect[c.key] + ")");
     });

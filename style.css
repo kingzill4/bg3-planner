@@ -1035,6 +1035,17 @@ footer.foot {
 }
 footer.foot a { color: var(--gold-dim); }
 footer.foot a:hover { color: var(--gold); }
+/* the second step of the race picker, indented under the first so it reads as
+   part of that choice rather than as another top-level field */
+.subrace-picker {
+  margin-top: 7px; padding-left: 10px;
+  border-left: 2px solid var(--gold-dim);
+}
+.subrace-label {
+  font-size: 9px; text-transform: uppercase; letter-spacing: .09em;
+  color: var(--gold-dim); margin-bottom: 4px;
+}
+
 /* the required Fan Content statement: present and legible, but set apart so it does
    not compete with the attribution above it */
 .foot-fcp { display: inline-block; margin-top: 5px; font-size: 10px; opacity: .72; }

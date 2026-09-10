@@ -255,16 +255,40 @@ function dualWieldCheck(member, mainItem, offItem) {
 function targetDefence() {
   const typeSel = document.getElementById("combat-defence-type");
   const stateSel = document.getElementById("combat-defence-state");
-  if (!typeSel || !stateSel) return null;
-  const type = typeSel.value;
-  const mult = parseFloat(stateSel.value);
-  if (!type || mult === 1 || isNaN(mult)) return null;
-  return { type, mult };
+  const type = typeSel ? typeSel.value : "";
+  const mult = stateSel ? parseFloat(stateSel.value) : NaN;
+  const manual = (type && !isNaN(mult) && mult !== 1) ? { type, mult } : null;
+  // Wet is a condition on the target, but what it changes is the target's
+  // defences, so it is resolved here with them rather than as an attack bonus.
+  const wet = !!conditionState.wet;
+  if (!manual && !wet) return null;
+  return { type: manual ? manual.type : "", mult: manual ? manual.mult : 1, wet };
 }
 
-const defenceMult = (defence, damageType) =>
-  (defence && damageType && damageType.toLowerCase() === defence.type.toLowerCase())
-    ? defence.mult : 1;
+// Wet (Condition): "Resistant to Fire damage. Vulnerable to Lightning and Cold
+// damage." Plus the note that decides the awkward cases:
+//   "Wet entities who are resistant to Lightning or Cold damage have their
+//    resistances negated instead of becoming vulnerable."
+// So it is not a flat doubling. A Lightning-resistant target that gets Wet takes
+// normal damage, not double — getting that backwards would overstate a
+// lightning build against exactly the enemies it is meant to counter.
+// Immunity is untouched: the note negates resistances, and says nothing about
+// immunity, so an immune target stays immune.
+function defenceMult(defence, damageType) {
+  if (!defence || !damageType) return 1;
+  const t = damageType.toLowerCase();
+  let mult = (defence.type && t === defence.type.toLowerCase()) ? defence.mult : 1;
+  if (!defence.wet) return mult;
+  if (mult === 0) return 0;
+  if (t === "fire") {
+    // resistance and vulnerability cancel rather than compound
+    return mult > 1 ? 1 : Math.min(mult, 0.5);
+  }
+  if (t === "lightning" || t === "cold") {
+    return mult < 1 ? 1 : 2;
+  }
+  return mult;
+}
 
 function weaponAttack(member, item, opts) {
   const o = opts || {};
@@ -493,6 +517,16 @@ const CONDITIONS = [
     advantage: true,
     effect: () => "attacks within 3 m (10 ft) have Advantage — assumed here",
     wiki: "https://bg3.wiki/wiki/Prone" },
+
+  // "Resistant to Fire damage. Vulnerable to Lightning and Cold damage."
+  // Nothing counts turns, so it is on or off. The multipliers are applied in
+  // defenceMult alongside the manual defence picker, because Wet changes what the
+  // target resists rather than what you roll — see the note there about the
+  // resistance-negation rule, which stops this being a plain doubling.
+  { key: "wet", label: "Wet", max: 1, on: "the target",
+    effect: () => "the target resists Fire, and is Vulnerable to Lightning and Cold — " +
+      "unless it already resisted them, in which case that resistance is negated instead",
+    wiki: "https://bg3.wiki/wiki/Wet_(Condition)" },
 
   { key: "orb", label: "Radiating Orb", max: 10, on: "the target", defensive: true,
     effect: (n) => "−" + n + " to the target's attack rolls — that protects you, and " +

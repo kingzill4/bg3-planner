@@ -14,9 +14,23 @@ $root = Split-Path -Parent $PSScriptRoot
 $cacheDir = Join-Path $root "cache"
 $UA = "bg3-planner personal build tool (contact: fmongeon@mongeonsolutions.ca)"
 
-# races et sous-races jouables (les sous-races ont leurs propres traits)
+# Races et sous-races jouables. Les sous-races portent leurs propres traits, donc
+# chacune doit figurer ici : le wiki met les features communes sous "Racial
+# features" et tout le reste sous la section de la sous-race.
+#
+# Dragonborn manquait ses dix sous-races de couleur, et le symptome etait qu'il
+# s'affichait sans aucun bonus : Draconic Ancestry, le souffle et la resistance
+# vivent tous dans la section de la couleur. Les features communes ne contiennent
+# que la vitesse et la taille.
+#
+# "Dragonborn" reste liste a cote des couleurs : un personnage deja sauvegarde
+# peut porter cet id, et le retirer casserait sa fiche. Meme arrangement que
+# "Half-Elf" a cote de "High Half-Elf".
 $races = @(
     "Human", "Githyanki", "Half-Orc", "Dragonborn",
+    "Black Dragonborn", "Blue Dragonborn", "Brass Dragonborn", "Bronze Dragonborn",
+    "Copper Dragonborn", "Gold Dragonborn", "Green Dragonborn", "Red Dragonborn",
+    "Silver Dragonborn", "White Dragonborn",
     "High Elf", "Wood Elf", "Half-Elf", "High Half-Elf", "Wood Half-Elf", "Drow Half-Elf",
     "Lolth-Sworn Drow", "Seldarine Drow",
     "Lightfoot Halfling", "Strongheart Halfling",
@@ -112,8 +126,12 @@ foreach ($name in $races) {
 
     $darkvision = ($traits | Where-Object { $_.n -match 'Darkvision' }).Count -gt 0
 
+    # Le wiki emploie les deux formes selon la page : les tieffelins ont
+    # "Resistance to Fire damage" (nom), les draconiques "You are Resistant to Acid
+    # damage" (adjectif). N'accepter que le nom laissait les dix draconiques sans
+    # aucune resistance enregistree, alors que c'est leur trait principal.
     $resistances = @()
-    foreach ($rm in [regex]::Matches($features, 'Resistance (?:to|against) ([A-Z][a-z]+)(?: damage)?')) {
+    foreach ($rm in [regex]::Matches($features, 'Resistan(?:ce|t) (?:to|against) ([A-Z][a-z]+)(?: damage)?')) {
         $r = $rm.Groups[1].Value
         if ($resistances -notcontains $r) { $resistances += $r }
     }
