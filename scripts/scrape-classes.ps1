@@ -236,6 +236,7 @@ foreach ($name in $classes) {
     # capacite qui les passe a d10.
     $descByName = @{}
     $descByLevel = @{}
+    $bullets = @()
     $lpM = [regex]::Match($html, '(?si)id="Level_progression".*?(?=<h2)')
     if ($lpM.Success) {
         foreach ($seg in (Split-WikiLevels $lpM.Value)) {
@@ -246,11 +247,33 @@ foreach ($name in $classes) {
                     d = $e.d
                     opts = @($e.opts | ForEach-Object { [PSCustomObject]@{ n = $_.n; d = $_.d } })
                 }
-                if (-not $descByName.ContainsKey($k)) { $descByName[$k] = $info }
-                if ($null -ne $seg.level) {
-                    $lk = "$($seg.level)|$k"
-                    if (-not $descByLevel.ContainsKey($lk)) { $descByLevel[$lk] = $info }
+                # On indexe aussi le nom sans sa parenthese finale. Le tableau de
+                # progression dit "Create Spell Slot" quand la description s'intitule
+                # "Create Spell Slot ( + 2 )" — le cout en points de sorcellerie,
+                # ecrit en icones. Sans cette cle, la capacite restait muette.
+                $keys = @($k)
+                $bare = ($e.n -replace '\s*\([^)]*\)\s*$', '').Trim().ToLower()
+                if ($bare -and $bare -ne $k) { $keys += $bare }
+                foreach ($kk in $keys) {
+                    if (-not $descByName.ContainsKey($kk)) { $descByName[$kk] = $info }
+                    if ($null -ne $seg.level) {
+                        $lk = "$($seg.level)|$kk"
+                        if (-not $descByLevel.ContainsKey($lk)) { $descByLevel[$lk] = $info }
+                    }
                 }
+            }
+
+            # Toutes les classes n'ecrivent pas leurs capacites en liste de
+            # definition. Le voleur les met en puces : "<li>Gain Expertise in 2
+            # Skills you are Proficient in.</li>". Lu uniquement en <dl>, son
+            # Expertise ressortait sans description, au milieu de capacites qui en
+            # avaient toutes une.
+            foreach ($li in [regex]::Matches($seg.html, '(?s)<li[^>]*>(?<t>.*?)</li>')) {
+                $t = ConvertTo-PlainText $li.Groups['t'].Value
+                if (-not $t -or $t.Length -lt 12 -or $t.Length -gt 400) { continue }
+                # La puce nomme la capacite qu'elle decrit : on la retrouve par son
+                # nom, et on ne garde la phrase que pour celle-la.
+                $bullets += [PSCustomObject]@{ level = $seg.level; text = $t }
             }
         }
     }
@@ -291,11 +314,52 @@ foreach ($name in $classes) {
                                 elseif ($descByName.ContainsKey($alt)) { $descByName[$alt] }
                                 else { $null }
                     }
-                    # Neuf capacites ne sont pas reprises niveau par niveau sur la
-                    # page de leur classe — Expertise, Pact Magic, Channel Oath. Le
-                    # wiki leur consacre une page a elles : c'est la qu'on va lire,
-                    # plutot que de laisser une pastille muette au milieu de
-                    # quatre-vingt-onze qui parlent.
+                    # Puis les puces du meme niveau : le voleur decrit Expertise
+                    # dans un <li>, pas dans un <dl>, et la phrase nomme la
+                    # capacite. On exige le nom pour ne pas coller au hasard la
+                    # premiere puce venue.
+                    if (-not $info) {
+                        $stem = ($f -replace '\s*\([^)]*\)\s*$', '')
+                        $hit = $bullets | Where-Object {
+                            $_.level -eq $lv -and $_.text -match [regex]::Escape($stem)
+                        } | Select-Object -First 1
+                        if ($hit) { $info = [PSCustomObject]@{ d = $hit.text; opts = @() } }
+                    }
+                    # Puis n'importe quelle definition de la page de la classe : le
+                    # Pact Magic d'un occultiste est decrit sur sa page, mais en
+                    # dehors de la section de progression.
+                    if (-not $info) {
+                        $stem3 = ($f -replace '\s*\([^)]*\)\s*$', '').Trim().ToLower()
+                        foreach ($e in (Get-FeatureEntries $html)) {
+                            $en = ($e.n -replace '\s*\([^)]*\)\s*$', '').Trim().ToLower()
+                            if ($en -ne $stem3) { continue }
+                            if (-not $e.d -and -not $e.opts.Count) { continue }
+                            $info = [PSCustomObject]@{
+                                d = $e.d
+                                opts = @($e.opts | ForEach-Object { [PSCustomObject]@{ n = $_.n; d = $_.d } })
+                            }
+                            break
+                        }
+                    }
+                    # Puis une section de la page de la classe portant ce nom.
+                    if (-not $info) {
+                        $stem2 = ($f -replace '\s*\([^)]*\)\s*$', '') -replace ' ', '_'
+                        $sec = [regex]::Match($html,
+                            '(?si)id="' + [regex]::Escape($stem2) + '".*?</h[234]>(?<b>.{0,3000}?)(?=<h[234])')
+                        if ($sec.Success) {
+                            foreach ($p in [regex]::Matches($sec.Groups['b'].Value, '(?s)<p[^>]*>(?<t>.*?)</p>')) {
+                                $t = ConvertTo-PlainText $p.Groups['t'].Value
+                                if ($t.Length -gt 40) {
+                                    if ($t.Length -gt 320) { $t = $t.Substring(0, 317).TrimEnd() + "..." }
+                                    $info = [PSCustomObject]@{ d = $t; opts = @() }
+                                    break
+                                }
+                            }
+                        }
+                    }
+                    # Enfin la page dediee a la capacite, quand le wiki lui en donne
+                    # une : mieux vaut la lire que laisser une pastille muette au
+                    # milieu de cent qui parlent.
                     if (-not $info) {
                         $d = Get-FeaturePageDescription ($f -replace '\s*\([^)]*\)\s*$', '')
                         if ($d) { $info = [PSCustomObject]@{ d = $d; opts = @() } }

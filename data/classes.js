@@ -8,8 +8,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 7,
     "spellAbility": null,
     "saves": [
-      "str",
-      "con"
+      "con",
+      "str"
     ],
     "armour": [
       "Light Armour",
@@ -71,7 +71,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a feat."
           }
         ]
       },
@@ -118,7 +118,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a feat."
           }
         ]
       },
@@ -160,7 +160,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a feat."
           }
         ]
       }
@@ -259,6 +259,12 @@ const CLASS_DATA = [
         "features": [
           "Choose a subclass",
           "Expertise"
+        ],
+        "detail": [
+          {
+            "n": "Expertise",
+            "d": "Gain Expertise in 2 Skills you are Proficient in."
+          }
         ]
       },
       {
@@ -269,7 +275,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -315,7 +321,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -336,6 +342,10 @@ const CLASS_DATA = [
             "d": "Your Bardic Inspiration dice are now d10"
           },
           {
+            "n": "Expertise",
+            "d": "Gain Expertise in 2 more Skills you are Proficient in."
+          },
+          {
             "n": "Magical Secrets",
             "d": "Learn 2 non-Bard Spells from the Magical Secrets list"
           }
@@ -353,7 +363,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }
@@ -395,8 +405,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": "wis",
     "saves": [
-      "cha",
-      "wis"
+      "wis",
+      "cha"
     ],
     "armour": [
       "Light Armour",
@@ -464,7 +474,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -496,7 +506,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -546,7 +556,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }
@@ -667,7 +677,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           },
           {
             "n": "Wild Shape Improvement",
@@ -706,7 +716,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           },
           {
             "n": "Wild Shape Improvement",
@@ -744,7 +754,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           },
           {
             "n": "Wild Shape Improvement",
@@ -782,8 +792,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 6,
     "spellAbility": null,
     "saves": [
-      "str",
-      "con"
+      "con",
+      "str"
     ],
     "armour": [
       "Light Armour",
@@ -867,7 +877,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -891,7 +901,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -909,7 +919,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -951,7 +961,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }
@@ -988,8 +998,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": null,
     "saves": [
-      "dex",
-      "str"
+      "str",
+      "dex"
     ],
     "armour": [],
     "weapons": [
@@ -1091,7 +1101,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           },
           {
             "n": "Slow Fall",
@@ -1164,7 +1174,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1212,7 +1222,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }
@@ -1244,8 +1254,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 6,
     "spellAbility": "cha",
     "saves": [
-      "cha",
-      "wis"
+      "wis",
+      "cha"
     ],
     "armour": [
       "Light Armour",
@@ -1344,7 +1354,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1386,7 +1396,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1428,7 +1438,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }
@@ -1463,8 +1473,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 6,
     "spellAbility": "wis",
     "saves": [
-      "dex",
-      "str"
+      "str",
+      "dex"
     ],
     "armour": [
       "Light Armour",
@@ -1554,7 +1564,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1603,7 +1613,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           },
           {
             "n": "Land's Stride: Difficult Terrain",
@@ -1688,8 +1698,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": null,
     "saves": [
-      "dex",
-      "int"
+      "int",
+      "dex"
     ],
     "armour": [
       "Light Armour"
@@ -1713,6 +1723,10 @@ const CLASS_DATA = [
           "Sneak Attack (Ranged)"
         ],
         "detail": [
+          {
+            "n": "Expertise",
+            "d": "Gain Expertise in 2 Skills you are Proficient in."
+          },
           {
             "n": "Sneak Attack (Melee)",
             "d": "Deal an extra 1d6 damage to a foe you have Advantage against. ( Recharge: Per turn.)"
@@ -1759,7 +1773,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1779,6 +1793,12 @@ const CLASS_DATA = [
         "level": 6,
         "features": [
           "Expertise"
+        ],
+        "detail": [
+          {
+            "n": "Expertise",
+            "d": "Gain Expertise in 2 Skills you are Proficient in."
+          }
         ]
       },
       {
@@ -1801,7 +1821,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1819,7 +1839,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1843,7 +1863,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }
@@ -1926,6 +1946,10 @@ const CLASS_DATA = [
             "d": "Choose 1 additional Metamagic"
           },
           {
+            "n": "Create Spell Slot",
+            "d": "Spend Sorcery Points to unlock a Spell Slot."
+          },
+          {
             "n": "Create Sorcery Points",
             "d": "Spend Spell Slots to gain Sorcery Points. The level of spell slot spent creates the equivalent number of Sorcery Points."
           }
@@ -1951,7 +1975,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -1977,7 +2001,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -2011,7 +2035,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }
@@ -2039,8 +2063,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": "cha",
     "saves": [
-      "cha",
-      "wis"
+      "wis",
+      "cha"
     ],
     "armour": [
       "Light Armour"
@@ -2056,6 +2080,12 @@ const CLASS_DATA = [
         "features": [
           "Pact Magic",
           "Choose a Subclass"
+        ],
+        "detail": [
+          {
+            "n": "Pact Magic",
+            "d": "Warlock spell slots (also known as \"pact slots\") are not like those of other spellcasters. · Warlock spell slots are equal to the highest level of Spells the Warlock has access to. Casting a lower level Spell will always \"upcast\" it to the highest level available. · Warlocks have a very limited number of spell slots, but also regain those slots by taking a Short Rest or Long Rest. · As a result, Warlocks can cast fewer Spells per battle than other spellcasters, but also more high level Spells per day."
+          }
         ]
       },
       {
@@ -2090,7 +2120,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -2137,7 +2167,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -2180,7 +2210,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           },
           {
             "n": "Eldritch Invocations (+1)",
@@ -2257,7 +2287,7 @@ const CLASS_DATA = [
           },
           {
             "n": "Transcribing scrolls",
-            "d": "Transcribing scrolls is game mechanic which allows wizard characters to add wizard spells to their spellbook by using scrolls."
+            "d": "A Wizard who finds a scroll for a spell they do not know may permanently copy that spell into their spellbook at the cost of the scroll and 50 gp per level of the spell. The spell must be on the Wizard class spell list, and be one for which the Wizard has a spell slot, even if they obtained it by multiclassing (so a L4 Cleric / L1 Wizard can transcribe Level 3 spells). For information about how this interacts with multiclassing, class changes, and unobtainable scrolls, see the dedicated page for this feature."
           }
         ]
       },
@@ -2279,7 +2309,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -2305,7 +2335,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       },
@@ -2331,7 +2361,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Feat",
-            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+            "d": "Choose a Feat."
           }
         ]
       }

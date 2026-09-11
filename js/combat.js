@@ -189,6 +189,49 @@ function divineSmiteDice(member, slotLevel) {
   return Math.min(5, 2 + Math.max(0, (slotLevel || 1) - 1));
 }
 
+// Improved Divine Smite, the Paladin's level 11 passive: "Melee weapon attacks
+// deal an additional 1d8 Radiant damage." No slot and no choice — it is simply
+// on, and it was missing from every Paladin 11+ figure this tool produced.
+// The wiki names the restriction when there is one — Brutal Critical says "main
+// hand melee weapon attacks or unarmed" — and here it says only "melee weapon
+// attacks", so the off-hand swing carries it too.
+const improvedSmiteDice = (member) =>
+  hasClassFeature(member, "Improved Divine Smite") ? 1 : 0;
+
+// Rage: "Deals an additional 2 (increased to 3 at level 9) damage with melee and
+// improvised weapons, unarmed strikes, and while throwing objects." The step is
+// read off the wiki's own Rage Damage column rather than remembered: +2 through
+// level 8, +3 from 9.
+//
+// Heavy armour cancels it. Rage Impeded: "Until the armour is removed, Raging
+// won't grant extra damage, resistance to physical damage, or Advantage on
+// Strength Checks and Saving Throws."
+function rageDamage(member) {
+  const barb = memberClasses(member).filter((c) => c.cls === "barbarian")
+    .reduce((sum, c) => sum + c.levels, 0);
+  if (!barb) return 0;
+  const chest = itemsById[gear(member).chest];
+  if (chest && armourCategory(chest) === "heavy") return 0;
+  return barb >= 9 ? 3 : 2;
+}
+
+// An extra die of weapon damage on a critical hit. Two sources, one shape:
+//   Brutal Critical (Barbarian 9) — "you roll an extra damage die as well as the
+//     normal additional critical die", limited by its own notes to "main hand
+//     melee weapon attacks or unarmed melee attacks".
+//   Savage Attacks (Half-Orc)     — "you deal an extra die of weapon damage",
+//     which the same notes say covers melee main hand or off-hand.
+// One die either way, whatever the weapon's dice count. bg3.wiki/wiki/Critical_Hit:
+// "an attack dealing 1d10 Bludgeoning will critically deal 2d10 + 1d10", and the
+// Brutal Critical page spells out that a greatsword's 2d6 gains a single d6.
+function extraCritDice(member, offHand) {
+  let dice = 0;
+  if (!offHand && hasClassFeature(member, "Brutal Critical")) dice += 1;
+  const race = raceById[member.race];
+  if (race && (race.traits || []).some((t) => /^Savage Attacks$/i.test(t.n || ""))) dice += 1;
+  return dice;
+}
+
 // GWM's "All In" is narrower in BG3 than the 5e feat: bg3.wiki words it as
 // "attacking with a Two-Handed or Versatile melee weapon (in both hands) that
 // you are Proficient with". A Heavy one-handed weapon does not qualify, and a
@@ -358,10 +401,23 @@ function weaponAttack(member, item, opts) {
     sum + diceExpected(r.count, r.size, gwf, savage) * defenceMult(defence, r.type), 0);
   const riderFlat = riders.reduce((sum, r) => sum + r.flat * defenceMult(defence, r.type), 0);
 
+  // Rage is a flat rider on the weapon's own damage type, so it rides the main
+  // component's multiplier like the ability modifier does.
+  const rage = o.rage ? rageDamage(member) : 0;
+  const rageOn = rage && !ranged;
+
   let flatOnMain = (main ? main.flat : 0) + damageAbilityMod + cond.damage;
   if (powerAttack) flatOnMain += 10;
   if (duelling) flatOnMain += 2;
-  let avgDamage = mainDice + flatOnMain * mainMult + riderDice + riderFlat;
+  if (rageOn) flatOnMain += rage;
+
+  // Improved Divine Smite rides every melee hit, and it is a die, so it doubles
+  // on a critical like any other damage die.
+  const impSmiteDice = !ranged ? improvedSmiteDice(member) : 0;
+  const impSmiteAvg = diceExpected(impSmiteDice, 8, gwf, savage) *
+    defenceMult(defence, "Radiant");
+
+  let avgDamage = mainDice + flatOnMain * mainMult + riderDice + riderFlat + impSmiteAvg;
 
   const luck = hasHalflingLuck(member);
   const critThreshold = critThresholdOf(member);
@@ -373,9 +429,19 @@ function weaponAttack(member, item, opts) {
   const roll = (advantage ? 1 : 0) - (disadvantage ? 1 : 0);
   const odds = attackOdds(attackBonus, o.targetAc, critThreshold, roll, luck);
   const chance = odds.hit + odds.crit;
-  // Only the dice double on a critical hit, riders included; flat bonuses and
-  // the ability modifier do not (bg3.wiki/wiki/Critical_Hit).
-  const critExtra = mainDice + riderDice;
+  // "Any dice that are rolled for damage, including additional dice such as those
+  // from smites or combat manoeuvres, are rolled twice. Flat modifiers and bonuses
+  // to damage – including one's relevant ability score modifier and proficiency
+  // bonus – are not doubled." (bg3.wiki/wiki/Critical_Hit)
+  //
+  // Brutal Critical and Savage Attacks then add one more die of weapon damage on
+  // top of that doubling — the same page's example is "an attack dealing 1d10
+  // Bludgeoning will critically deal 2d10 + 1d10".
+  const critDice = !ranged ? extraCritDice(member, offHand) : 0;
+  const critBonusAvg = main
+    ? diceExpected(critDice, main.size, gwf, savage) * mainMult
+    : 0;
+  const critExtra = mainDice + riderDice + impSmiteAvg + critBonusAvg;
 
   // Extra Attack multiplies the whole attack; the off-hand attack is a bonus
   // action and is not repeated by it.
@@ -385,13 +451,14 @@ function weaponAttack(member, item, opts) {
   // deliberately ignored here: Great Weapon Fighting and Savage Attacker shift the
   // distribution but not what the dice can physically roll.
   const flatTotal = (main ? main.flat : 0) + damageAbilityMod +
-    (powerAttack ? 10 : 0) + (duelling ? 2 : 0);
+    (powerAttack ? 10 : 0) + (duelling ? 2 : 0) + (rageOn ? rage : 0);
+  const radiantMult = defenceMult(defence, "Radiant");
   const minDamage = main
-    ? Math.max(0, (main.count + flatTotal) * mainMult +
+    ? Math.max(0, (main.count + flatTotal) * mainMult + impSmiteDice * radiantMult +
         riders.reduce((s, x) => s + (x.count + x.flat) * defenceMult(defence, x.type), 0))
     : 0;
   const maxDamage = main
-    ? Math.max(0, (main.count * main.size + flatTotal) * mainMult +
+    ? Math.max(0, (main.count * main.size + flatTotal) * mainMult + impSmiteDice * 8 * radiantMult +
         riders.reduce((s, x) => s + (x.count * x.size + x.flat) * defenceMult(defence, x.type), 0))
     : 0;
 
@@ -408,7 +475,19 @@ function weaponAttack(member, item, opts) {
   // Sneak Attack deals the weapon's own damage type; Divine Smite is always Radiant.
   const sneakAvg = diceExpected(sneakDice, 6, gwf, savage) * mainMult;
   const smiteAvg = diceExpected(smiteDice, 8, gwf, savage) * defenceMult(defence, "Radiant");
-  const riderTurn = anyHit * (sneakAvg + smiteAvg) + critOnce * (sneakAvg + smiteAvg);
+  // Brutal Critical and Savage Attacks add their extra die to Divine Smite too:
+  // "Additional damage dice, like those from battle manoeuvres, are not subject to
+  // this additive bonus, with the exception of Divine Smite."
+  // (bg3.wiki/wiki/Critical_Hit)
+  const smiteCritBonus = smiteDice
+    ? diceExpected(critDice, 8, gwf, savage) * defenceMult(defence, "Radiant")
+    : 0;
+  // Both land once per turn, and both are the player's choice after a hit lands —
+  // so an optimal turn spends them on a critical when the turn produces one. The
+  // first term is the rider landing at all, the second the doubling it gets when
+  // that hit was a critical.
+  const riderTurn = anyHit * (sneakAvg + smiteAvg) +
+    critOnce * (sneakAvg + smiteAvg + smiteCritBonus);
 
 
   return {
@@ -418,6 +497,7 @@ function weaponAttack(member, item, opts) {
     main, riders, riderAvg: riderDice + riderFlat, critExtra,
     critChance: odds.crit, critThreshold, odds, attacks,
     sneakDice, smiteDice, sneakAvg, smiteAvg,
+    rage: rageOn ? rage : 0, impSmiteDice, impSmiteAvg, critDice, critBonusAvg,
     attackBonus, avgDamage: Math.max(0, avgDamage),
     perAttack, minDamage, maxDamage,
     hitChance: chance,
@@ -703,6 +783,10 @@ function turnSummary(member, opts) {
   const dualWield = offIsWeapon ? dualWieldCheck(member, mainItem, offItem) : { ok: true };
   const off = (offIsWeapon && dualWield.ok)
     ? weaponAttack(member, offItem, {
+        // Rage stays: it is a state the character is in, not a choice made on one
+        // swing, and its wording covers melee weapon attacks without qualifying
+        // which hand. Sneak Attack and Divine Smite are once-per-turn choices and
+        // are already spent on the main hand.
         ...opts, offHand: true, slotKey: offKey,
         sneakAttack: false, divineSmite: false,
         twoHanded: false
@@ -722,7 +806,9 @@ function turnSummary(member, opts) {
 // all worth comparing against the plain attack — seeing 32.3 next to 39.2 answers
 // "is −5/+10 worth it here" without touching anything.
 function turnVariants(member, opts) {
-  const base = turnSummary(member, { ...opts, powerAttack: false, sneakAttack: false, divineSmite: false });
+  const base = turnSummary(member, {
+    ...opts, powerAttack: false, sneakAttack: false, divineSmite: false, rage: false
+  });
   if (!base) return null;
   const out = { base, rows: [] };
 
@@ -730,7 +816,7 @@ function turnVariants(member, opts) {
   // are always worth comparing against. Both are offered so the swing is visible
   // in either direction: from a straight d20 you see what each is worth, and from
   // Disadvantage you see what getting out of it is worth.
-  const plain = { powerAttack: false, sneakAttack: false, divineSmite: false };
+  const plain = { powerAttack: false, sneakAttack: false, divineSmite: false, rage: false };
   if (!opts.advantage) {
     const adv = turnSummary(member, { ...opts, ...plain, advantage: true, disadvantage: false });
     if (adv) out.rows.push({ label: "With Advantage", total: adv.total, rollState: true });
@@ -768,6 +854,22 @@ function turnVariants(member, opts) {
     const t = turnSummary(member, { ...opts, powerAttack: false, sneakAttack: true, divineSmite: false });
     if (t) out.rows.push({ label: "Sneak Attack " + sneakAttackDice(member) + "d6", total: t.total });
   }
+  // Rage is a Bonus Action the Barbarian is either in or not, so it belongs beside
+  // the other conditional riders rather than folded into the base figure. It is
+  // melee only, and heavy armour cancels the damage entirely (Rage Impeded), which
+  // rageDamage already accounts for — so a heavy-armoured Barbarian gets no row,
+  // which is the honest answer rather than a row worth nothing.
+  if (rageDamage(member) && !base.main.ranged) {
+    const t = turnSummary(member, { ...opts, ...plain, rage: true });
+    if (t) out.rows.push({
+      label: "Raging (+" + rageDamage(member) + " melee)",
+      total: t.total,
+      detail: "Bonus Action. Deals an additional " + rageDamage(member) + " damage with " +
+        "melee and improvised weapons, unarmed strikes, and while throwing objects. " +
+        "Heavy armour cancels it."
+    });
+  }
+
   const smiteSlots = spellSlotInfo(member);
   if (divineSmiteDice(member, 1)) {
     const slot = Math.min(Math.max(1, smiteSlots.maxSlot), 4);
@@ -788,7 +890,7 @@ function turnVariants(member, opts) {
   if (out.rows.some((r) => !r.rollState)) {
     const t = turnSummary(member, {
       ...opts, advantage: true, disadvantage: false,
-      powerAttack: true, sneakAttack: true, divineSmite: true,
+      powerAttack: true, sneakAttack: true, divineSmite: true, rage: true,
       smiteSlot: Math.min(Math.max(1, smiteSlots.maxSlot), 4)
     });
     if (t) out.rows.push({ label: "All of the above", total: t.total, combined: true });

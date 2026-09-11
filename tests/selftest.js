@@ -693,6 +693,85 @@ const SelfTest = (() => {
       if (dis) return "still offered at Disadvantage";
       return true;
     });
+    // A Paladin 11's every melee swing carries an extra 1d8 Radiant and nothing in
+    // the tool knew it: "Melee weapon attacks deal an additional 1d8 Radiant
+    // damage" (bg3.wiki/wiki/Improved_Divine_Smite). It is a passive, so it needs
+    // no toggle — which is exactly why its absence was invisible.
+    check("Rules", "Improved Divine Smite rides every melee hit from Paladin 11", () => {
+      const melee = ITEMS.find((i) => i.type === "weapon" && i.damage && !isRangedWeapon(i));
+      const at = (lv) => {
+        const m = scratchMember("paladin", lv);
+        m.loadouts[1].weapon1 = melee.id;
+        return weaponAttack(m, melee, { targetAc: 15, slotKey: "weapon1" });
+      };
+      if (at(10).impSmiteDice !== 0) return "granted before level 11";
+      if (at(11).impSmiteDice !== 1) return "missing at level 11";
+      // and it must not reach a bow
+      const bow = ITEMS.find((i) => i.type === "weapon" && i.damage && isRangedWeapon(i));
+      if (bow) {
+        const m = scratchMember("paladin", 11);
+        m.loadouts[1].ranged1 = bow.id;
+        if (weaponAttack(m, bow, { targetAc: 15, slotKey: "ranged1" }).impSmiteDice !== 0) {
+          return "applied to a ranged weapon";
+        }
+      }
+      return true;
+    });
+    // "Brutal Critical and Savage Attacks add an extra damage die to the damage of
+    // the attack, i.e. an attack dealing 1d10 will critically deal 2d10 + 1d10"
+    // (bg3.wiki/wiki/Critical_Hit). One die, whatever the weapon's dice count — the
+    // Brutal Critical page is explicit that a greatsword's 2d6 gains a single d6.
+    check("Rules", "a crit die is one die of the weapon's size, not one per die", () => {
+      const multi = ITEMS.find((i) => {
+        if (i.type !== "weapon" || !i.damage || isRangedWeapon(i)) return false;
+        const p = parseWeaponDamage(i.damage, true);
+        return p && p.main && p.main.count > 1;
+      });
+      if (!multi) return true;
+      const m = scratchMember("barbarian", 9);
+      m.loadouts[1].weapon1 = multi.id;
+      const a = weaponAttack(m, multi, { targetAc: 15, slotKey: "weapon1", twoHanded: true });
+      if (a.critDice !== 1) return "critDice = " + a.critDice;
+      const oneDie = (a.main.size + 1) / 2;
+      return Math.abs(a.critBonusAvg - oneDie) < 1e-9
+        ? true
+        : "added " + a.critBonusAvg.toFixed(2) + " for a d" + a.main.size + ", expected " + oneDie;
+    });
+    // Brutal Critical's notes: "only applies to main hand melee weapon attacks or
+    // unarmed melee attacks". Savage Attacks "only applies to melee weapon attacks
+    // (main hand or offhand)". So a half-orc barbarian has two dice in the main
+    // hand and one in the off-hand.
+    check("Rules", "Brutal Critical skips the off-hand, Savage Attacks does not", () => {
+      const light = ITEMS.filter((i) => i.type === "weapon" && i.damage && !isRangedWeapon(i) &&
+        (i.details || []).some((d) => /^Light$/i.test(d)));
+      if (!light.length) return true;
+      const m = scratchMember("barbarian", 9);
+      m.race = "half-orc";
+      m.loadouts[1].weapon1 = light[0].id;
+      m.loadouts[1].weapon2 = light[0].id;
+      const t = turnSummary(m, { targetAc: 15 });
+      if (!t || !t.off) return "no off-hand attack to test";
+      if (t.main.critDice !== 2) return "main hand has " + t.main.critDice + " extra crit dice, expected 2";
+      if (t.off.critDice !== 1) return "off-hand has " + t.off.critDice + ", expected 1";
+      return true;
+    });
+    // The wiki's own Rage Damage column: +2 through level 8, +3 from 9. And Rage
+    // Impeded: "Until the armour is removed, Raging won't grant extra damage".
+    check("Rules", "Rage is +2 then +3, and heavy armour cancels it", () => {
+      const light = scratchMember("barbarian", 8);
+      if (rageDamage(light) !== 2) return "level 8 gives " + rageDamage(light);
+      const nine = scratchMember("barbarian", 9);
+      if (rageDamage(nine) !== 3) return "level 9 gives " + rageDamage(nine);
+      const heavy = ITEMS.find((i) => i.type === "armor" && armourCategory(i) === "heavy");
+      if (heavy) {
+        const armoured = scratchMember("barbarian", 9);
+        armoured.loadouts[1].chest = heavy.id;
+        if (rageDamage(armoured) !== 0) return "heavy armour still grants " + rageDamage(armoured);
+      }
+      const bard = scratchMember("bard", 12);
+      return rageDamage(bard) === 0 ? true : "a bard rages";
+    });
+
     check("Rules", "Action Surge is Fighter-only", () => {
       const wrong = CLASS_KEYS.filter((k) => hasClassFeature(scratchMember(k, 12), "Action Surge"));
       return wrong.length === 1 && wrong[0] === "fighter" ? true : "found on: " + wrong.join(", ");
