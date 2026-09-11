@@ -16,17 +16,17 @@
       },
       {
         "level": 3,
-        "n": "Frenzy",
+        "n": "Frenzy ( Bonus Action + Rage Charge )",
         "d": "Your Rage turns into a frenzy! You gain Frenzied Strike and Enraged Throw. You can also make an Improvised Melee Weapon attack as a bonus action."
       },
       {
         "level": 3,
-        "n": "Frenzied Strike",
-        "d": "As a bonus action, make a melee attack with your equipped weapon. ( Recharge: Per turn.)"
+        "n": "Frenzied Strike ( Bonus Action )",
+        "d": "As a bonus action, make a melee attack with your equipped weapon. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 3,
-        "n": "Enraged Throw",
+        "n": "Enraged Throw ( Bonus Action )",
         "d": "Pick up an item or creature and throw it at a target, dealing additional damage and knocking it Prone."
       },
       {
@@ -36,7 +36,7 @@
       },
       {
         "level": 10,
-        "n": "Intimidating Presence",
+        "n": "Intimidating Presence ( Action )",
         "d": "Menace an enemy and instil a terrible Fear within them. · You can use Maintain Intimidating Presence to prolong the target's fear."
       }
     ],
@@ -56,7 +56,7 @@
     "features": [
       {
         "level": 3,
-        "n": "Giant's Rage",
+        "n": "Giant's Rage ( Bonus Action + Rage Charge )",
         "d": "Enter a Rage and increase in size. Your Rage damage bonus is doubled on Throw attacks."
       },
       {
@@ -66,12 +66,12 @@
       },
       {
         "level": 3,
-        "n": "Thaumaturgy",
+        "n": "Thaumaturgy ( Action )",
         "d": "Gain Advantage on Intimidation and Performance Checks."
       },
       {
         "level": 5,
-        "n": "Boot of the Giants",
+        "n": "Boot of the Giants ( Bonus Action )",
         "d": "Try to kick a target away. Your chances depend on your Athletics, and are higher if you're hidden or invisible."
       },
       {
@@ -81,7 +81,7 @@
       },
       {
         "level": 10,
-        "n": "Mighty Impel",
+        "n": "Mighty Impel ( Bonus Action )",
         "d": "Throw a creature or object that is Medium-sized or smaller."
       }
     ],
@@ -101,37 +101,37 @@
     "features": [
       {
         "level": 3,
-        "n": "Rage: Wild Magic",
+        "n": "Rage: Wild Magic ( Bonus Action + Rage Charge )",
         "d": "Enter a Rage that releases all the magic roiling inside you, causing a random magical effect."
       },
       {
         "level": 3,
-        "n": "Magic Awareness",
-        "d": "Anyone within range adds a 1d4 bonus to Saving throws. ( Recharge: Short rest.)"
+        "n": "Magic Awareness ( Bonus Action )",
+        "d": "Anyone within range adds a 1d4 bonus to Saving throws. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 6,
-        "n": "Bolstering Magic: Boon",
-        "d": "You or an ally receive +1d4 bonus to Attack Rolls and Ability Checks for 10 turns. ( Recharge: Long rest.)"
+        "n": "Bolstering Magic: Boon ( Action )",
+        "d": "You or an ally receive +1d4 bonus to Attack Rolls and Ability Checks for 10 turns. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 6,
-        "n": "Bolstering Magic: Level 1 Spell Slot",
-        "d": "You or an ally recover a Level 1 Spell Slot. ( Recharge: Long rest.)"
+        "n": "Bolstering Magic: Level 1 Spell Slot ( Action )",
+        "d": "You or an ally recover a Level 1 Spell Slot. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 6,
-        "n": "Bolstering Magic: Level 2 Spell Slot",
-        "d": "You or an ally recover a Level 2 Spell Slot. ( Recharge: Long rest.)"
+        "n": "Bolstering Magic: Level 2 Spell Slot ( Action )",
+        "d": "You or an ally recover a Level 2 Spell Slot. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 9,
-        "n": "Bolstering Magic: Level 3 Spell Slot",
-        "d": "You or an ally recover a Level 3 Spell Slot. ( Recharge: Long rest.)"
+        "n": "Bolstering Magic: Level 3 Spell Slot ( Action )",
+        "d": "You or an ally recover a Level 3 Spell Slot. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 10,
-        "n": "Unstable Backlash",
+        "n": "Unstable Backlash ( Reaction )",
         "d": "While Raging, when you take damage or fail a Saving Throw, you trigger another Wild Magic effect. This replaces your current Wild Magic effect."
       }
     ],
@@ -151,8 +151,8 @@
     "features": [
       {
         "level": 3,
-        "n": "Speak with Animals",
-        "d": "Gain the ability to comprehend and communicate with beasts. ( Recharge: Long rest.)"
+        "n": "Speak with Animals ( Action )",
+        "d": "Gain the ability to comprehend and communicate with beasts. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 3,
@@ -304,13 +304,13 @@
     "features": [
       {
         "level": 3,
-        "n": "Mantle of Inspiration",
+        "n": "Mantle of Inspiration ( Bonus Action + Bardic Inspiration )",
         "d": "Imbue 2 allies with your vigour and grant them 5 temporary hit points. If they're hit with a melee attack, the attacker becomes Charmed."
       },
       {
         "level": 6,
-        "n": "Mantle of Majesty: Command",
-        "d": "Command a creature to flee, move closer, freeze, drop to the ground or drop its weapon. Targets that are Charmed automatically fail their Saving Throw. ( Recharge: Long rest.)"
+        "n": "Mantle of Majesty: Command ( Bonus Action )",
+        "d": "Command a creature to flee, move closer, freeze, drop to the ground or drop its weapon. Targets that are Charmed automatically fail their Saving Throw. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 6,
@@ -339,7 +339,7 @@
     "features": [
       {
         "level": 3,
-        "n": "Cutting Words",
+        "n": "Cutting Words ( Reaction + Bardic Inspiration )",
         "d": "The target receives a -1d6 penalty to Attack Rolls, Ability Checks or damage dealt."
       },
       {
@@ -407,7 +407,7 @@
     "features": [
       {
         "level": 3,
-        "n": "Combat Inspiration",
+        "n": "Combat Inspiration ( Bonus Action + Bardic Inspiration )",
         "d": "Inspire an ally to add a +1d6 bonus to their next Attack Roll, Ability Check, Saving Throw, weapon damage, or Armour Class."
       },
       {
@@ -442,7 +442,7 @@
       },
       {
         "level": 2,
-        "n": "Touch of Death",
+        "n": "Touch of Death ( Channel Divinity Charge )",
         "d": "When hitting a creature with a melee attack, Channel Divinity Charges can be used to deal extra Necrotic damage."
       },
       {
@@ -467,8 +467,8 @@
       },
       {
         "level": 8,
-        "n": "Divine Strike: Necrotic",
-        "d": "Once per turn deal 1d8 Necrotic in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
+        "n": "Divine Strike: Necrotic ( Action )",
+        "d": "Once per turn deal 1d8 Necrotic in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 9,
@@ -502,7 +502,7 @@
       },
       {
         "level": 2,
-        "n": "Knowledge of the Ages",
+        "n": "Knowledge of the Ages ( Action + Channel Divinity Charge )",
         "d": "Gain Proficiency in all Skills of a chosen Ability."
       },
       {
@@ -517,12 +517,12 @@
       },
       {
         "level": 6,
-        "n": "Read Thoughts",
+        "n": "Read Thoughts ( Action + Channel Divinity Charge )",
         "d": "Read the thoughts of certain creatures while talking to them."
       },
       {
         "level": 6,
-        "n": "Speak with Animals",
+        "n": "Speak with Animals ( Action + Channel Divinity Charge )",
         "d": "Gain the ability to comprehend and communicate with beasts."
       },
       {
@@ -567,7 +567,7 @@
       },
       {
         "level": 2,
-        "n": "Preserve Life",
+        "n": "Preserve Life ( Action + Channel Divinity Charge )",
         "d": "Evoke a healing energy that restores 3 × Character level Hit Points to allied creatures."
       },
       {
@@ -592,8 +592,8 @@
       },
       {
         "level": 8,
-        "n": "Divine Strike: Radiant",
-        "d": "Strike a foe with your weapon as it becomes wreathed in gleaming radiance. ( Recharge: Per turn.)"
+        "n": "Divine Strike: Radiant ( Action )",
+        "d": "Strike a foe with your weapon as it becomes wreathed in gleaming radiance. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 9,
@@ -617,7 +617,7 @@
     "features": [
       {
         "level": 1,
-        "n": "Warding Flare",
+        "n": "Warding Flare ( Reaction )",
         "d": "Impose Disadvantage on an attacker, possibly causing their attack to miss."
       },
       {
@@ -627,7 +627,7 @@
       },
       {
         "level": 2,
-        "n": "Radiance of the Dawn",
+        "n": "Radiance of the Dawn ( Action + Channel Divinity Charge )",
         "d": "The sun's divine power dispels any magical darkness."
       },
       {
@@ -642,7 +642,7 @@
       },
       {
         "level": 6,
-        "n": "Improved Warding Flare",
+        "n": "Improved Warding Flare ( Reaction )",
         "d": "Impose Disadvantage on an ally's attacker, possibly causing their attack to miss."
       },
       {
@@ -687,7 +687,7 @@
       },
       {
         "level": 2,
-        "n": "Charm Animals and Plants",
+        "n": "Charm Animals and Plants ( Action + Channel Divinity Charge )",
         "d": "Channel fey magic to Charm nearby beasts and plants."
       },
       {
@@ -702,7 +702,7 @@
       },
       {
         "level": 6,
-        "n": "Dampen Elements",
+        "n": "Dampen Elements ( Reaction )",
         "d": "When you or an ally gets hit with Acid, Cold, Fire, Lightning, or Thunder damage, you can use your reaction to halve the attack's damage."
       },
       {
@@ -712,8 +712,8 @@
       },
       {
         "level": 8,
-        "n": "Divine Strike: Elemental Fury",
-        "d": "Once per turn deal 1d8 Cold, 1d8 Fire or 1d8 Lightning in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
+        "n": "Divine Strike: Elemental Fury ( Action )",
+        "d": "Once per turn deal 1d8 Cold, 1d8 Fire or 1d8 Lightning in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 9,
@@ -741,11 +741,11 @@
         "d": "As a Reaction, strike back at an attacking creature, dealing 2d8 Lightning or 2d8 Thunder damage. The target takes half damage on a successful Saving Throw.",
         "opts": [
           {
-            "n": "Wrath of the Storm: Lightning",
+            "n": "Wrath of the Storm: Lightning ( Reaction )",
             "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Lightning that deals 2d8 Lightning."
           },
           {
-            "n": "Wrath of the Storm: Thunder",
+            "n": "Wrath of the Storm: Thunder ( Reaction )",
             "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Thunder that deals 2d8 Thunder."
           }
         ]
@@ -757,7 +757,7 @@
       },
       {
         "level": 2,
-        "n": "Destructive Wrath",
+        "n": "Destructive Wrath ( Channel Divinity Charge )",
         "d": "When you roll Thunder or Lightning damage, you can use your Channel Divinity Charge to deal maximum damage instead."
       },
       {
@@ -782,8 +782,8 @@
       },
       {
         "level": 8,
-        "n": "Divine Strike: Thunder",
-        "d": "Once per turn deal 1d8 Thunder in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
+        "n": "Divine Strike: Thunder ( Action )",
+        "d": "Once per turn deal 1d8 Thunder in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 9,
@@ -807,7 +807,7 @@
     "features": [
       {
         "level": 1,
-        "n": "Blessing of the Trickster",
+        "n": "Blessing of the Trickster ( Action )",
         "d": "Grant another creature Advantage on Stealth Checks."
       },
       {
@@ -817,7 +817,7 @@
       },
       {
         "level": 2,
-        "n": "Invoke Duplicity",
+        "n": "Invoke Duplicity ( Action + Channel Divinity Charge )",
         "d": "Distract your enemies with an illusion. Within 3 m (10 ft), Attack Rolls have Advantage for you and your allies."
       },
       {
@@ -831,19 +831,14 @@
         "d": "You gain spells from your domain. They are always prepared. Bestow Curse Fear"
       },
       {
-        "level": 6,
-        "n": "Channel Divinity: Cloak of Shadows",
-        "d": "Wrap yourself in shadows to become Invisible if you are obscured. [ See: Bugs ]"
-      },
-      {
         "level": 7,
         "n": "Domain Spells",
         "d": "You gain spells from your domain. They are always prepared. Dimension Door Polymorph"
       },
       {
         "level": 8,
-        "n": "Divine Strike: Poison",
-        "d": "Once per turn deal 1d8 Poison in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
+        "n": "Divine Strike: Poison ( Action )",
+        "d": "Once per turn deal 1d8 Poison in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 9,
@@ -882,7 +877,7 @@
       },
       {
         "level": 2,
-        "n": "Guided Strike",
+        "n": "Guided Strike ( Channel Divinity Charge )",
         "d": "Gain a +10 bonus to your Attack Roll."
       },
       {
@@ -902,7 +897,7 @@
       },
       {
         "level": 6,
-        "n": "War God's Blessing",
+        "n": "War God's Blessing ( Reaction + Channel Divinity Charge )",
         "d": "Grant a nearby ally a +10 bonus to their Attack Roll."
       },
       {
@@ -917,8 +912,8 @@
       },
       {
         "level": 8,
-        "n": "Divine Strike: Weapon",
-        "d": "Once per turn deal 1d8 Weapon in addition to your weapon damage. ( Recharge: Per turn.)"
+        "n": "Divine Strike: Weapon ( Action )",
+        "d": "Once per turn deal 1d8 Weapon in addition to your weapon damage. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 9,
@@ -947,7 +942,7 @@
     "features": [
       {
         "level": 2,
-        "n": "Natural Recovery",
+        "n": "Natural Recovery ( Action + Natural Recovery Charge )",
         "d": "Replenish expended Spell Slots while out of combat."
       },
       {
@@ -1178,22 +1173,22 @@
     "features": [
       {
         "level": 2,
-        "n": "Lunar Mend",
+        "n": "Lunar Mend ( Bonus Action + Level 1 Spell Slot )",
         "d": "Expend spell slots to regain Hit Points while wild shaped. You regain 1d8 hit points per spell slot level."
       },
       {
         "level": 2,
-        "n": "Combat Wild Shape",
+        "n": "Combat Wild Shape ( Bonus Action + Wild Shape Charge )",
         "d": "As a bonus action, you can assume the form of a beast. You can transform twice per Short Rest. This ability otherwise acts as Wild Shape."
       },
       {
         "level": 2,
-        "n": "Wild Shape: Bear",
+        "n": "Wild Shape: Bear ( Bonus Action + Wild Shape Charge )",
         "d": "Assume the shape of a polar bear that can Goad enemies into attacking it. The polar bear has a starting health of 30 hit points that increases every two druid levels."
       },
       {
         "level": 4,
-        "n": "Wild Shape: Dire Raven",
+        "n": "Wild Shape: Dire Raven ( Bonus Action + Wild Shape Charge )",
         "d": "Take the shape of a Dire Raven that can avoid attention and Blind enemies. It has 13 hit points."
       },
       {
@@ -1203,27 +1198,27 @@
       },
       {
         "level": 8,
-        "n": "Wild Shape: Sabre-Toothed Tiger",
+        "n": "Wild Shape: Sabre-Toothed Tiger ( Bonus Action + Wild Shape Charge )",
         "d": "Take the shape of a Sabre-Toothed Tiger that can Shred Armour and regenerate hit points."
       },
       {
         "level": 10,
-        "n": "Wild Shape: Air Myrmidon ( + 2 )",
+        "n": "Wild Shape: Air Myrmidon ( Bonus Action + 2 Wild Shape Charge )",
         "d": "Take the shape of an Air Myrmidon. · Your air myrmidon shape has a starting health of 90 hit points that increases every two druid levels. It can cast Invisibility, Electrified Flail, and Raging Vortex."
       },
       {
         "level": 10,
-        "n": "Wild Shape: Earth Myrmidon ( + 2 )",
+        "n": "Wild Shape: Earth Myrmidon ( Bonus Action + 2 Wild Shape Charge )",
         "d": "Take the shape of an Earth Myrmidon. · Your earth myrmidon shape has a starting health of 103 hit points that increases every two druid levels. It can cast Muck to Metal, Sludgy Sling, and Burrow."
       },
       {
         "level": 10,
-        "n": "Wild Shape: Fire Myrmidon ( + 2 )",
+        "n": "Wild Shape: Fire Myrmidon ( Bonus Action + 2 Wild Shape Charge )",
         "d": "Take the shape of a Fire Myrmidon. · Your fire myrmidon shape has a starting health of 90 hit points that increases every two druid levels. It can cast Scorching Strike, Myrmidon's Immolation, and Cinderous Swipe."
       },
       {
         "level": 10,
-        "n": "Wild Shape: Water Myrmidon ( + 2 )",
+        "n": "Wild Shape: Water Myrmidon ( Bonus Action + 2 Wild Shape Charge )",
         "d": "Take the shape of a Water Myrmidon. · Your water myrmidon shape has a starting health of 90 hit points that increases every two druid levels. It can cast Hiemal Strike, Healing Vapours, and Explosive Icicle."
       }
     ],
@@ -1243,12 +1238,12 @@
     "features": [
       {
         "level": 2,
-        "n": "Halo of Spores",
+        "n": "Halo of Spores ( Reaction )",
         "d": "Unleash a cloud of necrotic spores upon a target. This uses a reaction, so other reactions won't trigger this turn."
       },
       {
         "level": 2,
-        "n": "Symbiotic Entity",
+        "n": "Symbiotic Entity ( Action + Wild Shape Charge )",
         "d": "Gain 4 temporary hit points per Druid level and deal an additional 1d6 Necrotic damage with weapon or unarmed attacks while you have them. Cast Halo of Spores with double damage."
       },
       {
@@ -1263,7 +1258,7 @@
       },
       {
         "level": 6,
-        "n": "Fungal Infestation",
+        "n": "Fungal Infestation ( Reaction + Fungal Infestation Charge )",
         "d": "Raises a mildewed, mould-encrusted zombie from a corpse.",
         "opts": [
           {
@@ -1284,7 +1279,7 @@
       },
       {
         "level": 10,
-        "n": "Spreading Spores",
+        "n": "Spreading Spores ( Bonus Action )",
         "d": "Seed an area in deadly spores that deal 2d8 Necrotic damage per turn to all creatures that inhale them, except you and your allies."
       }
     ],
@@ -1315,7 +1310,7 @@
       {
         "level": 2,
         "n": "Circle of the Stars spells",
-        "d": "You gain additional spells from your circle. They are Always Prepared. Guiding Bolt Star Map: Guiding Bolt"
+        "d": "You gain additional spells from your circle. They are Always Prepared. Guiding Bolt ( Action + Level 1 Spell Slot ) Star Map: Guiding Bolt ( Action + Star Map )"
       },
       {
         "level": 5,
@@ -1333,19 +1328,19 @@
         "d": "Whenever you Long Rest, you consult the stars for a Cosmic Omen of Weal or of Woe. The omen grants you the ability to increase (Weal) or decrease (Woe) Attack Rolls or Saving Throws, or (Weal only) to increase your allies' Ability Checks.",
         "opts": [
           {
-            "n": "Cosmic Omen of Weal: Attack Roll",
+            "n": "Cosmic Omen of Weal: Attack Roll ( Reaction + Cosmic Omen )",
             "d": "Add a +1d6 bonus to an Attack Roll."
           },
           {
-            "n": "Cosmic Omen of Woe: Attack Roll",
+            "n": "Cosmic Omen of Woe: Attack Roll ( Reaction + Cosmic Omen )",
             "d": "Subtract 1d6 from an Attack Roll."
           },
           {
-            "n": "Cosmic Omen of Weal: Saving Throw",
+            "n": "Cosmic Omen of Weal: Saving Throw ( Reaction + Cosmic Omen )",
             "d": "Add a +1d6 bonus to a Saving Throw."
           },
           {
-            "n": "Cosmic Omen of Woe: Saving Throw",
+            "n": "Cosmic Omen of Woe: Saving Throw ( Reaction + Cosmic Omen )",
             "d": "Subtract 1d6 from a Saving Throw."
           }
         ]
@@ -1402,7 +1397,7 @@
       },
       {
         "level": 7,
-        "n": "Curving Shot",
+        "n": "Curving Shot ( Bonus Action )",
         "d": "Use a Bonus Action to attack the next closest target with the same attack."
       },
       {
@@ -1543,7 +1538,7 @@
     "features": [
       {
         "level": 3,
-        "n": "Weapon Bond",
+        "n": "Weapon Bond ( Action )",
         "d": "Ritually bind the weapon in your main hand. The weapon can't be knocked out of your hand, and it automatically returns to you when thrown."
       },
       {
@@ -1734,52 +1729,52 @@
     "features": [
       {
         "level": 3,
-        "n": "Minor Illusion",
+        "n": "Minor Illusion ( Action )",
         "d": "Create an illusion that compels nearby creatures to investigate."
       },
       {
         "level": 3,
-        "n": "Shadow Arts: Hide",
+        "n": "Shadow Arts: Hide ( Bonus Action )",
         "d": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
       },
       {
         "level": 3,
-        "n": "Shadow Arts: Pass Without Trace ( + 2 )",
+        "n": "Shadow Arts: Pass Without Trace ( Action + 2 Ki Point )",
         "d": "Call forth a veil of shadow and silence that gives you and nearby allies a +10 bonus to Stealth checks."
       },
       {
         "level": 3,
-        "n": "Shadow Arts: Darkness ( + 2 )",
+        "n": "Shadow Arts: Darkness ( Action + 2 Ki Point )",
         "d": "Create a cloud of magical darkness that Heavily Obscures and Blinds creatures within. Creatures cannot make ranged attacks into or out of it."
       },
       {
         "level": 3,
-        "n": "Shadow Arts: Darkvision ( + 2 )",
+        "n": "Shadow Arts: Darkvision ( Action + 2 Ki Point )",
         "d": "Grant a creature the ability to see in the dark out to a range of 12 m / 40 ft."
       },
       {
         "level": 3,
-        "n": "Shadow Arts: Silence ( + 2 )",
+        "n": "Shadow Arts: Silence ( Action + 2 Ki Point )",
         "d": "Create a sound-proof sphere. All within are Silenced and immune to Thunder damage."
       },
       {
         "level": 5,
-        "n": "Cloak of Shadows",
+        "n": "Cloak of Shadows ( Action )",
         "d": "Wrap yourself in shadows to become Invisible if you are obscured."
       },
       {
         "level": 6,
-        "n": "Shadow Step",
+        "n": "Shadow Step ( Bonus Action )",
         "d": "Teleport from shadow to shadow. Afterwards, you have Advantage on your next melee Attack Roll."
       },
       {
         "level": 11,
-        "n": "Shadow Strike ( + 3 )",
+        "n": "Shadow Strike ( Action + 3 Ki Point )",
         "d": "Teleport to a foe from a hidden position, striking them with the creeping, psychic ferocity of the shadows themselves."
       },
       {
         "level": 11,
-        "n": "Shadow Strike: Unarmed ( + 3 )",
+        "n": "Shadow Strike: Unarmed ( Action + 3 Ki Point )",
         "d": "Teleport to a foe from a hidden position, striking them with the creeping, psychic ferocity of the shadows themselves."
       }
     ],
@@ -1809,12 +1804,12 @@
       },
       {
         "level": 3,
-        "n": "Drunken Technique",
+        "n": "Drunken Technique ( Bonus Action + Ki Point )",
         "d": "Punch twice in quick succession and grant yourself an additional 3 m / 10 ft movement and the benefits of Disengage."
       },
       {
         "level": 4,
-        "n": "Intoxicating Strike",
+        "n": "Intoxicating Strike ( Action + Ki Point )",
         "d": "Hit a creature with your bare fists and possibly get them Drunk."
       },
       {
@@ -1829,17 +1824,17 @@
       },
       {
         "level": 6,
-        "n": "Redirect Attack",
+        "n": "Redirect Attack ( Reaction + Ki Point )",
         "d": "When a creature misses you with a melee attack, spend 1 Ki Point as a reaction to make them attack a new target if possible."
       },
       {
         "level": 9,
-        "n": "Sobering Realisation",
+        "n": "Sobering Realisation ( Action + Ki Point )",
         "d": "Hit a Drunk target and sober them up by dealing bonus Psychic damage. On a successful hit, the monk also loses Life of the Party."
       },
       {
         "level": 11,
-        "n": "Drunkard's Luck (2 )",
+        "n": "Drunkard's Luck (2 Ki Point )",
         "d": "When you make an Ability Check, Attack Roll, or Saving Throw and have Disadvantage on the roll, you can spend 2 Ki Points to negate the Disadvantage for that roll."
       }
     ],
@@ -1859,8 +1854,8 @@
     "features": [
       {
         "level": 3,
-        "n": "Harmony of Fire and Water",
-        "d": "While not in combat, regain half of your Ki Points (rounded down). ( Recharge: Long rest.)"
+        "n": "Harmony of Fire and Water ( Action )",
+        "d": "While not in combat, regain half of your Ki Points (rounded down). ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 9,
@@ -1884,17 +1879,17 @@
     "features": [
       {
         "level": 3,
-        "n": "Flurry of Blows: Topple",
+        "n": "Flurry of Blows: Topple ( Bonus Action + Ki Point )",
         "d": "Punch twice in quick succession and potentially knock the target Prone."
       },
       {
         "level": 3,
-        "n": "Flurry of Blows: Stagger",
+        "n": "Flurry of Blows: Stagger ( Bonus Action + Ki Point )",
         "d": "Punch twice in quick succession and Stagger the target, making it unable to take Reactions."
       },
       {
         "level": 3,
-        "n": "Flurry of Blows: Push",
+        "n": "Flurry of Blows: Push ( Bonus Action + Ki Point )",
         "d": "Punch twice in quick succession and potentially push your target 5 m / 17 ft away."
       },
       {
@@ -1914,23 +1909,23 @@
       },
       {
         "level": 6,
-        "n": "Wholeness of Body",
-        "d": "Regain half your Ki Points and enter a temporary state of Wholeness where you regain Ki Points and have an extra Bonus Action. ( Recharge: Long rest.)"
+        "n": "Wholeness of Body ( Action )",
+        "d": "Regain half your Ki Points and enter a temporary state of Wholeness where you regain Ki Points and have an extra Bonus Action. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 9,
-        "n": "Ki Resonation: Punch",
+        "n": "Ki Resonation: Punch ( Action )",
         "d": "Hit a creature with your bare fists, making the ki in its body Resonate with yours."
       },
       {
         "level": 9,
-        "n": "Ki Resonation: Punch (Bonus Action)",
+        "n": "Ki Resonation: Punch (Bonus Action) ( Bonus Action )",
         "d": "Hit a creature with your bare fists, making the ki in its body Resonate with yours."
       },
       {
         "level": 9,
-        "n": "Ki Resonation: Blast",
-        "d": "Detonate the ki of a creature Resonating with you, hitting the creature and all creatures other than party members and summoned creatures within 5 m / 17 ft of it. ( Recharge: Per turn.)"
+        "n": "Ki Resonation: Blast ( Ki Point )",
+        "d": "Detonate the ki of a creature Resonating with you, hitting the creature and all creatures other than party members and summoned creatures within 5 m / 17 ft of it. ( Recharge: Per turn Recharge: Per turn.)"
       },
       {
         "level": 11,
@@ -1959,17 +1954,17 @@
       },
       {
         "level": 1,
-        "n": "Holy Rebuke",
+        "n": "Holy Rebuke ( Action + Channel Oath Charge )",
         "d": "Call upon your Oath to grant a vengeful aura that deals 1d4 Radiant damage to anyone who hits them with a melee attack."
       },
       {
         "level": 3,
-        "n": "Sacred Weapon",
+        "n": "Sacred Weapon ( Action + Channel Oath Charge )",
         "d": "Turn your weapon into a Sacred Weapon. It has a higher chance of hitting, and emits a bright light."
       },
       {
         "level": 3,
-        "n": "Turn the Unholy",
+        "n": "Turn the Unholy ( Action + Channel Oath Charge )",
         "d": "Turn nearby undead and fiends. They are forced to flee and cannot come close to you."
       },
       {
@@ -2014,17 +2009,17 @@
       },
       {
         "level": 1,
-        "n": "Healing Radiance",
+        "n": "Healing Radiance ( Bonus Action + Channel Oath Charge )",
         "d": "Heal yourself and all nearby allies. Regain the same amount the next turn."
       },
       {
         "level": 3,
-        "n": "Nature's Wrath",
+        "n": "Nature's Wrath ( Action + Channel Oath Charge )",
         "d": "Invoke primaeval forces to restrain an enemy."
       },
       {
         "level": 3,
-        "n": "Turn the Faithless",
+        "n": "Turn the Faithless ( Action + Channel Oath Charge )",
         "d": "Channel your Oath using ancient words to Turn nearby fey and fiends."
       },
       {
@@ -2069,17 +2064,17 @@
       },
       {
         "level": 1,
-        "n": "Righteous Clarity",
+        "n": "Righteous Clarity ( Bonus Action + Channel Oath Charge )",
         "d": "Target yourself or an ally to additionally grant the target's proficiency bonus to their Attack Rolls."
       },
       {
         "level": 3,
-        "n": "Champion Challenge",
+        "n": "Champion Challenge ( Bonus Action + Channel Oath Charge )",
         "d": "Challenge the enemies around you, compelling them to attack only you. Any attacks they might make against other targets have Disadvantage."
       },
       {
         "level": 3,
-        "n": "Turn the Tide",
+        "n": "Turn the Tide ( Bonus Action + Channel Oath Charge )",
         "d": "Shout out and heal all nearby non-enemy creatures."
       },
       {
@@ -2094,7 +2089,7 @@
       },
       {
         "level": 7,
-        "n": "Divine Allegiance",
+        "n": "Divine Allegiance ( Reaction )",
         "d": "When an ally within 1.5 m (5 ft) of you takes damage, you can use your Reaction to magically substitute your own health for your ally's, healing them by 2 × (Paladin level) Hit Points at the cost of taking 2 × (Paladin level) Radiant damage yourself."
       },
       {
@@ -2124,17 +2119,17 @@
       },
       {
         "level": 1,
-        "n": "Inquisitor's Might",
+        "n": "Inquisitor's Might ( Bonus Action + Channel Oath Charge )",
         "d": "You or an ally's weapon attacks deal an additional Charisma modifier Radiant damage and can Daze enemies for 1 turn."
       },
       {
         "level": 3,
-        "n": "Abjure Enemy",
+        "n": "Abjure Enemy ( Action + Channel Oath Charge )",
         "d": "Frighten an enemy. They have Disadvantage on ability checks and Attack Rolls, and they cannot move."
       },
       {
         "level": 3,
-        "n": "Vow of Enmity",
+        "n": "Vow of Enmity ( Bonus Action + Channel Oath Charge )",
         "d": "Gain Advantage on Attack Rolls against an enemy."
       },
       {
@@ -2174,17 +2169,17 @@
     "features": [
       {
         "level": 1,
-        "n": "Spiteful Suffering",
+        "n": "Spiteful Suffering ( Action + Channel Oath Charge )",
         "d": "Steep an enemy in the darkness that churns within you. The target takes 1d4 + Charisma Modifier Necrotic damage each turn and Attack Rolls against it have Advantage."
       },
       {
         "level": 3,
-        "n": "Control Undead",
+        "n": "Control Undead ( Action + Channel Oath Charge )",
         "d": "Use the power of your Oath to gain control over an undead creature. The undead will follow you around and attack your enemies."
       },
       {
         "level": 3,
-        "n": "Dreadful Aspect",
+        "n": "Dreadful Aspect ( Action + Channel Oath Charge )",
         "d": "Let your darkest emotions burst forth as a menacing pulse to Frighten nearby enemies."
       },
       {
@@ -2224,8 +2219,8 @@
     "features": [
       {
         "level": 3,
-        "n": "Ranger's Companion",
-        "d": "Gain a beast companion that accompanies you on your adventures and fights alongside you. ( Recharge: Short rest.)"
+        "n": "Ranger's Companion ( Action )",
+        "d": "Gain a beast companion that accompanies you on your adventures and fights alongside you. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 3,
@@ -2274,8 +2269,8 @@
     "features": [
       {
         "level": 3,
-        "n": "Umbral Shroud",
-        "d": "Wrap yourself in shadows to become Invisible if you are obscured. ( Recharge: Short rest.)"
+        "n": "Umbral Shroud ( Action )",
+        "d": "Wrap yourself in shadows to become Invisible if you are obscured. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 3,
@@ -2288,14 +2283,14 @@
           },
           {
             "n": "Dread Ambusher (Melee)",
-            "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat.)"
+            "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat Recharge: Per combat.)"
           },
           {
             "n": "Dread Ambusher (Ranged)",
-            "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat.)"
+            "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat Recharge: Per combat.)"
           },
           {
-            "n": "Dread Ambusher: Hide",
+            "n": "Dread Ambusher: Hide ( Bonus Action )",
             "d": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
           }
         ]
@@ -2337,12 +2332,12 @@
       },
       {
         "level": 11,
-        "n": "Volley",
+        "n": "Volley ( Action )",
         "d": "Fire a cascade of magical broadheads and bodkin arrows upon nearby foes."
       },
       {
         "level": 11,
-        "n": "Whirlwind Attack",
+        "n": "Whirlwind Attack ( Action )",
         "d": "Strike out at all nearby foes, making separate Attack Rolls against each target."
       }
     ],
@@ -2462,7 +2457,7 @@
       },
       {
         "level": 7,
-        "n": "Writhing Tide",
+        "n": "Writhing Tide ( Bonus Action + Writhing Current )",
         "d": "Condense part of your swarm into a mass that lifts you up. Gain a flying speed of 9 m (30 ft) and become unaffected by surface effects."
       },
       {
@@ -2726,7 +2721,7 @@
       },
       {
         "level": 9,
-        "n": "Infiltration Expertise",
+        "n": "Infiltration Expertise ( Action )",
         "d": "Adopt a new identity, changing your appearance."
       }
     ],
@@ -2755,12 +2750,12 @@
         "d": "You gain a +2 bonus to initiative rolls. This scales with your rogue level. You no longer need Advantage to trigger Sneak Attack as long as you are within 1.5 m (5 ft) of the target and don't have Disadvantage. [ See: Bugs ] · Normal Sneak Attack is replaced by Rakish Sneak Attack.",
         "opts": [
           {
-            "n": "Rakish Sneak Attack (Melee)",
-            "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
+            "n": "Rakish Sneak Attack (Melee) ( Action )",
+            "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn Recharge: Per turn.)"
           },
           {
-            "n": "Rakish Sneak Attack (Ranged)",
-            "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
+            "n": "Rakish Sneak Attack (Ranged) ( Action )",
+            "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn Recharge: Per turn.)"
           }
         ]
       },
@@ -2770,22 +2765,22 @@
         "d": "Learn the following Dirty Tricks. · Charisma is the spellcasting modifier used for these abilities, except Sand Toss, which uses Dexterity.",
         "opts": [
           {
-            "n": "Dirty Trick: Flick o' the Wrist",
+            "n": "Dirty Trick: Flick o' the Wrist ( Bonus Action )",
             "d": "Flick your weapon at a target and possibly Disarm them."
           },
           {
-            "n": "Dirty Trick: Sand Toss",
+            "n": "Dirty Trick: Sand Toss ( Bonus Action )",
             "d": "Toss a handful of sand at your enemy and possibly Blind them."
           },
           {
-            "n": "Dirty Trick: Vicious Mockery",
+            "n": "Dirty Trick: Vicious Mockery ( Bonus Action )",
             "d": "Insult a creature: it has Disadvantage on its next Attack Roll."
           }
         ]
       },
       {
         "level": 9,
-        "n": "Panache",
+        "n": "Panache ( Action )",
         "d": "Roll a Persuasion check to beguile a humanoid, who must contest it with an Insight check. Enemies who fail gain Panache: Disadvantage; others who fail become Charmed."
       }
     ],
@@ -2815,8 +2810,8 @@
       },
       {
         "level": 9,
-        "n": "Supreme Sneak",
-        "d": "Blend into the environment so completely that you become Invisible. ( Recharge: Short rest.)"
+        "n": "Supreme Sneak ( Action )",
+        "d": "Blend into the environment so completely that you become Invisible. ( Recharge: Short rest Recharge: Short rest.)"
       }
     ],
     "choices": [],
@@ -2855,7 +2850,7 @@
       },
       {
         "level": 6,
-        "n": "Elemental Affinity: Resistance",
+        "n": "Elemental Affinity: Resistance ( Sorcery Point )",
         "d": "When you cast a spell that deals damage matching your draconic ancestry, you can spend 1 Sorcery Point to gain Resistance to that damage type."
       },
       {
@@ -2977,22 +2972,22 @@
       },
       {
         "level": 3,
-        "n": "Darkness",
+        "n": "Darkness ( Action + Level 2 Spell Slot )",
         "d": "Create a cloud of magical darkness that Heavily Obscures and inflicts Blind to creatures within. Creatures cannot make ranged attacks into or out of it."
       },
       {
         "level": 3,
-        "n": "Eyes of the Dark: Darkness ( + 2 )",
+        "n": "Eyes of the Dark: Darkness ( Action + 2 Sorcery Point )",
         "d": "Create a dark shroud that Heavily Obscures and Blinds creatures within. Creatures cannot make ranged attacks into or out of it."
       },
       {
         "level": 6,
-        "n": "Hound of Ill Omen ( + 3 )",
-        "d": "Summon forth a creature of darkness. ( Recharge: Short rest.)"
+        "n": "Hound of Ill Omen ( Bonus Action + 3 Sorcery Point )",
+        "d": "Summon forth a creature of darkness. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 11,
-        "n": "Shadow Walk",
+        "n": "Shadow Walk ( Bonus Action )",
         "d": "Teleport into the shadows. The next spell you cast that turn will benefit from Distant Spell without costing any Sorcery Points."
       }
     ],
@@ -3042,7 +3037,7 @@
       },
       {
         "level": 11,
-        "n": "Storm's Fury",
+        "n": "Storm's Fury ( Reaction )",
         "d": "When struck by a melee attack, you may deal Lightning damage to the attacker and possibly push them back."
       }
     ],
@@ -3067,7 +3062,7 @@
       },
       {
         "level": 1,
-        "n": "Tides of Chaos",
+        "n": "Tides of Chaos ( Tides of Chaos Charge )",
         "d": "Gain Advantage on your next Attack Roll, Ability Check, or Saving Throw. Increased chance of Wild Magic surge afterwards."
       },
       {
@@ -3077,7 +3072,7 @@
       },
       {
         "level": 11,
-        "n": "Controlled Chaos",
+        "n": "Controlled Chaos ( Reaction )",
         "d": "Induce a Wild Magic Surge on the nearby spellcaster."
       }
     ],
@@ -3097,8 +3092,8 @@
     "features": [
       {
         "level": 1,
-        "n": "Fey Presence",
-        "d": "Charm or Frighten nearby foes with the feywild's beguiling, disturbing magics. ( Recharge: Short rest.)"
+        "n": "Fey Presence ( Action )",
+        "d": "Charm or Frighten nearby foes with the feywild's beguiling, disturbing magics. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 1,
@@ -3117,7 +3112,7 @@
       },
       {
         "level": 6,
-        "n": "Misty Escape",
+        "n": "Misty Escape ( Reaction )",
         "d": "Upon taking damage, become Invisible. On your next turn, you can cast Misty Step, though this will break your invisibility."
       },
       {
@@ -3188,7 +3183,7 @@
       {
         "level": 10,
         "n": "Fiendish Resilience",
-        "d": "Choose a damage type and become Resistant to it. You can pick a new damage type each Short Rest. ( Recharge: Short rest.)"
+        "d": "Choose a damage type and become Resistant to it. You can pick a new damage type each Short Rest. ( Recharge: Short rest Recharge: Short rest.)"
       }
     ],
     "choices": [],
@@ -3227,7 +3222,7 @@
       },
       {
         "level": 6,
-        "n": "Entropic Ward",
+        "n": "Entropic Ward ( Reaction )",
         "d": "Impose Disadvantage on an Attack Roll against you. If the attack misses, you gain Advantage on your next Attack Roll against the attacker for 1 turn."
       },
       {
@@ -3275,13 +3270,13 @@
       },
       {
         "level": 1,
-        "n": "Bind Hexed Weapon",
+        "n": "Bind Hexed Weapon ( Action )",
         "d": "Bind to your main hand weapon. Its damage becomes magical, you cannot drop or throw it, and you become Proficient with it if you weren't already. When you attack with this weapon, there is a chance [ See Notes ] that Hexblade's Curse will be applied to the target."
       },
       {
         "level": 1,
-        "n": "Hexblade's Curse",
-        "d": "Curse a target. Your damage rolls against the target gain a bonus equal to your Proficiency bonus. The number you need to roll a Critical Hit while attacking the target is also reduced by 1. If the target dies, you regain Warlock level + Charisma modifier hit points. ( Recharge: Short rest.)"
+        "n": "Hexblade's Curse ( Bonus Action )",
+        "d": "Curse a target. Your damage rolls against the target gain a bonus equal to your Proficiency bonus. The number you need to roll a Critical Hit while attacking the target is also reduced by 1. If the target dies, you regain Warlock level + Charisma modifier hit points. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 1,
@@ -3300,7 +3295,7 @@
       },
       {
         "level": 6,
-        "n": "Accursed Spectre",
+        "n": "Accursed Spectre ( Reaction )",
         "d": "Raise an Accursed Spectre from the soul of a fallen cursed target to fight by your side. The size of the fallen creature will determine whether you raise a Feeble Spectre, Mundane Spectre, or Primordial Spectre. Doesn't work with constructs, elementals, oozes, plants, or undead."
       },
       {
@@ -3315,7 +3310,7 @@
       },
       {
         "level": 10,
-        "n": "Armour of Hexes",
+        "n": "Armour of Hexes ( Reaction )",
         "d": "When a creature you cursed with Hexblade's Curse attacks you, potentially nullify the attack. This has a 50% chance of succeeding."
       }
     ],
@@ -3345,7 +3340,7 @@
       },
       {
         "level": 6,
-        "n": "Projected Ward",
+        "n": "Projected Ward ( Reaction )",
         "d": "When a nearby ally takes damage, you can use your Arcane Ward to reduce the damage equal to its charges and then lose 1 charge."
       },
       {
@@ -3377,7 +3372,7 @@
       },
       {
         "level": 2,
-        "n": "Bladesong",
+        "n": "Bladesong ( Bladesong Power )",
         "d": "Invoke the Bladesong. You gain a +2 bonus to Armour Class and your movement speed increases by 3 m (10 ft). You also gain Advantage in Acrobatics and a +2 to Constitution Saving Throws."
       },
       {
@@ -3437,13 +3432,13 @@
       },
       {
         "level": 2,
-        "n": "Minor Conjuration: Create Water",
-        "d": "Call forth rain. It extinguishes exposed flames and forms a Water surface. ( Recharge: Short rest.)"
+        "n": "Minor Conjuration: Create Water ( Action )",
+        "d": "Call forth rain. It extinguishes exposed flames and forms a Water surface. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 6,
-        "n": "Benign Transposition: Teleport",
-        "d": "Teleport to a nearby, unoccupied space, or swap places with an ally. ( Recharge: Long rest.)"
+        "n": "Benign Transposition: Teleport ( Action )",
+        "d": "Teleport to a nearby, unoccupied space, or swap places with an ally. ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 10,
@@ -3482,13 +3477,13 @@
       },
       {
         "level": 10,
-        "n": "Third Eye: Darkvision",
-        "d": "You gain the ability to see in the dark out to a range of 24 m (80 ft) ( Recharge: Long rest.)"
+        "n": "Third Eye: Darkvision ( Action )",
+        "d": "You gain the ability to see in the dark out to a range of 24 m (80 ft) ( Recharge: Long rest Recharge: Long rest.)"
       },
       {
         "level": 10,
-        "n": "Third Eye: See Invisibility",
-        "d": "Become able to see Invisible creatures, and possibly reveal them to others. ( Recharge: Long rest.)"
+        "n": "Third Eye: See Invisibility ( Action )",
+        "d": "Become able to see Invisible creatures, and possibly reveal them to others. ( Recharge: Long rest Recharge: Long rest.)"
       }
     ],
     "choices": [],
@@ -3512,12 +3507,12 @@
       },
       {
         "level": 2,
-        "n": "Hypnotic Gaze",
-        "d": "Charm and Incapacitates a creature. It cannot attack you. It cannot act. ( Recharge: Long rest.) · You can Maintain Hypnotic Gaze your Hypnotic Gaze each turn to extend its duration."
+        "n": "Hypnotic Gaze ( Action )",
+        "d": "Charm and Incapacitates a creature. It cannot attack you. It cannot act. ( Recharge: Long rest Recharge: Long rest.) · You can Maintain Hypnotic Gaze your Hypnotic Gaze each turn to extend its duration."
       },
       {
         "level": 6,
-        "n": "Instinctive Charm",
+        "n": "Instinctive Charm ( Reaction )",
         "d": "Charm an enemy attacking you. They will attack a new target if possible."
       },
       {
@@ -3587,12 +3582,12 @@
       },
       {
         "level": 6,
-        "n": "See Invisibility",
-        "d": "Glimpse Invisible creatures, and possibly reveal them to others. ( Recharge: Short rest.)"
+        "n": "See Invisibility ( Action )",
+        "d": "Glimpse Invisible creatures, and possibly reveal them to others. ( Recharge: Short rest Recharge: Short rest.)"
       },
       {
         "level": 10,
-        "n": "Illusory Self",
+        "n": "Illusory Self ( Reaction )",
         "d": "Interpose an illusory duplicate of yourself between you and an attacker's strike, making them miss their attack."
       }
     ],
@@ -3706,7 +3701,7 @@
       },
       {
         "level": 10,
-        "n": "Shapechanger",
+        "n": "Shapechanger ( Action )",
         "d": "Transform into a blue jay, able to Fly. If the blue jay's hit points drop to 0, the target reverts to its original form with its original hit points."
       }
     ],

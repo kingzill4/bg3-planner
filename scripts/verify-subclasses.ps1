@@ -13,21 +13,12 @@ param(
 )
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot "wiki-table.ps1")
 $cacheDir = Join-Path $root "cache"
 $UA = "bg3-planner personal build tool (contact: fmongeon@mongeonsolutions.ca)"
 
 $data = Get-Content (Join-Path $root "data\subclasses.json") -Raw -Encoding utf8 | ConvertFrom-Json
 if ($Id) { $data = @($data | Where-Object { $_.id -eq $Id }) }
-
-function Plain([string]$s) {
-    $s = [regex]::Replace($s, '(?s)<style.*?</style>', '')
-    $s = [regex]::Replace($s, '<[^>]+>', ' ')
-    $s = [System.Net.WebUtility]::HtmlDecode($s)
-    $s = ($s -replace '\s+', ' ').Trim()
-    # les balises separaient le nom du nombre : "Charges : 3" ici, "Charges: 3"
-    # apres nettoyage du scraper. Meme chose, pas une divergence.
-    ($s -replace '\s+([,.;:])', '$1')
-}
 
 $problems = @()
 $checked = 0
@@ -51,7 +42,7 @@ foreach ($sub in $data) {
     foreach ($dt in [regex]::Matches($body, '(?s)<dt[^>]*>(?<n>.*?)</dt>')) {
         $lv = $null
         foreach ($mk in $marks) { if ($mk.Index -lt $dt.Index) { $lv = [int]$mk.Groups['lv'].Value } }
-        $n = Plain $dt.Groups['n'].Value
+        $n = ConvertTo-PlainText $dt.Groups['n'].Value
         $n = ($n -replace '\(\s*[+\-,/&\s]*\)', '').Trim()
         if (-not $n -or $n.Length -gt 70) { continue }
         $wiki += "$lv|$n"

@@ -193,8 +193,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": "cha",
     "saves": [
-      "cha",
-      "dex"
+      "dex",
+      "cha"
     ],
     "armour": [
       "Light Armour"
@@ -246,7 +246,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Song of Rest",
-            "d": "Use your craft to soothe. You and your allies are revitalised as though you had taken a Short Rest. ( Recharge: Long rest.)"
+            "d": "Use your craft to soothe. You and your allies are revitalised as though you had taken a Short Rest. ( Recharge: Long rest Recharge: Long rest.)"
           },
           {
             "n": "Jack of All Trades",
@@ -525,19 +525,19 @@ const CLASS_DATA = [
             "d": "Call upon your deity in your moment of greatest need. Once they interfere, your deity will never do so again in this manner.",
             "opts": [
               {
-                "n": "Sunder the Heretical",
+                "n": "Sunder the Heretical ( Action )",
                 "d": "Call upon your deity to bring forth a radiant cataclysm upon all nearby enemies."
               },
               {
-                "n": "Arm Thy Servant",
+                "n": "Arm Thy Servant ( Action )",
                 "d": "Call upon your deity to grant you a legendary weapon forged in the fires of your holy bond."
               },
               {
-                "n": "Opulent Revival",
+                "n": "Opulent Revival ( Action )",
                 "d": "Resurrect fallen companions with half their hit points, and restore all nearby allies as if they had Long Rested."
               },
               {
-                "n": "Golden Generosity",
+                "n": "Golden Generosity ( Action )",
                 "d": "Call upon your deity to provide you with a rich bounty of potions and Camp Supplies."
               }
             ]
@@ -645,19 +645,19 @@ const CLASS_DATA = [
             "d": "Magically assume the shape of a beast.",
             "opts": [
               {
-                "n": "Wild Shape: Badger",
+                "n": "Wild Shape: Badger ( Action + Wild Shape Charge )",
                 "d": "Assume the shape of a giant badger that can Burrow into the ground. The badger has a starting health of 13 hit points that increases every two druid levels."
               },
               {
-                "n": "Wild Shape: Cat",
+                "n": "Wild Shape: Cat ( Action + Wild Shape Charge )",
                 "d": "Take the shape of a cat that can avoid attention and Meow to distract enemies. It has 2 hit points."
               },
               {
-                "n": "Wild Shape: Spider",
+                "n": "Wild Shape: Spider ( Action + Wild Shape Charge )",
                 "d": "Assume the shape of of a giant spider that can Enweb enemies. The giant spider has a starting health of 20 hit points that increases every two druid levels."
               },
               {
-                "n": "Wild Shape: Wolf",
+                "n": "Wild Shape: Wolf ( Action + Wild Shape Charge )",
                 "d": "Assume the shape of a dire wolf that can Incite allies and Distract enemies. The dire wolf has a starting health of 18 hit points that increase every two druid levels."
               }
             ]
@@ -817,7 +817,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Second Wind",
-            "d": "Draw on your stamina to protect yourself. You regain 1d10 + Fighter Level Hit Points. ( Recharge: Short rest.)"
+            "d": "Draw on your stamina to protect yourself. You regain 1d10 + Fighter Level Hit Points. ( Recharge: Short rest Recharge: Short rest.)"
           },
           {
             "n": "Fighting Style",
@@ -859,7 +859,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Action Surge",
-            "d": "Immediately gain an extra Action to use this turn. ( Recharge: Short rest.)"
+            "d": "Immediately gain an extra Action to use this turn. ( Recharge: Short rest Recharge: Short rest.)"
           }
         ]
       },
@@ -998,8 +998,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": null,
     "saves": [
-      "str",
-      "dex"
+      "dex",
+      "str"
     ],
     "armour": [],
     "weapons": [
@@ -1081,11 +1081,11 @@ const CLASS_DATA = [
             "d": "Use your reaction to reduce the damage from a ranged weapon attack by 1d10 + your Dexterity Modifier + your monk level. · If the damage is reduced to 0, you can use a Ki Point to Deflect the Missile.",
             "opts": [
               {
-                "n": "Deflect Missiles",
+                "n": "Deflect Missiles ( Reaction )",
                 "d": "Reduce the damage from a ranged weapon attack by 1d10 + your Dexterity modifier + your monk level."
               },
               {
-                "n": "Deflect Missiles: Redirect",
+                "n": "Deflect Missiles: Redirect ( Ki Point )",
                 "d": "Catch a projectile from a ranged weapon attack and shoot it back at your attacker using Deflect Missiles: Redirect."
               }
             ]
@@ -1281,7 +1281,7 @@ const CLASS_DATA = [
         "detail": [
           {
             "n": "Divine Sense",
-            "d": "Tap into your spiritual awareness to gain Advantage on Attack Rolls against celestials, fiends, and undead. ( Recharge: Short rest.)"
+            "d": "Tap into your spiritual awareness to gain Advantage on Attack Rolls against celestials, fiends, and undead. ( Recharge: Short rest Recharge: Short rest.)"
           },
           {
             "n": "Lay on Hands",
@@ -1473,8 +1473,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 6,
     "spellAbility": "wis",
     "saves": [
-      "str",
-      "dex"
+      "dex",
+      "str"
     ],
     "armour": [
       "Light Armour",
@@ -1698,8 +1698,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": null,
     "saves": [
-      "int",
-      "dex"
+      "dex",
+      "int"
     ],
     "armour": [
       "Light Armour"
@@ -1729,11 +1729,11 @@ const CLASS_DATA = [
           },
           {
             "n": "Sneak Attack (Melee)",
-            "d": "Deal an extra 1d6 damage to a foe you have Advantage against. ( Recharge: Per turn.)"
+            "d": "Deal an extra 1d6 damage to a foe you have Advantage against. ( Recharge: Per turn Recharge: Per turn.)"
           },
           {
             "n": "Sneak Attack (Ranged)",
-            "d": "Deal an extra 1d6 damage to a foe you have Advantage against. ( Recharge: Per turn.)"
+            "d": "Deal an extra 1d6 damage to a foe you have Advantage against. ( Recharge: Per turn Recharge: Per turn.)"
           }
         ]
       },
@@ -1898,8 +1898,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 4,
     "spellAbility": "cha",
     "saves": [
-      "cha",
-      "con"
+      "con",
+      "cha"
     ],
     "armour": [],
     "weapons": [],

@@ -11,6 +11,15 @@
 
 function ConvertTo-PlainText([string]$s) {
     if (-not $s) { return "" }
+    # Le cout d'une capacite est ecrit en icones, dans une parenthese finale : leur
+    # libelle alt est la seule chose qui le dit. "Wild Shape: Air Myrmidon ( + 2 )"
+    # veut dire "( Bonus Action + 2 Wild Shape Charge )", et le 2 tout seul ne
+    # disait 2 de quoi. On ne lit ces libelles QUE dans une parenthese : ailleurs
+    # sur la ligne, l'icone ne fait que repeter le nom de la capacite.
+    $s = [regex]::Replace($s, '(?s)\(([^()]*<img[^()]*)\)', {
+        param($m)
+        '(' + [regex]::Replace($m.Groups[1].Value, '<img[^>]*\balt="([^"]+)"[^>]*>', ' $1 ') + ')'
+    })
     $s = [regex]::Replace($s, '(?s)<!--.*?-->', '')
     $s = [regex]::Replace($s, '(?s)<style.*?</style>', '')
     $s = [regex]::Replace($s, '(?s)<script.*?</script>', '')
