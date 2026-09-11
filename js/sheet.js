@@ -1078,7 +1078,42 @@ function renderSkills() {
 
   const list = document.getElementById("skill-list");
   list.innerHTML = "";
-  SKILLS.forEach((skill) => {
+
+  // Three glyphs decided whether a skill was taken, takeable or off the class's
+  // list, and nothing said which was which — you had to click one to find out.
+  const legend = el("div", { class: "skill-legend" }, [
+    el("span", {}, [el("span", { class: "skill-dot on" }, ["●"]), " proficient"]),
+    el("span", {}, [el("span", { class: "skill-dot" }, ["○"]), " can take"]),
+    el("span", {}, [el("span", { class: "skill-dot locked" }, ["·"]), " not on your class list"])
+  ]);
+  if (allowExpertise) {
+    legend.appendChild(el("span", {}, [
+      el("span", { class: "skill-expertise on" }, ["E"]), " expertise — double proficiency"
+    ]));
+  }
+  list.appendChild(legend);
+
+  // Grouped under the ability each one rolls against, the way bg3.wiki lays them
+  // out ("Overview of abilities and skills": Strength, then Athletics; Dexterity,
+  // then Acrobatics, Sleight of Hand, Stealth) and the way the game asks for them.
+  // Eighteen skills in one alphabetical column hid the thing that actually matters
+  // when building: which ability carries which, and therefore what a +1 buys. The
+  // header now shows that ability's modifier, so a whole group moving together is
+  // visible rather than deduced.
+  let currentAbility = null;
+  const orderedSkills = ABILITIES
+    .flatMap((a) => SKILLS.filter((s) => s.ability === a.key));
+
+  orderedSkills.forEach((skill) => {
+    if (skill.ability !== currentAbility) {
+      currentAbility = skill.ability;
+      const ability = ABILITIES.find((a) => a.key === currentAbility);
+      const abilityMod = abilityModifier(finals[currentAbility]);
+      const head = el("div", { class: "skill-group" });
+      head.appendChild(el("span", { class: "skill-group-name" }, [ability ? ability.label : currentAbility.toUpperCase()]));
+      head.appendChild(el("span", { class: "skill-group-mod" }, [fmtSigned(abilityMod)]));
+      list.appendChild(head);
+    }
     const isBackground = fromBackground.has(skill.key);
     const isChosen = chosen.has(skill.key);
     const proficient = isBackground || isChosen;
@@ -1111,8 +1146,9 @@ function renderSkills() {
     }, [proficient ? "●" : isBackground || canPick ? "○" : "·"]);
     row.appendChild(dot);
 
+    // The ability is the group's heading now, so repeating it on every row was
+    // saying the same word five times in a column.
     row.appendChild(el("span", { class: "skill-name" }, [skill.label]));
-    row.appendChild(el("span", { class: "skill-ability" }, [skill.ability.toUpperCase()]));
 
     if (allowExpertise && proficient) {
       row.appendChild(el("button", {

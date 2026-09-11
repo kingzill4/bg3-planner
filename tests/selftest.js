@@ -926,6 +926,31 @@ const SelfTest = (() => {
       return true;
     });
 
+    // Checked against bg3.wiki's "Overview of abilities and skills", which groups
+    // them the same way: Strength carries Athletics alone, Dexterity three,
+    // Constitution none at all, and the skill list is grouped to match.
+    check("Rules", "every skill sits under the ability the wiki gives it", () => {
+      const wiki = {
+        str: ["Athletics"],
+        dex: ["Acrobatics", "Sleight of Hand", "Stealth"],
+        con: [],
+        int: ["Arcana", "History", "Investigation", "Nature", "Religion"],
+        wis: ["Animal Handling", "Insight", "Medicine", "Perception", "Survival"],
+        cha: ["Deception", "Intimidation", "Performance", "Persuasion"]
+      };
+      const bad = [];
+      Object.entries(wiki).forEach(([ability, names]) => {
+        const ours = SKILLS.filter((s) => s.ability === ability).map((s) => s.label).sort();
+        const want = [...names].sort();
+        if (ours.join("|") !== want.join("|")) {
+          bad.push(ability + ": [" + ours.join(", ") + "] vs wiki [" + want.join(", ") + "]");
+        }
+      });
+      const total = Object.values(wiki).reduce((n, a) => n + a.length, 0);
+      if (SKILLS.length !== total) bad.push(SKILLS.length + " skills, wiki lists " + total);
+      return bad;
+    });
+
     check("Rules", "Action Surge is Fighter-only", () => {
       const wrong = CLASS_KEYS.filter((k) => hasClassFeature(scratchMember(k, 12), "Action Surge"));
       return wrong.length === 1 && wrong[0] === "fighter" ? true : "found on: " + wrong.join(", ");
