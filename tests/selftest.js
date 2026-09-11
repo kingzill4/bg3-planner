@@ -772,6 +772,67 @@ const SelfTest = (() => {
       return rageDamage(bard) === 0 ? true : "a bard rages";
     });
 
+    // The breakdown on the card is the only figure a player can check against the
+    // game — hit something once and compare the combat log. So the lines printed
+    // and the totals beside them have to be the same arithmetic, not two
+    // calculations that happen to agree today.
+    check("Arithmetic", "the damage breakdown sums to its own totals", () => {
+      const bad = [];
+      const cases = [
+        ["barbarian", 9, "half-orc", ["savageAttacker"]],
+        ["paladin", 11, "human", []],
+        ["fighter", 11, "human", ["greatWeaponMaster"]],
+        ["rogue", 12, "lightfoot-halfling", []]
+      ];
+      const weapons = ITEMS.filter((i) => i.type === "weapon" && i.damage).slice(0, 40);
+      cases.forEach(([cls, lv, race, feats]) => {
+        weapons.forEach((it) => {
+          const m = scratchMember(cls, lv);
+          m.race = race;
+          m.feats = feats;
+          m.loadouts[1].weapon1 = it.id;
+          const r = weaponAttack(m, it, {
+            targetAc: 15, slotKey: "weapon1", twoHanded: true, rage: true
+          });
+          if (!r.main || !r.parts.length) return;
+          const hit = r.parts.filter((p) => !p.critOnly);
+          const min = hit.reduce((s, p) => s + (p.count + p.flat) * p.mult, 0);
+          const max = hit.reduce((s, p) => s + (p.count * p.size + p.flat) * p.mult, 0);
+          if (Math.abs(min - r.minDamage) > 1e-9) bad.push(cls + "/" + it.name + " min");
+          if (Math.abs(max - r.maxDamage) > 1e-9) bad.push(cls + "/" + it.name + " max");
+          // a hit can never roll below its span or above it
+          if (r.avgDamage < min - 1e-9 || r.avgDamage > max + 1e-9) {
+            bad.push(cls + "/" + it.name + " avg " + r.avgDamage.toFixed(2) +
+              " outside " + min + "-" + max);
+          }
+          // a critical is never worse than a hit, and its span contains its average
+          if (r.critMin < r.minDamage - 1e-9) bad.push(cls + "/" + it.name + " crit min below hit min");
+          const critAvg = r.avgDamage + r.critExtra;
+          if (critAvg < r.critMin - 1e-9 || critAvg > r.critMax + 1e-9) {
+            bad.push(cls + "/" + it.name + " crit avg " + critAvg.toFixed(2) +
+              " outside " + r.critMin + "-" + r.critMax);
+          }
+        });
+      });
+      return [...new Set(bad)];
+    });
+    // Every line has to name where it came from, or the breakdown stops being
+    // something you can reconcile against the game and becomes a list of numbers.
+    check("Shape", "every damage line is labelled and typed", () => {
+      const bad = [];
+      const weapons = ITEMS.filter((i) => i.type === "weapon" && i.damage).slice(0, 60);
+      weapons.forEach((it) => {
+        const m = scratchMember("paladin", 11);
+        m.loadouts[1].weapon1 = it.id;
+        const r = weaponAttack(m, it, { targetAc: 15, slotKey: "weapon1", twoHanded: true });
+        (r.parts || []).forEach((p) => {
+          if (!p.label) bad.push(it.name + ": unlabelled line");
+          if (!p.count && !p.flat) bad.push(it.name + ": empty line " + p.label);
+        });
+      });
+      return [...new Set(bad)];
+    });
+
     check("Rules", "Action Surge is Fighter-only", () => {
       const wrong = CLASS_KEYS.filter((k) => hasClassFeature(scratchMember(k, 12), "Action Surge"));
       return wrong.length === 1 && wrong[0] === "fighter" ? true : "found on: " + wrong.join(", ");

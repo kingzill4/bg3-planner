@@ -396,28 +396,64 @@ function weaponAttack(member, item, opts) {
   const defence = o.defence !== undefined ? o.defence : targetDefence();
   const mainMult = defenceMult(defence, main ? main.type : null);
 
-  const mainDice = (main ? diceExpected(main.count, main.size, gwf, savage) : 0) * mainMult;
-  const riderDice = riders.reduce((sum, r) =>
-    sum + diceExpected(r.count, r.size, gwf, savage) * defenceMult(defence, r.type), 0);
-  const riderFlat = riders.reduce((sum, r) => sum + r.flat * defenceMult(defence, r.type), 0);
-
   // Rage is a flat rider on the weapon's own damage type, so it rides the main
   // component's multiplier like the ability modifier does.
   const rage = o.rage ? rageDamage(member) : 0;
   const rageOn = rage && !ranged;
 
-  let flatOnMain = (main ? main.flat : 0) + damageAbilityMod + cond.damage;
-  if (powerAttack) flatOnMain += 10;
-  if (duelling) flatOnMain += 2;
-  if (rageOn) flatOnMain += rage;
-
   // Improved Divine Smite rides every melee hit, and it is a die, so it doubles
   // on a critical like any other damage die.
   const impSmiteDice = !ranged ? improvedSmiteDice(member) : 0;
-  const impSmiteAvg = diceExpected(impSmiteDice, 8, gwf, savage) *
-    defenceMult(defence, "Radiant");
 
-  let avgDamage = mainDice + flatOnMain * mainMult + riderDice + riderFlat + impSmiteAvg;
+  // ---- one hit, component by component ------------------------------------
+  // Every figure below is derived from this list, so what the card prints and
+  // what the turn total is built from cannot drift apart. It is also the only
+  // thing on this panel a player can check against the game directly: hit
+  // something once and the combat log shows these same lines.
+  //
+  // bg3.wiki/wiki/Damage_Mechanics breaks a hit down exactly this way — a source
+  // with its dice, its flat parts and its type, then each rider beneath it.
+  const mainType = main ? main.type : null;
+  const parts = [];
+  const addPart = (label, count, size, flat, type) => {
+    if (!count && !flat) return;
+    parts.push({
+      label, count: count || 0, size: size || 0, flat: flat || 0,
+      type: type || null, mult: defenceMult(defence, type)
+    });
+  };
+
+  if (main) {
+    // The weapon's own line carries its dice and its enchantment, the way the
+    // game prints them together on the weapon.
+    addPart(item.name, main.count, main.size, main.flat, mainType);
+    if (damageAbilityMod) {
+      addPart(ability.toUpperCase() + " modifier", 0, 0, damageAbilityMod, mainType);
+    }
+  }
+  if (powerAttack) addPart(gwmActive ? "Great Weapon Master: All In" : "Sharpshooter: All In", 0, 0, 10, mainType);
+  if (duelling) addPart("Duelling", 0, 0, 2, mainType);
+  if (rageOn) addPart("Rage", 0, 0, rage, mainType);
+  if (impSmiteDice) addPart("Improved Divine Smite", impSmiteDice, 8, 0, "Radiant");
+  riders.forEach((x) => addPart(item.name + " rider", x.count, x.size, x.flat, x.type));
+  if (cond.damage) addPart("Conditions in play", 0, 0, cond.damage, mainType);
+
+  // Rerolling changes what a die is worth but not what it can roll, so the
+  // averages use the reroll-aware expectation and the span does not.
+  const partAvg = (p) =>
+    (diceExpected(p.count, p.size, gwf, savage) + p.flat) * p.mult;
+  const partMin = (p) => (p.count + p.flat) * p.mult;
+  const partMax = (p) => (p.count * p.size + p.flat) * p.mult;
+  // Only dice double on a critical (bg3.wiki/wiki/Critical_Hit).
+  const partCrit = (p) => diceExpected(p.count, p.size, gwf, savage) * p.mult;
+
+  const mainDice = main ? diceExpected(main.count, main.size, gwf, savage) * mainMult : 0;
+  const riderDice = riders.reduce((sum, x) =>
+    sum + diceExpected(x.count, x.size, gwf, savage) * defenceMult(defence, x.type), 0);
+  const riderFlat = riders.reduce((sum, x) => sum + x.flat * defenceMult(defence, x.type), 0);
+  const impSmiteAvg = diceExpected(impSmiteDice, 8, gwf, savage) * defenceMult(defence, "Radiant");
+
+  let avgDamage = parts.reduce((sum, p) => sum + partAvg(p), 0);
 
   const luck = hasHalflingLuck(member);
   const critThreshold = critThresholdOf(member);
@@ -441,25 +477,33 @@ function weaponAttack(member, item, opts) {
   const critBonusAvg = main
     ? diceExpected(critDice, main.size, gwf, savage) * mainMult
     : 0;
-  const critExtra = mainDice + riderDice + impSmiteAvg + critBonusAvg;
+  if (critDice && main) {
+    parts.push({
+      label: (hasClassFeature(member, "Brutal Critical") && !offHand)
+        ? (critDice > 1 ? "Brutal Critical + Savage Attacks" : "Brutal Critical")
+        : "Savage Attacks",
+      count: critDice, size: main.size, flat: 0, type: mainType,
+      mult: mainMult, critOnly: true
+    });
+  }
+  const critExtra = parts.reduce((sum, p) => sum + (p.critOnly ? partAvg(p) : partCrit(p)), 0);
 
   // Extra Attack multiplies the whole attack; the off-hand attack is a bonus
   // action and is not repeated by it.
   const attacks = offHand ? 1 : (o.attacks || attacksPerAction(member));
-  // The game shows a weapon's damage as a span, not an average, and a span is what
-  // a player can check against the tooltip in front of them. Rerolling styles are
-  // deliberately ignored here: Great Weapon Fighting and Savage Attacker shift the
-  // distribution but not what the dice can physically roll.
-  const flatTotal = (main ? main.flat : 0) + damageAbilityMod +
-    (powerAttack ? 10 : 0) + (duelling ? 2 : 0) + (rageOn ? rage : 0);
-  const radiantMult = defenceMult(defence, "Radiant");
-  const minDamage = main
-    ? Math.max(0, (main.count + flatTotal) * mainMult + impSmiteDice * radiantMult +
-        riders.reduce((s, x) => s + (x.count + x.flat) * defenceMult(defence, x.type), 0))
+  // The span the game itself prints. Rerolling styles are deliberately left out
+  // of it: Great Weapon Fighting and Savage Attacker shift the distribution but
+  // not what the dice can physically roll.
+  const hitParts = parts.filter((p) => !p.critOnly);
+  const minDamage = main ? Math.max(0, hitParts.reduce((s, p) => s + partMin(p), 0)) : 0;
+  const maxDamage = main ? Math.max(0, hitParts.reduce((s, p) => s + partMax(p), 0)) : 0;
+  // And the same span on a critical: every die rolls twice, the extra crit dice
+  // join in, and the flat parts stay where they are.
+  const critMin = main
+    ? Math.max(0, parts.reduce((s, p) => s + partMin(p) + (p.critOnly ? 0 : p.count * p.mult), 0))
     : 0;
-  const maxDamage = main
-    ? Math.max(0, (main.count * main.size + flatTotal) * mainMult + impSmiteDice * 8 * radiantMult +
-        riders.reduce((s, x) => s + (x.count * x.size + x.flat) * defenceMult(defence, x.type), 0))
+  const critMax = main
+    ? Math.max(0, parts.reduce((s, p) => s + partMax(p) + (p.critOnly ? 0 : p.count * p.size * p.mult), 0))
     : 0;
 
   const perAttack = chance * avgDamage + odds.crit * critExtra;
@@ -498,6 +542,8 @@ function weaponAttack(member, item, opts) {
     critChance: odds.crit, critThreshold, odds, attacks,
     sneakDice, smiteDice, sneakAvg, smiteAvg,
     rage: rageOn ? rage : 0, impSmiteDice, impSmiteAvg, critDice, critBonusAvg,
+    // the breakdown every figure above was built from
+    parts, critMin, critMax, gwfApplies: gwf, savageApplies: savage,
     attackBonus, avgDamage: Math.max(0, avgDamage),
     perAttack, minDamage, maxDamage,
     hitChance: chance,
@@ -1177,29 +1223,52 @@ function renderCombat() {
       (r.sneakDice || r.smiteDice ? ", plus the once-per-turn riders" : "")));
     card.appendChild(grid);
 
-    // What the weapon actually rolls, by damage type — the same breakdown the
-    // game shows on the weapon, rather than one merged number.
-    if (r.main) {
-      const dice = el("div", { class: "dmg-parts" });
-      const part = (label, type) => {
-        const chip = el("span", { class: "dmg-part" }, [
-          el("span", { class: "dmg-part-roll" }, [label])
-        ]);
-        if (type) {
-          chip.appendChild(el("span", { class: "dmg-part-type", "data-damage": type }, [type]));
-        }
-        return chip;
-      };
-      const mainLabel = (r.main.count ? r.main.count + "d" + r.main.size : "") +
-        (r.main.flat ? " + " + r.main.flat : "") +
-        (r.damageAbilityMod ? " " + fmtSigned(r.damageAbilityMod) + " " + r.ability.toUpperCase() : "");
-      dice.appendChild(part(mainLabel.trim(), r.main.type));
-      // the span the game itself prints on the weapon
-      dice.appendChild(el("span", { class: "dmg-range" },
-        [Math.round(r.minDamage) + "\u2013" + Math.round(r.maxDamage)]));
-      r.riders.forEach((x) => dice.appendChild(
-        part(x.count ? x.count + "d" + x.size : String(x.flat), x.type)));
-      card.appendChild(dice);
+    // One hit, line by line. This is the only thing on the card a player can check
+    // against the game directly — hit something once and the combat log prints
+    // these same lines — so it is laid out to be read beside it rather than
+    // compressed into a single figure.
+    if (r.main && r.parts.length) {
+      const roll = (p) => (p.count ? p.count + "d" + p.size : "") +
+        (p.flat ? (p.count ? " + " : "") + p.flat : "");
+      const table = el("div", { class: "dmg-breakdown" });
+      r.parts.forEach((p) => {
+        const row = el("div", { class: "dmg-line" + (p.critOnly ? " crit-only" : "") });
+        row.appendChild(el("span", { class: "dmg-line-src" }, [p.label]));
+        row.appendChild(el("span", { class: "dmg-line-roll" }, [roll(p)]));
+        row.appendChild(p.type
+          ? el("span", { class: "dmg-part-type", "data-damage": p.type }, [p.type])
+          : el("span", {}, [""]));
+        // a resisted or doubled line says so where it happens, not only in a note
+        row.appendChild(el("span", { class: "dmg-line-mult" },
+          [p.mult === 1 ? "" : p.mult === 0 ? "immune" : p.mult < 1 ? "halved" : "doubled"]));
+        table.appendChild(row);
+      });
+      const totals = el("div", { class: "dmg-totals" });
+      totals.appendChild(el("div", { class: "dmg-total-row" }, [
+        el("span", {}, ["On a hit"]),
+        el("span", { class: "dmg-total-range" },
+          [Math.round(r.minDamage) + "\u2013" + Math.round(r.maxDamage)]),
+        el("span", { class: "dmg-total-avg" }, ["avg " + r.avgDamage.toFixed(1)])
+      ]));
+      totals.appendChild(el("div", { class: "dmg-total-row crit" }, [
+        el("span", {}, ["On a critical"]),
+        el("span", { class: "dmg-total-range" },
+          [Math.round(r.critMin) + "\u2013" + Math.round(r.critMax)]),
+        el("span", { class: "dmg-total-avg" },
+          ["avg " + (r.avgDamage + r.critExtra).toFixed(1)])
+      ]));
+      table.appendChild(totals);
+      // Rerolling styles lift the average without changing the span, which is why
+      // the two can look inconsistent — say so rather than leave it to be noticed.
+      if (r.gwfApplies || r.savageApplies) {
+        table.appendChild(el("div", { class: "combat-note dmg-reroll-note" }, [
+          [r.gwfApplies ? "Great Weapon Fighting rerolls 1s and 2s" : null,
+           r.savageApplies ? "Savage Attacker takes the best of two rolls per die" : null]
+            .filter(Boolean).join(" \u00b7 ") +
+          " \u2014 that lifts the average, not the span."
+        ]));
+      }
+      card.appendChild(table);
     }
 
     // Every term that went into the attack roll, so any number can be checked.

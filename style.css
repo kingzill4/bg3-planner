@@ -1202,13 +1202,46 @@ footer.foot a:hover { color: var(--gold); }
 .reset-origin:hover { color: var(--gold-bright); }
 
 /* --- combat: damage parts, notes, elevation --- */
-.dmg-parts { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
-.dmg-part {
-  display: inline-flex; align-items: baseline; gap: 5px;
-  font-size: 11px; padding: 2px 7px; border-radius: 3px;
-  background: rgba(0,0,0,.3); border: 1px solid var(--border-soft);
+/* La ventilation d'un coup, ligne par ligne. C'est la seule chose de cette carte
+   qu'on puisse confronter au jeu : on frappe une fois, et le journal de combat
+   imprime les memes lignes. Elle est donc disposee pour etre lue a cote de lui —
+   source, des, type — et non compressee en un seul nombre. */
+.dmg-breakdown {
+  margin-top: 8px; padding-top: 7px; border-top: 1px solid var(--border-soft);
 }
-.dmg-part-roll { font-family: var(--serif); font-weight: 600; color: var(--dmg-physical); }
+.dmg-line {
+  display: grid; grid-template-columns: 1fr auto auto auto; gap: 8px;
+  align-items: baseline; padding: 2px 0; font-size: 11.5px;
+}
+.dmg-line-src {
+  color: var(--text-dim); min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.dmg-line-roll {
+  font-family: var(--serif); font-weight: 600; color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.dmg-line-mult {
+  font-size: 9.5px; color: var(--gold-dim);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+/* un de qui n'existe que sur un critique ne fait pas partie d'un coup normal */
+.dmg-line.crit-only { opacity: .6; }
+.dmg-line.crit-only .dmg-line-src::after { content: " (on a crit)"; color: var(--gold-dim); }
+
+.dmg-totals { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border-soft); }
+.dmg-total-row {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 10px;
+  align-items: baseline; padding: 2px 0;
+  font-size: 11.5px; color: var(--text-dim);
+}
+.dmg-total-range {
+  font-family: var(--serif); font-size: 14px; font-weight: 700; color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.dmg-total-row.crit .dmg-total-range { color: var(--gold-bright); }
+.dmg-total-avg { font-size: 10.5px; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.dmg-reroll-note { margin-top: 6px; }
 .dmg-part-type { font-size: 9.5px; text-transform: uppercase; letter-spacing: .05em; }
 .dmg-part-type[data-damage="Fire"] { color: var(--dmg-fire); }
 .dmg-part-type[data-damage="Cold"] { color: var(--dmg-cold); }
@@ -1715,7 +1748,6 @@ footer.foot a:hover { color: var(--gold); }
 .combat-breakdown, .combat-note { font-size: 11.5px; }
 .turn-total-value { font-size: 36px; }
 .turn-step { font-size: 12.5px; padding: 5px 9px; }
-.dmg-part { font-size: 12px; padding: 3px 9px; }
 .dmg-part-type { font-size: 10px; }
 
 /* --- item picker and library --- */
@@ -1777,11 +1809,6 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
 }
 .party-member-pill:not(.active) { cursor: pointer; }
 .party-member-pill:not(.active):hover .party-member-name { color: var(--text); }
-
-.dmg-range {
-  font-family: var(--serif); font-size: 11.5px; color: var(--text-dim);
-  align-self: center; padding: 0 2px;
-}
 
 /* --- level path: the road to the character's level --- */
 .level-path { margin-top: 10px; border-top: 1px solid var(--border-soft); }
