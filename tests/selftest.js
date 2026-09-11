@@ -17,6 +17,10 @@
 const SelfTest = (() => {
   let results = [];
 
+  // Le balisage de index.html, quand la page de test a pu le charger : certaines
+  // verifications portent sur l'application elle-meme et pas sur ses donnees.
+  let APP_HTML = "";
+
   function check(group, name, fn) {
     let pass = false, detail = "";
     try {
@@ -57,7 +61,8 @@ const SelfTest = (() => {
   const SUB_NAMES = SUBCLASS_LIST.map((s) => s.name);
   const RACE_NAMES = RACES.map((r) => r.name);
 
-  function run() {
+  function run(appHtml) {
+    APP_HTML = appHtml || "";
     results = [];
 
     // ---- 1. Identity ------------------------------------------------------
@@ -140,6 +145,36 @@ const SelfTest = (() => {
       return COMPANIONS.filter((c) => !c.subrace && broad.includes((c.race || "").toLowerCase()))
         .map((c) => c.name + " = " + c.race);
     });
+    // Every pending choice is a button that opens the section settling it. A
+    // section id that no longer exists makes that button do nothing, silently.
+    check("References", "every pending choice points at a real section", () => {
+      if (!APP_HTML) return true;   // the app's markup was not reachable from here
+      const src = String(renderPendingChoices);
+      const used = [...new Set([...src.matchAll(/"([a-z]+-section)"/g)].map((m) => m[1]))];
+      if (!used.length) return "renderPendingChoices names no section";
+      return used.filter((id) => !APP_HTML.includes('id="' + id + '"'));
+    });
+    // A Tiefling used to show "Darkvision" twice in one place — once as a named
+    // trait, once as a derived fact in another colour. One row, one mention.
+    check("Shape", "a race never lists the same chip twice", () => {
+      const bad = [];
+      RACE_LIST.forEach((r) => {
+        const names = (r.traits || [])
+          .filter((t) => t.n && !/^(Base Racial Speed|Size)$/i.test(t.n))
+          .map((t) => t.n.toLowerCase());
+        const derived = [r.speed + " m speed"];
+        if (r.darkvision) derived.push("Darkvision");
+        (r.resistances || []).forEach((x) => derived.push(x + " resistance"));
+        (r.armour || []).forEach((x) => derived.push(x));
+        (r.weapons || []).forEach((x) => derived.push(x));
+        const shown = names.concat(derived.filter((d) => !names.includes(d.toLowerCase()))
+          .map((d) => d.toLowerCase()));
+        const seen = new Set();
+        shown.forEach((s) => { if (seen.has(s)) bad.push(r.name + ": " + s); seen.add(s); });
+      });
+      return bad;
+    });
+
     check("References", "every icon path is set", () =>
       [...ITEMS, ...SPELLS].filter((x) => !x.icon).map((x) => x.id));
     // GitHub Pages serves everything with max-age=600, so for ten minutes after a
@@ -740,8 +775,8 @@ const SelfTest = (() => {
   return { run, summary };
 })();
 
-function runSelfTest() {
-  const res = SelfTest.run();
+function runSelfTest(appHtml) {
+  const res = SelfTest.run(appHtml);
   const s = SelfTest.summary(res);
   return { ...s, results: res };
 }

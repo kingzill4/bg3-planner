@@ -50,7 +50,15 @@
   window.addEventListener("error", (e) => { e.preventDefault(); }, true);
   window.addEventListener("unhandledrejection", (e) => { e.preventDefault(); });
 
-  const r = runSelfTest();
+  // Tout ce qui suit est enveloppe dans une fonction asynchrone : lire index.html
+  // demande un await, et un script classique n'en accepte pas au premier niveau.
+  (async () => {
+  // Certaines verifications portent sur le balisage de l'application et non sur
+  // ses donnees : les sections vers lesquelles renvoie "Still to choose" doivent
+  // exister dans index.html. Cette page n'est pas index.html, on va donc le lire.
+  const appHtml = await fetch("../index.html").then((x) => x.text()).catch(() => "");
+
+  const r = runSelfTest(appHtml);
   const out = document.getElementById("out");
   out.innerHTML = "";
   const score = document.createElement("div");
@@ -82,6 +90,7 @@
     }
     out.appendChild(row);
   });
+  })();
 </script>
 </body>
 </html>

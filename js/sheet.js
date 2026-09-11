@@ -270,28 +270,33 @@ function renderRaceTraits(m) {
   const race = raceById[m.race];
   if (!race) return;
 
-  // The chips stay: they are the mechanical summary the rest of the tool computes
-  // with (speed, darkvision, resistances, proficiencies).
-  const bits = [];
-  bits.push(race.speed + " m speed");
+  // The named traits, as the wiki gives them — each opening what it does.
+  const traits = (race.traits || []).filter((t) =>
+    t.n && !/^(Base Racial Speed|Size)$/i.test(t.n));
+
+  // The mechanical summary the rest of the tool computes with. It used to sit in
+  // its own row above, which meant a Tiefling showed "Darkvision" twice — once as
+  // a blue fact and once as a named trait — and "Fire resistance" beside the
+  // "Hellish Resistance" that grants it. Two rows, two colours, one fact. So a
+  // derived bit is dropped when a trait already says it, and what survives joins
+  // the same row.
+  // Only a literal duplicate is dropped. "Darkvision" is a trait by that exact
+  // name, so the blue copy goes; "Fire resistance" stays, because the trait that
+  // grants it is called "Hellish Resistance" and a reader scanning the row would
+  // otherwise have to open it to learn which element.
+  const traitNames = traits.map((t) => t.n.toLowerCase());
+  const covered = (bit) => traitNames.includes(bit.toLowerCase());
+  const bits = [race.speed + " m speed"];
   if (race.darkvision) bits.push("Darkvision");
   (race.resistances || []).forEach((r) => bits.push(r + " resistance"));
   (race.armour || []).forEach((a) => bits.push(a));
   (race.weapons || []).forEach((w) => bits.push(w));
-  const chips = el("div", { class: "race-trait-chips" });
-  bits.forEach((b) => chips.appendChild(el("span", { class: "race-trait" }, [b])));
-  box.appendChild(chips);
+  const derived = bits.filter((b) => !covered(b));
 
-  // The named traits themselves were scraped but never shown, so Halfling Luck,
-  // Fey Ancestry and Dwarven Resilience were invisible even though the tool reads
-  // some of them. Listed the same way subclass features are.
-  const traits = (race.traits || []).filter((t) =>
-    t.n && !/^(Base Racial Speed|Size)$/i.test(t.n));
-  if (!traits.length) return;
+  if (!traits.length && !derived.length) return;
   // Same shape as every other list of things a build grants: a marker, then one
-  // chip per thing, each opening its own description. These used to be bare
-  // underlined text while subclass features next to them were boxed chips, so two
-  // lists that mean the same thing looked like two different kinds of content.
+  // chip per thing. Neutral for a named trait you can read about, blue for a fact
+  // the tool derived — the colours the rest of the sheet already uses.
   const list = el("div", { class: "sub-features race-features" });
   const row = el("div", { class: "sub-feature" });
   row.appendChild(el("span", { class: "sub-feature-level" }, ["◆"]));
@@ -299,6 +304,7 @@ function renderRaceTraits(m) {
   traits.forEach((t) => {
     bag.appendChild(withDetail(el("span", { class: "sub-chip" }, [t.n]), t.n, t.d, [race.name]));
   });
+  derived.forEach((b) => bag.appendChild(el("span", { class: "race-trait" }, [b])));
   row.appendChild(bag);
   list.appendChild(row);
   box.appendChild(list);
@@ -958,6 +964,27 @@ function renderDerivedStats() {
   box.appendChild(grid);
 }
 
+// Open the section that settles a pending choice and put it under the eye. The
+// sheet scrolls inside its own panel, not the page, so scrollIntoView on the
+// window would move the wrong thing.
+function revealSection(id) {
+  const section = document.getElementById(id);
+  if (!section) return;
+  section.open = true;
+  const panel = section.closest(".stats-panel") || section.parentElement;
+  const top = section.offsetTop - 12;
+  if (panel && panel.scrollHeight > panel.clientHeight) {
+    panel.scrollTo({ top, behavior: "smooth" });
+  } else {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  // A section that was already open and already in view would otherwise answer a
+  // click with nothing at all.
+  section.classList.remove("just-revealed");
+  void section.offsetWidth;
+  section.classList.add("just-revealed");
+}
+
 // Everything the sheet still needs before its numbers mean anything. Quietly
 // computing with defaults is what makes a planner feel unreliable, so say it.
 function renderPendingChoices() {
@@ -966,37 +993,59 @@ function renderPendingChoices() {
   box.innerHTML = "";
   const pending = [];
   const origin = !!(m.useOrigin && m.originScores);
+  // Each one names the section that settles it, so the list stops being a notice
+  // and becomes the way through: read what is missing, click it, land on it.
+  const add = (text, section) => pending.push({ text, section });
 
   // A family with subraces leaves `race` null until the ancestry is picked, and
   // "Race not chosen" reads as though the first choice had not registered. Name
   // the step that is actually outstanding, the way the subclass line below does.
   if (!m.race) {
-    pending.push(m.raceFamily
-      ? m.raceFamily + " ancestry not chosen"
-      : "Race not chosen");
+    add(m.raceFamily ? m.raceFamily + " ancestry" : "Race", "identity-section");
   }
   if (!origin) {
     const spent = spentPoints(m.scores);
-    if (spent < POINT_POOL) pending.push((POINT_POOL - spent) + " ability points unspent");
-    if (!m.racial2 || !m.racial1) pending.push("Racial +2 / +1 not placed");
+    if (spent < POINT_POOL) add((POINT_POOL - spent) + " ability points", "abilities-section");
+    if (!m.racial2 || !m.racial1) add("Racial +2 / +1", "abilities-section");
   }
   memberClasses(m).forEach((c) => {
     const label = (CLASSES[c.cls] || {}).label || c.cls;
     const hasSubclasses = SUBCLASS_LIST.some((s) => s.class === label);
-    if (hasSubclasses && !c.subclass) pending.push(label + " subclass not chosen");
+    if (hasSubclasses && !c.subclass) add(label + " subclass", "classes-section");
   });
-  if (!m.background) pending.push("Background not chosen");
+  if (!m.background) add("Background", "identity-section");
   const picks = skillPickBudget(m);
   const chosen = (m.skills || []).length;
-  if (chosen < picks) pending.push((picks - chosen) + " skill pick(s) left");
+  if (chosen < picks) add((picks - chosen) + " skill pick" + (picks - chosen > 1 ? "s" : ""), "skills-section");
+  const styleGap = styleSlots(m) - (m.styles || []).length;
+  if (styleGap > 0) add(styleGap + " fighting style" + (styleGap > 1 ? "s" : ""), "styles-section");
   const slots = featSlots(m);
   const taken = memberFeats(m).length;
-  if (taken < slots) pending.push((slots - taken) + " feat slot(s) empty");
+  if (taken < slots) add((slots - taken) + " feat" + (slots - taken > 1 ? "s" : ""), "feats-section");
 
-  if (!pending.length) return;
+  if (!pending.length) {
+    // Saying nothing when a sheet is complete is a missed chance to say so: the
+    // absence of a warning reads as "not checked yet", not as "nothing left".
+    box.appendChild(el("div", { class: "pending-box done" }, [
+      el("span", { class: "pending-tick" }, ["✓"]),
+      el("span", {}, ["Every choice made — the numbers above are the whole build."])
+    ]));
+    return;
+  }
+
   const wrap = el("div", { class: "pending-box" });
-  wrap.appendChild(el("div", {}, [el("strong", {}, ["Choices pending"])]));
-  pending.forEach((p) => wrap.appendChild(el("div", {}, ["· " + p])));
+  wrap.appendChild(el("div", { class: "pending-head" }, [
+    el("strong", {}, ["Still to choose"]),
+    el("span", { class: "sheet-badge" }, [String(pending.length)])
+  ]));
+  const bag = el("div", { class: "pending-set" });
+  pending.forEach((p) => {
+    bag.appendChild(el("button", {
+      type: "button", class: "pending-chip",
+      onclick: () => revealSection(p.section)
+    }, [p.text]));
+  });
+  wrap.appendChild(bag);
   box.appendChild(wrap);
 }
 
