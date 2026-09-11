@@ -905,6 +905,27 @@ const SelfTest = (() => {
       return bad;
     });
 
+    // Two items add dice to every weapon attack with no condition attached, and
+    // their damage was missing from every figure because item abilities are listed
+    // as uncounted rather than read. Anything that is counted must also stop being
+    // listed as left out.
+    check("Rules", "gear that adds dice to every attack is counted", () => {
+      const glove = ITEMS.find((i) => (i.special || [])
+        .some((sp) => /^\s*Your weapon attacks deal an additional \d+d\d+/.test(sp.d || "")));
+      if (!glove) return true;
+      const weapon = ITEMS.find((i) => i.type === "weapon" && i.damage && !isRangedWeapon(i));
+      const m = scratchMember("fighter", 6);
+      m.loadouts[1].weapon1 = weapon.id;
+      const before = weaponAttack(m, weapon, { targetAc: 15, slotKey: "weapon1", twoHanded: true });
+      m.loadouts[1].gloves = glove.id;
+      const after = weaponAttack(m, weapon, { targetAc: 15, slotKey: "weapon1", twoHanded: true });
+      if (!(after.dpr > before.dpr)) return glove.name + " changes nothing";
+      if (after.parts.length !== before.parts.length + 1) {
+        return "the breakdown gained " + (after.parts.length - before.parts.length) + " lines, expected 1";
+      }
+      return true;
+    });
+
     check("Rules", "Action Surge is Fighter-only", () => {
       const wrong = CLASS_KEYS.filter((k) => hasClassFeature(scratchMember(k, 12), "Action Surge"));
       return wrong.length === 1 && wrong[0] === "fighter" ? true : "found on: " + wrong.join(", ");

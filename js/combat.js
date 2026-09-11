@@ -189,6 +189,35 @@ function divineSmiteDice(member, slotLevel) {
   return Math.min(5, 2 + Math.max(0, (slotLevel || 1) - 1));
 }
 
+// Gear that adds dice to every weapon attack, with no condition attached. Two
+// items in the library word it exactly this way — the Flawed Helldusk Gloves
+// ("Your weapon attacks deal an additional 1d4 Fire damage") and the Dark
+// Justiciar Gauntlets — and their damage was missing from every figure, because
+// item abilities are listed as uncounted rather than read.
+//
+// Only the unconditional wording is taken. The other 83 abilities that mention
+// dice hang on something this tool does not know: a Burning target, a sleeping
+// one, a Gnome, a recharge. Those stay in "Not counted above", which is the
+// honest place for them.
+const FLAT_WEAPON_RIDER =
+  /^\s*Your weapon attacks deal an additional\s*(\d+)d(\d+)\s*([A-Z][a-z]+)?\s*damage\./;
+
+function gearWeaponRiders(member) {
+  const out = [];
+  equippedItems(member).forEach((it) => {
+    (it.special || []).forEach((sp) => {
+      const m = FLAT_WEAPON_RIDER.exec(sp.d || "");
+      if (!m) return;
+      out.push({
+        label: it.name + ": " + sp.n,
+        count: parseInt(m[1], 10), size: parseInt(m[2], 10),
+        type: m[3] || null
+      });
+    });
+  });
+  return out;
+}
+
 // Improved Divine Smite, the Paladin's level 11 passive: "Melee weapon attacks
 // deal an additional 1d8 Radiant damage." No slot and no choice — it is simply
 // on, and it was missing from every Paladin 11+ figure this tool produced.
@@ -436,6 +465,9 @@ function weaponAttack(member, item, opts) {
   if (rageOn) addPart("Rage", 0, 0, rage, mainType);
   if (impSmiteDice) addPart("Improved Divine Smite", impSmiteDice, 8, 0, "Radiant");
   riders.forEach((x) => addPart(item.name + " rider", x.count, x.size, x.flat, x.type));
+  // Gear that adds dice to every weapon attack — gloves, mostly. Its own damage
+  // type, so it takes its own resistance multiplier.
+  gearWeaponRiders(member).forEach((g) => addPart(g.label, g.count, g.size, 0, g.type || mainType));
   if (cond.damage) addPart("Conditions in play", 0, 0, cond.damage, mainType);
 
   // Rerolling changes what a die is worth but not what it can roll, so the
@@ -1330,7 +1362,11 @@ function renderCombat() {
   SLOT_DEFS.forEach((s) => {
     const it = itemsById[gear(m)[s.key]];
     if (!it) return;
-    (it.special || []).forEach((sp) => uncounted.push({ item: it.name, name: sp.n, desc: sp.d || "" }));
+    (it.special || []).forEach((sp) => {
+      // the ones that ARE counted must not also be listed as left out
+      if (FLAT_WEAPON_RIDER.test(sp.d || "")) return;
+      uncounted.push({ item: it.name, name: sp.n, desc: sp.d || "" });
+    });
   });
   if (uncounted.length) {
     const det = el("details", { class: "combat-uncounted" });
