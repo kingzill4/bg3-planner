@@ -1533,9 +1533,51 @@ function spellProjection(member, spell, opts) {
     };
   }
 
+  // Not every spell that carries dice is a spell that hits something. Forty-three
+  // had no attack roll and no save, and "Automatic hit" was wrong for thirty-four
+  // of them: Cure Wounds was projecting damage, Hex was being counted as a strike
+  // of its own when it only adds to yours, and Spiritual Weapon was a spell rather
+  // than the weapon it summons. The scraper reads which it is from the wiki's own
+  // description (bg3.wiki records it in the spell's text), and each kind says what
+  // its dice mean instead of pretending they are damage dealt on cast.
+  const KINDS = {
+    heal: {
+      mode: "Healing",
+      detail: "restores hit points — no attack roll, and nothing to resist",
+      chanceLabel: "Always lands"
+    },
+    rider: {
+      mode: "Damage rider",
+      detail: "adds its dice to your own attacks rather than dealing them itself",
+      chanceLabel: "Per hit you land"
+    },
+    weapon: {
+      mode: "Conjures a weapon",
+      detail: "the dice belong to the weapon it creates, rolled when that weapon attacks",
+      chanceLabel: "Per weapon hit"
+    },
+    zone: {
+      mode: "Area effect",
+      detail: "damages whoever enters, crosses or strikes into it — not on cast",
+      chanceLabel: "Per creature caught"
+    }
+  };
+  const kind = KINDS[spell.kind];
+  if (kind) {
+    return {
+      mode: kind.mode,
+      detail: kind.detail,
+      chanceLabel: kind.chanceLabel, chance: null, avg, dice, notes,
+      critNote: null,
+      // No expected figure: there is no roll here to weight one by, and inventing
+      // one would put a number next to a spell that never deals it on its own.
+      expected: null
+    };
+  }
+
   return {
     mode: "Automatic hit",
-    detail: "no attack roll and no saving throw",
+    detail: "no attack roll and no saving throw — the dice always land",
     chanceLabel: "Hit chance", chance: 1, avg, dice, notes,
     critNote: null,
     expected: avg
@@ -1733,14 +1775,24 @@ function renderSpellProjection() {
     c.appendChild(el("div", { class: "combat-stat-label" }, [label]));
     return c;
   };
-  grid.appendChild(stat(p.chanceLabel, Math.round(p.chance * 100) + "%", "combat-hit"));
+  // A spell with no roll to make has no percentage to show. Healing, riders,
+  // conjured weapons and zones say what their label means instead of printing a
+  // "100%" that answers a question nobody asked.
+  if (p.chance != null) {
+    grid.appendChild(stat(p.chanceLabel, Math.round(p.chance * 100) + "%", "combat-hit"));
+  }
   // "Avg damage" next to "Expected" read as two averages. This one is the damage
   // the spell deals when it lands in full; Expected is that weighted by the odds.
-  grid.appendChild(stat("If it lands", p.avg == null ? "—" : p.avg.toFixed(1), null,
-    "Damage when the spell lands in full — before the chance of missing, and before a " +
-    "successful saving throw halves it."));
-  grid.appendChild(stat("Expected", p.expected == null ? "—" : p.expected.toFixed(1), "combat-dpr",
-    "Averaged over hits, misses and — where the spell says so — half damage on a save."));
+  grid.appendChild(stat(p.chance == null ? p.chanceLabel : "If it lands",
+    p.avg == null ? "—" : p.avg.toFixed(1), null,
+    p.chance == null
+      ? "What its dice come to. " + p.detail
+      : "Damage when the spell lands in full — before the chance of missing, and before a " +
+        "successful saving throw halves it."));
+  if (p.expected != null || p.chance != null) {
+    grid.appendChild(stat("Expected", p.expected == null ? "—" : p.expected.toFixed(1), "combat-dpr",
+      "Averaged over hits, misses and — where the spell says so — half damage on a save."));
+  }
   card.appendChild(grid);
 
   // The dice and their type, the same way the weapon cards show them

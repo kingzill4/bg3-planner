@@ -172,11 +172,30 @@ foreach ($name in $names) {
     }
 
     # comment le sort se resout : jet d'attaque, jet de sauvegarde, ou touche auto
+    # Le wiki ecrit la sauvegarde de deux facons : "DEX Save", et la forme longue
+    # dans la parenthese de la ligne de degats — "2d10 Fire ( Dexterity Saving
+    # Throw to halve)". Seule la premiere etait lue, et Hellish Rebuke comme
+    # Cloudkill passaient pour des sorts qui touchent automatiquement.
+    #
+    # La forme longue n'est retenue que DANS cette parenthese. Ailleurs sur la page
+    # elle appartient a autre chose : Ray of Frost et Chromatic Orb sont des jets
+    # d'attaque dont la page cite une sauvegarde pour la surface qu'ils creent, et
+    # les Spiritual Weapon pour l'action de leur arme.
     $save = $null
     $saveM = [regex]::Match($props, '(?<ab>STR|DEX|CON|INT|WIS|CHA) Save')
     if ($saveM.Success) { $save = $saveM.Groups['ab'].Value }
+    if (-not $save) {
+        $longM = [regex]::Match($props,
+            'Damage:[^()]{0,120}\(\s*(?<ab>Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)\s+Saving Throw')
+        if ($longM.Success) {
+            $save = @{ Strength = "STR"; Dexterity = "DEX"; Constitution = "CON"
+                       Intelligence = "INT"; Wisdom = "WIS"; Charisma = "CHA" }[$longM.Groups['ab'].Value]
+        }
+    }
     $attackRoll = $props -match '\bAttack Roll\b'
-    $halfOnSave = $props -match '(?i)On Save:.{0,60}half damage'
+    # "to halve" dans cette parenthese dit la meme chose que "On Save: half damage"
+    $halfOnSave = ($props -match '(?i)On Save:.{0,60}half damage') -or
+                  ($props -match '(?i)Saving Throw[^)]{0,40}to halve')
     # "Range: Self" et "Range: Touch" sont des portees a part entiere : ne capter que
     # les distances chiffrees laissait 224 sorts sans portee, ce qui se lisait comme
     # une donnee manquante alors que c'est une information.
@@ -318,8 +337,34 @@ foreach ($name in $names) {
         if ($best) { $icon = "https://bg3.wiki" + $best }
     }
 
+    # De quel genre est ce sort ? Un sort qui porte des degats sans jet d'attaque
+    # ni sauvegarde etait projete comme un coup qui touche a tous les coups, et
+    # ils sont 43 dans ce cas : Cure Wounds affichait des "degats", Hex une frappe
+    # autonome alors qu'il s'ajoute aux tiennes, Spiritual Weapon un sort alors
+    # que c'est une arme qui attaque ensuite.
+    #
+    # Le wiki le dit dans sa propre description, et c'est elle qu'on lit :
+    #   soin    "Heal a creature you can touch", et aucun type de degat
+    #   rider   "Make your attacks deal an additional 1d6 Necrotic damage"
+    #   arme    "Summon a floating, spectral weapon", "Weave a shadowy shortsword"
+    $kind = $null
+    $descFlat = ($desc -replace '\s+', ' ')
+    if ($damage -and -not $attackRoll -and -not $save) {
+        if ((-not $damageTypes -or $damageTypes.Count -eq 0) -and $descFlat -match '(?i)\bheals?\b') {
+            $kind = "heal"
+        } elseif ($descFlat -match '(?i)(additional .{0,40}damage (when|whenever) you (attack|hit)|Make your attacks deal|weapon attacks deal|attacks deal an additional|Shift your Hunter)') {
+            $kind = "rider"
+        } elseif ($descFlat -match '(?i)(floating, spectral|spectral (greataxe|greatsword|halberd|maul|spear|trident)|spiritual twin|(Weave|Conjure|Summon|Create) an? .{0,30}(sword|scimitar|axe|spear|trident|maul|halberd|weapon))') {
+            $kind = "weapon"
+        } elseif ($descFlat -match '(?i)(anyone inside|anyone who hits you|creature walking on|hangs in the air|anyone under it|that attack anyone|for every 1\.5 m)') {
+            # Une zone ou une riposte : les degats se produisent quand quelqu'un
+            # entre, passe ou te frappe, pas quand tu lances le sort.
+            $kind = "zone"
+        }
+    }
+
     $results += [PSCustomObject]@{
-        id = $key; name = $name; level = $level; school = $school
+        id = $key; name = $name; level = $level; school = $school; kind = $kind
         desc = $desc; cost = $cost; damage = $damage; save = $save; range = $range; aoe = $aoe
         damageMin = $damageMin; damageMax = $damageMax
         attackRoll = [bool]$attackRoll; halfOnSave = [bool]$halfOnSave

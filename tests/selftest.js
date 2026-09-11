@@ -864,6 +864,47 @@ const SelfTest = (() => {
       return [...new Set(bad)];
     });
 
+    // A spell carrying dice is not automatically a spell that deals them on cast.
+    // Cure Wounds was projecting damage, Hex was counted as a strike of its own
+    // when it only adds to yours, Spiritual Weapon was a spell rather than the
+    // weapon it summons. Anything with no attack roll and no save has to say which
+    // of those it is, or go back to claiming it always hits.
+    check("Shape", "a spell with no roll says what kind it is", () => {
+      const kinds = ["heal", "rider", "weapon", "zone"];
+      const loose = SPELLS.filter((s) =>
+        s.damage && !s.attackRoll && !s.save && !s.kind);
+      // The genuinely automatic ones are few — Magic Missile and its kin. If this
+      // grows, the classification has stopped keeping up with the data.
+      return loose.length > 12
+        ? [loose.length + " unclassified: " + loose.slice(0, 5).map((s) => s.name).join(", ")]
+        : [];
+    });
+    check("Shape", "no healing spell is projected as damage", () => {
+      const m = scratchMember("cleric", 12);
+      return SPELLS.filter((s) => s.kind === "heal")
+        .filter((s) => {
+          const p = spellProjection(m, s, { targetAc: 15, targetSave: 2, slotLevel: s.level });
+          return p && (p.expected != null || /damage/i.test(p.mode));
+        })
+        .map((s) => s.name);
+    });
+    // The save is written two ways on the wiki — "DEX Save", and the long form
+    // inside the damage line's bracket. Reading only the short one left Hellish
+    // Rebuke and Cloudkill claiming to hit automatically.
+    check("Rules", "a spell that allows a save records which one", () => {
+      const m = scratchMember("warlock", 12);
+      const known = { "Hellish Rebuke": "DEX", "Cloudkill": "CON" };
+      const bad = [];
+      Object.entries(known).forEach(([name, save]) => {
+        const s = SPELLS.find((x) => x.name === name);
+        if (!s) return;
+        if (s.save !== save) bad.push(name + " reads " + (s.save || "no save") + ", expected " + save);
+        const p = spellProjection(m, s, { targetAc: 15, targetSave: 2, slotLevel: s.level });
+        if (p && p.chance === 1) bad.push(name + " still projects as an automatic hit");
+      });
+      return bad;
+    });
+
     check("Rules", "Action Surge is Fighter-only", () => {
       const wrong = CLASS_KEYS.filter((k) => hasClassFeature(scratchMember(k, 12), "Action Surge"));
       return wrong.length === 1 && wrong[0] === "fighter" ? true : "found on: " + wrong.join(", ");
