@@ -442,6 +442,21 @@ function weaponAttack(member, item, opts) {
   //
   // bg3.wiki/wiki/Damage_Mechanics breaks a hit down exactly this way — a source
   // with its dice, its flat parts and its type, then each rider beneath it.
+  //
+  // That page also describes "damage riders treated as damage sources", which
+  // cause every rider to apply a second time. It does not reach these figures, and
+  // that is a property of what this list contains rather than luck: a weapon attack
+  // is one damage source, so each rider below applies once.
+  //
+  // Twenty-eight weapons in the library appear on the wiki's DRS list, and every
+  // one of them qualifies through a named ability or a weapon action — Crimson
+  // Mischief through Redvein Savagery, the Hellfire Greataxe through Hellflame
+  // Cleave. Those are conditional or cost an action, so they sit in "Not counted
+  // above" rather than here. The passive riders in a weapon's own damage line
+  // belong to the source, not to a second one.
+  //
+  // Honour mode removes the distinction anyway: "Nearly all DRS effects are
+  // treated like normal Damage Riders when playing on Honour mode."
   const mainType = main ? main.type : null;
   const parts = [];
   const addPart = (label, count, size, flat, type) => {

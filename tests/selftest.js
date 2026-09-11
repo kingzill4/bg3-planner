@@ -1018,6 +1018,26 @@ const SelfTest = (() => {
         : "tool " + half.avgDamage.toFixed(4) + ", exact " + exact.toFixed(4);
     });
 
+    // A weapon attack is one damage source, so every rider applies once and the
+    // wiki's "damage riders treated as damage sources" cannot change these
+    // figures. That holds only while the breakdown stays one source deep: if a
+    // second source ever joined it, riders would need to apply twice and none of
+    // this arithmetic would know.
+    check("Shape", "a weapon attack computes exactly one damage source", () => {
+      const bad = [];
+      const weapons = ITEMS.filter((i) => i.type === "weapon" && i.damage).slice(0, 60);
+      weapons.forEach((it) => {
+        const m = scratchMember("fighter", 6);
+        m.loadouts[1].weapon1 = it.id;
+        const r = weaponAttack(m, it, { targetAc: 15, slotKey: "weapon1", twoHanded: true });
+        if (!r.main) return;
+        // the weapon's own line is the source; everything else rides it
+        const sources = (r.parts || []).filter((p) => p.label === it.name);
+        if (sources.length !== 1) bad.push(it.name + ": " + sources.length + " source lines");
+      });
+      return bad;
+    });
+
     check("Rules", "Action Surge is Fighter-only", () => {
       const wrong = CLASS_KEYS.filter((k) => hasClassFeature(scratchMember(k, 12), "Action Surge"));
       return wrong.length === 1 && wrong[0] === "fighter" ? true : "found on: " + wrong.join(", ");
