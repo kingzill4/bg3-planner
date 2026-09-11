@@ -816,7 +816,22 @@ a.wikilink:hover { text-decoration: underline; }
   font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--text);
   font-variant-numeric: tabular-nums; line-height: 1.15;
 }
-.combat-stat-value.combat-hit { color: var(--blue-bright); }
+/* ------------------------------------------------------------------
+   Ce que dit la couleur d'un chiffre, dans tout le panneau de combat
+   ------------------------------------------------------------------
+   Elle ne disait rien : l'or etait un total en haut de carte et une etape
+   trois lignes plus bas, le bleu marquait une chance de toucher ici et un
+   cout d'action la, et quatre tuiles cote a cote portaient trois couleurs
+   pour quatre chiffres du meme genre. Tout se disputait l'oeil, donc rien
+   ne ressortait.
+
+     or       le chiffre qu'on compare — les degats par tour, et rien d'autre
+     ivoire   un composant : un de, une portee, un bonus, une chance
+     bleu     une ressource ou un cout : Action, Action bonus
+     vert /   un ecart par rapport a la ligne de base
+     rouge
+     teinte   un type de degat, dans la couleur que le jeu lui donne
+   ------------------------------------------------------------------ */
 .combat-stat-value.combat-dpr { color: var(--gold-bright); }
 .combat-stat-label {
   font-size: 8.5px; text-transform: uppercase; letter-spacing: .06em;
@@ -1253,9 +1268,12 @@ footer.foot a:hover { color: var(--gold); }
 .dmg-part-type[data-damage="Radiant"] { color: var(--dmg-radiant); }
 .dmg-part-type[data-damage="Psychic"] { color: var(--dmg-psychic); }
 .dmg-part-type[data-damage="Force"] { color: var(--dmg-force); }
+/* Le physique n'a pas de couleur propre dans le jeu, et l'ivoire de --dmg-physical
+   etait a deux points du blanc du chiffre qu'il annote : l'etiquette se lisait
+   comme la valeur. Une etiquette doit toujours peser moins que son nombre. */
 .dmg-part-type[data-damage="Slashing"],
 .dmg-part-type[data-damage="Piercing"],
-.dmg-part-type[data-damage="Bludgeoning"] { color: var(--dmg-physical); }
+.dmg-part-type[data-damage="Bludgeoning"] { color: var(--text-dim); }
 
 .combat-note {
   font-size: 10.5px; line-height: 1.45; color: var(--text-dim); margin-top: 5px;
@@ -1403,7 +1421,7 @@ footer.foot a:hover { color: var(--gold); }
 .turn-step.blocked .turn-step-cost { color: var(--text-dim); }
 .turn-step.blocked .turn-step-name { color: var(--text-dim); }
 .turn-step.blocked .turn-step-value { color: var(--text-dim); font-weight: 400; }
-.turn-step-value { font-family: var(--serif); font-weight: 600; color: var(--gold); }
+.turn-step-value { font-family: var(--serif); font-weight: 600; color: var(--text); }
 
 /* --- party overview --- */
 .party-table { display: flex; flex-direction: column; gap: 4px; }

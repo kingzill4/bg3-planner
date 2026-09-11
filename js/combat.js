@@ -1214,9 +1214,14 @@ function renderCombat() {
     // could see, duplicated the dice shown below, and made a level 11 Fighter read
     // 13.0 while actually dealing 32.3. "Per attack" is the same expected damage the
     // turn total is built from, so the two tiles now explain each other.
-    grid.appendChild(stat("Per attack", r.perAttack.toFixed(1), null,
-      "Expected damage of a single attack: hit chance \u00d7 damage, plus what a critical adds. " +
-      "One hit rolls " + Math.round(r.minDamage) + "\u2013" + Math.round(r.maxDamage) + "."));
+    // Only when it says something the turn total does not. With one attack and no
+    // once-per-turn rider the two tiles carry the identical figure, and two
+    // identical numbers side by side under different labels read as a mistake.
+    if (r.attacks > 1 || r.sneakDice || r.smiteDice) {
+      grid.appendChild(stat("Per attack", r.perAttack.toFixed(1), null,
+        "Expected damage of a single attack: hit chance \u00d7 damage, plus what a critical adds. " +
+        "One hit rolls " + Math.round(r.minDamage) + "\u2013" + Math.round(r.maxDamage) + "."));
+    }
     grid.appendChild(stat("Damage / turn", r.dpr.toFixed(1), "combat-dpr",
       r.attacks + (r.attacks > 1 ? " attacks" : " attack") +
       " × (hit chance × damage) plus the extra dice a critical adds" +
