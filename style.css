@@ -1675,6 +1675,15 @@ footer.foot a:hover { color: var(--gold); }
 
 /* --- item picker: filters and the reasons an item is worth a look --- */
 .picker-facets { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 10px; }
+
+/* Combien de resultats la liste ne montre pas. Le plafond etait muet, et c'est
+   lui qui faisait croire que les filtres ne servaient a rien : quatre-vingt-quatorze
+   casques coupes a soixante, puis soixante-huit coupes a soixante — rien ne bougeait
+   a l'ecran alors que le filtre avait parfaitement fonctionne. */
+.picker-capped {
+  font-size: 10.5px; color: var(--gold-dim); padding: 4px 2px 8px;
+  border-bottom: 1px solid var(--border-soft); margin-bottom: 6px;
+}
 .picker-facet {
   font-size: 10.5px; padding: 4px 10px; border-radius: 20px;
   background: rgba(0,0,0,.3); border: 1px solid var(--border); color: var(--text-dim);

@@ -338,7 +338,7 @@ function renderPartyBar() {
       // without this marker the very click that opens this one counts as outside
       "data-popover": "",
       onclick: openStarterPicker
-    }, ["✦ Starter build"]));
+    }, ["✦ Example build"]));
   }
 }
 
@@ -349,12 +349,15 @@ function openStarterPicker(e) {
   const anchor = (e && (e.currentTarget || e.target)) ||
     document.querySelector(".starter-btn");
   const body = el("div", { class: "starter-list" });
+  // "Starter build" promised advice on how to start. These are not that, and the
+  // list has always said so in its own second sentence — the button just said
+  // something else. What they are is one complete, legal character per mechanic
+  // this calculator computes, ready to be pulled apart.
   body.appendChild(el("div", { class: "starter-intro" }, [
-    "Complete characters at level " + STARTER_LEVEL + " in Act 1 gear — where you " +
-    "actually start, not where you finish. Each is picked to show a different part " +
-    "of the calculator. They are examples to pull apart, not recommendations: what " +
-    "makes a build good is an opinion, and everything else this tool tells you is " +
-    "checked against the wiki."
+    "Complete characters at level " + STARTER_LEVEL + " in Act 1 gear, each chosen " +
+    "to show a different part of the calculator. Examples to pull apart, not " +
+    "recommendations: what makes a build good is an opinion, and everything else " +
+    "this tool tells you is checked against the wiki."
   ]));
   STARTER_BUILDS.forEach((b) => {
     const cls = CLASSES[b.cls];
@@ -387,7 +390,7 @@ function openStarterPicker(e) {
     row.appendChild(text);
     body.appendChild(row);
   });
-  showPopover(anchor, "Starter builds", body);
+  showPopover(anchor, "Example builds", body);
 }
 
 function addMember() {
@@ -537,25 +540,53 @@ function renderSlot(member, def) {
 function itemFacets(member, item) {
   const out = [];
   if (!proficiencyIssue(member, item)) out.push("proficient");
+  const searchText = itemSearchText(item);
 
   // A mechanic another equipped piece already carries. Two pieces is what makes a
   // BG3 build work, so "one more of these" is a real, checkable reason.
-  const text = itemStatText(item);
+  const text = itemSearchText(item);
   const equipped = equippedItems(member).filter((it) => it.id !== item.id);
   const shared = MECHANICS.filter((mech) => {
-    const re = new RegExp("\\b" + mech.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i");
-    return re.test(text) && equipped.some((it) => re.test(itemStatText(it)));
+    const re = mechanicPattern(mech);
+    return re.test(text) && equipped.some((it) => re.test(itemSearchText(it)));
   });
   if (shared.length) out.push({ facet: "synergy", detail: shared.slice(0, 2).join(", ") });
 
-  // Something the character's own numbers care about.
+  // Something the character's own numbers care about. This used to look for four
+  // phrases and found six of ninety-four helmets, which made the filter read as
+  // broken rather than as selective — most of what a build is actually built on
+  // was invisible to it: saving throws, an ability score, Advantage, a resistance,
+  // or the character's own weapon damage type.
   const d = derivedStats(member);
   const wants = [];
   if (/Armou?r Class/i.test(text)) wants.push("AC");
   if (/Attack Rolls?/i.test(text)) wants.push("attack rolls");
   if (d.spellAbility && /Spell Save DC|Spell Attack/i.test(text)) wants.push("spellcasting");
   if (/Initiative/i.test(text)) wants.push("initiative");
-  if (wants.length) out.push({ facet: "stat", detail: wants.join(", ") });
+  if (/Saving Throws?/i.test(text)) wants.push("saving throws");
+  if (/Advantage/i.test(text)) wants.push("advantage");
+  if (/Resistan(?:ce|t)/i.test(text)) wants.push("resistance");
+  if (/Temporary Hit Points|Hit Point Maximum/i.test(text)) wants.push("hit points");
+  if (/Movement Speed/i.test(text)) wants.push("movement");
+  // The ability this character actually leans on, by name — a +2 Dexterity item
+  // matters to a Rogue and not to a Cleric, and the sheet knows which is which.
+  ABILITIES.forEach((a) => {
+    if (new RegExp("\\b" + a.label + "\\b", "i").test(text) &&
+        (a.key === d.spellAbility || a.key === "con" ||
+         memberClasses(member).some((c) => (CLASSES[c.cls] || {}).saves &&
+           CLASSES[c.cls].saves.includes(a.key)))) {
+      wants.push(a.label);
+    }
+  });
+  // And the damage type this character's own weapon deals.
+  const main = itemsById[gear(member).weapon1] || itemsById[gear(member).ranged1];
+  const mainType = main && main.damage ? (parseWeaponDamage(main.damage, false) || {}).main : null;
+  if (mainType && mainType.type && new RegExp("\\b" + mainType.type + "\\b", "i").test(text)) {
+    wants.push(mainType.type.toLowerCase() + " damage");
+  }
+  if (wants.length) {
+    out.push({ facet: "stat", detail: [...new Set(wants)].slice(0, 3).join(", ") });
+  }
 
   return out;
 }
@@ -771,11 +802,22 @@ function openSlotItemPicker(slotKey) {
     } else {
       matches = matches.slice().sort(byRarity);
     }
-    const shown = matches.slice(0, 60);
+    // The list is capped, and the cap used to be silent — which is what made the
+    // filters look broken. Ninety-four helmets cut to sixty; then "Usable by this
+    // character" left sixty-eight, cut to sixty again, and nothing on screen
+    // changed. The filter had worked perfectly and the cap hid it.
+    const CAP = 60;
+    const shown = matches.slice(0, CAP);
     if (shown.length === 0) {
       listEl.appendChild(el("div", { class: "empty-hint" },
         ["No item matches. Try clearing a filter."]));
       return;
+    }
+    if (matches.length > CAP) {
+      listEl.appendChild(el("div", { class: "picker-capped" }, [
+        matches.length + " match — showing the first " + CAP +
+        ". Narrow it with a filter or the search box."
+      ]));
     }
     shown.forEach((it) => {
       const row = el("div", {
@@ -878,6 +920,25 @@ function itemStatText(it) {
   (it.details || []).forEach((d) => parts.push(d));
   return parts.join(" ");
 }
+
+// Everything an item says about itself, for asking *whether* it mentions
+// something rather than *how much* it gives. The two are different jobs and want
+// different text: the function above must not read the summary, because it adds
+// numbers up and the summary restates them; this one must, because a mechanic is
+// often named only there. Searching both took the number of items a mechanic can
+// be recognised on from 190 to 282.
+function itemSearchText(it) {
+  const parts = [it.summary || ""];
+  (it.special || []).forEach((s) => parts.push(s.n + " " + (s.d || "")));
+  (it.details || []).forEach((d) => parts.push(d));
+  return parts.join(" ");
+}
+
+// "Lightning Charge" never matched "Lightning Charges": a word boundary after the
+// singular refuses the plural, and the game writes it plural. Eleven items carry
+// it and the filter found none of them.
+const mechanicPattern = (mech) =>
+  new RegExp("\\b" + mech.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?:s|es)?\\b", "i");
 
 function computeBuildStats(member) {
   const equipped = SLOT_DEFS

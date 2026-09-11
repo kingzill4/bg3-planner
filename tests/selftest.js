@@ -257,6 +257,40 @@ const SelfTest = (() => {
       return ITEMS.filter((i) => i.anyAct && !said.test(i.location || "")).map((i) => i.name);
     });
 
+    // The facet filters looked broken and were not: a silent cap of 60 rows meant
+    // a filter leaving 68 items changed nothing on screen. What was genuinely
+    // broken was the text they search — the summary was dropped whenever an item
+    // had a named ability, and "Lightning Charge" could not match the plural the
+    // game actually writes.
+    check("Shape", "a mechanic matches the plural the game writes", () => {
+      const bad = [];
+      MECHANICS.forEach((mech) => {
+        const carriers = ITEMS.filter((i) => mechanicPattern(mech).test(itemSearchText(i)));
+        if (!carriers.length) bad.push(mech + ": no item in the library mentions it");
+      });
+      return bad;
+    });
+    check("Shape", "an item's search text keeps its summary", () => {
+      // itemStatText deliberately drops it — it adds numbers up and the summary
+      // restates them. itemSearchText must not, or mechanics named only there are
+      // invisible to every filter.
+      const withBoth = ITEMS.find((i) => i.summary && (i.special || []).length);
+      if (!withBoth) return true;
+      return itemSearchText(withBoth).includes(withBoth.summary)
+        ? true
+        : withBoth.name + ": summary missing from its search text";
+    });
+    check("Shape", "the stat facet finds more than a handful", () => {
+      const m = scratchMember("rogue", 10);
+      const heads = ITEMS.filter((i) => i.type === "head");
+      const hit = heads.filter((i) => hasFacet(itemFacets(m, i), "stat")).length;
+      // It found six of ninety-four before, which read as a broken filter rather
+      // than a selective one.
+      return hit < heads.length * 0.15
+        ? [hit + " of " + heads.length + " helmets boost anything this character uses"]
+        : [];
+    });
+
     check("References", "every icon path is set", () =>
       [...ITEMS, ...SPELLS].filter((x) => !x.icon).map((x) => x.id));
     // GitHub Pages serves everything with max-age=600, so for ten minutes after a
@@ -1036,6 +1070,30 @@ const SelfTest = (() => {
         if (sources.length !== 1) bad.push(it.name + ": " + sources.length + " source lines");
       });
       return bad;
+    });
+
+    // The combined row used to be called "All of the above" while the rows above
+    // it included both Advantage and Disadvantage — and no turn is both. A reader
+    // who noticed that was right to distrust the figure. It names its parts now,
+    // and must never name the roll state it excludes.
+    check("Rules", "the combined turn does not claim both roll states", () => {
+      const finesse = ITEMS.find((i) => i.type === "weapon" && i.damage &&
+        (i.details || []).some((d) => /Finesse/i.test(d)));
+      if (!finesse) return true;
+      const m = scratchMember("rogue", 10);
+      m.loadouts[1].weapon1 = finesse.id;
+      const v = turnVariants(m, { targetAc: 15 });
+      if (!v) return "no turn to read";
+      const combined = v.rows.find((r) => r.combined);
+      if (!combined) return true;               // nothing to combine on this build
+      if (/disadvantage/i.test(combined.label)) return "names Disadvantage: " + combined.label;
+      if (/all of the above/i.test(combined.label)) return "still says 'all of the above'";
+      // and it has to beat every single rider it claims to stack
+      const singles = v.rows.filter((r) => !r.rollState && !r.combined);
+      const weaker = singles.filter((r) => r.total > combined.total + 1e-9);
+      return weaker.length
+        ? "lower than " + weaker.map((r) => r.label).join(", ")
+        : true;
     });
 
     check("Rules", "Action Surge is Fighter-only", () => {

@@ -77,7 +77,7 @@ script and stylesheet carries its content hash.
   from. *By slot* is the same gear itemised, each piece with its full stat block. These were two
   panels in two columns answering one question; merging them freed a column and removed a second
   scroll region.
-- **Starter builds** — five complete characters at level 12, one click from the party bar, so the
+- **Example builds** — five complete characters at level 5 in Act 1 gear, one click from the party bar, so the
   first screen is something to pull apart rather than twelve empty fields. They are **worked
   examples, not recommendations**, and the distinction is deliberate: everything else here is
   checked against bg3.wiki, and "this build is strong" is not a claim a wiki can settle. Each is

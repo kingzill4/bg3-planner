@@ -1018,19 +1018,38 @@ function turnVariants(member, opts) {
       total: t.total
     });
   }
-  // and the whole lot together, when there is genuinely something to combine.
-  // The two roll-state rows do not count: they are alternatives to each other, not
-  // riders, and counting them made "All of the above" appear on a build with no
-  // feats at all, where it only ever repeated the Advantage figure.
-  // This is the ceiling, so it takes Advantage — which also clears Disadvantage,
-  // and with it the block on Sneak Attack.
-  if (out.rows.some((r) => !r.rollState)) {
-    const t = turnSummary(member, {
-      ...opts, advantage: true, disadvantage: false,
+  // The best turn this build can actually take, which is not "all of the above":
+  // the rows above include Advantage and Disadvantage, and no turn is both. The
+  // label used to say it was all of them, and a reader who noticed that the two
+  // roll states contradict each other was right to distrust the number.
+  //
+  // So it names what it actually switches on. Advantage, because it is the better
+  // of the two states and clears the block on Sneak Attack; then every rider this
+  // character has. The riders are alternatives to each other only in the sense of
+  // costing resources — they can all land on one turn.
+  const riderRows = out.rows.filter((r) => !r.rollState);
+  if (riderRows.length) {
+    const on = {
+      advantage: true, disadvantage: false,
       powerAttack: true, sneakAttack: true, divineSmite: true, rage: true,
       smiteSlot: Math.min(Math.max(1, smiteSlots.maxSlot), 4)
-    });
-    if (t) out.rows.push({ label: "All of the above", total: t.total, combined: true });
+    };
+    const t = turnSummary(member, { ...opts, ...on });
+    if (t) {
+      // Name the parts rather than gesturing at them: "Advantage + Sneak Attack"
+      // is checkable against the rows above, "all of the above" is not.
+      const named = [opts.advantage ? null : "Advantage"]
+        .concat(riderRows.map((r) => r.label.replace(/\s*\(.*$/, "")))
+        .filter(Boolean);
+      out.rows.push({
+        label: named.join(" + "),
+        total: t.total,
+        combined: true,
+        detail: "Every one of these at once, on a turn rolled with Advantage. " +
+          "Disadvantage is the other roll state, not another rider, so it is not " +
+          "part of this."
+      });
+    }
   }
 
   // An Opportunity Attack is a single melee swing taken as a Reaction when an enemy
