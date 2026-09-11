@@ -485,7 +485,51 @@ function weaponAttack(member, item, opts) {
   const riderFlat = riders.reduce((sum, x) => sum + x.flat * defenceMult(defence, x.type), 0);
   const impSmiteAvg = diceExpected(impSmiteDice, 8, gwf, savage) * defenceMult(defence, "Radiant");
 
-  let avgDamage = parts.reduce((sum, p) => sum + partAvg(p), 0);
+  // Resistance is "halved (rounded down)" per hit, and that floor is a real loss
+  // an average can carry exactly rather than approximately:
+  //
+  //     E[floor(X/2)] = (E[X] − P(X odd)) / 2
+  //
+  // P(X odd) follows from the parity bias of the dice, which multiplies across
+  // independent dice. Every BG3 die has an even number of faces, so one of them is
+  // enough to make the total exactly even-odds — unless Savage Attacker is in
+  // play, which skews it, and that is why the bias is computed rather than assumed
+  // to be a half.
+  const roundingLoss = (typeParts) => {
+    if (!typeParts.length) return 0;
+    let bias = 1;
+    let anyDie = false;
+    typeParts.forEach((p) => {
+      if (p.count) {
+        anyDie = true;
+        bias *= Math.pow(dieParityBias(p.size, gwf, savage), p.count);
+      }
+      if (p.flat % 2 !== 0) bias = -bias;     // an odd constant flips the parity
+    });
+    if (!anyDie) {
+      // No dice at all: the total is a fixed number, so it is odd or it is not.
+      const total = typeParts.reduce((s, p) => s + p.flat, 0);
+      return (Math.abs(total) % 2) / 2;
+    }
+    return (1 - bias) / 2 / 2;               // P(odd) / 2
+  };
+
+  // Grouped by damage type, because the game halves the total of a type, not each
+  // component of it.
+  const resistedLoss = (list) => {
+    const byType = new Map();
+    list.forEach((p) => {
+      if (p.mult !== 0.5) return;
+      const key = p.type || "";
+      if (!byType.has(key)) byType.set(key, []);
+      byType.get(key).push(p);
+    });
+    let loss = 0;
+    byType.forEach((ps) => { loss += roundingLoss(ps); });
+    return loss;
+  };
+
+  let avgDamage = parts.reduce((sum, p) => sum + partAvg(p), 0) - resistedLoss(parts);
 
   const luck = hasHalflingLuck(member);
   const critThreshold = critThresholdOf(member);
@@ -1192,15 +1236,11 @@ function renderCombat() {
         "only — not again on the bonus-action attack. Both are spent on a critical " +
         "when the turn produces one, which is what the numbers assume."
       ]));
-      // Resistance is "halved (rounded down)" per hit. These figures are averages,
-      // and an average cannot carry a per-roll floor — so a resisted number here
-      // runs about a quarter point high. Saying so is better than a correction
-      // nobody could check against their own arithmetic.
-      if (targetDefence()) {
+      const def = targetDefence();
+      if (def && def.mult === 0.5) {
         card.appendChild(el("div", { class: "combat-note" }, [
-          "Resistance halves each hit and rounds down. These are averages, so they " +
-          "do not carry that rounding: expect roughly a quarter point less per " +
-          "resisted hit than shown."
+          "Resistance halves each hit and rounds down, and these figures carry that " +
+          "rounding — a resisted hit is worth slightly less than half."
         ]));
       }
     }

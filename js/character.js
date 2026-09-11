@@ -473,6 +473,31 @@ function dieDistribution(size, rerollLowTwo) {
   return p;
 }
 
+// P(even) − P(odd) for one die. It is the quantity that multiplies cleanly: for a
+// sum of independent dice the whole sum's bias is the product of theirs, so a
+// single unbiased die drags the total to exactly even odds.
+//
+// Every BG3 die has an even number of faces, so a plain d4…d12 has bias exactly 0
+// — and Great Weapon Fighting's reroll preserves that. Savage Attacker does not:
+// keeping the best of two skews towards the high half, which is uneven.
+function dieParityBias(size, rerollLowTwo, bestOfTwo) {
+  if (!size) return 1;                       // no die: parity is fixed, bias 1
+  const p = dieDistribution(size, rerollLowTwo);
+  let probs = p;
+  if (bestOfTwo) {
+    probs = [];
+    let cum = 0, prev = 0;
+    for (let v = 1; v <= size; v++) {
+      cum += p[v];
+      probs[v] = cum * cum - prev * prev;
+      prev = cum;
+    }
+  }
+  let bias = 0;
+  for (let v = 1; v <= size; v++) bias += (v % 2 === 0 ? 1 : -1) * probs[v];
+  return bias;
+}
+
 function dieExpected(size, rerollLowTwo, bestOfTwo) {
   if (!size) return 0;
   const p = dieDistribution(size, rerollLowTwo);

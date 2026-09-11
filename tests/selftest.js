@@ -979,6 +979,45 @@ const SelfTest = (() => {
       return bad;
     });
 
+    // Resistance is "halved (rounded down)" per hit. That floor is not something
+    // an average has to give up on: E[floor(X/2)] = (E[X] − P(X odd)) / 2, and
+    // P(X odd) follows from the dice's parity bias. Checked here against the exact
+    // distribution rather than against the formula that produced it.
+    check("Arithmetic", "resisted damage carries the game's rounding", () => {
+      const weapon = ITEMS.find((i) => {
+        if (i.type !== "weapon" || !i.damage || isRangedWeapon(i)) return false;
+        const p = parseWeaponDamage(i.damage, true);
+        return p && p.main && p.main.count && !p.riders.length;
+      });
+      if (!weapon) return true;
+      const m = scratchMember("fighter", 6);
+      m.loadouts[1].weapon1 = weapon.id;
+      const opts = { targetAc: 15, slotKey: "weapon1", twoHanded: true };
+      const full = weaponAttack(m, weapon, opts);
+      const half = weaponAttack(m, weapon,
+        { ...opts, defence: { type: full.main.type, mult: 0.5 } });
+
+      // the exact distribution of one hit, by convolution
+      const flat = full.parts.reduce((s, p) => s + p.flat, 0);
+      const dicePart = full.parts.find((p) => p.count);
+      let dist = { 0: 1 };
+      for (let d = 0; d < dicePart.count; d++) {
+        const next = {};
+        Object.entries(dist).forEach(([v, pr]) => {
+          for (let f = 1; f <= dicePart.size; f++) {
+            const k = +v + f;
+            next[k] = (next[k] || 0) + pr / dicePart.size;
+          }
+        });
+        dist = next;
+      }
+      let exact = 0;
+      Object.entries(dist).forEach(([v, pr]) => { exact += pr * Math.floor((+v + flat) / 2); });
+      return Math.abs(half.avgDamage - exact) < 1e-9
+        ? true
+        : "tool " + half.avgDamage.toFixed(4) + ", exact " + exact.toFixed(4);
+    });
+
     check("Rules", "Action Surge is Fighter-only", () => {
       const wrong = CLASS_KEYS.filter((k) => hasClassFeature(scratchMember(k, 12), "Action Surge"));
       return wrong.length === 1 && wrong[0] === "fighter" ? true : "found on: " + wrong.join(", ");
