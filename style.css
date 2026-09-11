@@ -1644,10 +1644,35 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
 .level-path > summary::-webkit-details-marker { display: none; }
 .level-path > summary:hover { color: var(--gold-bright); }
 .level-path-list { display: flex; flex-direction: column; gap: 2px; padding-bottom: 8px; }
+/* A taken step is now two columns — the character level, then what it gave. The
+   class icon moved up to a heading per run, because repeating it on every row
+   spent 22px saying something that only changes when the class does. */
 .level-step {
-  display: grid; grid-template-columns: 22px 82px 1fr; gap: 8px; align-items: center;
+  display: grid; grid-template-columns: 26px 1fr; gap: 8px; align-items: baseline;
   font-size: 11px; padding: 4px 6px; border-radius: 3px;
   border-left: 2px solid var(--gold-dim);
+}
+/* the previews keep the icon, since they are not part of a run */
+.level-step.ahead { grid-template-columns: 22px 82px 1fr; align-items: center; }
+
+.level-class-head {
+  display: flex; align-items: center; gap: 8px;
+  margin: 9px 0 3px; padding-bottom: 3px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.level-class-head:first-child { margin-top: 0; }
+.level-class-name { font-family: var(--serif); color: var(--gold-bright); font-size: 12.5px; }
+.level-class-range {
+  margin-left: auto; font-size: 9.5px; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--text-dim); opacity: .8;
+}
+.level-ahead-head {
+  margin: 12px 0 4px; padding-top: 8px; border-top: 1px solid var(--border-soft);
+  font-size: 9px; text-transform: uppercase; letter-spacing: .09em; color: var(--blue);
+}
+.level-path-note {
+  margin-top: 9px; font-size: 10px; line-height: 1.4;
+  color: var(--text-dim); opacity: .7; font-style: italic;
 }
 .level-step:hover { background: rgba(212,175,106,.07); }
 .level-step-icon {
@@ -1661,7 +1686,8 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
 /* what is still ahead reads as a preview, not as something you have */
 .level-step.ahead { border-left-color: var(--blue-deep); opacity: .55; }
 .level-step.ahead .level-step-level { color: var(--blue); }
-.level-step.ahead .level-step-features::after { content: " — next level"; color: var(--blue-dim); }
+/* the "One more level would give" heading already says this, so the per-row
+   suffix was saying it a second time on every line */
 
 /* --- conditions in play --- */
 .combat-conditions { grid-column: 1 / -1; margin-top: 4px; }

@@ -309,46 +309,103 @@ function renderLevelPath(m) {
   const entries = memberClasses(m);
   if (!entries.length) return;
 
+  // The wiki's progression table has a column per class that the scraper reads by
+  // cell, so a row whose only entry is a die arrives as a bare "1d6". The column
+  // headers say what those are: "Sneak Attack Damage" for the rogue, "Martial
+  // Arts" for the monk. Unlabelled, "1d6" on its own line means nothing.
+  const DICE_COLUMN = { rogue: "Sneak Attack", monk: "Martial Arts die" };
+  const labelFeature = (clsKey, f) =>
+    /^\d+d\d+$/.test(String(f).trim()) && DICE_COLUMN[clsKey]
+      ? DICE_COLUMN[clsKey] + " " + f
+      : f;
+
   const rows = [];
+  const ahead = [];
+  // Character level, not class level. A Fighter 6 / Rogue 3 is level 9, and the
+  // old list never said so — it counted each class from 1 again. The classes are
+  // numbered in the order they were added, which is the only order the sheet
+  // records; a real playthrough may have interleaved them differently, and the
+  // footnote below says so rather than implying a precision we do not have.
+  let charLevel = 0;
   entries.forEach((entry) => {
     const cls = CLASSES[entry.cls];
     if (!cls) return;
     (cls.progression || []).forEach((step) => {
       if (step.level > entry.levels) return;
+      charLevel++;
       rows.push({
-        cls: cls.label, icon: cls.icon, level: step.level,
-        features: step.features, taken: true
+        cls: cls.label, icon: cls.icon, level: step.level, charLevel,
+        features: (step.features || []).map((f) => labelFeature(entry.cls, f))
       });
     });
-    // the next level of this class, so the payoff of one more level is visible
+    // What one more level of this class would buy — kept out of the main list.
+    // Interleaved, "Fighter 7" sat between Fighter 6 and Rogue 1 and read as
+    // something already taken, in an order that never happened.
     const next = (cls.progression || []).find((s) => s.level === entry.levels + 1);
     if (next && totalLevel(m) < MAX_LEVEL) {
-      rows.push({
+      ahead.push({
         cls: cls.label, icon: cls.icon, level: next.level,
-        features: next.features, taken: false
+        features: (next.features || []).map((f) => labelFeature(entry.cls, f))
       });
     }
   });
   if (!rows.length) return;
 
   const wrap = el("details", { class: "level-path" });
-  const taken = rows.filter((r) => r.taken).length;
   wrap.appendChild(el("summary", {}, [
     el("span", {}, ["Level path"]),
-    el("span", { class: "sheet-badge" }, [taken + " milestones"])
+    el("span", { class: "sheet-badge" }, ["Character level " + charLevel])
   ]));
+
   const list = el("div", { class: "level-path-list" });
+  let lastClass = null;
   rows.forEach((r) => {
-    const row = el("div", { class: "level-step" + (r.taken ? "" : " ahead") });
-    if (r.icon) {
-      row.appendChild(el("span", { class: "level-step-icon" },
-        [el("img", { src: r.icon, alt: "", loading: "lazy" })]));
+    // One heading per class, so a multiclass reads as two runs rather than as one
+    // undifferentiated column of rows
+    if (r.cls !== lastClass) {
+      lastClass = r.cls;
+      const head = el("div", { class: "level-class-head" });
+      if (r.icon) {
+        head.appendChild(el("span", { class: "level-step-icon" },
+          [el("img", { src: r.icon, alt: "", loading: "lazy" })]));
+      }
+      head.appendChild(el("span", { class: "level-class-name" }, [r.cls]));
+      const runEnd = rows.filter((x) => x.cls === r.cls).slice(-1)[0];
+      head.appendChild(el("span", { class: "level-class-range" },
+        ["levels " + r.charLevel + "–" + runEnd.charLevel]));
+      list.appendChild(head);
     }
-    row.appendChild(el("span", { class: "level-step-level" }, [r.cls + " " + r.level]));
+    const row = el("div", { class: "level-step" });
+    // the character level leads, because that is the number the game asks for
+    row.appendChild(el("span", { class: "level-step-level", title: r.cls + " " + r.level },
+      [String(r.charLevel)]));
     row.appendChild(el("span", { class: "level-step-features" }, [r.features.join(" · ")]));
     list.appendChild(row);
   });
   wrap.appendChild(list);
+
+  if (ahead.length) {
+    wrap.appendChild(el("div", { class: "level-ahead-head" }, ["One more level would give"]));
+    const next = el("div", { class: "level-path-list" });
+    ahead.forEach((r) => {
+      const row = el("div", { class: "level-step ahead" });
+      if (r.icon) {
+        row.appendChild(el("span", { class: "level-step-icon" },
+          [el("img", { src: r.icon, alt: "", loading: "lazy" })]));
+      }
+      row.appendChild(el("span", { class: "level-step-level" }, [r.cls + " " + r.level]));
+      row.appendChild(el("span", { class: "level-step-features" }, [r.features.join(" · ")]));
+      next.appendChild(row);
+    });
+    wrap.appendChild(next);
+  }
+
+  if (entries.length > 1) {
+    wrap.appendChild(el("div", { class: "level-path-note" }, [
+      "Numbered in the order the classes were added — the sheet records how many " +
+      "levels of each, not which order you took them in."
+    ]));
+  }
   box.appendChild(wrap);
 }
 

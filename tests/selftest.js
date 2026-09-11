@@ -412,6 +412,23 @@ const SelfTest = (() => {
         : true;
     });
 
+    // The wiki's progression table is read cell by cell, so a row whose only entry
+    // is a die arrives as a bare "1d6" — meaningless on its own line. The column
+    // headers name them: "Sneak Attack Damage" for the rogue, "Martial Arts" for
+    // the monk. Verified against those tables; both numbers were right, only the
+    // labels were missing. This fails if a third class starts doing the same.
+    check("Shape", "bare dice features only come from classes we label", () => {
+      const labelled = ["rogue", "monk"];
+      const bad = [];
+      Object.entries(CLASSES).forEach(([k, c]) => (c.progression || []).forEach((p) =>
+        (p.features || []).forEach((f) => {
+          if (/^\d+d\d+$/.test(String(f).trim()) && !labelled.includes(k)) {
+            bad.push(k + " L" + p.level + ' "' + f + '"');
+          }
+        })));
+      return bad;
+    });
+
     check("Rules", "binary conditions have max 1, stacking ones more", () => {
       const expect = { acuity: 10, bless: 1, charges: 5, reverb: 5, bane: 1,
         restrained: 1, prone: 1, wet: 1, orb: 10 };
