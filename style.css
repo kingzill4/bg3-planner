@@ -1691,6 +1691,18 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
   margin-left: auto; font-size: 9.5px; text-transform: uppercase;
   letter-spacing: .07em; color: var(--text-dim); opacity: .8;
 }
+/* the decisions, gathered into one line instead of a placeholder row each */
+.level-choices {
+  display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap;
+  margin-top: 9px; padding-top: 8px; border-top: 1px solid var(--border-soft);
+  font-size: 11px;
+}
+.level-choices-head {
+  font-size: 9px; text-transform: uppercase; letter-spacing: .09em;
+  color: var(--gold-dim); flex: 0 0 auto;
+}
+.level-choices-body { color: var(--text-dim); line-height: 1.45; }
+
 .level-ahead-head {
   margin: 12px 0 4px; padding-top: 8px; border-top: 1px solid var(--border-soft);
   font-size: 9px; text-transform: uppercase; letter-spacing: .09em; color: var(--blue);

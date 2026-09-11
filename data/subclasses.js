@@ -4,7 +4,7 @@ const SUBCLASSES = [
     "id": "berserker",
     "name": "Berserker",
     "class": "Barbarian",
-    "desc": "Berserker is one of the subclasses of Barbarian . These Barbarians are more specialized in using their anger to gain more abilities while raging in combat.",
+    "desc": "Berserker is one of the subclasses of Barbarian. These Barbarians are more specialized in using their anger to gain more abilities while raging in combat.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -17,39 +17,38 @@ const SUBCLASSES = [
       },
       {
         "level": 3,
-        "n": "Frenzy ( + )",
-        "d": "Your Rage turns into a frenzy! You gain Frenzied Strike and Enraged Throw . You can also make an Improvised Melee Weapon attack as a bonus action."
+        "n": "Frenzy",
+        "d": "Your Rage turns into a frenzy! You gain Frenzied Strike and Enraged Throw. You can also make an Improvised Melee Weapon attack as a bonus action."
       },
       {
         "level": 3,
-        "n": "Frenzied Strike ( )",
+        "n": "Frenzied Strike",
         "d": "As a bonus action, make a melee attack with your equipped weapon. ( Recharge: Per turn.)"
       },
       {
         "level": 3,
-        "n": "Enraged Throw ( )",
-        "d": "Pick up an item or creature and throw it at a target, dealing additional damage and knocking it Prone ."
+        "n": "Enraged Throw",
+        "d": "Pick up an item or creature and throw it at a target, dealing additional damage and knocking it Prone."
       },
       {
         "level": 6,
         "n": "Mindless Rage",
-        "d": "Your rage becomes all-consuming, repelling outside influence. While Frenzied , you can't be Charmed or Frightened , and Calm Emotions no longer ends your rage."
+        "d": "Your rage becomes all-consuming, repelling outside influence. While Frenzied, you can't be Charmed or Frightened, and Calm Emotions no longer ends your rage."
       },
       {
         "level": 10,
-        "n": "Intimidating Presence ( )",
+        "n": "Intimidating Presence",
         "d": "Menace an enemy and instil a terrible Fear within them."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Berserker",
-    "icon": "icons/subclasses/berserker.png"
+    "wiki": "https://bg3.wiki/wiki/Berserker"
   },
   {
     "id": "giant-barbarian-subclass",
     "name": "Giant",
     "class": "Barbarian",
-    "desc": "Path of Giants is one of the subclasses of Barbarian . They can grow in size while raging and kick and throw other creatures. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Path of Giants is one of the subclasses of Barbarian. They can grow in size while raging and kick and throw other creatures. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -57,7 +56,7 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Giant's Rage ( + )",
+        "n": "Giant's Rage",
         "d": "Enter a Rage and increase in size. Your Rage damage bonus is doubled on Throw attacks."
       },
       {
@@ -67,34 +66,33 @@ const SUBCLASSES = [
       },
       {
         "level": 3,
-        "n": "Thaumaturgy ( )",
-        "d": "Gain Advantage on Intimidation and Performance Checks ."
+        "n": "Thaumaturgy",
+        "d": "Gain Advantage on Intimidation and Performance Checks."
       },
       {
         "level": 5,
-        "n": "Boot of the Giants ( )",
-        "d": "Try to kick a target away. Your chances depend on your Athletics , and are higher if you're hidden or invisible."
+        "n": "Boot of the Giants",
+        "d": "Try to kick a target away. Your chances depend on your Athletics, and are higher if you're hidden or invisible."
       },
       {
         "level": 6,
         "n": "Elemental Cleaver",
-        "d": "Channel primordial might into your weapon. Until the end of your Rage , your weapon will deal 1d6 additional Acid , Cold , Fire , Lightning , or Thunder damage, and gain the Thrown property. If thrown, it will immediately reappear in your hand."
+        "d": "Channel primordial might into your weapon. Until the end of your Rage, your weapon will deal 1d6 additional Acid, Cold, Fire, Lightning, or Thunder damage, and gain the Thrown property. If thrown, it will immediately reappear in your hand."
       },
       {
         "level": 10,
-        "n": "Mighty Impel ( )",
+        "n": "Mighty Impel",
         "d": "Throw a creature or object that is Medium-sized or smaller."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Giant_(barbarian_subclass)",
-    "icon": "icons/subclasses/giant-barbarian-subclass.png"
+    "wiki": "https://bg3.wiki/wiki/Giant_(barbarian_subclass)"
   },
   {
     "id": "wild-magic-barbarian-subclass",
     "name": "Wild Magic",
     "class": "Barbarian",
-    "desc": "Wild Magic is one of the subclasses of barbarian . These barbarians manifest otherworldy magic to bolster their martial abilities.",
+    "desc": "Wild Magic is one of the subclasses of barbarian. These barbarians manifest otherworldy magic to bolster their martial abilities.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -102,49 +100,48 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Rage: Wild Magic ( + )",
+        "n": "Rage: Wild Magic",
         "d": "Enter a Rage that releases all the magic roiling inside you, causing a random magical effect."
       },
       {
         "level": 3,
-        "n": "Magic Awareness ( )",
-        "d": "Anyone within range adds a 1d4 bonus to Saving throws . ( Recharge: Short rest .)"
+        "n": "Magic Awareness",
+        "d": "Anyone within range adds a 1d4 bonus to Saving throws. ( Recharge: Short rest.)"
       },
       {
         "level": 6,
-        "n": "Bolstering Magic: Boon ( )",
-        "d": "You or an ally receive +1d4 bonus to Attack Rolls and Ability Checks for 10 turns. ( Recharge: Long rest .)"
+        "n": "Bolstering Magic: Boon",
+        "d": "You or an ally receive +1d4 bonus to Attack Rolls and Ability Checks for 10 turns. ( Recharge: Long rest.)"
       },
       {
         "level": 6,
-        "n": "Bolstering Magic: Level 1 Spell Slot ( )",
-        "d": "You or an ally recover a Level 1 Spell Slot . ( Recharge: Long rest .)"
+        "n": "Bolstering Magic: Level 1 Spell Slot",
+        "d": "You or an ally recover a Level 1 Spell Slot. ( Recharge: Long rest.)"
       },
       {
         "level": 6,
-        "n": "Bolstering Magic: Level 2 Spell Slot ( )",
-        "d": "You or an ally recover a Level 2 Spell Slot . ( Recharge: Long rest .)"
+        "n": "Bolstering Magic: Level 2 Spell Slot",
+        "d": "You or an ally recover a Level 2 Spell Slot. ( Recharge: Long rest.)"
       },
       {
         "level": 9,
-        "n": "Bolstering Magic: Level 3 Spell Slot ( )",
-        "d": "You or an ally recover a Level 3 Spell Slot . ( Recharge: Long rest .)"
+        "n": "Bolstering Magic: Level 3 Spell Slot",
+        "d": "You or an ally recover a Level 3 Spell Slot. ( Recharge: Long rest.)"
       },
       {
         "level": 10,
-        "n": "Unstable Backlash ( )",
-        "d": "While Raging , when you take damage or fail a Saving Throw , you trigger another Wild Magic effect . This replaces your current Wild Magic effect."
+        "n": "Unstable Backlash",
+        "d": "While Raging, when you take damage or fail a Saving Throw, you trigger another Wild Magic effect. This replaces your current Wild Magic effect."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(barbarian_subclass)",
-    "icon": "icons/subclasses/wild-magic-barbarian-subclass.png"
+    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(barbarian_subclass)"
   },
   {
     "id": "wildheart",
     "name": "Wildheart",
     "class": "Barbarian",
-    "desc": "Wildheart is one of the Subclasses of Barbarian . These Barbarians are attuned with nature and the beasts that live in it. Their rages resemble the animals that inspired them.",
+    "desc": "Wildheart is one of the Subclasses of Barbarian. These Barbarians are attuned with nature and the beasts that live in it. Their rages resemble the animals that inspired them.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -152,13 +149,13 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Speak with Animals ( )",
-        "d": "Gain the ability to comprehend and communicate with beasts. ( Recharge: Long rest .)"
+        "n": "Speak with Animals",
+        "d": "Gain the ability to comprehend and communicate with beasts. ( Recharge: Long rest.)"
       },
       {
         "level": 3,
         "n": "Bestial Heart",
-        "d": "Choose a Bestial Heart from the table below. From here on out, every time you gain a level in Barbarian , you may replace your current Bestial Heart with a different one as an optional choice. You may also choose an alternate appearance"
+        "d": "Choose a Bestial Heart from the table below. From here on out, every time you gain a level in Barbarian, you may replace your current Bestial Heart with a different one as an optional choice. You may also choose an alternate appearance"
       },
       {
         "level": 6,
@@ -189,35 +186,35 @@ const SUBCLASSES = [
           {
             "n": "Bear Heart",
             "fields": {
-              "Description": "While Raging , you can use Unrelenting Ferocity , and have Resistance to all damage except psychic damage.",
+              "Description": "While Raging, you can use Unrelenting Ferocity, and have Resistance to all damage except psychic damage.",
               "Grants": "Rage: Bear Heart Unrelenting Ferocity"
             }
           },
           {
             "n": "Eagle Heart",
             "fields": {
-              "Description": "While Raging , you can use Diving Strike . Foes also have Disadvantage on Opportunity Attacks against you, and you can use Dash as a bonus action.",
+              "Description": "While Raging, you can use Diving Strike. Foes also have Disadvantage on Opportunity Attacks against you, and you can use Dash as a bonus action.",
               "Grants": "Rage: Eagle Heart Diving Strike"
             }
           },
           {
             "n": "Elk Heart",
             "fields": {
-              "Description": "While Raging , you can use Primal Stampede , and your Movement Speed increases by 4.5 m (15 ft).",
+              "Description": "While Raging, you can use Primal Stampede, and your Movement Speed increases by 4.5 m (15 ft).",
               "Grants": "Rage: Elk Heart Primal Stampede"
             }
           },
           {
             "n": "Tiger Heart",
             "fields": {
-              "Description": "While Raging , you can use Tiger's Bloodlust , and your jump distance increases by 4.5 m (15 ft).",
+              "Description": "While Raging, you can use Tiger's Bloodlust, and your jump distance increases by 4.5 m (15 ft).",
               "Grants": "Rage: Tiger Heart Tiger's Bloodlust"
             }
           },
           {
             "n": "Wolf Heart",
             "fields": {
-              "Description": "While Raging , you can use Inciting Howl , and your allies have Advantage on melee Attack Rolls against enemies within 2 m (7 ft) of you.",
+              "Description": "While Raging, you can use Inciting Howl, and your allies have Advantage on melee Attack Rolls against enemies within 2 m (7 ft) of you.",
               "Grants": "Rage: Wolf Heart Inciting Howl"
             }
           }
@@ -230,7 +227,7 @@ const SUBCLASSES = [
           {
             "n": "Bear",
             "fields": {
-              "Description": "Your carrying capacity is doubled, and you have Advantage on Strength Checks ."
+              "Description": "Your carrying capacity is doubled, and you have Advantage on Strength Checks."
             }
           },
           {
@@ -242,25 +239,25 @@ const SUBCLASSES = [
           {
             "n": "Crocodile",
             "fields": {
-              "Description": "Your movement speed increases by 3 m (10 ft) while standing in water-based surfaces. On slippery surfaces, you also have Advantage on Saving Throws against being knocked prone ."
+              "Description": "Your movement speed increases by 3 m (10 ft) while standing in water-based surfaces. On slippery surfaces, you also have Advantage on Saving Throws against being knocked prone."
             }
           },
           {
             "n": "Eagle",
             "fields": {
-              "Description": "You see in the dark up to 12 m (40 ft), and gain Advantage on Perception Checks ."
+              "Description": "You see in the dark up to 12 m (40 ft), and gain Advantage on Perception Checks."
             }
           },
           {
             "n": "Elk",
             "fields": {
-              "Description": "Grant yourself and nearby allies (18 m (60 ft)) +1.5 m (5 ft) permanent movement speed ."
+              "Description": "Grant yourself and nearby allies (18 m (60 ft)) +1.5 m (5 ft) permanent movement speed."
             }
           },
           {
             "n": "Honey Badger",
             "fields": {
-              "Description": "If you're Poisoned , Frightened or Charmed at the start of your turn, you have a 50% chance to begin Raging without expending a Rage Charge."
+              "Description": "If you're Poisoned, Frightened or Charmed at the start of your turn, you have a 50% chance to begin Raging without expending a Rage Charge."
             }
           },
           {
@@ -272,13 +269,13 @@ const SUBCLASSES = [
           {
             "n": "Tiger",
             "fields": {
-              "Description": "You add an additional Strength modifier to Attack Rolls against Bleeding or Poisoned targets, and gain proficiency in Survival ."
+              "Description": "You add an additional Strength modifier to Attack Rolls against Bleeding or Poisoned targets, and gain proficiency in Survival."
             }
           },
           {
             "n": "Wolf",
             "fields": {
-              "Description": "You and nearby allies (18 m (60 ft)) add your Dexterity modifier as a bonus to your Stealth Checks ."
+              "Description": "You and nearby allies (18 m (60 ft)) add your Dexterity modifier as a bonus to your Stealth Checks."
             }
           },
           {
@@ -290,14 +287,13 @@ const SUBCLASSES = [
         ]
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Wildheart",
-    "icon": "icons/subclasses/wildheart.png"
+    "wiki": "https://bg3.wiki/wiki/Wildheart"
   },
   {
     "id": "college-of-glamour",
     "name": "College of Glamour",
     "class": "Bard",
-    "desc": "College of Glamour is one of the subclasses of Bard . It can inspire multiple allies simultaneously with temporary hit points and influence enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "College of Glamour is one of the subclasses of Bard. It can inspire multiple allies simultaneously with temporary hit points and influence enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -305,34 +301,33 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Mantle of Inspiration ( + )",
-        "d": "Imbue 2 allies with your vigour and grant them 5 temporary hit points . If they're hit with a melee attack, the attacker becomes Charmed ."
+        "n": "Mantle of Inspiration",
+        "d": "Imbue 2 allies with your vigour and grant them 5 temporary hit points. If they're hit with a melee attack, the attacker becomes Charmed."
       },
       {
         "level": 6,
-        "n": "Mantle of Majesty: Command ( )",
-        "d": "Command a creature to flee, move closer, freeze, drop to the ground or drop its weapon. Targets that are Charmed automatically fail their Saving Throw. ( Recharge: Long rest .)"
+        "n": "Mantle of Majesty: Command",
+        "d": "Command a creature to flee, move closer, freeze, drop to the ground or drop its weapon. Targets that are Charmed automatically fail their Saving Throw. ( Recharge: Long rest.)"
       },
       {
         "level": 6,
         "n": "Mantle of Inspiration",
-        "d": "Bonus increases to 8 temporary hit points ."
+        "d": "Bonus increases to 8 temporary hit points."
       },
       {
         "level": 10,
         "n": "Mantle of Inspiration",
-        "d": "Bonus increases to 11 temporary hit points ."
+        "d": "Bonus increases to 11 temporary hit points."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Glamour",
-    "icon": "icons/subclasses/college-of-glamour.png"
+    "wiki": "https://bg3.wiki/wiki/College_of_Glamour"
   },
   {
     "id": "college-of-lore",
     "name": "College of Lore",
     "class": "Bard",
-    "desc": "College of Lore is one of the Subclasses of Bard . These Bards gain the ability to hinder their foes with their performances, 3 more Skill Proficiencies, and additional pick of Magical Secrets spells.",
+    "desc": "College of Lore is one of the Subclasses of Bard. These Bards gain the ability to hinder their foes with their performances, 3 more Skill Proficiencies, and additional pick of Magical Secrets spells.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -340,8 +335,8 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Cutting Words ( + )",
-        "d": "The target receives a -1d6 penalty to Attack Rolls , Ability Checks or damage dealt."
+        "n": "Cutting Words",
+        "d": "The target receives a -1d6 penalty to Attack Rolls, Ability Checks or damage dealt."
       },
       {
         "level": 6,
@@ -350,14 +345,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Lore",
-    "icon": "icons/subclasses/college-of-lore.png"
+    "wiki": "https://bg3.wiki/wiki/College_of_Lore"
   },
   {
     "id": "college-of-swords",
     "name": "College of Swords",
     "class": "Bard",
-    "desc": "College of Swords is one of the Subclasses of Bard . These Bards focus entirely on improving their own combat prowess by combining the Extra Attack passive, being able to use Bardic Inspiration charges for utility and multi-attacks, and...",
+    "desc": "College of Swords is one of the Subclasses of Bard. These Bards focus entirely on improving their own combat prowess by combining the Extra Attack passive, being able to use Bardic Inspiration charges for utility and multi-attacks, and b...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -385,14 +379,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Swords",
-    "icon": "icons/subclasses/college-of-swords.png"
+    "wiki": "https://bg3.wiki/wiki/College_of_Swords"
   },
   {
     "id": "college-of-valour",
     "name": "College of Valour",
     "class": "Bard",
-    "desc": "College of Valour is one of the Subclasses of Bard . These Bards alter Bardic Inspiration so that it increases the combat prowess of their allies, and receive a moderate increase to their own combat prowess by obtaining all weapon profic...",
+    "desc": "College of Valour is one of the Subclasses of Bard. These Bards alter Bardic Inspiration so that it increases the combat prowess of their allies, and receive a moderate increase to their own combat prowess by obtaining all weapon profici...",
     "patch": null,
     "armour": [
       "Medium Armour",
@@ -403,8 +396,8 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Combat Inspiration ( + )",
-        "d": "Inspire an ally to add a +1d6 bonus to their next Attack Roll , Ability Check , Saving Throw , weapon damage, or Armour Class ."
+        "n": "Combat Inspiration",
+        "d": "Inspire an ally to add a +1d6 bonus to their next Attack Roll, Ability Check, Saving Throw, weapon damage, or Armour Class."
       },
       {
         "level": 6,
@@ -413,14 +406,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Valour",
-    "icon": "icons/subclasses/college-of-valour.png"
+    "wiki": "https://bg3.wiki/wiki/College_of_Valour"
   },
   {
     "id": "death-domain",
     "name": "Death Domain",
     "class": "Cleric",
-    "desc": "Death Domain is one of the subclasses of Cleric . It has potent features which boost necrotic spells and add necrotic damage to weapon attacks. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Death Domain is one of the subclasses of Cleric. It has potent features which boost necrotic spells and add necrotic damage to weapon attacks. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -434,22 +426,22 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Bone Chill , Bursting Sinew , or Toll the Dead (your choice) False Life Ray of Sickness"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Bone Chill, Bursting Sinew, or Toll the Dead (your choice) False Life Ray of Sickness"
       },
       {
         "level": 2,
-        "n": "Touch of Death ( )",
+        "n": "Touch of Death",
         "d": "When hitting a creature with a melee attack, Channel Divinity Charges can be used to deal extra Necrotic damage."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Blindness Ray of Enfeeblement"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Blindness Ray of Enfeeblement"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Animate Dead Vampiric Touch"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Animate Dead Vampiric Touch"
       },
       {
         "level": 6,
@@ -459,28 +451,27 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Blight Death Ward"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Blight Death Ward"
       },
       {
         "level": 8,
-        "n": "Divine Strike: Necrotic ( )",
+        "n": "Divine Strike: Necrotic",
         "d": "Once per turn deal 1d8 Necrotic in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
       },
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Cloudkill Contagion"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Cloudkill Contagion"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Death_Domain",
-    "icon": "icons/subclasses/death-domain.png"
+    "wiki": "https://bg3.wiki/wiki/Death_Domain"
   },
   {
     "id": "knowledge-domain",
     "name": "Knowledge Domain",
     "class": "Cleric",
-    "desc": "Knowledge Domain is one of the Subclasses of Cleric . These Clerics are more specialized in arcane magic.",
+    "desc": "Knowledge Domain is one of the Subclasses of Cleric. These Clerics are more specialized in arcane magic.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -489,42 +480,42 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Blessings of Knowledge",
-        "d": "Gain Expertise in two of the following Skills: Arcana , History , Nature , or Religion . Your Proficiency Bonus is doubled for Ability Checks made using these Skills."
+        "d": "Gain Expertise in two of the following Skills: Arcana, History, Nature, or Religion. Your Proficiency Bonus is doubled for Ability Checks made using these Skills."
       },
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Command Sleep"
+        "d": "You gain spells from your domain. They are Always Prepared. Command Sleep"
       },
       {
         "level": 2,
-        "n": "Knowledge of the Ages ( + )",
-        "d": "Gain Proficiency in all Skills of a chosen Ability ."
+        "n": "Knowledge of the Ages",
+        "d": "Gain Proficiency in all Skills of a chosen Ability."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Calm Emotions Hold Person"
+        "d": "You gain spells from your domain. They are Always Prepared. Calm Emotions Hold Person"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Slow Speak with Dead"
+        "d": "You gain spells from your domain. They are Always Prepared. Slow Speak with Dead"
       },
       {
         "level": 6,
-        "n": "Read Thoughts ( + )",
+        "n": "Read Thoughts",
         "d": "Read the thoughts of certain creatures while talking to them."
       },
       {
         "level": 6,
-        "n": "Speak with Animals ( + )",
+        "n": "Speak with Animals",
         "d": "Gain the ability to comprehend and communicate with beasts."
       },
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Confusion Otiluke's Resilient Sphere"
+        "d": "You gain spells from your domain. They are Always Prepared. Confusion Otiluke's Resilient Sphere"
       },
       {
         "level": 8,
@@ -534,18 +525,17 @@ const SUBCLASSES = [
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Dominate Person Telekinesis"
+        "d": "You gain spells from your domain. They are Always Prepared. Dominate Person Telekinesis"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Knowledge_Domain",
-    "icon": "icons/subclasses/knowledge-domain.png"
+    "wiki": "https://bg3.wiki/wiki/Knowledge_Domain"
   },
   {
     "id": "life-domain",
     "name": "Life Domain",
     "class": "Cleric",
-    "desc": "Life Domain is one of the Subclasses of Cleric . These Clerics are more specialized in preserving life, and their healing spells are more potent.",
+    "desc": "Life Domain is one of the Subclasses of Cleric. These Clerics are more specialized in preserving life, and their healing spells are more potent.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -554,58 +544,57 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Disciple of Life",
-        "d": "Your devotion empowers your healing Spells . When casting a healing spell , the target regains additional hit points equal to 2 + the spell's level Hit Points ."
+        "d": "Your devotion empowers your healing Spells. When casting a healing spell, the target regains additional hit points equal to 2 + the spell's level Hit Points."
       },
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Bless Cure Wounds"
+        "d": "You gain spells from your domain. They are Always Prepared. Bless Cure Wounds"
       },
       {
         "level": 2,
-        "n": "Preserve Life ( + )",
+        "n": "Preserve Life",
         "d": "Evoke a healing energy that restores 3 × Character level Hit Points to allied creatures."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Aid Lesser Restoration"
+        "d": "You gain spells from your domain. They are Always Prepared. Aid Lesser Restoration"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Revivify Beacon of Hope"
+        "d": "You gain spells from your domain. They are Always Prepared. Revivify Beacon of Hope"
       },
       {
         "level": 6,
         "n": "Blessed Healer",
-        "d": "Healing others heals you as well. When you cast a healing spell of Level 1 or higher on another creature, you regain hit points equal to 2 + the spell's level Hit Points ."
+        "d": "Healing others heals you as well. When you cast a healing spell of Level 1 or higher on another creature, you regain hit points equal to 2 + the spell's level Hit Points."
       },
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Guardian of Faith Death Ward"
+        "d": "You gain spells from your domain. They are Always Prepared. Guardian of Faith Death Ward"
       },
       {
         "level": 8,
-        "n": "Divine Strike: Radiant ( )",
+        "n": "Divine Strike: Radiant",
         "d": "Strike a foe with your weapon as it becomes wreathed in gleaming radiance. ( Recharge: Per turn.)"
       },
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Greater Restoration Mass Cure Wounds"
+        "d": "You gain spells from your domain. They are Always Prepared. Greater Restoration Mass Cure Wounds"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Life_Domain",
-    "icon": "icons/subclasses/life-domain.png"
+    "wiki": "https://bg3.wiki/wiki/Life_Domain"
   },
   {
     "id": "light-domain",
     "name": "Light Domain",
     "class": "Cleric",
-    "desc": "Light Domain is one of the Subclasses of Cleric . These Clerics are charged with chasing away lies and burning away darkness.",
+    "desc": "Light Domain is one of the Subclasses of Cleric. These Clerics are charged with chasing away lies and burning away darkness.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -613,38 +602,38 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 1,
-        "n": "Warding Flare ( )",
+        "n": "Warding Flare",
         "d": "Impose Disadvantage on an attacker, possibly causing their attack to miss."
       },
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Light Burning Hands Faerie Fire"
+        "d": "You gain spells from your domain. They are Always Prepared. Light Burning Hands Faerie Fire"
       },
       {
         "level": 2,
-        "n": "Radiance of the Dawn ( + )",
+        "n": "Radiance of the Dawn",
         "d": "The sun's divine power dispels any magical darkness."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Flaming Sphere Scorching Ray"
+        "d": "You gain spells from your domain. They are Always Prepared. Flaming Sphere Scorching Ray"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Daylight Fireball"
+        "d": "You gain spells from your domain. They are Always Prepared. Daylight Fireball"
       },
       {
         "level": 6,
-        "n": "Improved Warding Flare ( )",
+        "n": "Improved Warding Flare",
         "d": "Impose Disadvantage on an ally's attacker, possibly causing their attack to miss."
       },
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Guardian of Faith Wall of Fire"
+        "d": "You gain spells from your domain. They are Always Prepared. Guardian of Faith Wall of Fire"
       },
       {
         "level": 8,
@@ -654,18 +643,17 @@ const SUBCLASSES = [
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Destructive Wave Flame Strike"
+        "d": "You gain spells from your domain. They are Always Prepared. Destructive Wave Flame Strike"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Light_Domain",
-    "icon": "icons/subclasses/light-domain.png"
+    "wiki": "https://bg3.wiki/wiki/Light_Domain"
   },
   {
     "id": "nature-domain",
     "name": "Nature Domain",
     "class": "Cleric",
-    "desc": "The player-selectable deities directly associated with this domain are Eilistraee and Mielikki .",
+    "desc": "The player-selectable deities directly associated with this domain are Eilistraee and Mielikki.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -679,53 +667,52 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are Always Prepared . Speak with Animals Animal Friendship"
+        "d": "You gain spells from your domain. They are Always Prepared. Speak with Animals Animal Friendship"
       },
       {
         "level": 2,
-        "n": "Charm Animals and Plants ( + )",
+        "n": "Charm Animals and Plants",
         "d": "Channel fey magic to Charm nearby beasts and plants."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Barkskin Spike Growth"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Barkskin Spike Growth"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Plant Growth Sleet Storm"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Plant Growth Sleet Storm"
       },
       {
         "level": 6,
-        "n": "Dampen Elements ( )",
+        "n": "Dampen Elements",
         "d": "When you or an ally gets hit with Acid, Cold, Fire, Lightning, or Thunder damage, you can use your reaction to halve the attack's damage."
       },
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Dominate Beast Grasping Vine"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Dominate Beast Grasping Vine"
       },
       {
         "level": 8,
-        "n": "Divine Strike: Elemental Fury ( )",
-        "d": "Once per turn deal 1d8 Cold , 1d8 Fire or 1d8 Lightning in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
+        "n": "Divine Strike: Elemental Fury",
+        "d": "Once per turn deal 1d8 Cold, 1d8 Fire or 1d8 Lightning in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
       },
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Insect Plague Wall of Stone"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Insect Plague Wall of Stone"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Nature_Domain",
-    "icon": "icons/subclasses/nature-domain.png"
+    "wiki": "https://bg3.wiki/wiki/Nature_Domain"
   },
   {
     "id": "tempest-domain",
     "name": "Tempest Domain",
     "class": "Cleric",
-    "desc": "Tempest Domain is one of the cleric subclasses , with a focus on Thunder and Lightning damage, weather themed spells, and martial combat.",
+    "desc": "Tempest Domain is one of the cleric subclasses, with a focus on Thunder and Lightning damage, weather themed spells, and martial combat.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -734,37 +721,37 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Wrath of the Storm",
-        "d": "As a Reaction , strike back at an attacking creature, dealing 2d8 Lightning or 2d8 Thunder damage. The target takes half damage on a successful Saving Throw ."
+        "d": "As a Reaction, strike back at an attacking creature, dealing 2d8 Lightning or 2d8 Thunder damage. The target takes half damage on a successful Saving Throw."
       },
       {
         "level": 1,
-        "n": "Wrath of the Storm: Lightning ( )",
-        "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Lightning that deals 2d8 Lightning ."
+        "n": "Wrath of the Storm: Lightning",
+        "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Lightning that deals 2d8 Lightning."
       },
       {
         "level": 1,
-        "n": "Wrath of the Storm: Thunder ( )",
-        "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Thunder that deals 2d8 Thunder ."
+        "n": "Wrath of the Storm: Thunder",
+        "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Thunder that deals 2d8 Thunder."
       },
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Thunderwave Fog Cloud"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Thunderwave Fog Cloud"
       },
       {
         "level": 2,
-        "n": "Destructive Wrath ( )",
+        "n": "Destructive Wrath",
         "d": "When you roll Thunder or Lightning damage, you can use your Channel Divinity Charge to deal maximum damage instead."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Gust of Wind Shatter"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Gust of Wind Shatter"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Call Lightning Sleet Storm"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Call Lightning Sleet Storm"
       },
       {
         "level": 6,
@@ -774,28 +761,27 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Freedom of Movement Ice Storm"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Freedom of Movement Ice Storm"
       },
       {
         "level": 8,
-        "n": "Divine Strike: Thunder ( )",
+        "n": "Divine Strike: Thunder",
         "d": "Once per turn deal 1d8 Thunder in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
       },
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Destructive Wave Insect Plague"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Destructive Wave Insect Plague"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Tempest_Domain",
-    "icon": "icons/subclasses/tempest-domain.png"
+    "wiki": "https://bg3.wiki/wiki/Tempest_Domain"
   },
   {
     "id": "trickery-domain",
     "name": "Trickery Domain",
     "class": "Cleric",
-    "desc": "Trickery Domain is one of the Subclasses of Cleric . These Clerics are more specialised in stealth and illusion magic.",
+    "desc": "Trickery Domain is one of the Subclasses of Cleric. These Clerics are more specialised in stealth and illusion magic.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -803,59 +789,58 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 1,
-        "n": "Blessing of the Trickster ( )",
-        "d": "Grant another creature Advantage on Stealth Checks ."
+        "n": "Blessing of the Trickster",
+        "d": "Grant another creature Advantage on Stealth Checks."
       },
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are always prepared . Charm Person Disguise Self"
+        "d": "You gain spells from your domain. They are always prepared. Charm Person Disguise Self"
       },
       {
         "level": 2,
-        "n": "Invoke Duplicity ( + )",
+        "n": "Invoke Duplicity",
         "d": "Distract your enemies with an illusion. Within 3 m (10 ft), Attack Rolls have Advantage for you and your allies."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are always prepared . Mirror Image Pass Without Trace"
+        "d": "You gain spells from your domain. They are always prepared. Mirror Image Pass Without Trace"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are always prepared . Bestow Curse Fear"
+        "d": "You gain spells from your domain. They are always prepared. Bestow Curse Fear"
       },
       {
         "level": 6,
-        "n": "Channel Divinity: Cloak of Shadows ( + )",
-        "d": "Wrap yourself in shadows to become Invisible if you are obscured . [ See: Bugs ]"
+        "n": "Channel Divinity: Cloak of Shadows",
+        "d": "Wrap yourself in shadows to become Invisible if you are obscured. [ See: Bugs ]"
       },
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are always prepared . Dimension Door Polymorph"
+        "d": "You gain spells from your domain. They are always prepared. Dimension Door Polymorph"
       },
       {
         "level": 8,
-        "n": "Divine Strike: Poison ( )",
+        "n": "Divine Strike: Poison",
         "d": "Once per turn deal 1d8 Poison in addition to your weapon's damage when you make a melee attack. ( Recharge: Per turn.)"
       },
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain spells from your domain. They are always prepared . Dominate Person Seeming"
+        "d": "You gain spells from your domain. They are always prepared. Dominate Person Seeming"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Trickery_Domain",
-    "icon": "icons/subclasses/trickery-domain.png"
+    "wiki": "https://bg3.wiki/wiki/Trickery_Domain"
   },
   {
     "id": "war-domain",
     "name": "War Domain",
     "class": "Cleric",
-    "desc": "War Domain is one of the Subclasses of Cleric . These Clerics are more specialized in striking with weapons, dealing physical damage.",
+    "desc": "War Domain is one of the Subclasses of Cleric. These Clerics are more specialized in striking with weapons, dealing physical damage.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -863,79 +848,78 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 1,
-        "n": "War Priest Charges : 3",
+        "n": "War Priest Charges: 3",
         "d": "Resource that allows the cleric to make extra attacks with a bonus action."
       },
       {
         "level": 1,
         "n": "War Priest",
-        "d": "When you make an unarmed or weapon attack, you can spend a War Priest Charge to make an additional attack as a Bonus Action ."
+        "d": "When you make an unarmed or weapon attack, you can spend a War Priest Charge to make an additional attack as a Bonus Action."
       },
       {
         "level": 1,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Divine Favour Shield of Faith"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Divine Favour Shield of Faith"
       },
       {
         "level": 2,
-        "n": "Guided Strike ( )",
-        "d": "Gain a +10 bonus to your Attack Roll ."
+        "n": "Guided Strike",
+        "d": "Gain a +10 bonus to your Attack Roll."
       },
       {
         "level": 3,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Magic Weapon Spiritual Weapon"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Magic Weapon Spiritual Weapon"
       },
       {
         "level": 5,
-        "n": "War Priest Charges : 4",
+        "n": "War Priest Charges: 4",
         "d": "Gain an additional charge"
       },
       {
         "level": 5,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Spirit Guardians Crusader's Mantle"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Spirit Guardians Crusader's Mantle"
       },
       {
         "level": 6,
-        "n": "War God's Blessing ( + )",
-        "d": "Grant a nearby ally a +10 bonus to their Attack Roll ."
+        "n": "War God's Blessing",
+        "d": "Grant a nearby ally a +10 bonus to their Attack Roll."
       },
       {
         "level": 7,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Freedom of Movement Stoneskin"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Freedom of Movement Stoneskin"
       },
       {
         "level": 8,
-        "n": "War Priest Charges : 5",
+        "n": "War Priest Charges: 5",
         "d": "Gain an additional charge"
       },
       {
         "level": 8,
-        "n": "Divine Strike: Weapon ( )",
+        "n": "Divine Strike: Weapon",
         "d": "Once per turn deal 1d8 Weapon in addition to your weapon damage. ( Recharge: Per turn.)"
       },
       {
         "level": 9,
         "n": "Domain Spells",
-        "d": "You gain additional spells from your domain. They are Always Prepared . Flame Strike Hold Monster"
+        "d": "You gain additional spells from your domain. They are Always Prepared. Flame Strike Hold Monster"
       },
       {
         "level": 11,
-        "n": "War Priest Charges : 6",
+        "n": "War Priest Charges: 6",
         "d": "Gain an additional charge"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/War_Domain",
-    "icon": "icons/subclasses/war-domain.png"
+    "wiki": "https://bg3.wiki/wiki/War_Domain"
   },
   {
     "id": "circle-of-the-land",
     "name": "Circle of the Land",
     "class": "Druid",
-    "desc": "Circle of the Land is one of the subclasses of Druid . These Druids are more specialized in spellcasting to attack enemies or support allies in combat. They also have the ability to recover a certain amount of Spell Slots once per day.",
+    "desc": "Circle of the Land is one of the subclasses of Druid. These Druids are more specialized in spellcasting to attack enemies or support allies in combat. They also have the ability to recover a certain amount of Spell Slots once per day.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -943,22 +927,22 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 2,
-        "n": "Natural Recovery ( + )",
+        "n": "Natural Recovery",
         "d": "Replenish expended Spell Slots while out of combat."
       },
       {
         "level": 2,
-        "n": "Natural Recovery Charges : 1",
+        "n": "Natural Recovery Charges: 1",
         "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
       },
       {
         "level": 2,
         "n": "Bonus Cantrip",
-        "d": "Choose an additional Cantrip from the Druid spell list ."
+        "d": "Choose an additional Cantrip from the Druid spell list."
       },
       {
         "level": 3,
-        "n": "Natural Recovery Charges : 2",
+        "n": "Natural Recovery Charges: 2",
         "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
       },
       {
@@ -1008,7 +992,7 @@ const SUBCLASSES = [
       },
       {
         "level": 5,
-        "n": "Natural Recovery Charges : 3",
+        "n": "Natural Recovery Charges: 3",
         "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
       },
       {
@@ -1073,7 +1057,7 @@ const SUBCLASSES = [
       },
       {
         "level": 7,
-        "n": "Natural Recovery Charges : 4",
+        "n": "Natural Recovery Charges: 4",
         "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
       },
       {
@@ -1123,7 +1107,7 @@ const SUBCLASSES = [
       },
       {
         "level": 9,
-        "n": "Natural Recovery Charges : 5",
+        "n": "Natural Recovery Charges: 5",
         "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
       },
       {
@@ -1178,19 +1162,18 @@ const SUBCLASSES = [
       },
       {
         "level": 11,
-        "n": "Natural Recovery Charges : 6",
+        "n": "Natural Recovery Charges: 6",
         "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Land",
-    "icon": "icons/subclasses/circle-of-the-land.png"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Land"
   },
   {
     "id": "circle-of-the-moon",
     "name": "Circle of the Moon",
     "class": "Druid",
-    "desc": "Circle of the Moon is one of the subclasses of Druid . These Druids are more specialized in Wild Shaping into various creatures to attack enemies or support allies in combat. They also have the ability to regain Hit Points while Wild Sha...",
+    "desc": "Circle of the Moon is one of the subclasses of Druid. These Druids are more specialized in Wild Shaping into various creatures to attack enemies or support allies in combat. They also have the ability to regain Hit Points while Wild Shaped.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1198,23 +1181,23 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 2,
-        "n": "Lunar Mend ( + )",
+        "n": "Lunar Mend",
         "d": "Expend spell slots to regain Hit Points while wild shaped. You regain 1d8 hit points per spell slot level."
       },
       {
         "level": 2,
-        "n": "Combat Wild Shape ( + )",
-        "d": "As a bonus action, you can assume the form of a beast. You can transform twice per Short Rest . This ability otherwise acts as Wild Shape ."
+        "n": "Combat Wild Shape",
+        "d": "As a bonus action, you can assume the form of a beast. You can transform twice per Short Rest. This ability otherwise acts as Wild Shape."
       },
       {
         "level": 2,
-        "n": "Wild Shape: Bear ( + )",
+        "n": "Wild Shape: Bear",
         "d": "Assume the shape of a polar bear that can Goad enemies into attacking it. The polar bear has a starting health of 30 hit points that increases every two druid levels."
       },
       {
         "level": 4,
-        "n": "Wild Shape: Dire Raven ( + )",
-        "d": "Take the shape of a Dire Raven that can avoid attention and Blind enemies. It has 13 hit points ."
+        "n": "Wild Shape: Dire Raven",
+        "d": "Take the shape of a Dire Raven that can avoid attention and Blind enemies. It has 13 hit points."
       },
       {
         "level": 6,
@@ -1223,7 +1206,7 @@ const SUBCLASSES = [
       },
       {
         "level": 8,
-        "n": "Wild Shape: Sabre-Toothed Tiger ( + )",
+        "n": "Wild Shape: Sabre-Toothed Tiger",
         "d": "Take the shape of a Sabre-Toothed Tiger that can Shred Armour and regenerate hit points."
       },
       {
@@ -1248,14 +1231,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Moon",
-    "icon": "icons/subclasses/circle-of-the-moon.png"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Moon"
   },
   {
     "id": "circle-of-the-spores",
     "name": "Circle of the Spores",
     "class": "Druid",
-    "desc": "Circle of the Spores is one of the subclasses of Druid . These druids use fungal growth and decay to inflict Necrotic damage through spells, as well as to raise corpses through fungal infestation to fight at their side.",
+    "desc": "Circle of the Spores is one of the subclasses of Druid. These druids use fungal growth and decay to inflict Necrotic damage through spells, as well as to raise corpses through fungal infestation to fight at their side.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1263,12 +1245,12 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 2,
-        "n": "Halo of Spores ( )",
+        "n": "Halo of Spores",
         "d": "Unleash a cloud of necrotic spores upon a target. This uses a reaction, so other reactions won't trigger this turn."
       },
       {
         "level": 2,
-        "n": "Symbiotic Entity ( + )",
+        "n": "Symbiotic Entity",
         "d": "Gain 4 temporary hit points per Druid level and deal an additional 1d6 Necrotic damage with weapon or unarmed attacks while you have them. Cast Halo of Spores with double damage."
       },
       {
@@ -1283,13 +1265,13 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "Fungal Infestation ( + )",
+        "n": "Fungal Infestation",
         "d": "Raises a mildewed, mould-encrusted zombie from a corpse."
       },
       {
         "level": 6,
-        "n": "Fungal Infestation Charges : 4",
-        "d": "The number of times you can use Fungal Infestation. Replenished by Long Rest ."
+        "n": "Fungal Infestation Charges: 4",
+        "d": "The number of times you can use Fungal Infestation. Replenished by Long Rest."
       },
       {
         "level": 7,
@@ -1303,19 +1285,18 @@ const SUBCLASSES = [
       },
       {
         "level": 10,
-        "n": "Spreading Spores ( )",
+        "n": "Spreading Spores",
         "d": "Seed an area in deadly spores that deal 2d8 Necrotic damage per turn to all creatures that inhale them, except you and your allies."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Spores",
-    "icon": "icons/subclasses/circle-of-the-spores.png"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Spores"
   },
   {
     "id": "circle-of-the-stars",
     "name": "Circle of the Stars",
     "class": "Druid",
-    "desc": "Circle of Stars is one of the subclasses of Druid . It can choose to transform into special Starry Forms instead of beast forms which grant unique abilities. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Circle of Stars is one of the subclasses of Druid. It can choose to transform into special Starry Forms instead of beast forms which grant unique abilities. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -1328,74 +1309,73 @@ const SUBCLASSES = [
       },
       {
         "level": 2,
-        "n": "Star Maps : 2",
-        "d": "Used to cast Guiding Bolt without a spell slot. Replenished by a Long Rest ."
+        "n": "Star Maps: 2",
+        "d": "Used to cast Guiding Bolt without a spell slot. Replenished by a Long Rest."
       },
       {
         "level": 2,
         "n": "Circle of the Stars spells",
-        "d": "You gain additional spells from your circle. They are Always Prepared . Guiding Bolt ( + ) Star Map: Guiding Bolt ( + )"
+        "d": "You gain additional spells from your circle. They are Always Prepared. Guiding Bolt Star Map: Guiding Bolt"
       },
       {
         "level": 5,
-        "n": "Star Maps : 3",
+        "n": "Star Maps: 3",
         "d": "You gain an additional Star Map."
       },
       {
         "level": 5,
         "n": "Dazzling Breath",
-        "d": "Damage increases to 3d6 + Spellcasting modifier Radiant ."
+        "d": "Damage increases to 3d6 + Spellcasting modifier Radiant."
       },
       {
         "level": 6,
         "n": "Cosmic Omen",
-        "d": "Whenever you Long Rest , you consult the stars for a Cosmic Omen of Weal or of Woe. The omen grants you the ability to increase (Weal) or decrease (Woe) Attack Rolls or Saving Throws , or (Weal only) to increase your allies' Ability Checks ."
+        "d": "Whenever you Long Rest, you consult the stars for a Cosmic Omen of Weal or of Woe. The omen grants you the ability to increase (Weal) or decrease (Woe) Attack Rolls or Saving Throws, or (Weal only) to increase your allies' Ability Checks."
       },
       {
         "level": 6,
-        "n": "Cosmic Omen of Weal: Attack Roll ( + )",
-        "d": "Add a +1d6 bonus to an Attack Roll ."
+        "n": "Cosmic Omen of Weal: Attack Roll",
+        "d": "Add a +1d6 bonus to an Attack Roll."
       },
       {
         "level": 6,
-        "n": "Cosmic Omen of Woe: Attack Roll ( + )",
-        "d": "Subtract 1d6 from an Attack Roll ."
+        "n": "Cosmic Omen of Woe: Attack Roll",
+        "d": "Subtract 1d6 from an Attack Roll."
       },
       {
         "level": 6,
-        "n": "Cosmic Omen of Weal: Saving Throw ( + )",
-        "d": "Add a +1d6 bonus to a Saving Throw ."
+        "n": "Cosmic Omen of Weal: Saving Throw",
+        "d": "Add a +1d6 bonus to a Saving Throw."
       },
       {
         "level": 6,
-        "n": "Cosmic Omen of Woe: Saving Throw ( + )",
-        "d": "Subtract 1d6 from a Saving Throw ."
+        "n": "Cosmic Omen of Woe: Saving Throw",
+        "d": "Subtract 1d6 from a Saving Throw."
       },
       {
         "level": 6,
-        "n": "Cosmic Omens : 3",
-        "d": "Resource used for Omens. Replenished by a Long Rest ."
+        "n": "Cosmic Omens: 3",
+        "d": "Resource used for Omens. Replenished by a Long Rest."
       },
       {
         "level": 9,
-        "n": "Star Maps : 4",
+        "n": "Star Maps: 4",
         "d": "You gain an additional Star Map."
       },
       {
         "level": 9,
-        "n": "Cosmic Omens : 4",
+        "n": "Cosmic Omens: 4",
         "d": "You gain an additional Cosmic Omen."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Stars",
-    "icon": "icons/subclasses/circle-of-the-stars.png"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Stars"
   },
   {
     "id": "arcane-archer",
     "name": "Arcane Archer",
     "class": "Fighter",
-    "desc": "Arcane Archer is one of the subclasses of Fighter . It focuses on using magical arrows to damage and control enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Arcane Archer is one of the subclasses of Fighter. It focuses on using magical arrows to damage and control enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -1413,54 +1393,53 @@ const SUBCLASSES = [
       },
       {
         "level": 3,
-        "n": "Arcane Arrows : 4",
-        "d": "Resource used to fire an Arcane Shot. Replenished by a Short or Long Rest ."
+        "n": "Arcane Arrows: 4",
+        "d": "Resource used to fire an Arcane Shot. Replenished by a Short or Long Rest."
       },
       {
         "level": 3,
-        "n": "Arcane Shots : 3",
+        "n": "Arcane Shots: 3",
         "d": "Choose 3 Arcane Shots."
       },
       {
         "level": 7,
-        "n": "Curving Shot ( )",
+        "n": "Curving Shot",
         "d": "Use a Bonus Action to attack the next closest target with the same attack."
       },
       {
         "level": 7,
         "n": "Magic Arrow",
-        "d": "All of your ranged attacks are considered magical to overcome Resistance ."
+        "d": "All of your ranged attacks are considered magical to overcome Resistance."
       },
       {
         "level": 7,
-        "n": "Arcane Arrows : 7",
+        "n": "Arcane Arrows: 7",
         "d": "Gain three additional Arcane Arrows."
       },
       {
         "level": 7,
-        "n": "Arcane Shots : 4",
+        "n": "Arcane Shots: 4",
         "d": "Choose 1 additional Arcane Shot."
       },
       {
         "level": 10,
-        "n": "Arcane Arrows : 10",
+        "n": "Arcane Arrows: 10",
         "d": "Gain three additional Arcane Arrows."
       },
       {
         "level": 10,
-        "n": "Arcane Shots : 5",
+        "n": "Arcane Shots: 5",
         "d": "Choose 1 additional Arcane Shot."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Arcane_Archer",
-    "icon": "icons/subclasses/arcane-archer.png"
+    "wiki": "https://bg3.wiki/wiki/Arcane_Archer"
   },
   {
     "id": "battle-master",
     "name": "Battle Master",
     "class": "Fighter",
-    "desc": "Battle Master is one of the subclasses of Fighter . They focus on using active skills on a limited resource to hinder and disable opponents as well as sometimes supporting allies.",
+    "desc": "Battle Master is one of the subclasses of Fighter. They focus on using active skills on a limited resource to hinder and disable opponents as well as sometimes supporting allies.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1468,7 +1447,7 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Superiority Dice : 4",
+        "n": "Superiority Dice: 4",
         "d": "Your Superiority Dice are d8s. They fuel your Battle Master manoeuvres and are expended upon use."
       },
       {
@@ -1478,7 +1457,7 @@ const SUBCLASSES = [
       },
       {
         "level": 7,
-        "n": "Superiority Dice : 5",
+        "n": "Superiority Dice: 5",
         "d": "You gain +1 Superiority Die"
       },
       {
@@ -1488,8 +1467,7 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Battle_Master",
-    "icon": "icons/subclasses/battle-master.png"
+    "wiki": "https://bg3.wiki/wiki/Battle_Master"
   },
   {
     "id": "champion",
@@ -1524,12 +1502,12 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Archery",
-        "d": "You gain a +2 bonus to Attack Rolls you make with ranged Weapons ."
+        "d": "You gain a +2 bonus to Attack Rolls you make with ranged Weapons."
       },
       {
         "level": 10,
         "n": "Defence",
-        "d": "You gain a +1 bonus to Armour Class while wearing armour ."
+        "d": "You gain a +1 bonus to Armour Class while wearing armour."
       },
       {
         "level": 10,
@@ -1544,7 +1522,7 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Protection",
-        "d": "When you have a Shield , impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5 m (5 ft). You must be able to see the enemy."
+        "d": "When you have a Shield, impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5 m (5 ft). You must be able to see the enemy."
       },
       {
         "level": 10,
@@ -1553,14 +1531,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Champion",
-    "icon": "icons/subclasses/champion.png"
+    "wiki": "https://bg3.wiki/wiki/Champion"
   },
   {
     "id": "eldritch-knight",
     "name": "Eldritch Knight",
     "class": "Fighter",
-    "desc": "Eldritch Knight is one of the Subclasses of Fighter . These Fighters specialize in spellcasting , using their martial prowess and magic to attack enemies or support allies in combat. Eldritch Knights use Intelligence as their Spellcastin...",
+    "desc": "Eldritch Knight is one of the Subclasses of Fighter. These Fighters specialize in spellcasting, using their martial prowess and magic to attack enemies or support allies in combat. Eldritch Knights use Intelligence as their Spellcasting...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1568,8 +1545,8 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Weapon Bond ( )",
-        "d": "Ritually bind the weapon in your main hand. The weapon can't be knocked out of your hand, and it automatically returns to you when thrown ."
+        "n": "Weapon Bond",
+        "d": "Ritually bind the weapon in your main hand. The weapon can't be knocked out of your hand, and it automatically returns to you when thrown."
       },
       {
         "level": 3,
@@ -1579,17 +1556,17 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Cantrips Known: 2",
-        "d": "Choose 2 Cantrips from the Wizard spell list ."
+        "d": "Choose 2 Cantrips from the Wizard spell list."
       },
       {
         "level": 3,
         "n": "Prepared spells",
-        "d": "Eldritch Knight Spells are Always Prepared ."
+        "d": "Eldritch Knight Spells are Always Prepared."
       },
       {
         "level": 3,
         "n": "Known Spells",
-        "d": "Choose 2 Spells from the Wizard spell list (schools of Abjuration or Evocation only), up to Level 1. These spells are Always Prepared ."
+        "d": "Choose 2 Spells from the Wizard spell list (schools of Abjuration or Evocation only), up to Level 1. These spells are Always Prepared."
       },
       {
         "level": 4,
@@ -1599,22 +1576,22 @@ const SUBCLASSES = [
       {
         "level": 4,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (schools of Abjuration or Evocation only). This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (schools of Abjuration or Evocation only). This spell is Always Prepared."
       },
       {
         "level": 4,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must be Level 1."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 1."
       },
       {
         "level": 5,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must be Level 1."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 1."
       },
       {
         "level": 6,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must be Level 1."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 1."
       },
       {
         "level": 7,
@@ -1629,22 +1606,22 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "War Magic",
-        "d": "You have honed your body and magic for war. After you cast a cantrip, you can make a weapon attack using a Bonus Action ."
+        "d": "You have honed your body and magic for war. After you cast a cantrip, you can make a weapon attack using a Bonus Action."
       },
       {
         "level": 7,
         "n": "Known Spells",
-        "d": "Choose 2 Spells from the Wizard spell list (schools of Abjuration or Evocation only). These spells are Always Prepared ."
+        "d": "Choose 2 Spells from the Wizard spell list (schools of Abjuration or Evocation only). These spells are Always Prepared."
       },
       {
         "level": 8,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (any spell school) up to Level 2. This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (any spell school) up to Level 2. This spell is Always Prepared."
       },
       {
         "level": 9,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must be Level 2 or below."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 2 or below."
       },
       {
         "level": 10,
@@ -1659,43 +1636,42 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Cantrips Known: 3",
-        "d": "Choose 1 Cantrip from the Wizard spell list ."
+        "d": "Choose 1 Cantrip from the Wizard spell list."
       },
       {
         "level": 10,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (schools of Abjuration or Evocation only). This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (schools of Abjuration or Evocation only). This spell is Always Prepared."
       },
       {
         "level": 10,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must be Level 2 or below."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 2 or below."
       },
       {
         "level": 11,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (schools of Abjuration or Evocation only). This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (schools of Abjuration or Evocation only). This spell is Always Prepared."
       },
       {
         "level": 11,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must be Level 2 or below."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 2 or below."
       },
       {
         "level": 12,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must be Level 2 or below."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 2 or below."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Eldritch_Knight",
-    "icon": "icons/subclasses/eldritch-knight.png"
+    "wiki": "https://bg3.wiki/wiki/Eldritch_Knight"
   },
   {
     "id": "way-of-shadow",
     "name": "Way of Shadow",
     "class": "Monk",
-    "desc": "Way of Shadow is one of the subclasses of Monk . It can be chosen at level 3. These monks are more specialized in using the shadows to quietly strike their foes.",
+    "desc": "Way of Shadow is one of the subclasses of Monk. It can be chosen at level 3. These monks are more specialized in using the shadows to quietly strike their foes.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1703,18 +1679,18 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Minor Illusion ( )",
+        "n": "Minor Illusion",
         "d": "Create an illusion that compels nearby creatures to investigate."
       },
       {
         "level": 3,
-        "n": "Shadow Arts: Hide ( )",
-        "d": "Hide from enemies by succeeding at Stealth checks . Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
+        "n": "Shadow Arts: Hide",
+        "d": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
       },
       {
         "level": 3,
         "n": "Shadow Arts: Pass Without Trace ( + 2 )",
-        "d": "Call forth a veil of shadow and silence that gives you and nearby allies a +10 bonus to Stealth checks ."
+        "d": "Call forth a veil of shadow and silence that gives you and nearby allies a +10 bonus to Stealth checks."
       },
       {
         "level": 3,
@@ -1733,13 +1709,13 @@ const SUBCLASSES = [
       },
       {
         "level": 5,
-        "n": "Cloak of Shadows ( )",
-        "d": "Wrap yourself in shadows to become Invisible if you are obscured ."
+        "n": "Cloak of Shadows",
+        "d": "Wrap yourself in shadows to become Invisible if you are obscured."
       },
       {
         "level": 6,
-        "n": "Shadow Step ( )",
-        "d": "Teleport from shadow to shadow. Afterwards, you have Advantage on your next melee Attack Roll ."
+        "n": "Shadow Step",
+        "d": "Teleport from shadow to shadow. Afterwards, you have Advantage on your next melee Attack Roll."
       },
       {
         "level": 11,
@@ -1753,14 +1729,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_Shadow",
-    "icon": "icons/subclasses/way-of-shadow.png"
+    "wiki": "https://bg3.wiki/wiki/Way_of_Shadow"
   },
   {
     "id": "way-of-the-drunken-master",
     "name": "Way of the Drunken Master",
     "class": "Monk",
-    "desc": "Drunken Master is one of the subclasses of Monk . They have significant bonuses against drunk targets and can intoxicate enemies in combat. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Drunken Master is one of the subclasses of Monk. They have significant bonuses against drunk targets and can intoxicate enemies in combat. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -1769,58 +1744,57 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Cheeky Tipple",
-        "d": "You are Immune to the negative effects of being Drunk . Once per day, when you drink alcohol, you regain half your Ki Points (rounded down)."
+        "d": "You are Immune to the negative effects of being Drunk. Once per day, when you drink alcohol, you regain half your Ki Points (rounded down)."
       },
       {
         "level": 3,
         "n": "Drunken Performance",
-        "d": "You gain Proficiency in Performance ."
+        "d": "You gain Proficiency in Performance."
       },
       {
         "level": 3,
-        "n": "Drunken Technique ( + )",
-        "d": "Punch twice in quick succession and grant yourself an additional 3 m / 10 ft movement and the benefits of Disengage ."
+        "n": "Drunken Technique",
+        "d": "Punch twice in quick succession and grant yourself an additional 3 m / 10 ft movement and the benefits of Disengage."
       },
       {
         "level": 4,
-        "n": "Intoxicating Strike ( + )",
-        "d": "Hit a creature with your bare fists and possibly get them Drunk ."
+        "n": "Intoxicating Strike",
+        "d": "Hit a creature with your bare fists and possibly get them Drunk."
       },
       {
         "level": 4,
         "n": "Life of the Party",
-        "d": "Every time Intoxicating Strike hits, the monk gains Life of the Party , which increases Armour Class and Attack Rolls against Drunk targets."
+        "d": "Every time Intoxicating Strike hits, the monk gains Life of the Party, which increases Armour Class and Attack Rolls against Drunk targets."
       },
       {
         "level": 6,
         "n": "Leap to Your Feet",
-        "d": "When you are Prone , standing up uses only 1.5 m (5 ft) of your Movement Speed speed."
+        "d": "When you are Prone, standing up uses only 1.5 m (5 ft) of your Movement Speed speed."
       },
       {
         "level": 6,
-        "n": "Redirect Attack ( + )",
+        "n": "Redirect Attack",
         "d": "When a creature misses you with a melee attack, spend 1 Ki Point as a reaction to make them attack a new target if possible."
       },
       {
         "level": 9,
-        "n": "Sobering Realisation ( + )",
-        "d": "Hit a Drunk target and sober them up by dealing bonus Psychic damage. On a successful hit, the monk also loses Life of the Party ."
+        "n": "Sobering Realisation",
+        "d": "Hit a Drunk target and sober them up by dealing bonus Psychic damage. On a successful hit, the monk also loses Life of the Party."
       },
       {
         "level": 11,
         "n": "Drunkard's Luck (2 )",
-        "d": "When you make an Ability Check , Attack Roll , or Saving Throw and have Disadvantage on the roll, you can spend 2 Ki Points to negate the Disadvantage for that roll."
+        "d": "When you make an Ability Check, Attack Roll, or Saving Throw and have Disadvantage on the roll, you can spend 2 Ki Points to negate the Disadvantage for that roll."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_the_Drunken_Master",
-    "icon": "icons/subclasses/way-of-the-drunken-master.png"
+    "wiki": "https://bg3.wiki/wiki/Way_of_the_Drunken_Master"
   },
   {
     "id": "way-of-the-four-elements",
     "name": "Way of the Four Elements",
     "class": "Monk",
-    "desc": "Way of the Four Elements is one of the subclasses of monk . These monks are more specialized in using their Ki to channel the elements to influence the battlefield. Rather than focusing on physical techniques that the other Monk subclass...",
+    "desc": "Way of the Four Elements is one of the subclasses of monk. These monks are more specialized in using their Ki to channel the elements to influence the battlefield. Rather than focusing on physical techniques that the other Monk subclasse...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1828,8 +1802,8 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Harmony of Fire and Water ( )",
-        "d": "While not in combat, regain half of your Ki Points (rounded down). ( Recharge: Long rest .)"
+        "n": "Harmony of Fire and Water",
+        "d": "While not in combat, regain half of your Ki Points (rounded down). ( Recharge: Long rest.)"
       },
       {
         "level": 9,
@@ -1838,14 +1812,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_the_Four_Elements",
-    "icon": "icons/subclasses/way-of-the-four-elements.png"
+    "wiki": "https://bg3.wiki/wiki/Way_of_the_Four_Elements"
   },
   {
     "id": "way-of-the-open-hand",
     "name": "Way of the Open Hand",
     "class": "Monk",
-    "desc": "Way of the Open Hand is one of the subclasses of Monk . It can be chosen at level 3. These monks are more specialized in using unarmed attacks to strike their opponents down.",
+    "desc": "Way of the Open Hand is one of the subclasses of Monk. It can be chosen at level 3. These monks are more specialized in using unarmed attacks to strike their opponents down.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1853,17 +1826,17 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Flurry of Blows: Topple ( + )",
-        "d": "Punch twice in quick succession and potentially knock the target Prone ."
+        "n": "Flurry of Blows: Topple",
+        "d": "Punch twice in quick succession and potentially knock the target Prone."
       },
       {
         "level": 3,
-        "n": "Flurry of Blows: Stagger ( + )",
-        "d": "Punch twice in quick succession and Stagger the target, making it unable to take Reactions ."
+        "n": "Flurry of Blows: Stagger",
+        "d": "Punch twice in quick succession and Stagger the target, making it unable to take Reactions."
       },
       {
         "level": 3,
-        "n": "Flurry of Blows: Push ( + )",
+        "n": "Flurry of Blows: Push",
         "d": "Punch twice in quick succession and potentially push your target 5 m / 17 ft away."
       },
       {
@@ -1883,22 +1856,22 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "Wholeness of Body ( )",
-        "d": "Regain half your Ki Points and enter a temporary state of Wholeness where you regain Ki Points and have an extra Bonus Action . ( Recharge: Long rest .)"
+        "n": "Wholeness of Body",
+        "d": "Regain half your Ki Points and enter a temporary state of Wholeness where you regain Ki Points and have an extra Bonus Action. ( Recharge: Long rest.)"
       },
       {
         "level": 9,
-        "n": "Ki Resonation: Punch ( )",
+        "n": "Ki Resonation: Punch",
         "d": "Hit a creature with your bare fists, making the ki in its body Resonate with yours."
       },
       {
         "level": 9,
-        "n": "Ki Resonation: Punch (Bonus Action) ( )",
+        "n": "Ki Resonation: Punch (Bonus Action)",
         "d": "Hit a creature with your bare fists, making the ki in its body Resonate with yours."
       },
       {
         "level": 9,
-        "n": "Ki Resonation: Blast ( )",
+        "n": "Ki Resonation: Blast",
         "d": "Detonate the ki of a creature Resonating with you, hitting the creature and all creatures other than party members and summoned creatures within 5 m / 17 ft of it. ( Recharge: Per turn.)"
       },
       {
@@ -1908,14 +1881,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_the_Open_Hand",
-    "icon": "icons/subclasses/way-of-the-open-hand.png"
+    "wiki": "https://bg3.wiki/wiki/Way_of_the_Open_Hand"
   },
   {
     "id": "oath-of-devotion",
     "name": "Oath of Devotion",
     "class": "Paladin",
-    "desc": "Oath of Devotion is one of the subclasses of Paladin . These Paladins gain abilities that aid them in protecting the weak, dispelling falsehoods, and defeating fiends and undead.",
+    "desc": "Oath of Devotion is one of the subclasses of Paladin. These Paladins gain abilities that aid them in protecting the weak, dispelling falsehoods, and defeating fiends and undead.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1928,49 +1900,48 @@ const SUBCLASSES = [
       },
       {
         "level": 1,
-        "n": "Holy Rebuke ( + )",
+        "n": "Holy Rebuke",
         "d": "Call upon your Oath to grant a vengeful aura that deals 1d4 Radiant damage to anyone who hits them with a melee attack."
       },
       {
         "level": 3,
-        "n": "Sacred Weapon ( + )",
-        "d": "Turn your weapon into a Sacred Weapon . It has a higher chance of hitting, and emits a bright light."
+        "n": "Sacred Weapon",
+        "d": "Turn your weapon into a Sacred Weapon. It has a higher chance of hitting, and emits a bright light."
       },
       {
         "level": 3,
-        "n": "Turn the Unholy ( + )",
-        "d": "Turn nearby undead and fiends . They are forced to flee and cannot come close to you."
+        "n": "Turn the Unholy",
+        "d": "Turn nearby undead and fiends. They are forced to flee and cannot come close to you."
       },
       {
         "level": 3,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Protection from Evil and Good Sanctuary"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Protection from Evil and Good Sanctuary"
       },
       {
         "level": 5,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Lesser Restoration Silence"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Lesser Restoration Silence"
       },
       {
         "level": 7,
         "n": "Aura of Devotion",
-        "d": "You and any nearby allies can't be Charmed . The aura disappears if you fall unconscious."
+        "d": "You and any nearby allies can't be Charmed. The aura disappears if you fall unconscious."
       },
       {
         "level": 9,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Remove Curse Beacon of Hope"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Remove Curse Beacon of Hope"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_Devotion",
-    "icon": "icons/subclasses/oath-of-devotion.png"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_Devotion"
   },
   {
     "id": "oath-of-the-ancients",
     "name": "Oath of the Ancients",
     "class": "Paladin",
-    "desc": "Oath of the Ancients is one of the subclasses of Paladin . These Paladins have a deep connection with the natural world and the light within it.",
+    "desc": "Oath of the Ancients is one of the subclasses of Paladin. These Paladins have a deep connection with the natural world and the light within it.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -1983,28 +1954,28 @@ const SUBCLASSES = [
       },
       {
         "level": 1,
-        "n": "Healing Radiance ( + )",
+        "n": "Healing Radiance",
         "d": "Heal yourself and all nearby allies. Regain the same amount the next turn."
       },
       {
         "level": 3,
-        "n": "Nature's Wrath ( + )",
+        "n": "Nature's Wrath",
         "d": "Invoke primaeval forces to restrain an enemy."
       },
       {
         "level": 3,
-        "n": "Turn the Faithless ( + )",
-        "d": "Channel your Oath using ancient words to Turn nearby fey and fiends ."
+        "n": "Turn the Faithless",
+        "d": "Channel your Oath using ancient words to Turn nearby fey and fiends."
       },
       {
         "level": 3,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Speak with Animals Ensnaring Strike"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Speak with Animals Ensnaring Strike"
       },
       {
         "level": 5,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Misty Step Moonbeam"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Misty Step Moonbeam"
       },
       {
         "level": 7,
@@ -2014,18 +1985,17 @@ const SUBCLASSES = [
       {
         "level": 9,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Protection from Energy Plant Growth"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Protection from Energy Plant Growth"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Ancients",
-    "icon": "icons/subclasses/oath-of-the-ancients.png"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Ancients"
   },
   {
     "id": "oath-of-the-crown",
     "name": "Oath of the Crown",
     "class": "Paladin",
-    "desc": "Oath of the Crown is one of the subclasses of Paladin . It focuses on protecting allies by healing them and redirecting attacks. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Oath of the Crown is one of the subclasses of Paladin. It focuses on protecting allies by healing them and redirecting attacks. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -2038,43 +2008,42 @@ const SUBCLASSES = [
       },
       {
         "level": 1,
-        "n": "Righteous Clarity ( + )",
-        "d": "Target yourself or an ally to additionally grant the target's proficiency bonus to their Attack Rolls ."
+        "n": "Righteous Clarity",
+        "d": "Target yourself or an ally to additionally grant the target's proficiency bonus to their Attack Rolls."
       },
       {
         "level": 3,
-        "n": "Champion Challenge ( + )",
-        "d": "Challenge the enemies around you, compelling them to attack only you. Any attacks they might make against other targets have Disadvantage ."
+        "n": "Champion Challenge",
+        "d": "Challenge the enemies around you, compelling them to attack only you. Any attacks they might make against other targets have Disadvantage."
       },
       {
         "level": 3,
-        "n": "Turn the Tide ( + )",
+        "n": "Turn the Tide",
         "d": "Shout out and heal all nearby non-enemy creatures."
       },
       {
         "level": 3,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Command Compelled Duel"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Command Compelled Duel"
       },
       {
         "level": 5,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Warding Bond Spiritual Weapon"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Warding Bond Spiritual Weapon"
       },
       {
         "level": 7,
-        "n": "Divine Allegiance ( )",
+        "n": "Divine Allegiance",
         "d": "When an ally within 1.5 m (5 ft) of you takes damage, you can use your Reaction to magically substitute your own health for your ally's, healing them by 2 × (Paladin level) Hit Points at the cost of taking 2 × (Paladin level) Radiant damage yourself."
       },
       {
         "level": 9,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Spirit Guardians Crusader's Mantle"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Spirit Guardians Crusader's Mantle"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Crown",
-    "icon": "icons/subclasses/oath-of-the-crown.png"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Crown"
   },
   {
     "id": "oath-of-vengeance",
@@ -2093,49 +2062,48 @@ const SUBCLASSES = [
       },
       {
         "level": 1,
-        "n": "Inquisitor's Might ( + )",
+        "n": "Inquisitor's Might",
         "d": "You or an ally's weapon attacks deal an additional Charisma modifier Radiant damage and can Daze enemies for 1 turn."
       },
       {
         "level": 3,
-        "n": "Abjure Enemy ( + )",
-        "d": "Frighten an enemy. They have Disadvantage on ability checks and Attack Rolls , and they cannot move."
+        "n": "Abjure Enemy",
+        "d": "Frighten an enemy. They have Disadvantage on ability checks and Attack Rolls, and they cannot move."
       },
       {
         "level": 3,
-        "n": "Vow of Enmity ( + )",
+        "n": "Vow of Enmity",
         "d": "Gain Advantage on Attack Rolls against an enemy."
       },
       {
         "level": 3,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Bane Hunter's Mark"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Bane Hunter's Mark"
       },
       {
         "level": 5,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Misty Step Hold Person"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Misty Step Hold Person"
       },
       {
         "level": 7,
         "n": "Relentless Avenger",
-        "d": "If you hit an enemy with an Opportunity Attack , your movement speed increases by 4.5 m (15 ft) on your next turn."
+        "d": "If you hit an enemy with an Opportunity Attack, your movement speed increases by 4.5 m (15 ft) on your next turn."
       },
       {
         "level": 9,
         "n": "Oath Spells",
-        "d": "You gain additional spells from your oath. They are Always Prepared . Haste Protection from Energy"
+        "d": "You gain additional spells from your oath. They are Always Prepared. Haste Protection from Energy"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_Vengeance",
-    "icon": "icons/subclasses/oath-of-vengeance.png"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_Vengeance"
   },
   {
     "id": "oathbreaker",
     "name": "Oathbreaker",
     "class": "Paladin",
-    "desc": "Oathbreaker is one of the subclasses of Paladin . These Paladins draw power from the darkness within to destroy their foes.",
+    "desc": "Oathbreaker is one of the subclasses of Paladin. These Paladins draw power from the darkness within to destroy their foes.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2143,28 +2111,28 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 1,
-        "n": "Spiteful Suffering ( + )",
-        "d": "Steep an enemy in the darkness that churns within you. The target takes 1d4 + Charisma Modifier Necrotic damage each turn and Attack Rolls against it have Advantage ."
+        "n": "Spiteful Suffering",
+        "d": "Steep an enemy in the darkness that churns within you. The target takes 1d4 + Charisma Modifier Necrotic damage each turn and Attack Rolls against it have Advantage."
       },
       {
         "level": 3,
-        "n": "Control Undead ( + )",
+        "n": "Control Undead",
         "d": "Use the power of your Oath to gain control over an undead creature. The undead will follow you around and attack your enemies."
       },
       {
         "level": 3,
-        "n": "Dreadful Aspect ( + )",
+        "n": "Dreadful Aspect",
         "d": "Let your darkest emotions burst forth as a menacing pulse to Frighten nearby enemies."
       },
       {
         "level": 3,
         "n": "Oath Spells",
-        "d": "You gain additional spells from the darkness within. They are Always Prepared . Hellish Rebuke Inflict Wounds"
+        "d": "You gain additional spells from the darkness within. They are Always Prepared. Hellish Rebuke Inflict Wounds"
       },
       {
         "level": 5,
         "n": "Oath Spells",
-        "d": "You gain additional spells from the darkness within. They are Always Prepared . Crown of Madness Darkness"
+        "d": "You gain additional spells from the darkness within. They are Always Prepared. Crown of Madness Darkness"
       },
       {
         "level": 7,
@@ -2174,18 +2142,17 @@ const SUBCLASSES = [
       {
         "level": 9,
         "n": "Oath Spells",
-        "d": "You gain additional spells from the darkness within. They are Always Prepared . Bestow Curse Animate Dead"
+        "d": "You gain additional spells from the darkness within. They are Always Prepared. Bestow Curse Animate Dead"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oathbreaker",
-    "icon": "icons/subclasses/oathbreaker.png"
+    "wiki": "https://bg3.wiki/wiki/Oathbreaker"
   },
   {
     "id": "beast-master",
     "name": "Beast Master",
     "class": "Ranger",
-    "desc": "Beast Master is one of the subclasses of Ranger . These Rangers are able to summon an animal companion to aid them in combat and exploration. The companions also gain new features and abilities as the Ranger level increases.",
+    "desc": "Beast Master is one of the subclasses of Ranger. These Rangers are able to summon an animal companion to aid them in combat and exploration. The companions also gain new features and abilities as the Ranger level increases.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2193,18 +2160,18 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Ranger's Companion ( )",
-        "d": "Gain a beast companion that accompanies you on your adventures and fights alongside you. ( Recharge: Short rest .)"
+        "n": "Ranger's Companion",
+        "d": "Gain a beast companion that accompanies you on your adventures and fights alongside you. ( Recharge: Short rest.)"
       },
       {
         "level": 5,
         "n": "Companion's Bond",
-        "d": "Your Ranger's Companions receive a bonus to Armour Class and damage equal to its Proficiency Bonus ."
+        "d": "Your Ranger's Companions receive a bonus to Armour Class and damage equal to its Proficiency Bonus."
       },
       {
         "level": 7,
         "n": "Exceptional Training",
-        "d": "Your summoned companions can now Dash , Disengage , and Help as a Bonus Action ."
+        "d": "Your summoned companions can now Dash, Disengage, and Help as a Bonus Action."
       },
       {
         "level": 11,
@@ -2213,14 +2180,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Beast_Master",
-    "icon": "icons/subclasses/beast-master.png"
+    "wiki": "https://bg3.wiki/wiki/Beast_Master"
   },
   {
     "id": "gloom-stalker",
     "name": "Gloom Stalker",
     "class": "Ranger",
-    "desc": "Gloom Stalker is a subclass of Ranger . Gloom Stalkers specialize in taking out foes swiftly and ruthlessly from the shadows, gaining damage bonuses and increased movement speed.",
+    "desc": "Gloom Stalker is a subclass of Ranger. Gloom Stalkers specialize in taking out foes swiftly and ruthlessly from the shadows, gaining damage bonuses and increased movement speed.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2228,8 +2194,8 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 3,
-        "n": "Umbral Shroud ( )",
-        "d": "Wrap yourself in shadows to become Invisible if you are obscured. ( Recharge: Short rest .)"
+        "n": "Umbral Shroud",
+        "d": "Wrap yourself in shadows to become Invisible if you are obscured. ( Recharge: Short rest.)"
       },
       {
         "level": 3,
@@ -2253,13 +2219,13 @@ const SUBCLASSES = [
       },
       {
         "level": 3,
-        "n": "Dread Ambusher: Hide ( )",
-        "d": "Hide from enemies by succeeding at Stealth checks . Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
+        "n": "Dread Ambusher: Hide",
+        "d": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
       },
       {
         "level": 7,
         "n": "Iron Mind",
-        "d": "You gain Proficiency in Wisdom and Intelligence Saving Throws ."
+        "d": "You gain Proficiency in Wisdom and Intelligence Saving Throws."
       },
       {
         "level": 11,
@@ -2268,14 +2234,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Gloom_Stalker",
-    "icon": "icons/subclasses/gloom-stalker.png"
+    "wiki": "https://bg3.wiki/wiki/Gloom_Stalker"
   },
   {
     "id": "hunter",
     "name": "Hunter",
     "class": "Ranger",
-    "desc": "Hunter is one of the subclasses of Ranger . These Rangers are more specialized in dealing high damage to enemies, using Spellcasting , and area of effect and utility attacks to hunt down their prey.",
+    "desc": "Hunter is one of the subclasses of Ranger. These Rangers are more specialized in dealing high damage to enemies, using Spellcasting, and area of effect and utility attacks to hunt down their prey.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2293,12 +2258,12 @@ const SUBCLASSES = [
       },
       {
         "level": 11,
-        "n": "Volley ( )",
+        "n": "Volley",
         "d": "Fire a cascade of magical broadheads and bodkin arrows upon nearby foes."
       },
       {
         "level": 11,
-        "n": "Whirlwind Attack ( )",
+        "n": "Whirlwind Attack",
         "d": "Strike out at all nearby foes, making separate Attack Rolls against each target."
       }
     ],
@@ -2310,13 +2275,13 @@ const SUBCLASSES = [
           {
             "n": "Escape the Horde",
             "fields": {
-              "Description": "Opportunity Attacks against you have Disadvantage ."
+              "Description": "Opportunity Attacks against you have Disadvantage."
             }
           },
           {
             "n": "Steel Will",
             "fields": {
-              "Description": "Advantage on Saving Throws against being Frightened ."
+              "Description": "Advantage on Saving Throws against being Frightened."
             }
           },
           {
@@ -2328,14 +2293,13 @@ const SUBCLASSES = [
         ]
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Hunter",
-    "icon": "icons/subclasses/hunter.png"
+    "wiki": "https://bg3.wiki/wiki/Hunter"
   },
   {
     "id": "swarmkeeper",
     "name": "Swarmkeeper",
     "class": "Ranger",
-    "desc": "Swarmkeeper is one of the subclasses of Ranger . They command swarms of fey creatures to assist them in battle. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Swarmkeeper is one of the subclasses of Ranger. They command swarms of fey creatures to assist them in battle. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -2414,32 +2378,32 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Subclass Spells",
-        "d": "You gain the following spells. They are Always Prepared . Mage Hand Faerie Fire"
+        "d": "You gain the following spells. They are Always Prepared. Mage Hand Faerie Fire"
       },
       {
         "level": 5,
         "n": "Subclass Spells",
-        "d": "You gain the following spell. It is Always Prepared . Web"
+        "d": "You gain the following spell. It is Always Prepared. Web"
       },
       {
         "level": 7,
-        "n": "Writhing Currents : 3",
-        "d": "Used to cast Writhing Tide. Replenished on a Long Rest ."
+        "n": "Writhing Currents: 3",
+        "d": "Used to cast Writhing Tide. Replenished on a Long Rest."
       },
       {
         "level": 7,
-        "n": "Writhing Tide ( + )",
+        "n": "Writhing Tide",
         "d": "Condense part of your swarm into a mass that lifts you up. Gain a flying speed of 9 m (30 ft) and become unaffected by surface effects."
       },
       {
         "level": 9,
-        "n": "Writhing Currents : 4",
+        "n": "Writhing Currents: 4",
         "d": "One additional use of Writhing Tide."
       },
       {
         "level": 9,
         "n": "Subclass Spells",
-        "d": "You gain the following spell. It is Always Prepared . Gaseous Form"
+        "d": "You gain the following spell. It is Always Prepared. Gaseous Form"
       },
       {
         "level": 11,
@@ -2454,7 +2418,7 @@ const SUBCLASSES = [
       {
         "level": 11,
         "n": "Cloud of Jellyfish: Mighty Teleport",
-        "d": "Use your swarm to Teleport to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class ."
+        "d": "Use your swarm to Teleport to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class."
       },
       {
         "level": 11,
@@ -2469,7 +2433,7 @@ const SUBCLASSES = [
       {
         "level": 11,
         "n": "Flurry of Moths: Mighty Teleport",
-        "d": "Use your swarm to Teleport you to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class ."
+        "d": "Use your swarm to Teleport you to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class."
       },
       {
         "level": 11,
@@ -2489,18 +2453,17 @@ const SUBCLASSES = [
       {
         "level": 11,
         "n": "Legion of Bees: Mighty Knockback",
-        "d": "Use your swarm to push your target back 5 m (17 ft) and knock them Prone ."
+        "d": "Use your swarm to push your target back 5 m (17 ft) and knock them Prone."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Swarmkeeper",
-    "icon": "icons/subclasses/swarmkeeper.png"
+    "wiki": "https://bg3.wiki/wiki/Swarmkeeper"
   },
   {
     "id": "arcane-trickster",
     "name": "Arcane Trickster",
     "class": "Rogue",
-    "desc": "Arcane Trickster is a subclass of Rogue . These Rogues are capable of spellcasting (from the Wizard spell list ) and use their spells to attack enemies or support allies in combat. Arcane Tricksters use Intelligence as their spellcasting...",
+    "desc": "Arcane Trickster is a subclass of Rogue. These Rogues are capable of spellcasting (from the Wizard spell list ) and use their spells to attack enemies or support allies in combat. Arcane Tricksters use Intelligence as their spellcasting...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2519,17 +2482,17 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Cantrips Known: 2",
-        "d": "Choose 2 Cantrips from the Wizard spell list ."
+        "d": "Choose 2 Cantrips from the Wizard spell list."
       },
       {
         "level": 3,
         "n": "Prepared spells",
-        "d": "Arcane Trickster Spells are Always Prepared ."
+        "d": "Arcane Trickster Spells are Always Prepared."
       },
       {
         "level": 3,
         "n": "Known Spells",
-        "d": "Choose 2 Spells from the Wizard spell list (schools of Enchantment or Illusion only) up to Level 1. These spells are Always Prepared ."
+        "d": "Choose 2 Spells from the Wizard spell list (schools of Enchantment or Illusion only) up to Level 1. These spells are Always Prepared."
       },
       {
         "level": 4,
@@ -2539,22 +2502,22 @@ const SUBCLASSES = [
       {
         "level": 4,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Arcane Trickster spell list (schools of Enchantment or Illusion only). This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Arcane Trickster spell list (schools of Enchantment or Illusion only). This spell is Always Prepared."
       },
       {
         "level": 4,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
       },
       {
         "level": 5,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
       },
       {
         "level": 6,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
       },
       {
         "level": 7,
@@ -2569,7 +2532,7 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (schools of Enchantment or Illusion only). This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (schools of Enchantment or Illusion only). This spell is Always Prepared."
       },
       {
         "level": 7,
@@ -2579,12 +2542,12 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
       },
       {
         "level": 8,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (any spell school) up to Level 2. This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (any spell school) up to Level 2. This spell is Always Prepared."
       },
       {
         "level": 8,
@@ -2594,17 +2557,17 @@ const SUBCLASSES = [
       {
         "level": 8,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
       },
       {
         "level": 9,
         "n": "Magical Ambush",
-        "d": "While you are Hiding , your targets have Disadvantage on Saving Throws against your Spells ."
+        "d": "While you are Hiding, your targets have Disadvantage on Saving Throws against your Spells."
       },
       {
         "level": 9,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
       },
       {
         "level": 10,
@@ -2614,33 +2577,32 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Cantrips Known: 3",
-        "d": "Choose 1 Cantrip from the Wizard spell list ."
+        "d": "Choose 1 Cantrip from the Wizard spell list."
       },
       {
         "level": 10,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (schools of Enchantment or Illusion only). This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (schools of Enchantment or Illusion only). This spell is Always Prepared."
       },
       {
         "level": 11,
         "n": "Known Spells",
-        "d": "Choose 1 Spell from the Wizard spell list (schools of Enchantment or Illusion only). This spell is Always Prepared ."
+        "d": "Choose 1 Spell from the Wizard spell list (schools of Enchantment or Illusion only). This spell is Always Prepared."
       },
       {
         "level": 12,
         "n": "Replacement Spell (Optional)",
-        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list . The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must still be of a level for which the Arcane Trickster has spell slots."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Arcane_Trickster",
-    "icon": "icons/subclasses/arcane-trickster.png"
+    "wiki": "https://bg3.wiki/wiki/Arcane_Trickster"
   },
   {
     "id": "assassin",
     "name": "Assassin",
     "class": "Rogue",
-    "desc": "Assassin is a subclass of Rogue . It's focused on dealing higher and more reliable damage to enemies at the start of battle, especially if you can surprise them.",
+    "desc": "Assassin is a subclass of Rogue. It's focused on dealing higher and more reliable damage to enemies at the start of battle, especially if you can surprise them.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2654,7 +2616,7 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Assassinate: Ambush",
-        "d": "Any successful Attack Roll against a Surprised creature is a Critical Hit ."
+        "d": "Any successful Attack Roll against a Surprised creature is a Critical Hit."
       },
       {
         "level": 3,
@@ -2663,19 +2625,18 @@ const SUBCLASSES = [
       },
       {
         "level": 9,
-        "n": "Infiltration Expertise ( )",
+        "n": "Infiltration Expertise",
         "d": "Adopt a new identity, changing your appearance."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Assassin",
-    "icon": "icons/subclasses/assassin.png"
+    "wiki": "https://bg3.wiki/wiki/Assassin"
   },
   {
     "id": "swashbuckler",
     "name": "Swashbuckler",
     "class": "Rogue",
-    "desc": "Swashbuckler is one of the subclasses of Rogue . Unlike other rogues, they focus on fighting enemies head-to-head in single combat. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Swashbuckler is one of the subclasses of Rogue. Unlike other rogues, they focus on fighting enemies head-to-head in single combat. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -2689,16 +2650,16 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Rakish Audacity",
-        "d": "You gain a +2 bonus to initiative rolls. This scales with your rogue level. You no longer need Advantage to trigger Sneak Attack as long as you are within 1.5 m (5 ft) of the target and don't have Disadvantage . [ See: Bugs ]"
+        "d": "You gain a +2 bonus to initiative rolls. This scales with your rogue level. You no longer need Advantage to trigger Sneak Attack as long as you are within 1.5 m (5 ft) of the target and don't have Disadvantage. [ See: Bugs ]"
       },
       {
         "level": 3,
-        "n": "Rakish Sneak Attack (Melee) ( )",
+        "n": "Rakish Sneak Attack (Melee)",
         "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
       },
       {
         "level": 3,
-        "n": "Rakish Sneak Attack (Ranged) ( )",
+        "n": "Rakish Sneak Attack (Ranged)",
         "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
       },
       {
@@ -2708,34 +2669,33 @@ const SUBCLASSES = [
       },
       {
         "level": 4,
-        "n": "Dirty Trick: Flick o' the Wrist ( )",
+        "n": "Dirty Trick: Flick o' the Wrist",
         "d": "Flick your weapon at a target and possibly Disarm them."
       },
       {
         "level": 4,
-        "n": "Dirty Trick: Sand Toss ( )",
+        "n": "Dirty Trick: Sand Toss",
         "d": "Toss a handful of sand at your enemy and possibly Blind them."
       },
       {
         "level": 4,
-        "n": "Dirty Trick: Vicious Mockery ( )",
-        "d": "Insult a creature: it has Disadvantage on its next Attack Roll ."
+        "n": "Dirty Trick: Vicious Mockery",
+        "d": "Insult a creature: it has Disadvantage on its next Attack Roll."
       },
       {
         "level": 9,
-        "n": "Panache ( )",
-        "d": "Roll a Persuasion check to beguile a humanoid, who must contest it with an Insight check. Enemies who fail gain Panache: Disadvantage ; others who fail become Charmed ."
+        "n": "Panache",
+        "d": "Roll a Persuasion check to beguile a humanoid, who must contest it with an Insight check. Enemies who fail gain Panache: Disadvantage; others who fail become Charmed."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Swashbuckler",
-    "icon": "icons/subclasses/swashbuckler.png"
+    "wiki": "https://bg3.wiki/wiki/Swashbuckler"
   },
   {
     "id": "thief",
     "name": "Thief",
     "class": "Rogue",
-    "desc": "Thief is a subclass of Rogue . Most notably, its Fast Hands passive grants a second Bonus Action . Together with the cunning actions the rogue gains at level 2, this subclass allows for exceptional mobility and enhanced versatility.",
+    "desc": "Thief is a subclass of Rogue. Most notably, its Fast Hands passive grants a second Bonus Action. Together with the cunning actions the rogue gains at level 2, this subclass allows for exceptional mobility and enhanced versatility.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2744,28 +2704,27 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Fast Hands",
-        "d": "You gain an extra Bonus Action , which you can use with any of your existing Bonus Actions."
+        "d": "You gain an extra Bonus Action, which you can use with any of your existing Bonus Actions."
       },
       {
         "level": 3,
         "n": "Second-Story Work",
-        "d": "You've mastered the art of falling and gain Resistance to Falling damage ."
+        "d": "You've mastered the art of falling and gain Resistance to Falling damage."
       },
       {
         "level": 9,
-        "n": "Supreme Sneak ( )",
-        "d": "Blend into the environment so completely that you become Invisible . ( Recharge: Short rest .)"
+        "n": "Supreme Sneak",
+        "d": "Blend into the environment so completely that you become Invisible. ( Recharge: Short rest.)"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Thief",
-    "icon": "icons/subclasses/thief.png"
+    "wiki": "https://bg3.wiki/wiki/Thief"
   },
   {
     "id": "draconic-bloodline",
     "name": "Draconic Bloodline",
     "class": "Sorcerer",
-    "desc": "Draconic Bloodline is one of the subclasses of Sorcerer . These Sorcerers are harder to hit than their counterparts. They also have the ability to gain resistance and deal more damage with certain types of damage based on their bloodline.",
+    "desc": "Draconic Bloodline is one of the subclasses of Sorcerer. These Sorcerers are harder to hit than their counterparts. They also have the ability to gain resistance and deal more damage with certain types of damage based on their bloodline.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2788,12 +2747,12 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "Elemental Affinity: Resistance ( )",
+        "n": "Elemental Affinity: Resistance",
         "d": "When you cast a spell that deals damage matching your draconic ancestry, you can spend 1 Sorcery Point to gain Resistance to that damage type."
       },
       {
         "level": 11,
-        "n": "Fly ( )",
+        "n": "Fly",
         "d": "Fly to a target position"
       }
     ],
@@ -2885,14 +2844,13 @@ const SUBCLASSES = [
         ]
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Draconic_Bloodline",
-    "icon": "icons/subclasses/draconic-bloodline.png"
+    "wiki": "https://bg3.wiki/wiki/Draconic_Bloodline"
   },
   {
     "id": "shadow-magic",
     "name": "Shadow Magic",
     "class": "Sorcerer",
-    "desc": "Shadow Magic is one of the subclasses of Sorcerer . They command a shadowy mastiff which can attack and curse enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Shadow Magic is one of the subclasses of Sorcerer. They command a shadowy mastiff which can attack and curse enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [],
     "weapons": null,
@@ -2906,11 +2864,11 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Strength of the Grave",
-        "d": "After reaching 0 Hit Points , you regain 1 instead of becoming downed ."
+        "d": "After reaching 0 Hit Points, you regain 1 instead of becoming downed."
       },
       {
         "level": 3,
-        "n": "Darkness ( + )",
+        "n": "Darkness",
         "d": "Create a cloud of magical darkness that Heavily Obscures and inflicts Blind to creatures within. Creatures cannot make ranged attacks into or out of it."
       },
       {
@@ -2921,23 +2879,22 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Hound of Ill Omen ( + 3 )",
-        "d": "Summon forth a creature of darkness. ( Recharge: Short rest .)"
+        "d": "Summon forth a creature of darkness. ( Recharge: Short rest.)"
       },
       {
         "level": 11,
-        "n": "Shadow Walk ( )",
+        "n": "Shadow Walk",
         "d": "Teleport into the shadows. The next spell you cast that turn will benefit from Distant Spell without costing any Sorcery Points."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Shadow_Magic",
-    "icon": "icons/subclasses/shadow-magic.png"
+    "wiki": "https://bg3.wiki/wiki/Shadow_Magic"
   },
   {
     "id": "storm-sorcery",
     "name": "Storm Sorcery",
     "class": "Sorcerer",
-    "desc": "Storm Sorcery is one of the Subclasses of Sorcerer . They are extremely mobile, being able to fly after each spell they cast, making it safer for them to wade into melee. As they grow in power they can make their spells generate small da...",
+    "desc": "Storm Sorcery is one of the Subclasses of Sorcerer. They are extremely mobile, being able to fly after each spell they cast, making it safer for them to wade into melee. As they grow in power they can make their spells generate small dam...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2946,22 +2903,22 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Tempestuous Magic",
-        "d": "After you cast a Level 1 Spell or higher you can Fly as a Bonus Action up to 9 m (30 ft) until the end of your turn without receiving Opportunity Attacks ."
+        "d": "After you cast a Level 1 Spell or higher you can Fly as a Bonus Action up to 9 m (30 ft) until the end of your turn without receiving Opportunity Attacks."
       },
       {
         "level": 6,
         "n": "Heart of the Storm",
-        "d": "When you cast a Spell of Level 1 or higher that deals Lightning or Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer Level / 2) Lightning or (Sorcerer Level / 2) Thunder ."
+        "d": "When you cast a Spell of Level 1 or higher that deals Lightning or Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer Level / 2) Lightning or (Sorcerer Level / 2) Thunder."
       },
       {
         "level": 6,
         "n": "Heart of the Storm: Lightning",
-        "d": "When you cast a spell of Level 1 or higher that deals Lightning damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Lightning ."
+        "d": "When you cast a spell of Level 1 or higher that deals Lightning damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Lightning."
       },
       {
         "level": 6,
         "n": "Heart of the Storm: Thunder",
-        "d": "When you cast a spell of Level 1 or higher that deals Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Thunder ."
+        "d": "When you cast a spell of Level 1 or higher that deals Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Thunder."
       },
       {
         "level": 6,
@@ -2975,19 +2932,18 @@ const SUBCLASSES = [
       },
       {
         "level": 11,
-        "n": "Storm's Fury ( )",
+        "n": "Storm's Fury",
         "d": "When struck by a melee attack, you may deal Lightning damage to the attacker and possibly push them back."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Storm_Sorcery",
-    "icon": "icons/subclasses/storm-sorcery.png"
+    "wiki": "https://bg3.wiki/wiki/Storm_Sorcery"
   },
   {
     "id": "wild-magic-sorcerer-subclass",
     "name": "Wild Magic",
     "class": "Sorcerer",
-    "desc": "Wild Magic is one of the Subclasses of Sorcerer . These Sorcerers are capable of using the chaos of their magic to unleash various unexpected effects that can be helpful or chaotic. They also have the ability to gain Advantage on rolls,...",
+    "desc": "Wild Magic is one of the Subclasses of Sorcerer. These Sorcerers are capable of using the chaos of their magic to unleash various unexpected effects that can be helpful or chaotic. They also have the ability to gain Advantage on rolls, i...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -2996,33 +2952,32 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Wild Magic",
-        "d": "Unruly magic sparks and fizzes through your veins. Each time you cast a spell of Level 1 or higher, your magic might surge and trigger a random magical effect ."
+        "d": "Unruly magic sparks and fizzes through your veins. Each time you cast a spell of Level 1 or higher, your magic might surge and trigger a random magical effect."
       },
       {
         "level": 1,
-        "n": "Tides of Chaos ( )",
-        "d": "Gain Advantage on your next Attack Roll , Ability Check , or Saving Throw . Increased chance of Wild Magic surge afterwards."
+        "n": "Tides of Chaos",
+        "d": "Gain Advantage on your next Attack Roll, Ability Check, or Saving Throw. Increased chance of Wild Magic surge afterwards."
       },
       {
         "level": 6,
         "n": "Bend Luck",
-        "d": "When a creature you can see makes an Attack Roll , Ability Check , or a Saving Throw , you can use your reaction and spend 2 Sorcery Points to roll 1d4, applying the number rolled as a bonus or penalty (your choice) to the creature's roll."
+        "d": "When a creature you can see makes an Attack Roll, Ability Check, or a Saving Throw, you can use your reaction and spend 2 Sorcery Points to roll 1d4, applying the number rolled as a bonus or penalty (your choice) to the creature's roll."
       },
       {
         "level": 11,
-        "n": "Controlled Chaos ( )",
+        "n": "Controlled Chaos",
         "d": "Induce a Wild Magic Surge on the nearby spellcaster."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(sorcerer_subclass)",
-    "icon": "icons/subclasses/wild-magic-sorcerer-subclass.png"
+    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(sorcerer_subclass)"
   },
   {
     "id": "the-archfey",
     "name": "The Archfey",
     "class": "Warlock",
-    "desc": "The Archfey is one of the subclasses of Warlock . Graced by a lady or lord of the fey, these warlocks are imbued with all the sumptuous and fearsome qualities of their patron's extraordinary realm.",
+    "desc": "The Archfey is one of the subclasses of Warlock. Graced by a lady or lord of the fey, these warlocks are imbued with all the sumptuous and fearsome qualities of their patron's extraordinary realm.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3030,8 +2985,8 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 1,
-        "n": "Fey Presence ( )",
-        "d": "Charm or Frighten nearby foes with the feywild's beguiling, disturbing magics. ( Recharge: Short rest .)"
+        "n": "Fey Presence",
+        "d": "Charm or Frighten nearby foes with the feywild's beguiling, disturbing magics. ( Recharge: Short rest.)"
       },
       {
         "level": 1,
@@ -3050,8 +3005,8 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "Misty Escape ( )",
-        "d": "Upon taking damage, become Invisible . On your next turn, you can cast Misty Step , though this will break your invisibility."
+        "n": "Misty Escape",
+        "d": "Upon taking damage, become Invisible. On your next turn, you can cast Misty Step, though this will break your invisibility."
       },
       {
         "level": 7,
@@ -3066,18 +3021,17 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Beguiling Defences",
-        "d": "You have built stoic barriers in your heart and mind, and cannot be Charmed ."
+        "d": "You have built stoic barriers in your heart and mind, and cannot be Charmed."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Archfey",
-    "icon": "icons/subclasses/the-archfey.png"
+    "wiki": "https://bg3.wiki/wiki/The_Archfey"
   },
   {
     "id": "the-fiend",
     "name": "The Fiend",
     "class": "Warlock",
-    "desc": "The Fiend is one of the subclasses of Warlock . These Warlocks are servants of chaotic and destructive beings such as demons or devils and traded their souls to these dark forces in exchange for power. They also have the ability to gain...",
+    "desc": "The Fiend is one of the subclasses of Warlock. These Warlocks are servants of chaotic and destructive beings such as demons or devils and traded their souls to these dark forces in exchange for power. They also have the ability to gain a...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3086,7 +3040,7 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Dark One's Blessing",
-        "d": "Whenever you reduce a hostile creature to 0 Hit Points , this gift from your patron grants you Charisma modifier + Warlock level temporary hit points ."
+        "d": "Whenever you reduce a hostile creature to 0 Hit Points, this gift from your patron grants you Charisma modifier + Warlock level temporary hit points."
       },
       {
         "level": 1,
@@ -3106,7 +3060,7 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Dark One's Own Luck",
-        "d": "Call on your patron to change your fate and add a 1d10 to an Ability Check ."
+        "d": "Call on your patron to change your fate and add a 1d10 to an Ability Check."
       },
       {
         "level": 7,
@@ -3121,18 +3075,17 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Fiendish Resilience",
-        "d": "Choose a damage type and become Resistant to it. You can pick a new damage type each Short Rest . ( Recharge: Short rest .)"
+        "d": "Choose a damage type and become Resistant to it. You can pick a new damage type each Short Rest. ( Recharge: Short rest.)"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Fiend",
-    "icon": "icons/subclasses/the-fiend.png"
+    "wiki": "https://bg3.wiki/wiki/The_Fiend"
   },
   {
     "id": "the-great-old-one",
     "name": "The Great Old One",
     "class": "Warlock",
-    "desc": "The Great Old One is one of the subclasses of Warlock . These Warlocks are acolytes of eldritch entities that are incomprehensible to regular mortals. They are given the ability to channel magic through pacts with these ancient beings in...",
+    "desc": "The Great Old One is one of the subclasses of Warlock. These Warlocks are acolytes of eldritch entities that are incomprehensible to regular mortals. They are given the ability to channel magic through pacts with these ancient beings in...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3160,7 +3113,7 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "Entropic Ward ( )",
+        "n": "Entropic Ward",
         "d": "Impose Disadvantage on an Attack Roll against you. If the attack misses, you gain Advantage on your next Attack Roll against the attacker for 1 turn."
       },
       {
@@ -3185,14 +3138,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Great_Old_One",
-    "icon": "icons/subclasses/the-great-old-one.png"
+    "wiki": "https://bg3.wiki/wiki/The_Great_Old_One"
   },
   {
     "id": "the-hexblade",
     "name": "The Hexblade",
     "class": "Warlock",
-    "desc": "Hexblade is one of the subclasses of Warlock . They can curse enemies with their hexed weapons and raise the souls of defeated enemies as spectres. Released as part of Patch 8 on April 15, 2025. [ url 1 ]",
+    "desc": "Hexblade is one of the subclasses of Warlock. They can curse enemies with their hexed weapons and raise the souls of defeated enemies as spectres. Released as part of Patch 8 on April 15, 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [
       "Medium Armour",
@@ -3204,17 +3156,17 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Hex Warrior",
-        "d": "You gain proficiency with Medium armour , Shields , and Martial weapons . You gain Bind Hexed Weapon , which lets you use your Charisma modifier instead of Strength or Dexterity when attacking with weapons that you are proficient with."
+        "d": "You gain proficiency with Medium armour, Shields, and Martial weapons. You gain Bind Hexed Weapon, which lets you use your Charisma modifier instead of Strength or Dexterity when attacking with weapons that you are proficient with."
       },
       {
         "level": 1,
-        "n": "Bind Hexed Weapon ( )",
+        "n": "Bind Hexed Weapon",
         "d": "Bind to your main hand weapon. Its damage becomes magical, you cannot drop or throw it, and you become Proficient with it if you weren't already. When you attack with this weapon, there is a chance [ See Notes ] that Hexblade's Curse will be applied to the target."
       },
       {
         "level": 1,
-        "n": "Hexblade's Curse ( )",
-        "d": "Curse a target. Your damage rolls against the target gain a bonus equal to your Proficiency bonus . The number you need to roll a Critical Hit while attacking the target is also reduced by 1. If the target dies, you regain Warlock level + Charisma modifier hit points . ( Recharge: Short rest .)"
+        "n": "Hexblade's Curse",
+        "d": "Curse a target. Your damage rolls against the target gain a bonus equal to your Proficiency bonus. The number you need to roll a Critical Hit while attacking the target is also reduced by 1. If the target dies, you regain Warlock level + Charisma modifier hit points. ( Recharge: Short rest.)"
       },
       {
         "level": 1,
@@ -3233,8 +3185,8 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "Accursed Spectre ( )",
-        "d": "Raise an Accursed Spectre from the soul of a fallen cursed target to fight by your side. The size of the fallen creature will determine whether you raise a Feeble Spectre , Mundane Spectre , or Primordial Spectre . Doesn't work with constructs , elementals , oozes , plants , or undead ."
+        "n": "Accursed Spectre",
+        "d": "Raise an Accursed Spectre from the soul of a fallen cursed target to fight by your side. The size of the fallen creature will determine whether you raise a Feeble Spectre, Mundane Spectre, or Primordial Spectre. Doesn't work with constructs, elementals, oozes, plants, or undead."
       },
       {
         "level": 7,
@@ -3248,19 +3200,18 @@ const SUBCLASSES = [
       },
       {
         "level": 10,
-        "n": "Armour of Hexes ( )",
+        "n": "Armour of Hexes",
         "d": "When a creature you cursed with Hexblade's Curse attacks you, potentially nullify the attack. This has a 50% chance of succeeding."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Hexblade",
-    "icon": "icons/subclasses/the-hexblade.png"
+    "wiki": "https://bg3.wiki/wiki/The_Hexblade"
   },
   {
     "id": "abjuration-school",
     "name": "Abjuration School",
     "class": "Wizard",
-    "desc": "Abjuration School is one of the subclasses of Wizard . These Wizards are specialized in magic that can protect themselves and allies from harm. They also have the ability to reduce the amount of damage dealt to them on subsequent turns w...",
+    "desc": "Abjuration School is one of the subclasses of Wizard. These Wizards are specialized in magic that can protect themselves and allies from harm. They also have the ability to reduce the amount of damage dealt to them on subsequent turns wh...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3269,7 +3220,7 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Abjuration Savant",
-        "d": "Halves the cost to learn Abjuration spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Abjuration spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
@@ -3278,24 +3229,23 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "Projected Ward ( )",
+        "n": "Projected Ward",
         "d": "When a nearby ally takes damage, you can use your Arcane Ward to reduce the damage equal to its charges and then lose 1 charge."
       },
       {
         "level": 10,
         "n": "Improved Abjuration",
-        "d": "Each time you take a Short Rest , the intensity of your Arcane Ward increases by an amount equal to your wizard level."
+        "d": "Each time you take a Short Rest, the intensity of your Arcane Ward increases by an amount equal to your wizard level."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Abjuration_School",
-    "icon": "icons/subclasses/abjuration-school.png"
+    "wiki": "https://bg3.wiki/wiki/Abjuration_School"
   },
   {
     "id": "bladesinging",
     "name": "Bladesinging",
     "class": "Wizard",
-    "desc": "Bladesinger is one of the subclasses of Wizard . It uses an elegant combination of sword and spell to defeat enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
+    "desc": "Bladesinger is one of the subclasses of Wizard. It uses an elegant combination of sword and spell to defeat enemies. Released as part of Patch 8 in 2025. [ url 1 ]",
     "patch": "Patch 8",
     "armour": [
       "Light Armour"
@@ -3305,22 +3255,22 @@ const SUBCLASSES = [
     "features": [
       {
         "level": 2,
-        "n": "Bladesong Power : 2",
-        "d": "Used to cast Bladesong. Replenished on a Long Rest . Bladesinging is not possible in Medium or Heavy armor, even if proficient; you will receive the \"Bladesong Impeded\" Condition while wearing them."
+        "n": "Bladesong Power: 2",
+        "d": "Used to cast Bladesong. Replenished on a Long Rest. Bladesinging is not possible in Medium or Heavy armor, even if proficient; you will receive the \"Bladesong Impeded\" Condition while wearing them."
       },
       {
         "level": 2,
-        "n": "Bladesong ( )",
-        "d": "Invoke the Bladesong. You gain a +2 bonus to Armour Class and your movement speed increases by 3 m (10 ft). You also gain Advantage in Acrobatics and a +2 to Constitution Saving Throws ."
+        "n": "Bladesong",
+        "d": "Invoke the Bladesong. You gain a +2 bonus to Armour Class and your movement speed increases by 3 m (10 ft). You also gain Advantage in Acrobatics and a +2 to Constitution Saving Throws."
       },
       {
         "level": 2,
         "n": "Training in War and Song",
-        "d": "You gain proficiency with Light armour and in the Performance skill. You also gain proficiency with Daggers , Longswords , Rapiers , Scimitars , Shortswords , and Sickles ."
+        "d": "You gain proficiency with Light armour and in the Performance skill. You also gain proficiency with Daggers, Longswords, Rapiers, Scimitars, Shortswords, and Sickles."
       },
       {
         "level": 5,
-        "n": "Bladesong Power : 3",
+        "n": "Bladesong Power: 3",
         "d": "Gain an additional use of Bladesong."
       },
       {
@@ -3335,7 +3285,7 @@ const SUBCLASSES = [
       },
       {
         "level": 9,
-        "n": "Bladesong Power : 4",
+        "n": "Bladesong Power: 4",
         "d": "Gain an additional use of Bladesong."
       },
       {
@@ -3346,18 +3296,17 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Song of Defence",
-        "d": "When you take damage during your Bladesong , you can expend a spell slot to subtract 5 damage per spell slot."
+        "d": "When you take damage during your Bladesong, you can expend a spell slot to subtract 5 damage per spell slot."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Bladesinging",
-    "icon": "icons/subclasses/bladesinging.png"
+    "wiki": "https://bg3.wiki/wiki/Bladesinging"
   },
   {
     "id": "conjuration-school",
     "name": "Conjuration School",
     "class": "Wizard",
-    "desc": "Conjuration School is one of the subclasses of Wizard . These Wizards specialize in summoning the elements and moving themselves and others from one place to another.",
+    "desc": "Conjuration School is one of the subclasses of Wizard. These Wizards specialize in summoning the elements and moving themselves and others from one place to another.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3366,33 +3315,32 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Conjuration Savant",
-        "d": "Halves the cost to learn Conjuration spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Conjuration spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
-        "n": "Minor Conjuration: Create Water ( )",
-        "d": "Call forth rain. It extinguishes exposed flames and forms a Water surface. ( Recharge: Short rest .)"
+        "n": "Minor Conjuration: Create Water",
+        "d": "Call forth rain. It extinguishes exposed flames and forms a Water surface. ( Recharge: Short rest.)"
       },
       {
         "level": 6,
-        "n": "Benign Transposition: Teleport ( )",
-        "d": "Teleport to a nearby, unoccupied space, or swap places with an ally. ( Recharge: Long rest .)"
+        "n": "Benign Transposition: Teleport",
+        "d": "Teleport to a nearby, unoccupied space, or swap places with an ally. ( Recharge: Long rest.)"
       },
       {
         "level": 10,
         "n": "Focused Conjuration",
-        "d": "Damage taken while you are Concentrating on a Conjuration spell will not break your Concentration ."
+        "d": "Damage taken while you are Concentrating on a Conjuration spell will not break your Concentration."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Conjuration_School",
-    "icon": "icons/subclasses/conjuration-school.png"
+    "wiki": "https://bg3.wiki/wiki/Conjuration_School"
   },
   {
     "id": "divination-school",
     "name": "Divination School",
     "class": "Wizard",
-    "desc": "Divination School is one of the subclasses of Wizard . These Wizards specialize in fates and knowledge. They can manipulate random outcomes and see the unseen.",
+    "desc": "Divination School is one of the subclasses of Wizard. These Wizards specialize in fates and knowledge. They can manipulate random outcomes and see the unseen.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3401,38 +3349,37 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Divination Savant",
-        "d": "Halves the cost to learn Divination spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Divination spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
         "n": "Portent",
-        "d": "Your dreams grant you glimpses that let you influence the future. After each Long Rest , the user gains two random Portent Dice. During the day, they can use their reaction to change the die of an Attack Roll or Saving Throw rolled near them to one of their Portent Dice. Each Portent Die can only be used once; unused Portent Dice are lost at the end of the day."
+        "d": "Your dreams grant you glimpses that let you influence the future. After each Long Rest, the user gains two random Portent Dice. During the day, they can use their reaction to change the die of an Attack Roll or Saving Throw rolled near them to one of their Portent Dice. Each Portent Die can only be used once; unused Portent Dice are lost at the end of the day."
       },
       {
         "level": 6,
         "n": "Expert Divination",
-        "d": "You gain an additional Portent Die . When taking a Short Rest you receive a set of Prophecies . Complete them to regain missing Portent Dice."
+        "d": "You gain an additional Portent Die. When taking a Short Rest you receive a set of Prophecies. Complete them to regain missing Portent Dice."
       },
       {
         "level": 10,
-        "n": "Third Eye: Darkvision ( )",
-        "d": "You gain the ability to see in the dark out to a range of 24 m (80 ft) ( Recharge: Long rest .)"
+        "n": "Third Eye: Darkvision",
+        "d": "You gain the ability to see in the dark out to a range of 24 m (80 ft) ( Recharge: Long rest.)"
       },
       {
         "level": 10,
-        "n": "Third Eye: See Invisibility ( )",
-        "d": "Become able to see Invisible creatures, and possibly reveal them to others. ( Recharge: Long rest .)"
+        "n": "Third Eye: See Invisibility",
+        "d": "Become able to see Invisible creatures, and possibly reveal them to others. ( Recharge: Long rest.)"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Divination_School",
-    "icon": "icons/subclasses/divination-school.png"
+    "wiki": "https://bg3.wiki/wiki/Divination_School"
   },
   {
     "id": "enchantment-school",
     "name": "Enchantment School",
     "class": "Wizard",
-    "desc": "Enchantment School is one of the subclasses of Wizard . These Wizards specialize in controlling and befuddling others.",
+    "desc": "Enchantment School is one of the subclasses of Wizard. These Wizards specialize in controlling and befuddling others.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3441,16 +3388,16 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Enchantment Savant",
-        "d": "Halves the cost to learn Enchantment spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Enchantment spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
-        "n": "Hypnotic Gaze ( )",
-        "d": "Charm and Incapacitates a creature. It cannot attack you. It cannot act. ( Recharge: Long rest .)"
+        "n": "Hypnotic Gaze",
+        "d": "Charm and Incapacitates a creature. It cannot attack you. It cannot act. ( Recharge: Long rest.)"
       },
       {
         "level": 6,
-        "n": "Instinctive Charm ( )",
+        "n": "Instinctive Charm",
         "d": "Charm an enemy attacking you. They will attack a new target if possible."
       },
       {
@@ -3460,14 +3407,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Enchantment_School",
-    "icon": "icons/subclasses/enchantment-school.png"
+    "wiki": "https://bg3.wiki/wiki/Enchantment_School"
   },
   {
     "id": "evocation-school",
     "name": "Evocation School",
     "class": "Wizard",
-    "desc": "Evocation School is one of the subclasses of Wizard . These Wizards are specialized in offensive magic that deal large damage to enemies and control the battlefield. They also have the ability to protect their allies from harmful Evocati...",
+    "desc": "Evocation School is one of the subclasses of Wizard. These Wizards are specialized in offensive magic that deal large damage to enemies and control the battlefield. They also have the ability to protect their allies from harmful Evocatio...",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3476,12 +3422,12 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Evocation Savant",
-        "d": "Halves the cost to learn Evocation spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Evocation spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
         "n": "Sculpt Spells",
-        "d": "Create pockets of safety within your Evocation spells . Allies automatically succeed their Saving Throws against these spells and take no damage from them."
+        "d": "Create pockets of safety within your Evocation spells. Allies automatically succeed their Saving Throws against these spells and take no damage from them."
       },
       {
         "level": 6,
@@ -3495,14 +3441,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Evocation_School",
-    "icon": "icons/subclasses/evocation-school.png"
+    "wiki": "https://bg3.wiki/wiki/Evocation_School"
   },
   {
     "id": "illusion-school",
     "name": "Illusion School",
     "class": "Wizard",
-    "desc": "Illusion School is one of the subclasses of Wizard . These Wizards are specialized in illusory magic that can hide where they are, detect the invisible, or trick enemies into wasting actions.",
+    "desc": "Illusion School is one of the subclasses of Wizard. These Wizards are specialized in illusory magic that can hide where they are, detect the invisible, or trick enemies into wasting actions.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3511,7 +3456,7 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Illusion Savant",
-        "d": "Halves the cost to learn Illusion spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Illusion spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
@@ -3520,24 +3465,23 @@ const SUBCLASSES = [
       },
       {
         "level": 6,
-        "n": "See Invisibility ( )",
-        "d": "Glimpse Invisible creatures, and possibly reveal them to others. ( Recharge: Short rest .)"
+        "n": "See Invisibility",
+        "d": "Glimpse Invisible creatures, and possibly reveal them to others. ( Recharge: Short rest.)"
       },
       {
         "level": 10,
-        "n": "Illusory Self ( )",
+        "n": "Illusory Self",
         "d": "Interpose an illusory duplicate of yourself between you and an attacker's strike, making them miss their attack."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Illusion_School",
-    "icon": "icons/subclasses/illusion-school.png"
+    "wiki": "https://bg3.wiki/wiki/Illusion_School"
   },
   {
     "id": "necromancy-school",
     "name": "Necromancy School",
     "class": "Wizard",
-    "desc": "Necromancy School is one of the subclasses of Wizard . These Wizards are specialized in powers of death, allowing them to protect themselves from harm and raise undead minions to serve them.",
+    "desc": "Necromancy School is one of the subclasses of Wizard. These Wizards are specialized in powers of death, allowing them to protect themselves from harm and raise undead minions to serve them.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3546,7 +3490,7 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Necromancy Savant",
-        "d": "Halves the cost to learn Necromancy spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Necromancy spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
@@ -3561,7 +3505,7 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Undead Thralls: Additional Undead",
-        "d": "When you use Animate Dead , you can raise an additional corpse."
+        "d": "When you use Animate Dead, you can raise an additional corpse."
       },
       {
         "level": 6,
@@ -3575,14 +3519,13 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Necromancy_School",
-    "icon": "icons/subclasses/necromancy-school.png"
+    "wiki": "https://bg3.wiki/wiki/Necromancy_School"
   },
   {
     "id": "transmutation-school",
     "name": "Transmutation School",
     "class": "Wizard",
-    "desc": "Transmutation School is one of the subclasses of Wizard . These Wizards become accomplished Alchemists , able to pass benefits to companions. At higher levels they can turn into a bird without using a spell slot.",
+    "desc": "Transmutation School is one of the subclasses of Wizard. These Wizards become accomplished Alchemists, able to pass benefits to companions. At higher levels they can turn into a bird without using a spell slot.",
     "patch": null,
     "armour": [],
     "weapons": null,
@@ -3591,22 +3534,22 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Transmutation Savant",
-        "d": "Halves the cost to learn Transmutation spells from Scrolls . Learning these spells will only cost 25 gp per spell level."
+        "d": "Halves the cost to learn Transmutation spells from Scrolls. Learning these spells will only cost 25 gp per spell level."
       },
       {
         "level": 2,
         "n": "Experimental Alchemy",
-        "d": "You brew two Alchemical Solutions instead of one when combining extracts, if you succeed a Difficulty Class 15 Medicine Check ."
+        "d": "You brew two Alchemical Solutions instead of one when combining extracts, if you succeed a Difficulty Class 15 Medicine Check."
       },
       {
         "level": 6,
         "n": "Transmuter's Stone",
-        "d": "You can create Transmuter's Stones ."
+        "d": "You can create Transmuter's Stones."
       },
       {
         "level": 6,
         "n": "Transmuter's Stone",
-        "d": "Variants: Transmuter's Stone: Constitution Create a stone that grants the carrier Proficiency in Constitution Saving Throws ."
+        "d": "Variants: Transmuter's Stone: Constitution Create a stone that grants the carrier Proficiency in Constitution Saving Throws."
       },
       {
         "level": 6,
@@ -3621,37 +3564,36 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Transmuter's Stone: Acid Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Acid ."
+        "d": "Create a stone that grants the carrier Resistance to Acid."
       },
       {
         "level": 6,
         "n": "Transmuter's Stone: Cold Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Cold ."
+        "d": "Create a stone that grants the carrier Resistance to Cold."
       },
       {
         "level": 6,
         "n": "Transmuter's Stone: Fire Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Fire ."
+        "d": "Create a stone that grants the carrier Resistance to Fire."
       },
       {
         "level": 6,
         "n": "Transmuter's Stone: Lightning Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Lightning ."
+        "d": "Create a stone that grants the carrier Resistance to Lightning."
       },
       {
         "level": 6,
         "n": "Transmuter's Stone: Thunder Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Thunder ."
+        "d": "Create a stone that grants the carrier Resistance to Thunder."
       },
       {
         "level": 10,
-        "n": "Shapechanger ( )",
-        "d": "Transform into a blue jay, able to Fly . If the blue jay's hit points drop to 0, the target reverts to its original form with its original hit points."
+        "n": "Shapechanger",
+        "d": "Transform into a blue jay, able to Fly. If the blue jay's hit points drop to 0, the target reverts to its original form with its original hit points."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Transmutation_School",
-    "icon": "icons/subclasses/transmutation-school.png"
+    "wiki": "https://bg3.wiki/wiki/Transmutation_School"
   }
 ]
 ;

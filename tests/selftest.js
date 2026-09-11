@@ -218,6 +218,21 @@ const SelfTest = (() => {
       ITEMS.filter((i) => i.type === "weapon" && i.damage)
         .filter((i) => { const p = parseWeaponDamage(i.damage, false); return !p || !p.main || !p.main.count; })
         .map((i) => i.name));
+    // The wiki writes an ability's cost as icons inside brackets, so stripping the
+    // tags left 131 of 511 subclass features named "Frenzied Strike ( )" or
+    // "Frenzy ( + )". Brackets holding real text are legitimate and stay.
+    check("Shape", "no feature name carries an empty bracket", () => {
+      const bad = [];
+      SUBCLASS_LIST.forEach((s) => (s.features || []).forEach((f) => {
+        if (/\(\s*[+\-,/&\s]*\)/.test(f.n || "")) bad.push(s.name + ': "' + f.n + '"');
+      }));
+      Object.entries(CLASSES).forEach(([k, c]) => (c.progression || []).forEach((p) =>
+        (p.features || []).forEach((f) => {
+          if (/\(\s*[+\-,/&\s]*\)/.test(f)) bad.push(k + ': "' + f + '"');
+        })));
+      return bad;
+    });
+
     check("Shape", "every race has at least one trait", () =>
       RACES.filter((r) => !(r.traits || []).length).map((r) => r.name));
     // Dragonborn showed no bonuses at all because its ten colour subraces were

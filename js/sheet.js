@@ -369,11 +369,41 @@ function renderLevelPath(m) {
     el("span", { class: "sheet-badge" }, ["Character level " + charLevel])
   ]));
 
+  // Half of every class's progression table is scaffolding, not content: "Feat"
+  // appears twenty times across the twelve classes, "Subclass feature" six, and
+  // "-" — the wiki's marker for a level that grants nothing — eighty-five. Listing
+  // one row per level spent half its height saying "you will choose something
+  // here", which is the shape of levelling rather than anything about this build.
+  //
+  // So the two are split. What the class hands you is listed by level; what you
+  // still have to decide is collected into one line naming where each decision
+  // falls. A Barbarian 12 goes from twelve rows to six and a sentence.
+  const CHOICE_FEATURES = {
+    "Feat": "Feats",
+    "Subclass feature": "Subclass features",
+    "Choose a subclass": "Subclass",
+    "Fighting Style": "Fighting style"
+  };
+  const isNothing = (f) => !f || f.trim() === "-";
+
   const list = el("div", { class: "level-path-list" });
   let lastClass = null;
+  const choices = new Map();
+
   rows.forEach((r) => {
-    // One heading per class, so a multiclass reads as two runs rather than as one
-    // undifferentiated column of rows
+    const gained = [];
+    (r.features || []).forEach((f) => {
+      if (isNothing(f)) return;
+      const label = CHOICE_FEATURES[f];
+      if (label) {
+        if (!choices.has(label)) choices.set(label, []);
+        choices.get(label).push(r.charLevel);
+      } else {
+        gained.push(f);
+      }
+    });
+    if (!gained.length) return;
+
     if (r.cls !== lastClass) {
       lastClass = r.cls;
       const head = el("div", { class: "level-class-head" });
@@ -391,10 +421,19 @@ function renderLevelPath(m) {
     // the character level leads, because that is the number the game asks for
     row.appendChild(el("span", { class: "level-step-level", title: r.cls + " " + r.level },
       [String(r.charLevel)]));
-    row.appendChild(el("span", { class: "level-step-features" }, [r.features.join(" · ")]));
+    row.appendChild(el("span", { class: "level-step-features" }, [gained.join(" · ")]));
     list.appendChild(row);
   });
   wrap.appendChild(list);
+
+  if (choices.size) {
+    const parts = [...choices.entries()].map(([label, levels]) =>
+      label + " at " + levels.join(", "));
+    wrap.appendChild(el("div", { class: "level-choices" }, [
+      el("span", { class: "level-choices-head" }, ["You choose"]),
+      el("span", { class: "level-choices-body" }, [parts.join(" · ")])
+    ]));
+  }
 
   if (ahead.length) {
     wrap.appendChild(el("div", { class: "level-ahead-head" }, ["One more level would give"]));

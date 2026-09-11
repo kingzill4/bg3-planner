@@ -18,7 +18,17 @@ function Strip-Html([string]$s) {
     $s = [regex]::Replace($s, '<[^>]+>', ' ')
     $s = [System.Net.WebUtility]::HtmlDecode($s)
     $s = $s -replace ' ', ' ' -replace '[​⁠﻿]', ''
-    return ([regex]::Replace($s, '\s+', ' ')).Trim()
+    $s = [regex]::Replace($s, '\s+', ' ')
+
+    # The wiki writes an ability's cost as icons inside brackets — "Frenzied Strike
+    # (<img action>)", "Frenzy (<img action> + <img rage>)". Stripping the tags
+    # leaves the brackets behind, so 131 of the 511 subclass features carried a
+    # dangling "( )" or "( + )" in their name. Drop a bracket pair holding nothing
+    # but leftover punctuation; brackets with real text are untouched.
+    $s = [regex]::Replace($s, '\(\s*[+\-,/&\s]*\)', '')
+    $s = [regex]::Replace($s, '\s+', ' ')
+    $s = [regex]::Replace($s, '\s+([,.;:])', '$1')
+    return $s.Trim()
 }
 
 $CLASS_NAMES = @("Barbarian","Bard","Cleric","Druid","Fighter","Monk",
