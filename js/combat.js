@@ -528,6 +528,26 @@ const CONDITIONS = [
       "unless it already resisted them, in which case that resistance is negated instead",
     wiki: "https://bg3.wiki/wiki/Wet_(Condition)" },
 
+  // "Takes 2 Slashing DRS damage at the start of each turn and has Disadvantage on
+  // Constitution Saving Throws." Nothing counts turns, so it is on or off. The
+  // Disadvantage is stated rather than folded into the save DC for the same reason
+  // as Restrained: a re-roll is not a flat modifier, and inventing one would be a
+  // number nobody could check.
+  { key: "bleeding", label: "Bleeding", max: 1, on: "the target",
+    effect: () => "the target takes 2 Slashing at the start of its turn, and its CON " +
+      "saves have Disadvantage (rolled twice, worse kept — not a flat number, so it " +
+      "is not folded into the save below)",
+    wiki: "https://bg3.wiki/wiki/Bleeding_(Condition)" },
+
+  // "Takes 1d4 Fire damage per turn." That is damage on the target's own turn, not
+  // part of your attack, so it changes nothing in the figures above and says so.
+  // The Wet interaction is worth stating because the two are commonly stacked and
+  // they cancel: the page says Burning is "Immune from if Wet".
+  { key: "burning", label: "Burning", max: 1, on: "the target",
+    effect: () => "the target takes 1d4 Fire at the start of its turn — its own turn, " +
+      "so it is not part of your damage below. A Wet target cannot be Burning at all",
+    wiki: "https://bg3.wiki/wiki/Burning_(Condition)" },
+
   { key: "orb", label: "Radiating Orb", max: 10, on: "the target", defensive: true,
     effect: (n) => "−" + n + " to the target's attack rolls — that protects you, and " +
       "this calculator projects the damage you deal, so no number here moves",

@@ -105,7 +105,7 @@ then open http://localhost:8791
   *applied after the damage lands*. They are three different questions — whether the attack lands,
   whether the target resists the spell, and how much of the damage survives — and labelling all
   three "Target …" made them read as three versions of one number.
-- **Conditions in play** — eight of them, folded away until wanted, each a stepper with clickable
+- **Conditions in play** — eleven of them, folded away until wanted, each a stepper with clickable
   pips where the wiki counts turns or charges, and a plain on/off pill where it does not — Prone
   is not a quantity, but Lightning Charges and Reverberation both are, and both change at 5: five
   charges are consumed on your next damage for one extra 1d8 Lightning, five turns of Reverberation
@@ -114,7 +114,15 @@ then open http://localhost:8791
   Arcane Acuity, Bless and Lightning Charges raise your rolls;
   Reverberation and Bane lower the target's saves; Prone and Restrained hand you Advantage.
   Radiating Orb protects you rather than helping you hit, and says so instead of pretending to
-  count. Every wording is quoted from that condition's own wiki page.
+  count. **Wet** is the one BG3 combos are built on — *"Resistant to Fire damage. Vulnerable to
+  Lightning and Cold damage"* — and it is not a flat doubling: the page adds that a target already
+  resistant to those has *"their resistances negated instead of becoming vulnerable"*, so a
+  Lightning-resistant enemy takes normal damage rather than double. Getting that backwards would
+  overstate a lightning build against precisely the enemies it exists to beat. Bleeding and Burning
+  are listed because they are commonly stacked, and both say plainly that their damage lands on the
+  target's own turn rather than on your attack. **Momentum is deliberately absent**: it only raises
+  movement speed, and a condition that moves no number here would be noise in a list meant to be
+  read. Every wording is quoted from that condition's own wiki page.
 - **"Not counted above"** — a folded list of every named ability on your equipped gear that the
   damage figures leave out. Across the library items carry 545 of them, and most cannot be computed
   from the wiki's wording alone: they recharge, they need a condition the tool does not track, or

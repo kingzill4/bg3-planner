@@ -452,8 +452,11 @@ const SelfTest = (() => {
     });
 
     check("Rules", "binary conditions have max 1, stacking ones more", () => {
+      // Momentum is deliberately absent: "Movement Speed increased by 1.5 m per
+      // remaining duration" touches nothing this tool computes, and a condition
+      // that changes no number is noise in a list meant to be read.
       const expect = { acuity: 10, bless: 1, charges: 5, reverb: 5, bane: 1,
-        restrained: 1, prone: 1, wet: 1, orb: 10 };
+        restrained: 1, prone: 1, wet: 1, bleeding: 1, burning: 1, orb: 10 };
       return CONDITIONS.filter((c) => expect[c.key] !== c.max)
         .map((c) => c.key + "=" + c.max + " (expected " + expect[c.key] + ")");
     });
