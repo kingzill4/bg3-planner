@@ -409,9 +409,19 @@ function renderActTabs() {
   const box = document.getElementById("act-tabs");
   box.innerHTML = "";
   const m = activeMember();
+  // The three tab groups in the app used the same look and three different levels
+  // of markup: the main nav and the Loadout pair were proper tablists, while these
+  // — visually identical — were plain buttons with nothing saying which act was
+  // current. Only the act buttons are tabs; "Copy forward" sits in the same row
+  // and is an action, the same trap as the scroll-mode button in the main nav.
+  box.setAttribute("role", "tablist");
+  box.setAttribute("aria-label", "Act");
   ACTS.forEach((a) => {
+    const current = state.activeAct === a;
     box.appendChild(el("button", {
-      class: "act-tab" + (state.activeAct === a ? " active" : ""),
+      class: "act-tab" + (current ? " active" : ""),
+      role: "tab",
+      "aria-selected": current ? "true" : "false",
       onclick: () => { state.activeAct = a; saveCurrent(); renderPlanner(); }
     }, [
       "Act " + a,

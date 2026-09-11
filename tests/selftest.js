@@ -147,6 +147,33 @@ const SelfTest = (() => {
     // without asking the server. That is how a change can be live and invisible at
     // once — it happened, and cost a quarter of an hour of chasing a phantom.
     // The content hash in each URL is what makes a changed file a different file.
+    // Three groups of tabs shared one look and three different levels of markup:
+    // the main nav and the Loadout pair announced themselves properly while the
+    // act tabs, visually identical, were plain buttons. Same component, same
+    // contract — a group that looks like tabs has to behave like tabs.
+    check("References", "every tab group is marked up the same way", () => {
+      const doc = typeof document === "undefined" ? null : document;
+      if (!doc) return true;
+      const groups = [...doc.querySelectorAll("nav.tabs, .act-tabs")];
+      if (!groups.length) return true;
+      const bad = [];
+      groups.forEach((g) => {
+        const tabs = [...g.querySelectorAll('button[role="tab"]')];
+        if (!tabs.length) {
+          bad.push((g.className || g.tagName) + ": no button carries role=tab");
+          return;
+        }
+        if (g.getAttribute("role") !== "tablist") {
+          bad.push((g.className || g.tagName) + ": container is not a tablist");
+        }
+        const selected = tabs.filter((t) => t.getAttribute("aria-selected") === "true");
+        if (selected.length !== 1) {
+          bad.push((g.className || g.tagName) + ": " + selected.length + " tabs marked selected");
+        }
+      });
+      return bad;
+    });
+
     check("References", "every local script and stylesheet is version-stamped", () => {
       const doc = typeof document === "undefined" ? null : document;
       if (!doc) return true;
