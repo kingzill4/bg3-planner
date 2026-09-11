@@ -304,7 +304,11 @@ function renderRaceTraits(m) {
   traits.forEach((t) => {
     bag.appendChild(withDetail(el("span", { class: "sub-chip" }, [t.n]), t.n, t.d, [race.name]));
   });
-  derived.forEach((b) => bag.appendChild(el("span", { class: "race-trait" }, [b])));
+  // Same chip as the traits beside them, only dimmer. A second colour made the
+  // derived facts louder than the named traits they sit next to, which is exactly
+  // backwards; what actually separates them is that one opens and the other does
+  // not, and that is the hover's job, not the fill's.
+  derived.forEach((b) => bag.appendChild(el("span", { class: "sub-chip derived" }, [b])));
   row.appendChild(bag);
   list.appendChild(row);
   box.appendChild(list);

@@ -57,8 +57,9 @@
   // ses donnees : les sections vers lesquelles renvoie "Still to choose" doivent
   // exister dans index.html. Cette page n'est pas index.html, on va donc le lire.
   const appHtml = await fetch("../index.html").then((x) => x.text()).catch(() => "");
+  const appCss = await fetch("../style.css").then((x) => x.text()).catch(() => "");
 
-  const r = runSelfTest(appHtml);
+  const r = runSelfTest(appHtml, appCss);
   const out = document.getElementById("out");
   out.innerHTML = "";
   const score = document.createElement("div");

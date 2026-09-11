@@ -20,6 +20,7 @@ const SelfTest = (() => {
   // Le balisage de index.html, quand la page de test a pu le charger : certaines
   // verifications portent sur l'application elle-meme et pas sur ses donnees.
   let APP_HTML = "";
+  let APP_CSS = "";
 
   function check(group, name, fn) {
     let pass = false, detail = "";
@@ -61,8 +62,9 @@ const SelfTest = (() => {
   const SUB_NAMES = SUBCLASS_LIST.map((s) => s.name);
   const RACE_NAMES = RACES.map((r) => r.name);
 
-  function run(appHtml) {
+  function run(appHtml, appCss) {
     APP_HTML = appHtml || "";
+    APP_CSS = appCss || "";
     results = [];
 
     // ---- 1. Identity ------------------------------------------------------
@@ -171,6 +173,44 @@ const SelfTest = (() => {
           .map((d) => d.toLowerCase()));
         const seen = new Set();
         shown.forEach((s) => { if (seen.has(s)) bad.push(r.name + ": " + s); seen.add(s); });
+      });
+      return bad;
+    });
+
+    // The sheet drifted into five chip treatments, seven pill radii between 8 and
+    // 20px and thirteen sizes of the same small uppercase label, none of which
+    // meant anything. Three shapes now come from tokens; a member of a family that
+    // sets its own size is the drift starting again.
+    check("Shape", "the chip, pill and label tokens exist", () => {
+      if (!APP_CSS) return true;
+      return ["--chip-font", "--chip-pad", "--chip-radius",
+              "--pill-font", "--pill-pad", "--pill-radius",
+              "--btn-font", "--btn-font-sm", "--btn-radius",
+              "--section-font", "--label-font"]
+        .filter((t) => !APP_CSS.includes(t + ":"));
+    });
+    check("Shape", "no chip or pill sets its own size", () => {
+      if (!APP_CSS) return true;
+      const family = ["sub-chip", "pending-chip", "opt-grant", "bg-grant", "opt-row-badge",
+                      "party-skill", "sheet-badge", "act-count", "rarity-chip", "doll-count",
+                      "card-ability", "pickup-act-count", "sub-chip-count"];
+      const bad = [];
+      // Rule by rule: a selector naming one of these must not also pin geometry,
+      // unless it is the shared rule that defines it from the tokens.
+      APP_CSS.replace(/\/\*[\s\S]*?\*\//g, "").split("}").forEach((block) => {
+        const [sel, body] = block.split("{");
+        if (!sel || !body) return;
+        if (body.includes("var(--chip-") || body.includes("var(--pill-")) return;
+        // A pseudo-element is its own glyph — the arrow on a pending chip may size
+        // itself. And ".bg-grant-mod" is a different thing from ".bg-grant".
+        if (/::/.test(sel)) return;
+        const named = family.filter((f) => new RegExp("\\." + f + "(?![\\w-])").test(sel));
+        if (!named.length) return;
+        ["font-size", "border-radius"].forEach((prop) => {
+          if (new RegExp("(^|;|\\s)" + prop + "\\s*:").test(body)) {
+            bad.push(named[0] + " sets " + prop);
+          }
+        });
       });
       return bad;
     });
@@ -775,8 +815,8 @@ const SelfTest = (() => {
   return { run, summary };
 })();
 
-function runSelfTest(appHtml) {
-  const res = SelfTest.run(appHtml);
+function runSelfTest(appHtml, appCss) {
+  const res = SelfTest.run(appHtml, appCss);
   const s = SelfTest.summary(res);
   return { ...s, results: res };
 }

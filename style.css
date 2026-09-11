@@ -53,6 +53,43 @@
 
   --serif: 'Linux Libertine', 'Georgia', 'Book Antiqua', 'Times New Roman', serif;
   --sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* ----------------------------------------------------------------
+     Trois formes, et trois seulement
+     ----------------------------------------------------------------
+     Le site s'etait mis a en dessiner une par endroit : on comptait sept
+     pastilles rondes entre 9 et 20 px de rayon, six etiquettes carrees de
+     10,5 a 11,5 px, et des boutons a six corps de texte differents. Rien de
+     tout cela ne voulait dire quoi que ce soit — c'etait juste la main qui
+     avait tremble a chaque fois.
+
+       etiquette  une chose que le personnage possede ou recoit
+       pastille   un compte, ou un resume d'un mot
+       bouton     quelque chose qui se clique et agit
+
+     La couleur, elle, garde son sens : or pour ce qui est accorde, bleu pour
+     un fait, neutre pour ce qui s'ouvre. Une seule regle par famille, et
+     l'ecran large ne change que ces valeurs.
+     ---------------------------------------------------------------- */
+  --chip-font: 11.5px;
+  --chip-pad: 3px 10px;
+  --chip-radius: 3px;
+
+  --pill-font: 11px;
+  --pill-pad: 2px 10px;
+  --pill-radius: 999px;
+
+  --btn-font: 13.5px;
+  --btn-font-sm: 12px;
+  --btn-radius: 4px;
+
+  /* Les petits libelles en capitales. Il y en avait treize tailles entre 8 et
+     11,5 px, et autant d'interlettrages : la meme chose ecrite treize fois.
+     Deux rangs suffisent — le titre d'un bloc, et la legende d'une valeur. */
+  --section-font: 10.5px;
+  --section-track: .1em;
+  --label-font: 9.5px;
+  --label-track: .08em;
 }
 
 * { box-sizing: border-box; }
@@ -94,11 +131,12 @@ h1, h2, h3 { font-weight: 600; margin: 0; font-family: var(--serif); }
 /* ---------------------------------------------------------------- controls */
 button {
   font-family: var(--sans);
+  font-size: var(--btn-font);
   cursor: pointer;
   border: 1px solid var(--border);
   background: linear-gradient(180deg, #1f2b39, #17212d);
   color: var(--text);
-  border-radius: 4px;
+  border-radius: var(--btn-radius);
   padding: 6px 13px;
   transition: border-color .15s, background .15s, color .15s;
 }
@@ -111,7 +149,10 @@ button.primary {
   text-shadow: 0 1px 0 rgba(255,255,255,.25);
 }
 button.primary:hover { background: linear-gradient(180deg, #e2bc76, #ab8344); }
-button.ghost { background: transparent; border-color: transparent; padding: 4px 6px; }
+button.ghost {
+  background: transparent; border-color: transparent;
+  font-size: var(--btn-font-sm); padding: 4px 7px;
+}
 button.danger { color: #d9614f; }
 button.danger:hover { border-color: #7a3a2c; }
 
@@ -322,15 +363,14 @@ a.wikilink:hover { text-decoration: underline; }
 .card-roll { font-size: 13px; font-weight: 700; color: var(--dmg-physical); font-family: var(--serif); }
 .card-abilities { display: flex; flex-wrap: wrap; gap: 4px; }
 .card-ability {
-  font-size: 11px; padding: 2px 8px; border-radius: 9px; cursor: help;
-  background: rgba(212,175,106,.10); border: 1px solid var(--gold-dim); color: var(--gold);
+  cursor: help;
+  background: rgba(212,175,106,.10); border-color: var(--gold-dim); color: var(--gold);
 }
-.details-btn { font-size: 12px; color: var(--text-dim); }
+.details-btn { color: var(--text-dim); }
 .details-btn:hover { color: var(--gold); }
 
 .badge {
-  display: inline-block; font-size: 11px; padding: 2px 6px; border-radius: 3px;
-  background: var(--bg-panel); color: var(--text-dim); border: 1px solid var(--border);
+  background: var(--bg-panel); color: var(--text-dim); border-color: var(--border);
 }
 
 /* spell cards reuse the item card, tinted toward the arcane */
@@ -359,7 +399,7 @@ a.wikilink:hover { text-decoration: underline; }
 .party-member-pill input[type="text"]:focus { box-shadow: none; }
 .party-member-pill button.remove-member { border: none; background: transparent; color: var(--text-dim); padding: 2px 6px; }
 .party-member-pill button.remove-member:hover { color: #d9614f; }
-.add-member-btn { border-radius: 20px; font-size: 13px; }
+.add-member-btn { border-radius: 999px; }
 
 .equip-target-bar { font-size: 13px; color: var(--text-dim); margin-bottom: 10px; }
 .equip-target-bar strong { color: var(--gold); font-family: var(--serif); }
@@ -451,19 +491,18 @@ a.wikilink:hover { text-decoration: underline; }
 .act-tabs { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
 .act-tab {
   display: flex; align-items: center; gap: 6px;
-  font-family: var(--serif); font-size: 13px; padding: 5px 12px;
-  border-radius: 4px; color: var(--text-dim);
+  font-family: var(--serif); font-size: var(--btn-font); padding: 5px 12px;
+  border-radius: var(--btn-radius); color: var(--text-dim);
 }
 .act-tab.active {
   color: var(--gold-bright); border-color: var(--gold-dim);
   background: linear-gradient(180deg, rgba(212,175,106,.16), rgba(212,175,106,.04));
 }
 .act-count {
-  font-size: 10px; font-family: var(--sans); min-width: 17px; text-align: center;
-  background: rgba(0,0,0,.4); border-radius: 9px; padding: 1px 5px; color: var(--text-dim);
+  min-width: 20px; background: rgba(0,0,0,.4); color: var(--text-dim);
 }
 .act-tab.active .act-count { color: var(--gold); }
-.act-copy { font-size: 11px; color: var(--blue); padding: 5px 10px; }
+.act-copy { font-size: var(--btn-font-sm); color: var(--blue); padding: 5px 10px; }
 .act-copy:hover { color: var(--blue-bright); border-color: var(--blue-deep); }
 
 /* --- paper doll --- */
@@ -476,9 +515,8 @@ a.wikilink:hover { text-decoration: underline; }
 .doll-figure svg { width: 132px; height: 222px; fill: #263444; }
 .doll-figure { filter: drop-shadow(0 0 22px rgba(212,175,106,.10)); }
 .doll-count {
-  margin-top: 10px; font-size: 12px; color: var(--gold); font-family: var(--serif);
-  background: rgba(212,175,106,.07); border: 1px solid var(--gold-dim);
-  border-radius: 20px; padding: 3px 13px;
+  margin-top: 10px; color: var(--gold);
+  background: rgba(212,175,106,.07); border-color: var(--gold-dim);
 }
 .doll-bottom {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
@@ -512,9 +550,7 @@ a.wikilink:hover { text-decoration: underline; }
 .slot-icon img { width: 100%; height: 100%; object-fit: contain; }
 .slot-icon-empty { font-size: 15px; opacity: .3; filter: grayscale(1); }
 .slot-text { min-width: 0; flex: 1; }
-.slot .slot-label {
-  font-size: 9px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim);
-}
+.slot .slot-label { color: var(--text-dim); }
 .slot .slot-item {
   font-size: 12.5px; font-weight: 600; line-height: 1.25; font-family: var(--serif);
   overflow: hidden; text-overflow: ellipsis; display: -webkit-box;
@@ -558,7 +594,7 @@ a.wikilink:hover { text-decoration: underline; }
   width: 100%; font-size: 11.5px; color: var(--text-dim);
   display: flex; align-items: center; gap: 8px; margin-top: 3px;
 }
-.respec-btn { font-size: 10.5px; color: var(--blue); padding: 2px 6px; }
+.respec-btn { color: var(--blue); padding: 2px 7px; }
 .respec-btn:hover { color: var(--blue-bright); }
 .respec-note { font-size: 10.5px; color: var(--gold-dim); font-style: italic; }
 .points-origin { color: var(--gold); font-family: var(--serif); font-style: italic; }
@@ -631,10 +667,16 @@ a.wikilink:hover { text-decoration: underline; }
 }
 
 .race-traits { margin: -6px 0 14px; }
-.race-trait {
-  font-size: 10px; padding: 2px 7px; border-radius: 3px;
-  background: rgba(79,155,214,.10); border: 1px solid var(--blue-deep); color: var(--blue-bright);
+/* Un fait que l'outil a calcule — vitesse, resistance — a cote des traits
+   nommes qui l'entourent. Meme etiquette, juste plus sourde : une deuxieme
+   couleur les rendait plus voyants que les traits eux-memes, ce qui est
+   l'inverse de ce qu'il faut. Ce qui les distingue, c'est qu'ils ne
+   s'ouvrent pas, et cela se voit au survol. */
+.sub-chip.derived {
+  background: rgba(0,0,0,.16); border-color: var(--border-soft);
+  color: var(--text-dim); cursor: default;
 }
+.sub-feature:not(.locked) .sub-chip.derived { color: var(--text-dim); }
 
 .class-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
 #total-level { font-size: 11px; color: var(--gold); font-family: var(--serif); }
@@ -681,11 +723,8 @@ a.wikilink:hover { text-decoration: underline; }
 .pending-head .sheet-badge { margin-left: 0; }
 .pending-set { display: flex; flex-wrap: wrap; gap: 5px; }
 .pending-chip {
-  display: inline-flex; align-items: baseline; gap: 6px;
-  font-family: var(--sans); font-size: 10.5px; line-height: 1.45;
-  padding: 3px 9px; border-radius: 3px; cursor: pointer;
-  background: rgba(212,175,106,.12); border: 1px solid var(--gold-dim);
-  color: var(--gold-bright);
+  cursor: pointer;
+  background: rgba(212,175,106,.12); border-color: var(--gold-dim); color: var(--gold-bright);
 }
 .pending-chip::after { content: "→"; font-size: 10px; opacity: .65; }
 .pending-chip:hover { background: rgba(212,175,106,.22); border-color: var(--gold); }
@@ -819,8 +858,7 @@ a.wikilink:hover { text-decoration: underline; }
 
 .rarity-bar { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
 .rarity-chip {
-  font-size: 11px; padding: 2px 9px; border-radius: 10px;
-  background: rgba(0,0,0,.3); border: 1px solid var(--border); color: var(--text-dim);
+  background: rgba(0,0,0,.3); border-color: var(--border); color: var(--text-dim);
 }
 .rarity-chip[data-rarity="uncommon"] { border-color: var(--rarity-uncommon); color: var(--rarity-uncommon); }
 .rarity-chip[data-rarity="rare"] { border-color: var(--rarity-rare); color: var(--rarity-rare); }
@@ -852,8 +890,7 @@ a.set-tag:hover { background: rgba(79,155,214,.2); }
 .effects-list { display: flex; flex-direction: column; gap: 12px; }
 .effect-row { display: flex; gap: 10px; align-items: flex-start; }
 .effect-row .effect-slot {
-  font-size: 9px; color: var(--text-dim); min-width: 62px;
-  text-transform: uppercase; letter-spacing: .07em; padding-top: 3px;
+  color: var(--text-dim); min-width: 62px; padding-top: 3px;
 }
 .effect-text { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 5px; }
 .effect-name {
@@ -1152,9 +1189,7 @@ footer.foot a:hover { color: var(--gold); }
 }
 .bg-grants { display: flex; flex-wrap: wrap; gap: 5px; }
 .bg-grant {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 10.5px; padding: 3px 8px; border-radius: 3px;
-  background: rgba(212,175,106,.10); border: 1px solid var(--gold-dim); color: var(--gold-bright);
+  background: rgba(212,175,106,.10); border-color: var(--gold-dim); color: var(--gold-bright);
 }
 .bg-grant-mod { font-family: var(--serif); font-weight: 600; }
 .bg-grant.overlap { background: rgba(217,97,79,.10); border-color: #8a4a3d; color: #e08b7a; }
@@ -1361,7 +1396,7 @@ footer.foot a:hover { color: var(--gold); }
 }
 
 .party-skills { display: flex; flex-wrap: wrap; gap: 5px; }
-.party-skill { font-size: 10.5px; padding: 3px 8px; border-radius: 3px; border: 1px solid var(--border-soft); }
+.party-skill { border-color: var(--border-soft); }
 .party-skill.covered { background: rgba(111,191,111,.10); border-color: #4d8a4d; color: #8fd98f; }
 .party-skill.uncovered { background: rgba(0,0,0,.25); color: var(--text-dim); }
 .party-warn { margin-top: 10px; font-size: 11.5px; line-height: 1.5; color: #e08b7a; }
@@ -1369,7 +1404,7 @@ footer.foot a:hover { color: var(--gold); }
 /* --- A/B build comparison --- */
 .compare-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
 .compare-bar .meta { flex: 1; min-width: 0; font-size: 10.5px; }
-#pin-build-btn { color: var(--gold); font-size: 11px; }
+#pin-build-btn { color: var(--gold); }
 #pin-build-btn:hover { color: var(--gold-bright); }
 .compare-table { display: flex; flex-direction: column; gap: 3px; margin-top: 8px; }
 .compare-row {
@@ -1387,10 +1422,7 @@ footer.foot a:hover { color: var(--gold); }
 .compare-delta.same { color: var(--text-dim); font-weight: 400; }
 
 .pickup-act { justify-content: space-between; }
-.pickup-act-count {
-  font-family: var(--sans); font-size: 11px; color: var(--text-dim);
-  background: rgba(0,0,0,.35); border-radius: 10px; padding: 2px 10px;
-}
+.pickup-act-count { color: var(--text-dim); background: rgba(0,0,0,.35); }
 
 /* --- character sheet: give the sections room to breathe --- */
 .stats-panel .stats-subtitle {
@@ -1436,11 +1468,22 @@ footer.foot a:hover { color: var(--gold); }
      bleu    un fait sur le personnage, vitesse ou sens      (.race-trait, .opt-row-badge)
      or      ce qui est accorde, ou ce qui compte            (.bg-grant, .opt-grant, .sub-chip-count)
    ------------------------------------------------------------------ */
-.sub-chip, .race-trait, .opt-row-badge, .opt-grant, .bg-grant {
+.sub-chip, .pending-chip, .opt-row-badge, .opt-grant, .bg-grant,
+.party-skill, .badge {
   display: inline-flex; align-items: baseline; gap: 6px;
-  font-size: 10.5px; line-height: 1.45;
-  padding: 2px 7px; border-radius: 3px;
+  font-family: var(--sans); font-size: var(--chip-font); line-height: 1.45;
+  padding: var(--chip-pad); border-radius: var(--chip-radius);
   border: 1px solid transparent;
+}
+
+/* La famille des pastilles : un compte, ou un resume d'un mot. Ronde, plus
+   petite, jamais cliquable. */
+.sheet-badge, .act-count, .rarity-chip, .doll-count, .card-ability,
+.pickup-act-count, .sub-chip-count {
+  display: inline-flex; align-items: baseline; justify-content: center;
+  font-family: var(--sans); font-size: var(--pill-font); line-height: 1.5;
+  padding: var(--pill-pad); border-radius: var(--pill-radius);
+  border: 1px solid transparent; white-space: nowrap;
 }
 .sub-chip {
   cursor: help;
@@ -1451,10 +1494,8 @@ footer.foot a:hover { color: var(--gold); }
 
 /* Une pastille qui cache huit choix doit le dire. */
 .sub-chip-count {
-  margin-left: 6px; padding: 0 5px; border-radius: 8px;
-  background: rgba(198,162,90,.16); border: 1px solid var(--gold-dim);
-  color: var(--gold-dim); font-size: 10px; letter-spacing: .02em;
-  white-space: nowrap;
+  margin-left: 2px; padding: 0 7px; letter-spacing: .02em;
+  background: rgba(198,162,90,.16); border-color: var(--gold-dim); color: var(--gold-dim);
 }
 .sub-chip:hover .sub-chip-count { color: var(--gold-bright); }
 .sub-feature-level {
@@ -1495,8 +1536,7 @@ footer.foot a:hover { color: var(--gold); }
 .sheet-section > summary:hover { color: var(--gold-bright); }
 .sheet-section > summary:hover::after { border-color: var(--gold); }
 .sheet-badge {
-  margin-left: auto; font-family: var(--sans); font-size: 10px; color: var(--text-dim);
-  background: rgba(0,0,0,.35); border-radius: 10px; padding: 2px 9px; white-space: nowrap;
+  margin-left: auto; color: var(--text-dim); background: rgba(0,0,0,.35);
 }
 .sheet-body { padding: 2px 0 14px; }
 .sheet-body > .char-field { margin-bottom: 10px; }
@@ -1539,7 +1579,6 @@ footer.foot a:hover { color: var(--gold); }
 .opt-row-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .opt-row-name { font-family: var(--serif); font-size: 12.5px; color: var(--gold-bright); }
 .opt-row-badge {
-  text-transform: uppercase; letter-spacing: .06em;
   color: var(--blue-bright); background: rgba(79,155,214,.12); border-color: var(--blue-deep);
 }
 .opt-row-desc { font-size: 10.5px; line-height: 1.45; color: var(--text-dim); margin-top: 3px; }
@@ -1642,20 +1681,15 @@ footer.foot a:hover { color: var(--gold); }
 
 .slot { min-height: 66px; padding: 8px 11px; gap: 11px; }
 .slot-icon { width: 52px; height: 52px; }
-.slot .slot-label { font-size: 10px; }
 .slot .slot-item { font-size: 14px; }
 .slot-act { font-size: 9.5px; }
 .slot-icon-empty { font-size: 19px; }
 
 /* --- character sheet --- */
 .sheet-section > summary { font-size: 14.5px; padding: 13px 2px 11px; }
-.sheet-badge { font-size: 11px; padding: 2px 10px; }
 .char-field > span { font-size: 10px; }
 .stats-panel select, .stats-panel input[type="text"] { font-size: 13.5px; padding: 7px 10px; }
-/* Les pastilles grandissent ensemble : c'est tout l'interet de n'en avoir qu'une. */
-.sub-chip, .race-trait, .opt-row-badge, .opt-grant, .bg-grant {
-  font-size: 11.5px; padding: 3px 9px;
-}
+
 .sub-feature { font-size: 11.5px; padding: 3px 7px; }
 .sub-feature-level { font-size: 9.5px; }
 .derived-tile { padding: 10px 4px; }
@@ -1673,7 +1707,6 @@ footer.foot a:hover { color: var(--gold); }
 /* --- combat --- */
 .combat-icon { width: 52px; height: 52px; }
 .combat-weapon-text .combat-name { font-size: 15.5px; }
-.combat-weapon-text .combat-slot { font-size: 10px; }
 .combat-stat-value { font-size: 18px; }
 .combat-stat-label { font-size: 9.5px; }
 .combat-breakdown, .combat-note { font-size: 11.5px; }
@@ -1696,7 +1729,6 @@ footer.foot a:hover { color: var(--gold); }
 .party-who img { width: 38px; height: 38px; }
 .party-num { font-size: 17px; }
 .party-cell-dim { font-size: 12.5px; }
-.party-skill { font-size: 11.5px; padding: 4px 9px; }
 
 /* --- popover --- */
 .detail-pop { width: 340px; }
@@ -2061,4 +2093,23 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
   }
   .party-who { grid-column: 1 / -1; }
   .party-head { display: none; }
+}
+
+/* ----------------------------------------------------------------
+   Les petits libelles en capitales
+   ----------------------------------------------------------------
+   Un rang pour ce qui titre un bloc, un rang pour ce qui legende une valeur.
+   La couleur reste a chacun : or sourd pour un titre de section, gris pour
+   une legende, bleu quand la ligne parle d'un cout.
+   ---------------------------------------------------------------- */
+.stats-subtitle, .cond-head, .subrace-label,
+.level-choices-head, .level-ahead-head {
+  font-size: var(--section-font); letter-spacing: var(--section-track);
+  text-transform: uppercase;
+}
+.derived-label, .slot-label, .slot-act, .doll-vital-label, .effect-row .effect-slot,
+.sb-key, .turn-total-label, .turn-step-cost, .combat-slot, .combat-stat-label,
+.dmg-part-type, .level-class-range, .char-field > span {
+  font-size: var(--label-font); letter-spacing: var(--label-track);
+  text-transform: uppercase;
 }
