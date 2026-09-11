@@ -492,9 +492,26 @@ const SelfTest = (() => {
         if (!raceById[b.race]) bad.push(b.id + " race " + b.race);
         if (!BACKGROUNDS[b.background]) bad.push(b.id + " background " + b.background);
         (b.feats || []).forEach((f) => { if (!FEATS[f]) bad.push(b.id + " feat " + f); });
+        // The kits held a style's display name where everything else holds its id,
+        // so hasStyle never matched and the Greatsword Fighter's Great Weapon
+        // Fighting had never once reached its damage. An id that resolves is the
+        // difference between a style being chosen and a style doing anything.
+        if (b.kit && b.kit.style && !STYLE_LIST.some((s) => s.id === b.kit.style)) {
+          bad.push(b.id + " style " + b.kit.style);
+        }
         Object.entries(b.gear || {}).forEach(([slot, id]) => {
           if (!itemsById[id]) bad.push(b.id + " " + slot + " " + id);
         });
+      });
+      return bad;
+    });
+    check("Rules", "a starter's fighting style actually applies", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        if (!b.kit || !b.kit.style) return;
+        const m = memberFromStarter(b);
+        if (!styleSlots(m)) return;          // the class grants none at this level
+        if (!hasStyle(m, b.kit.style)) bad.push(b.name + ": " + b.kit.style + " never took effect");
       });
       return bad;
     });

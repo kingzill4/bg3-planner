@@ -60,7 +60,7 @@ const STARTER_BUILDS = [
     // the best armour of this category that the character may legally wear are
     // resolved from the data at build time. Accessories stay empty — rings,
     // amulet and gloves are where the decisions worth making live.
-    kit: { weapon: "Greatsword", armour: "Heavy Armour", style: "Great Weapon Fighting" }
+    kit: { weapon: "Greatsword", armour: "Heavy Armour", style: "great-weapon-fighting" }
   },
   {
     id: "dual-wield-rogue",
@@ -70,7 +70,7 @@ const STARTER_BUILDS = [
     feats: [],
     // both hands Light, so it dual-wields without the Dual Wielder feat
     kit: { weapon: "Shortsword", offhand: "Dagger", armour: "Light Armour",
-           style: "Two-Weapon Fighting" }
+           style: "two-weapon-fighting" }
   },
   {
     id: "evocation-wizard",
@@ -86,7 +86,7 @@ const STARTER_BUILDS = [
     shows: "Divine Smite spending a spell slot for damage",
     cls: "paladin", subclass: "oath-of-vengeance", race: "zariel-tiefling",
     background: "noble", feats: [],
-    kit: { weapon: "Longsword", armour: "Heavy Armour", shield: true, style: "Duelling" }
+    kit: { weapon: "Longsword", armour: "Heavy Armour", shield: true, style: "duelling" }
   },
   {
     id: "life-cleric",
@@ -220,9 +220,18 @@ function memberFromStarter(build, id) {
   // A fighting style only if the class actually grants one. Writing the kit's
   // style in unconditionally gave the Rogue a style it has no slot for — an
   // illegal sheet that still rendered, which is the worst kind.
+  //
+  // A Champion Fighter at 10 has two slots and the kit names one, so the starter
+  // shipped reading "1 / 2 fighting styles" — the same half-built sheet the skills
+  // and feats below exist to avoid. The rest are filled from what this build can
+  // actually take, skipping anything already chosen.
   const styleRoom = styleSlots(m);
   if (styleRoom > 0 && build.kit && build.kit.style) {
     m.styles = [build.kit.style];
+    availableStyles(m).forEach((s) => {
+      if (m.styles.length >= styleRoom) return;
+      if (!m.styles.includes(s.id)) m.styles.push(s.id);
+    });
   }
 
   // Skills from this class's list, up to its budget. A starter that arrives with
