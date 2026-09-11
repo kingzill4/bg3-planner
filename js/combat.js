@@ -1111,8 +1111,20 @@ function renderCombat() {
       card.appendChild(alt);
       card.appendChild(el("div", { class: "combat-note" }, [
         "Sneak Attack and Divine Smite land once per turn, so they count on the Action " +
-        "only — not again on the bonus-action attack."
+        "only — not again on the bonus-action attack. Both are spent on a critical " +
+        "when the turn produces one, which is what the numbers assume."
       ]));
+      // Resistance is "halved (rounded down)" per hit. These figures are averages,
+      // and an average cannot carry a per-roll floor — so a resisted number here
+      // runs about a quarter point high. Saying so is better than a correction
+      // nobody could check against their own arithmetic.
+      if (targetDefence()) {
+        card.appendChild(el("div", { class: "combat-note" }, [
+          "Resistance halves each hit and rounds down. These are averages, so they " +
+          "do not carry that rounding: expect roughly a quarter point less per " +
+          "resisted hit than shown."
+        ]));
+      }
     }
     box.appendChild(card);
   }

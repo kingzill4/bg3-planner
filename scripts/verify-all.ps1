@@ -17,6 +17,9 @@ $checks = @(
     @{ name = "sous-classes"; script = "verify-subclasses.ps1" }
     @{ name = "backgrounds";  script = "verify-backgrounds.ps1" }
     @{ name = "multiclasse";  script = "verify-multiclass.ps1" }
+    # Celui-ci ne verifie pas des donnees scrapees mais les regles ecrites a la
+    # main dans js/combat.js, contre les pages qui les enoncent.
+    @{ name = "combat";       script = "verify-combat.ps1" }
 )
 
 $failed = @()
