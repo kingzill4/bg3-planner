@@ -558,6 +558,22 @@ function saveCurrent() {
   try { localStorage.setItem(STORAGE_CURRENT, JSON.stringify(state)); } catch (e) { /* no storage */ }
 }
 
+// Small per-viewer preferences — which sections are folded open, nothing that
+// belongs to a build. They live only in this browser, and a browser that refuses
+// storage (a private window, site data blocked) must still render the page, so
+// every read falls back to the default rather than throwing.
+function readPref(key, fallback) {
+  try {
+    const raw = localStorage.getItem("bg3-planner:" + key);
+    return raw === null ? fallback : JSON.parse(raw);
+  } catch (e) { return fallback; }
+}
+
+function writePref(key, value) {
+  try { localStorage.setItem("bg3-planner:" + key, JSON.stringify(value)); }
+  catch (e) { /* no storage */ }
+}
+
 function loadBuilds() {
   try { return JSON.parse(localStorage.getItem(STORAGE_BUILDS) || "{}"); }
   catch (e) { return {}; }

@@ -363,9 +363,16 @@ function renderLevelPath(m) {
   });
   if (!rows.length) return;
 
+  // Open by default. This is the answer to the question a build planner exists to
+  // answer — what a level buys, and what a multiclass split costs on the way — and
+  // it was folded shut behind a label that did not say so. The viewer's own choice
+  // wins over the default and survives a re-render and a reload.
   const wrap = el("details", { class: "level-path" });
+  wrap.open = readPref("level-path-open", true);
+  wrap.addEventListener("toggle", () => writePref("level-path-open", wrap.open));
   wrap.appendChild(el("summary", {}, [
     el("span", {}, ["Level path"]),
+    el("span", { class: "level-path-hint" }, ["what each level gives you"]),
     el("span", { class: "sheet-badge" }, ["Character level " + charLevel])
   ]));
 

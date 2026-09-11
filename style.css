@@ -1702,6 +1702,13 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
 }
 .level-path > summary::-webkit-details-marker { display: none; }
 .level-path > summary:hover { color: var(--gold-bright); }
+/* "Level path" alone does not say what is inside it. The hint sits between the
+   name and the badge, and is the first thing to go when the column is narrow. */
+.level-path-hint {
+  flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; font-family: var(--sans); font-size: 10.5px;
+  color: var(--text-dim); font-style: italic;
+}
 .level-path-list { display: flex; flex-direction: column; gap: 2px; padding-bottom: 8px; }
 /* A taken step is now two columns — the character level, then what it gave. The
    class icon moved up to a heading per run, because repeating it on every row
