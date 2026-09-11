@@ -1,0 +1,50 @@
+name: A rule or number is wrong
+description: The tool disagrees with the game or the wiki
+labels: ["data", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the report worth the most. The whole point of this tool is that its
+        numbers are the wiki's numbers, so a case where they are not is the bug
+        that matters — more than anything cosmetic.
+
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      placeholder: Damage per turn · the Wet condition · Dragonborn's resistance
+    validations:
+      required: true
+
+  - type: input
+    id: shown
+    attributes:
+      label: What the tool shows
+      placeholder: 32.2 damage per turn
+    validations:
+      required: true
+
+  - type: input
+    id: correct
+    attributes:
+      label: What it should show
+      placeholder: 48.3 — Haste keeps Extra Attack outside Honour mode
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: The wiki page that says so
+      description: >
+        A link to the bg3.wiki page, and the sentence on it, if you have one. Not
+        required — a report without a source is still worth filing, it just takes
+        longer to check.
+      placeholder: https://bg3.wiki/wiki/Hastened_(Condition)
+
+  - type: input
+    id: build
+    attributes:
+      label: Share link
+      placeholder: https://kingzill4.github.io/bg3-planner/#...

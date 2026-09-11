@@ -1084,6 +1084,13 @@ footer.foot a:hover { color: var(--gold); }
 }
 .foot-links a { color: var(--gold-dim); text-decoration: none; }
 .foot-links a:hover { color: var(--gold); text-decoration: underline; }
+/* a button, because it has to gather the build before opening anything — styled
+   as the links beside it, because to a reader it is the same kind of thing */
+.foot-link-btn {
+  background: none; border: none; padding: 0; font: inherit; cursor: pointer;
+  color: var(--gold-dim);
+}
+.foot-link-btn:hover { color: var(--gold); text-decoration: underline; }
 .foot-sep { color: var(--text-dim); opacity: .5; }
 .foot-note { color: var(--text-dim); font-size: 11px; opacity: .7; }
 

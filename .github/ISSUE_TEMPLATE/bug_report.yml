@@ -1,0 +1,48 @@
+name: Bug report
+description: A number looks wrong, something is broken, or the page misbehaves
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The **⚑ Report a bug** link at the bottom of the planner fills most of this
+        in for you, including a link to the exact build you were looking at. Using
+        it saves a round trip.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      placeholder: The damage per turn showed 0 after I equipped a second weapon.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: input
+    id: build
+    attributes:
+      label: Share link
+      description: >
+        The 📋 Share button copies a link that carries your whole party. Pasting it
+        here means the bug can be reproduced exactly rather than guessed at.
+      placeholder: https://kingzill4.github.io/bg3-planner/#...
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and screen size
+      placeholder: Firefox 130 on Windows, 1920×1080 — or "phone, Chrome"
+
+  - type: markdown
+    attributes:
+      value: |
+        **If a number is wrong, the wiki settles it.** Every rule and value in this
+        tool is taken from bg3.wiki, so a link to the page that disagrees is the
+        fastest possible fix — and if the wiki and the game disagree, say so and
+        the tool follows the game.

@@ -660,6 +660,52 @@ function initBuildCard() {
   });
 }
 
+// ---------------------------------------------------------------
+// Reporting a bug
+// ---------------------------------------------------------------
+// GitHub Issues already exists on a public repo, so the work here is not building
+// a form — it is making sure the report arrives with enough to act on. A bug
+// report that says "the damage is wrong" costs a round trip to find out which
+// character, which weapon and which browser; one that carries the share link is
+// reproducible on the first read.
+const REPO_URL = "https://github.com/kingzill4/bg3-planner";
+
+async function reportIssue() {
+  let share = "(could not build one)";
+  try { share = await buildShareUrl(); } catch (e) { /* keep the placeholder */ }
+
+  const m = activeMember();
+  const classes = memberClasses(m)
+    .map((e) => ((CLASSES[e.cls] || {}).label || e.cls) + " " + e.levels)
+    .join(" / ") || "none";
+  const tab = document.querySelector("nav.tabs button.active");
+
+  const body = [
+    "**What happened**",
+    "",
+    "",
+    "**What you expected instead**",
+    "",
+    "",
+    "---",
+    "*Filled in automatically — it tells me which build and which screen, so I can",
+    "reproduce it without asking:*",
+    "",
+    "- Build: " + share,
+    "- Character: " + (m.name || "unnamed") + " — " + classes +
+      ", " + ((raceById[m.race] || {}).name || "no race"),
+    "- Tab: " + (tab ? tab.textContent.trim() : "unknown"),
+    "- Screen: " + window.innerWidth + "×" + window.innerHeight,
+    "- Browser: " + navigator.userAgent
+  ].join("\n");
+
+  const url = REPO_URL + "/issues/new?labels=bug&title=" +
+    encodeURIComponent("") + "&body=" + encodeURIComponent(body);
+  // A share link can be long; GitHub truncates a very long query rather than
+  // failing, and the prose above survives, so the report is still usable.
+  window.open(url, "_blank", "noopener");
+}
+
 function initShareControls() {
   document.getElementById("share-btn").addEventListener("click", async (e) => {
     const url = await buildShareUrl();
@@ -762,6 +808,8 @@ async function init() {
   initSpellControls();
   initCompareControls();
   initLoadoutViews();
+  const report = document.getElementById("report-bug-btn");
+  if (report) report.addEventListener("click", reportIssue);
   initBuildCard();
   initScrollMode();
   document.getElementById("app-subtitle").textContent =
