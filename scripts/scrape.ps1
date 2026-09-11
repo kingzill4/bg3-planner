@@ -305,11 +305,26 @@ foreach ($item in $index) {
 
     $act = Guess-Act ("$location $summary")
 
+    # Le nom interne de l'objet, celui que le jeu porte dans ses fichiers et dans
+    # une sauvegarde : "MAG_ElementalGish_ArcaneAcuity_Helmet" pour le Helmet of
+    # Arcane Acuity. Une sauvegarde .lsv ne contient QUE ce nom-la, jamais le nom
+    # affiche, donc sans lui aucun objet d'une partie ne peut etre relie a sa fiche.
+    #
+    # L'UUID est garde a cote mais ne sert pas au meme usage : celui que porte une
+    # sauvegarde est local a la partie et ne correspond pas au modele statique.
+    $flat = Strip-Html $html
+    $stats = $null
+    $sm = [regex]::Match($flat, '\bStats\s+([A-Za-z0-9_]{4,})')
+    if ($sm.Success) { $stats = $sm.Groups[1].Value }
+    $uuid = $null
+    $um = [regex]::Match($flat, '\bUUID\s+([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})')
+    if ($um.Success) { $uuid = $um.Groups[1].Value }
+
     $results.Add([PSCustomObject]@{
         id = $item.id; name = $item.name; type = $item.type; subtype = $subtype; rarity = $rarity
         act = $act; attunement = [bool]$attunement; summary = $summary; location = $location
         damage = $damage; ac = $acValue; details = $details; special = $special
-        cut = $cut; icon = $icon; wiki = $item.wiki
+        cut = $cut; icon = $icon; wiki = $item.wiki; stats = $stats; uuid = $uuid
     })
 }
 

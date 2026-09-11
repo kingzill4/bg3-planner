@@ -215,6 +215,37 @@ const SelfTest = (() => {
       return bad;
     });
 
+    // A .lsv save carries an item's internal name and nothing else — never the
+    // display name. "MAG_ElementalGish_ArcaneAcuity_Helmet" is all a save says
+    // about a Helmet of Arcane Acuity, so without this field no item in a save
+    // could ever be matched to its card. The wiki records it in the infobox.
+    // They are not unique, and that is the game's doing rather than a scraping
+    // fault: "+1 Breastplate" and "Breastplate" are both ARM_Breastplate_Body,
+    // "Bloody Amulet" and "Dog Collar" are both ARM_Amulet. A save holding one of
+    // those cannot say which it is, so any import has to show both. What must not
+    // happen is that becoming common enough to make an import meaningless.
+    check("Identity", "internal item names are nearly always unambiguous", () => {
+      const byStats = new Map();
+      ITEMS.forEach((i) => {
+        if (!i.stats) return;
+        if (!byStats.has(i.stats)) byStats.set(i.stats, []);
+        byStats.get(i.stats).push(i.name);
+      });
+      const shared = [...byStats.entries()].filter(([, names]) => names.length > 1);
+      return shared.length / byStats.size > 0.05
+        ? [shared.length + " of " + byStats.size + " internal names are shared"]
+        : [];
+    });
+    check("Shape", "most magical items carry their internal name", () => {
+      // Common items are largely vendor stock the wiki does not give a Stats row,
+      // and they are not what a build is made of. Anything rare or better is.
+      const wanted = ITEMS.filter((i) => ["rare", "veryrare", "legendary"].includes(i.rarity));
+      const have = wanted.filter((i) => i.stats).length;
+      return have / wanted.length < 0.8
+        ? [have + " of " + wanted.length + " rare-or-better items have one"]
+        : [];
+    });
+
     check("References", "every icon path is set", () =>
       [...ITEMS, ...SPELLS].filter((x) => !x.icon).map((x) => x.id));
     // GitHub Pages serves everything with max-age=600, so for ten minutes after a
