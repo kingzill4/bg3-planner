@@ -288,13 +288,19 @@ function renderRaceTraits(m) {
   const traits = (race.traits || []).filter((t) =>
     t.n && !/^(Base Racial Speed|Size)$/i.test(t.n));
   if (!traits.length) return;
+  // Same shape as every other list of things a build grants: a marker, then one
+  // chip per thing, each opening its own description. These used to be bare
+  // underlined text while subclass features next to them were boxed chips, so two
+  // lists that mean the same thing looked like two different kinds of content.
   const list = el("div", { class: "sub-features race-features" });
+  const row = el("div", { class: "sub-feature" });
+  row.appendChild(el("span", { class: "sub-feature-level" }, ["◆"]));
+  const bag = el("span", { class: "sub-feature-set" });
   traits.forEach((t) => {
-    const row = el("div", { class: "sub-feature" });
-    row.appendChild(el("span", { class: "sub-feature-level" }, ["◆"]));
-    row.appendChild(el("span", { class: "sub-feature-name" }, [t.n]));
-    list.appendChild(withDetail(row, t.n, t.d, [race.name]));
+    bag.appendChild(withDetail(el("span", { class: "sub-chip" }, [t.n]), t.n, t.d, [race.name]));
   });
+  row.appendChild(bag);
+  list.appendChild(row);
   box.appendChild(list);
 }
 
@@ -339,6 +345,21 @@ function renderLevelPath(m) {
   // records; a real playthrough may have interleaved them differently, and the
   // footnote below says so rather than implying a precision we do not have.
   let charLevel = 0;
+  // The progression table gives names; the class page's own level-by-level
+  // section gives what those names do, and the scraper now carries both. So a
+  // level-path entry answers the same click as every other feature on the sheet
+  // instead of being the one list you cannot interrogate.
+  const detailOf = (step, name) =>
+    (step.detail || []).find((d) => d.n === name) || null;
+  const describe = (cls, step, raw) => {
+    const d = detailOf(step, raw);
+    return {
+      label: labelFeature(cls, raw),
+      desc: d ? d.d : "",
+      opts: d && d.opts ? d.opts : []
+    };
+  };
+
   entries.forEach((entry) => {
     const cls = CLASSES[entry.cls];
     if (!cls) return;
@@ -347,7 +368,7 @@ function renderLevelPath(m) {
       charLevel++;
       rows.push({
         cls: cls.label, icon: cls.icon, level: step.level, charLevel,
-        features: (step.features || []).map((f) => labelFeature(entry.cls, f))
+        features: (step.features || []).map((f) => describe(entry.cls, step, f))
       });
     });
     // What one more level of this class would buy — kept out of the main list.
@@ -357,7 +378,7 @@ function renderLevelPath(m) {
     if (next && totalLevel(m) < MAX_LEVEL) {
       ahead.push({
         cls: cls.label, icon: cls.icon, level: next.level,
-        features: (next.features || []).map((f) => labelFeature(entry.cls, f))
+        features: (next.features || []).map((f) => describe(entry.cls, next, f))
       });
     }
   });
@@ -391,7 +412,21 @@ function renderLevelPath(m) {
     "Choose a subclass": "Subclass",
     "Fighting Style": "Fighting style"
   };
-  const isNothing = (f) => !f || f.trim() === "-";
+  const isNothing = (f) => !f || !f.label || f.label.trim() === "-";
+
+  // One chip per feature, opening what it does — the same object the race traits
+  // and the subclass features are made of, so the three lists on this sheet read
+  // as one kind of thing rather than three.
+  const featureChip = (f, extras) => {
+    const chip = el("span", { class: "sub-chip" }, [f.label]);
+    if (f.opts.length > 1) chip.appendChild(el("span", { class: "sub-chip-count" }, [
+      f.opts.length + " options"
+    ]));
+    return withDetail(chip, f.label, f.desc, [
+      ...extras,
+      ...f.opts.map((o) => o.n + (o.d ? " — " + o.d : ""))
+    ]);
+  };
 
   const list = el("div", { class: "level-path-list" });
   let lastClass = null;
@@ -401,7 +436,7 @@ function renderLevelPath(m) {
     const gained = [];
     (r.features || []).forEach((f) => {
       if (isNothing(f)) return;
-      const label = CHOICE_FEATURES[f];
+      const label = CHOICE_FEATURES[f.label];
       if (label) {
         if (!choices.has(label)) choices.set(label, []);
         choices.get(label).push(r.charLevel);
@@ -428,7 +463,9 @@ function renderLevelPath(m) {
     // the character level leads, because that is the number the game asks for
     row.appendChild(el("span", { class: "level-step-level", title: r.cls + " " + r.level },
       [String(r.charLevel)]));
-    row.appendChild(el("span", { class: "level-step-features" }, [gained.join(" · ")]));
+    const bag = el("span", { class: "level-step-features sub-feature-set" });
+    gained.forEach((f) => bag.appendChild(featureChip(f, [r.cls + " " + r.level])));
+    row.appendChild(bag);
     list.appendChild(row);
   });
   wrap.appendChild(list);
@@ -452,7 +489,10 @@ function renderLevelPath(m) {
           [el("img", { src: r.icon, alt: "", loading: "lazy" })]));
       }
       row.appendChild(el("span", { class: "level-step-level" }, [r.cls + " " + r.level]));
-      row.appendChild(el("span", { class: "level-step-features" }, [r.features.join(" · ")]));
+      const bag = el("span", { class: "level-step-features sub-feature-set" });
+      r.features.filter((f) => !isNothing(f))
+        .forEach((f) => bag.appendChild(featureChip(f, [r.cls + " " + r.level])));
+      row.appendChild(bag);
       next.appendChild(row);
     });
     wrap.appendChild(next);

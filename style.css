@@ -587,7 +587,11 @@ a.wikilink:hover { text-decoration: underline; }
 /* --- character sheet --- */
 .char-row { display: flex; gap: 10px; margin-bottom: 14px; }
 .char-field { display: flex; flex-direction: column; gap: 4px; flex: 1; }
-.char-field span { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); }
+/* Le libelle d'un champ, c'est-a-dire le <span> enfant direct — pas le moindre
+   <span> a l'interieur. En descendant, cette regle rattrapait les pastilles du
+   selecteur de race ouvert dedans et leur imposait un corps plus petit qu'aux
+   pastilles identiques du reste de la fiche. */
+.char-field > span { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); }
 /* what the field is measured against, so three "target" numbers stop reading as
    three versions of the same one. Lower case on purpose: it is a sentence, not a
    label, and it must not compete with the label above it. */
@@ -1380,11 +1384,28 @@ footer.foot a:hover { color: var(--gold); }
    levels; as chips the repetition reads as repetition, instead of burying the
    seven things that actually happen. */
 .sub-feature-set { display: flex; flex-wrap: wrap; gap: 4px 5px; align-items: baseline; }
-.sub-chip {
-  display: inline-flex; align-items: baseline; cursor: help;
+/* ------------------------------------------------------------------
+   Les pastilles de la fiche
+   ------------------------------------------------------------------
+   La fiche en avait cinq variantes qui disaient toutes la meme chose et ne se
+   ressemblaient pas : cinq remplissages, cinq corps de texte entre 9 et 11,5 px
+   et cinq rembourrages. Cote a cote sous Identity, les traits de race etaient du
+   texte souligne la ou les capacites de sous-classe etaient des boites — deux
+   apparences pour une meme idee, "ce que ce personnage recoit".
+   Une seule forme, donc, et la couleur seule porte le sens :
+     neutre  ce qu'on recoit et dont on peut lire le detail  (.sub-chip)
+     bleu    un fait sur le personnage, vitesse ou sens      (.race-trait, .opt-row-badge)
+     or      ce qui est accorde, ou ce qui compte            (.bg-grant, .opt-grant, .sub-chip-count)
+   ------------------------------------------------------------------ */
+.sub-chip, .race-trait, .opt-row-badge, .opt-grant, .bg-grant {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  font-size: 10.5px; line-height: 1.45;
   padding: 2px 7px; border-radius: 3px;
-  background: rgba(0,0,0,.28); border: 1px solid var(--border-soft);
-  color: var(--text-dim); line-height: 1.45;
+  border: 1px solid transparent;
+}
+.sub-chip {
+  cursor: help;
+  background: rgba(0,0,0,.28); border-color: var(--border-soft); color: var(--text-dim);
 }
 .sub-chip:hover { border-color: var(--gold-dim); color: var(--gold-bright); }
 .sub-feature:not(.locked) .sub-chip { color: var(--text); }
@@ -1400,14 +1421,12 @@ footer.foot a:hover { color: var(--gold); }
 .sub-feature-level {
   font-size: 8.5px; letter-spacing: .06em; color: var(--gold-dim); text-align: right;
 }
-.sub-feature-name { color: var(--text-dim); }
 /* a feature that only counts up shows its whole run on one line */
 .sub-feature-scale {
   margin-left: 7px; font-family: var(--serif); font-size: 11px;
   color: var(--gold-dim); letter-spacing: .02em;
 }
 .sub-feature.locked { opacity: .42; }
-.sub-feature:not(.locked) .sub-feature-name { color: var(--text); }
 .sub-feature:not(.locked) .sub-feature-level { color: var(--gold); }
 .sub-feature:hover { background: rgba(212,175,106,.07); }
 
@@ -1481,15 +1500,14 @@ footer.foot a:hover { color: var(--gold); }
 .opt-row-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .opt-row-name { font-family: var(--serif); font-size: 12.5px; color: var(--gold-bright); }
 .opt-row-badge {
-  font-size: 9px; text-transform: uppercase; letter-spacing: .06em;
-  color: var(--blue-bright); background: rgba(79,155,214,.12);
-  border: 1px solid var(--blue-deep); border-radius: 3px; padding: 1px 6px;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--blue-bright); background: rgba(79,155,214,.12); border-color: var(--blue-deep);
 }
 .opt-row-desc { font-size: 10.5px; line-height: 1.45; color: var(--text-dim); margin-top: 3px; }
 .opt-row-grants { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
 .opt-grant {
-  font-size: 9.5px; padding: 1px 6px; border-radius: 3px; cursor: help;
-  background: rgba(212,175,106,.09); border: 1px solid var(--gold-dim); color: var(--gold);
+  cursor: help;
+  background: rgba(212,175,106,.09); border-color: var(--gold-dim); color: var(--gold);
 }
 .opt-row-note { font-size: 9.5px; color: #e08b7a; margin-top: 3px; }
 
@@ -1523,7 +1541,6 @@ footer.foot a:hover { color: var(--gold); }
 .race-trait-chips { display: flex; flex-wrap: wrap; gap: 4px; }
 .race-features { margin-top: 7px; }
 .race-features .sub-feature-level { color: var(--blue-dim); }
-.race-features .sub-feature-name { color: var(--text); }
 
 /* --- detail popover: click a trait or feature and read what it does --- */
 .detail-pop {
@@ -1549,7 +1566,6 @@ footer.foot a:hover { color: var(--gold); }
 .detail-pop-close:hover { color: var(--gold); background: none; }
 .has-detail { cursor: pointer; }
 .has-detail:hover { background: rgba(212,175,106,.09); }
-.has-detail .sub-feature-name { text-decoration: underline dotted var(--border); text-underline-offset: 2px; }
 
 .sub-choice { margin-top: 8px; }
 .sub-choice-label {
@@ -1598,7 +1614,10 @@ footer.foot a:hover { color: var(--gold); }
 .sheet-badge { font-size: 11px; padding: 2px 10px; }
 .char-field > span { font-size: 10px; }
 .stats-panel select, .stats-panel input[type="text"] { font-size: 13.5px; padding: 7px 10px; }
-.race-trait { font-size: 11px; padding: 3px 9px; }
+/* Les pastilles grandissent ensemble : c'est tout l'interet de n'en avoir qu'une. */
+.sub-chip, .race-trait, .opt-row-badge, .opt-grant, .bg-grant {
+  font-size: 11.5px; padding: 3px 9px;
+}
 .sub-feature { font-size: 11.5px; padding: 3px 7px; }
 .sub-feature-level { font-size: 9.5px; }
 .derived-tile { padding: 10px 4px; }
@@ -1612,8 +1631,6 @@ footer.foot a:hover { color: var(--gold); }
 .opt-row-icon { width: 34px; height: 34px; }
 .opt-toggle-icon { width: 26px; height: 26px; }
 .opt-list { max-height: 420px; }
-.opt-row-badge { font-size: 10px; }
-.opt-grant { font-size: 10.5px; }
 
 /* --- combat --- */
 .combat-icon { width: 52px; height: 52px; }
@@ -1760,6 +1777,10 @@ body.scroll-page .scroll-region { max-height: none; overflow: visible; }
 }
 .level-step-icon img { width: 100%; height: 100%; object-fit: cover; }
 .level-step-level { font-family: var(--serif); color: var(--gold); font-size: 11.5px; }
+/* Les trois listes de la fiche — traits de race, capacites de sous-classe,
+   chemin de niveaux — sont faites des memes pastilles. Elles disent la meme
+   chose (ce que le personnage recoit, et ce que ca fait au clic) et n'ont plus
+   de raison d'avoir trois apparences. */
 .level-step-features { color: var(--text); line-height: 1.4; }
 /* what is still ahead reads as a preview, not as something you have */
 .level-step.ahead { border-left-color: var(--blue-deep); opacity: .55; }

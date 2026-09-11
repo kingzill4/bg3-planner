@@ -8,8 +8,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 7,
     "spellAbility": null,
     "saves": [
-      "con",
-      "str"
+      "str",
+      "con"
     ],
     "armour": [
       "Light Armour",
@@ -28,6 +28,16 @@ const CLASS_DATA = [
         "features": [
           "Rage",
           "Unarmoured Defence"
+        ],
+        "detail": [
+          {
+            "n": "Rage",
+            "d": "Deal 2 extra damage with melee and improvised weapons, and throwing. · Gain Resistance to physical damage, and Advantage on Strength Checks and Saving Throws."
+          },
+          {
+            "n": "Unarmoured Defence",
+            "d": "Your body is as resilient as any armour. While not wearing armour, you add your Constitution Modifier to your Armour Class."
+          }
         ]
       },
       {
@@ -35,6 +45,16 @@ const CLASS_DATA = [
         "features": [
           "Reckless Attack",
           "Danger Sense"
+        ],
+        "detail": [
+          {
+            "n": "Reckless Attack",
+            "d": "Throw all caution in the wind to gain Advantage on your melee Attack Roll. Until your next turn, you have advantage on attack rolls, but enemies also have advantage on attack rolls against you."
+          },
+          {
+            "n": "Danger Sense",
+            "d": "You sense when things aren't as they should be. You have Advantage on Dexterity Saving Throws, such as against traps, spells, and surfaces. To gain this benefit, you can't be Blinded or Incapacitated."
+          }
         ]
       },
       {
@@ -47,6 +67,12 @@ const CLASS_DATA = [
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -54,6 +80,16 @@ const CLASS_DATA = [
         "features": [
           "Extra Attack",
           "Fast Movement"
+        ],
+        "detail": [
+          {
+            "n": "Extra Attack",
+            "d": "You can make an additional free attack after making an unarmed or weapon attack."
+          },
+          {
+            "n": "Fast Movement",
+            "d": "Your Movement Speed increases by 3 m (10 ft) while not wearing Heavy Armour."
+          }
         ]
       },
       {
@@ -66,18 +102,36 @@ const CLASS_DATA = [
         "level": 7,
         "features": [
           "Feral Instinct"
+        ],
+        "detail": [
+          {
+            "n": "Feral Instinct",
+            "d": "You have honed your instincts to the utmost degree. You gain a +3 to Initiative and can't be Surprised."
+          }
         ]
       },
       {
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 9,
         "features": [
           "Brutal Critical"
+        ],
+        "detail": [
+          {
+            "n": "Brutal Critical",
+            "d": "You've trained to strike swift and true. When you land a Critical Hit, you roll an extra damage die as well as the normal additional critical die."
+          }
         ]
       },
       {
@@ -90,12 +144,24 @@ const CLASS_DATA = [
         "level": 11,
         "features": [
           "Relentless Rage"
+        ],
+        "detail": [
+          {
+            "n": "Relentless Rage",
+            "d": "Once per Short Rest, if you drop to 0 hit points while Enraged, you regain 1 Hit Points instead of being Downed."
+          }
         ]
       },
       {
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -149,6 +215,26 @@ const CLASS_DATA = [
         "features": [
           "Spellcasting",
           "Bardic Inspiration (d6)"
+        ],
+        "detail": [
+          {
+            "n": "Spellcasting",
+            "d": "",
+            "opts": [
+              {
+                "n": "Level 1 Spell Slots Unlocked: 2",
+                "d": "You gain two Level 1 Spell Slots"
+              },
+              {
+                "n": "Cantrips Known: 2",
+                "d": "Choose 2 Cantrips from the Bard Spell List."
+              }
+            ]
+          },
+          {
+            "n": "Bardic Inspiration (d6)",
+            "d": "Inspire an ally to go beyond their capabilities with your performance. They can add a +1d6 bonus to their next Attack roll, Ability check, or Saving throw."
+          }
         ]
       },
       {
@@ -156,6 +242,16 @@ const CLASS_DATA = [
         "features": [
           "Song of Rest",
           "Jack of All Trades"
+        ],
+        "detail": [
+          {
+            "n": "Song of Rest",
+            "d": "Use your craft to soothe. You and your allies are revitalised as though you had taken a Short Rest. ( Recharge: Long rest.)"
+          },
+          {
+            "n": "Jack of All Trades",
+            "d": "Your vast experiences make you more likely to succeed in any undertaking. Add half of your Proficiency Bonus (rounded down) to Ability Checks that you are not Proficient in."
+          }
         ]
       },
       {
@@ -169,6 +265,12 @@ const CLASS_DATA = [
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -176,6 +278,16 @@ const CLASS_DATA = [
         "features": [
           "Improved Bardic Inspiration (d8)",
           "Font of Inspiration"
+        ],
+        "detail": [
+          {
+            "n": "Improved Bardic Inspiration (d8)",
+            "d": "Your Bardic Inspiration dice are now d8"
+          },
+          {
+            "n": "Font of Inspiration",
+            "d": "You regain all of your Bardic Inspirations after a Long or Short Rest."
+          }
         ]
       },
       {
@@ -183,6 +295,12 @@ const CLASS_DATA = [
         "features": [
           "Countercharm",
           "Subclass feature"
+        ],
+        "detail": [
+          {
+            "n": "Countercharm",
+            "d": "You and any allies within 9 m / 30 ft have Advantage on Saving throws against being Charmed or Frightened."
+          }
         ]
       },
       {
@@ -193,6 +311,12 @@ const CLASS_DATA = [
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -205,6 +329,16 @@ const CLASS_DATA = [
           "Improved Bardic Inspiration (d10)",
           "Expertise",
           "Magical Secrets"
+        ],
+        "detail": [
+          {
+            "n": "Improved Bardic Inspiration (d10)",
+            "d": "Your Bardic Inspiration dice are now d10"
+          },
+          {
+            "n": "Magical Secrets",
+            "d": "Learn 2 non-Bard Spells from the Magical Secrets list"
+          }
         ]
       },
       {
@@ -215,6 +349,12 @@ const CLASS_DATA = [
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -276,12 +416,40 @@ const CLASS_DATA = [
         "level": 1,
         "features": [
           "Spellcasting"
+        ],
+        "detail": [
+          {
+            "n": "Spellcasting",
+            "d": "",
+            "opts": [
+              {
+                "n": "Level 1 spell slots unlocked: 2",
+                "d": "You gain two level 1 spell slots."
+              },
+              {
+                "n": "Cantrips known: 3",
+                "d": "Choose 3 cantrips from the Cleric Spell List."
+              }
+            ]
+          }
         ]
       },
       {
         "level": 2,
         "features": [
           "Turn Undead"
+        ],
+        "detail": [
+          {
+            "n": "Turn Undead",
+            "d": "",
+            "opts": [
+              {
+                "n": "Channel Divinity action",
+                "d": "As an action, present your holy symbol and cause undead creatures to flee."
+              }
+            ]
+          }
         ]
       },
       {
@@ -292,12 +460,24 @@ const CLASS_DATA = [
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 5,
         "features": [
           "Destroy Undead"
+        ],
+        "detail": [
+          {
+            "n": "Destroy Undead",
+            "d": "When you successfully Turn an Undead creature, it also takes 4d6 Radiant."
+          }
         ]
       },
       {
@@ -312,6 +492,12 @@ const CLASS_DATA = [
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -322,6 +508,30 @@ const CLASS_DATA = [
         "level": 10,
         "features": [
           "Divine Intervention"
+        ],
+        "detail": [
+          {
+            "n": "Divine Intervention",
+            "d": "Call upon your deity in your moment of greatest need. Once they interfere, your deity will never do so again in this manner.",
+            "opts": [
+              {
+                "n": "Sunder the Heretical",
+                "d": "Call upon your deity to bring forth a radiant cataclysm upon all nearby enemies."
+              },
+              {
+                "n": "Arm Thy Servant",
+                "d": "Call upon your deity to grant you a legendary weapon forged in the fires of your holy bond."
+              },
+              {
+                "n": "Opulent Revival",
+                "d": "Resurrect fallen companions with half their hit points, and restore all nearby allies as if they had Long Rested."
+              },
+              {
+                "n": "Golden Generosity",
+                "d": "Call upon your deity to provide you with a rich bounty of potions and Camp Supplies."
+              }
+            ]
+          }
         ]
       },
       {
@@ -332,6 +542,12 @@ const CLASS_DATA = [
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -364,8 +580,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": "wis",
     "saves": [
-      "int",
-      "wis"
+      "wis",
+      "int"
     ],
     "armour": [
       "Light Armour",
@@ -389,6 +605,22 @@ const CLASS_DATA = [
         "level": 1,
         "features": [
           "Spellcasting"
+        ],
+        "detail": [
+          {
+            "n": "Spellcasting",
+            "d": "",
+            "opts": [
+              {
+                "n": "Level 1 spell slots unlocked: 2",
+                "d": "You gain two Level 1 spell slots."
+              },
+              {
+                "n": "Cantrips Known: 2",
+                "d": "Choose 2 cantrips from the druid spell list."
+              }
+            ]
+          }
         ]
       },
       {
@@ -396,6 +628,30 @@ const CLASS_DATA = [
         "features": [
           "Wild Shape",
           "Choose a subclass"
+        ],
+        "detail": [
+          {
+            "n": "Wild Shape",
+            "d": "Magically assume the shape of a beast.",
+            "opts": [
+              {
+                "n": "Wild Shape: Badger",
+                "d": "Assume the shape of a giant badger that can Burrow into the ground. The badger has a starting health of 13 hit points that increases every two druid levels."
+              },
+              {
+                "n": "Wild Shape: Cat",
+                "d": "Take the shape of a cat that can avoid attention and Meow to distract enemies. It has 2 hit points."
+              },
+              {
+                "n": "Wild Shape: Spider",
+                "d": "Assume the shape of of a giant spider that can Enweb enemies. The giant spider has a starting health of 20 hit points that increases every two druid levels."
+              },
+              {
+                "n": "Wild Shape: Wolf",
+                "d": "Assume the shape of a dire wolf that can Incite allies and Distract enemies. The dire wolf has a starting health of 18 hit points that increase every two druid levels."
+              }
+            ]
+          }
         ]
       },
       {
@@ -407,12 +663,28 @@ const CLASS_DATA = [
         "features": [
           "Feat",
           "Wild Shape Improvement"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          },
+          {
+            "n": "Wild Shape Improvement",
+            "d": "Wild Shape attack damage increased."
+          }
         ]
       },
       {
         "level": 5,
         "features": [
           "Wild Strike"
+        ],
+        "detail": [
+          {
+            "n": "Wild Strike",
+            "d": "You can make an additional Attack Roll after making an Unarmed Strike while in an animal Wild Shape."
+          }
         ]
       },
       {
@@ -430,6 +702,16 @@ const CLASS_DATA = [
         "features": [
           "Feat",
           "Wild Shape Improvement"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          },
+          {
+            "n": "Wild Shape Improvement",
+            "d": "Wild Shape attack damage increased."
+          }
         ]
       },
       {
@@ -441,6 +723,12 @@ const CLASS_DATA = [
         "features": [
           "Subclass feature",
           "Improved Wild Strike"
+        ],
+        "detail": [
+          {
+            "n": "Improved Wild Strike",
+            "d": "You can make 2 additional Attack Rolls after making an Unarmed Strike while in an animal Wild Shape."
+          }
         ]
       },
       {
@@ -452,6 +740,16 @@ const CLASS_DATA = [
         "features": [
           "Feat",
           "Wild Shape Improvement"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          },
+          {
+            "n": "Wild Shape Improvement",
+            "d": "Wild Shape attack damage increased."
+          }
         ]
       }
     ],
@@ -484,8 +782,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 6,
     "spellAbility": null,
     "saves": [
-      "con",
-      "str"
+      "str",
+      "con"
     ],
     "armour": [
       "Light Armour",
@@ -505,12 +803,54 @@ const CLASS_DATA = [
         "features": [
           "Second Wind",
           "Fighting Style"
+        ],
+        "detail": [
+          {
+            "n": "Second Wind",
+            "d": "Draw on your stamina to protect yourself. You regain 1d10 + Fighter Level Hit Points. ( Recharge: Short rest.)"
+          },
+          {
+            "n": "Fighting Style",
+            "d": "Choose a fighting style:",
+            "opts": [
+              {
+                "n": "Archery",
+                "d": "You gain a +2 bonus to Attack Rolls you make with ranged Weapons."
+              },
+              {
+                "n": "Defence",
+                "d": "You gain a +1 bonus to Armour Class while wearing armour."
+              },
+              {
+                "n": "Duelling",
+                "d": "When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon."
+              },
+              {
+                "n": "Great Weapon Fighting",
+                "d": "When you roll a 1 or 2 on a damage die for an attack with a Two-Handed melee weapon, that die is rerolled once."
+              },
+              {
+                "n": "Protection",
+                "d": "When you have a Shield, impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5 m (5 ft). You must be able to see the enemy."
+              },
+              {
+                "n": "Two-Weapon Fighting",
+                "d": "When you make an offhand attack, you can add your Ability Score Modifier to the damage of the attack."
+              }
+            ]
+          }
         ]
       },
       {
         "level": 2,
         "features": [
           "Action Surge"
+        ],
+        "detail": [
+          {
+            "n": "Action Surge",
+            "d": "Immediately gain an extra Action to use this turn. ( Recharge: Short rest.)"
+          }
         ]
       },
       {
@@ -523,18 +863,36 @@ const CLASS_DATA = [
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 5,
         "features": [
           "Extra Attack"
+        ],
+        "detail": [
+          {
+            "n": "Extra Attack",
+            "d": "You can make an additional free attack after making an unarmed or weapon attack."
+          }
         ]
       },
       {
         "level": 6,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -547,12 +905,24 @@ const CLASS_DATA = [
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 9,
         "features": [
           "Indomitable"
+        ],
+        "detail": [
+          {
+            "n": "Indomitable",
+            "d": "Whenever you fail a Saving Throw, you can roll again, using the new result instead."
+          }
         ]
       },
       {
@@ -565,12 +935,24 @@ const CLASS_DATA = [
         "level": 11,
         "features": [
           "Improved Extra Attack"
+        ],
+        "detail": [
+          {
+            "n": "Improved Extra Attack",
+            "d": "You can make two additional attacks after attacking with your main-hand weapon."
+          }
         ]
       },
       {
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -626,6 +1008,28 @@ const CLASS_DATA = [
           "Martial Arts: Deft Strikes",
           "Martial Arts: Bonus Unarmed Strike",
           "Flurry of Blows"
+        ],
+        "detail": [
+          {
+            "n": "Unarmoured Defence",
+            "d": "Your reflexes are as effective as any armour. While not wearing armour, you add your Wisdom Modifier to your Armour Class."
+          },
+          {
+            "n": "Martial Arts: Dextrous Attacks",
+            "d": "Attacks with Monk weapons and unarmed attacks scale with your Dexterity instead of your Strength if your Dexterity is higher."
+          },
+          {
+            "n": "Martial Arts: Deft Strikes",
+            "d": "Attacks with Monk Weapons and unarmed attacks deal 1d4 Bludgeoning damage, unless their normal damage is higher."
+          },
+          {
+            "n": "Martial Arts: Bonus Unarmed Strike",
+            "d": "After making an attack with a melee Monk weapon or while unarmed, you can make another unarmed attack as a bonus action."
+          },
+          {
+            "n": "Flurry of Blows",
+            "d": "Punch twice in quick succession."
+          }
         ]
       },
       {
@@ -635,6 +1039,24 @@ const CLASS_DATA = [
           "Patient Defence",
           "Step of the Wind: Dash",
           "Step of the Wind: Disengage"
+        ],
+        "detail": [
+          {
+            "n": "Unarmoured Movement",
+            "d": "Your movement speed increases by 3 m (10 ft) while you are not wearing armour or using a shield."
+          },
+          {
+            "n": "Patient Defence",
+            "d": "Attack Rolls against you have Disadvantage, and you have Advantage on Dexterity Saving Throws."
+          },
+          {
+            "n": "Step of the Wind: Dash",
+            "d": "Double your movement speed. Jump no longer requires a Bonus Action."
+          },
+          {
+            "n": "Step of the Wind: Disengage",
+            "d": "Move without triggering Opportunity Attacks. Jump no longer requires a Bonus Action."
+          }
         ]
       },
       {
@@ -642,6 +1064,22 @@ const CLASS_DATA = [
         "features": [
           "Choose a subclass",
           "Deflect Missiles"
+        ],
+        "detail": [
+          {
+            "n": "Deflect Missiles",
+            "d": "Use your reaction to reduce the damage from a ranged weapon attack by 1d10 + your Dexterity Modifier + your monk level. · If the damage is reduced to 0, you can use a Ki Point to Deflect the Missile.",
+            "opts": [
+              {
+                "n": "Deflect Missiles",
+                "d": "Reduce the damage from a ranged weapon attack by 1d10 + your Dexterity modifier + your monk level."
+              },
+              {
+                "n": "Deflect Missiles: Redirect",
+                "d": "Catch a projectile from a ranged weapon attack and shoot it back at your attacker using Deflect Missiles: Redirect."
+              }
+            ]
+          }
         ]
       },
       {
@@ -649,6 +1087,16 @@ const CLASS_DATA = [
         "features": [
           "Feat",
           "Slow Fall"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          },
+          {
+            "n": "Slow Fall",
+            "d": "When you fall, you can use your reaction to gain Resistance to Falling damage."
+          }
         ]
       },
       {
@@ -657,6 +1105,20 @@ const CLASS_DATA = [
           "Extra Attack",
           "Stunning Strike (Melee)",
           "Stunning Strike (Unarmed)"
+        ],
+        "detail": [
+          {
+            "n": "Extra Attack",
+            "d": "You can make an additional free attack after making an unarmed or weapon attack."
+          },
+          {
+            "n": "Stunning Strike (Melee)",
+            "d": "Spend a Ki Point to deal normal weapon damage and possibly Stun the target."
+          },
+          {
+            "n": "Stunning Strike (Unarmed)",
+            "d": "Spend a Ki Point to deal normal unarmed damage and possibly Stun the target."
+          }
         ]
       },
       {
@@ -665,6 +1127,16 @@ const CLASS_DATA = [
           "Ki-Empowered Strikes",
           "Subclass feature",
           "Improved Unarmoured Movement"
+        ],
+        "detail": [
+          {
+            "n": "Ki-Empowered Strikes",
+            "d": "Your unarmed attacks count as magical for the purpose of overcoming enemies' Resistance and Immunity to non-magical damage."
+          },
+          {
+            "n": "Improved Unarmoured Movement",
+            "d": "Your movement speed increases by 4.5 m (15 ft) (previously 3 m (10 ft)) while you are not wearing armour or using a shield."
+          }
         ]
       },
       {
@@ -672,12 +1144,28 @@ const CLASS_DATA = [
         "features": [
           "Evasion",
           "Stillness of Mind"
+        ],
+        "detail": [
+          {
+            "n": "Evasion",
+            "d": "Your agility lets you dodge out of the way of certain spells. When a spell or effect would deal half damage on a successful Dexterity Saving Throw, it deals no damage if you succeed, and only half damage if you fail."
+          },
+          {
+            "n": "Stillness of Mind",
+            "d": "If you are Charmed or Frightened, you automatically cast Stillness of Mind to remove the condition."
+          }
         ]
       },
       {
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -685,6 +1173,12 @@ const CLASS_DATA = [
         "features": [
           "Advanced Unarmoured Movement",
           "Subclass feature"
+        ],
+        "detail": [
+          {
+            "n": "Advanced Unarmoured Movement",
+            "d": "Difficult Terrain doesn't slow you down and you can Jump an additional 6 m (20 ft) while you are not wearing armour or using a shield."
+          }
         ]
       },
       {
@@ -692,6 +1186,16 @@ const CLASS_DATA = [
         "features": [
           "Purity of Body",
           "Improved Unarmoured Movement"
+        ],
+        "detail": [
+          {
+            "n": "Purity of Body",
+            "d": "You are Immune to Poison damage and can't be Poisoned or affected by disease thanks to the purifying ki flowing through your meridians."
+          },
+          {
+            "n": "Improved Unarmoured Movement",
+            "d": "Your movement speed increases by 6 m (20 ft) (previously 4.5 m (15 ft)) while you are not wearing armour or using a shield."
+          }
         ]
       },
       {
@@ -704,6 +1208,12 @@ const CLASS_DATA = [
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -757,6 +1267,20 @@ const CLASS_DATA = [
           "Lay on Hands",
           "Channel Oath",
           "Choose a subclass"
+        ],
+        "detail": [
+          {
+            "n": "Divine Sense",
+            "d": "Tap into your spiritual awareness to gain Advantage on Attack Rolls against celestials, fiends, and undead. ( Recharge: Short rest.)"
+          },
+          {
+            "n": "Lay on Hands",
+            "d": "Use your blessed touch to heal a creature or cure it of all diseases and poisons."
+          },
+          {
+            "n": "Channel Oath",
+            "d": "Channel Oath Charge is a class-specific resource for Paladins."
+          }
         ]
       },
       {
@@ -765,6 +1289,38 @@ const CLASS_DATA = [
           "Fighting Style",
           "Spellcasting",
           "Divine Smite"
+        ],
+        "detail": [
+          {
+            "n": "Fighting Style",
+            "d": "Choose a fighting style:",
+            "opts": [
+              {
+                "n": "Defence",
+                "d": "You gain a +1 bonus to Armour Class while wearing armour."
+              },
+              {
+                "n": "Duelling",
+                "d": "When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon."
+              },
+              {
+                "n": "Great Weapon Fighting",
+                "d": "When you roll a 1 or 2 on a damage die for an attack with a Two-Handed melee weapon, that die is rerolled once."
+              },
+              {
+                "n": "Protection",
+                "d": "When you have a Shield, impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5 m (5 ft). You must be able to see the enemy."
+              }
+            ]
+          },
+          {
+            "n": "Spellcasting",
+            "d": "Spells are magical effects that are created by creatures via spellcasting. [ 1 ] Spells are frequently cast to deal damage and provide healing, or to inflict conditions on their targets."
+          },
+          {
+            "n": "Divine Smite",
+            "d": "Your weapon deals an additional 2d8 Radiant DRS damage, increased by 1d8 Radiant damage when attacking Fiends or Undead."
+          }
         ]
       },
       {
@@ -772,24 +1328,48 @@ const CLASS_DATA = [
         "features": [
           "Divine Health",
           "Subclass Feature"
+        ],
+        "detail": [
+          {
+            "n": "Divine Health",
+            "d": "The divine magic flowing within you prevents disease from affecting you."
+          }
         ]
       },
       {
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 5,
         "features": [
           "Extra Attack"
+        ],
+        "detail": [
+          {
+            "n": "Extra Attack",
+            "d": "You can make an additional free attack after making an unarmed or weapon attack."
+          }
         ]
       },
       {
         "level": 6,
         "features": [
           "Aura of Protection"
+        ],
+        "detail": [
+          {
+            "n": "Aura of Protection",
+            "d": "You and nearby allies gain a bonus to Saving throws equal to your Charisma modifier. The aura disappears if you fall Unconscious."
+          }
         ]
       },
       {
@@ -802,6 +1382,12 @@ const CLASS_DATA = [
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -814,18 +1400,36 @@ const CLASS_DATA = [
         "level": 10,
         "features": [
           "Aura of Courage"
+        ],
+        "detail": [
+          {
+            "n": "Aura of Courage",
+            "d": "You and any nearby allies can't be Frightened. The aura disappears if you fall unconscious."
+          }
         ]
       },
       {
         "level": 11,
         "features": [
           "Improved Divine Smite"
+        ],
+        "detail": [
+          {
+            "n": "Improved Divine Smite",
+            "d": "Your attacks are suffused with divine might. Melee weapon attacks deal an additional 1d8 Radiant damage."
+          }
         ]
       },
       {
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -879,6 +1483,16 @@ const CLASS_DATA = [
         "features": [
           "Favoured Enemy",
           "Natural Explorer"
+        ],
+        "detail": [
+          {
+            "n": "Favoured Enemy",
+            "d": "Choose 1 Favoured Enemy"
+          },
+          {
+            "n": "Natural Explorer",
+            "d": "Choose 1 Natural Explorer"
+          }
         ]
       },
       {
@@ -886,6 +1500,44 @@ const CLASS_DATA = [
         "features": [
           "Fighting Style",
           "Spellcasting"
+        ],
+        "detail": [
+          {
+            "n": "Fighting Style",
+            "d": "Gain 1 of the fighting styles:",
+            "opts": [
+              {
+                "n": "Archery",
+                "d": "You gain a +2 bonus to Attack Rolls you make with ranged Weapons."
+              },
+              {
+                "n": "Defence",
+                "d": "You gain a +1 bonus to Armour Class while wearing armour."
+              },
+              {
+                "n": "Duelling",
+                "d": "When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon."
+              },
+              {
+                "n": "Two-Weapon Fighting",
+                "d": "When you make an offhand attack, you can add your Ability Score Modifier to the damage of the attack."
+              }
+            ]
+          },
+          {
+            "n": "Spellcasting",
+            "d": "",
+            "opts": [
+              {
+                "n": "Level 1 Spell Slots Unlocked: 2",
+                "d": "You gain two Level 1 Spell Slots."
+              },
+              {
+                "n": "Spells Known: 2",
+                "d": "Choose 2 starting spells from the Ranger Spell List."
+              }
+            ]
+          }
         ]
       },
       {
@@ -898,6 +1550,12 @@ const CLASS_DATA = [
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -905,6 +1563,12 @@ const CLASS_DATA = [
         "features": [
           "Extra Attack",
           "Subclass Feature"
+        ],
+        "detail": [
+          {
+            "n": "Extra Attack",
+            "d": "You can attack twice, instead of once, whenever you take the Attack action on your turn."
+          }
         ]
       },
       {
@@ -912,6 +1576,16 @@ const CLASS_DATA = [
         "features": [
           "Favoured Enemy",
           "Natural Explorer"
+        ],
+        "detail": [
+          {
+            "n": "Favoured Enemy",
+            "d": "Choose 1 additional Favoured Enemy"
+          },
+          {
+            "n": "Natural Explorer",
+            "d": "Choose 1 additional Natural Explorer"
+          }
         ]
       },
       {
@@ -925,6 +1599,16 @@ const CLASS_DATA = [
         "features": [
           "Feat",
           "Land's Stride: Difficult Terrain"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          },
+          {
+            "n": "Land's Stride: Difficult Terrain",
+            "d": "You have become an expert at moving through the wilderness. Difficult Terrain no longer slows you down."
+          }
         ]
       },
       {
@@ -937,6 +1621,20 @@ const CLASS_DATA = [
           "Favoured Enemy",
           "Natural Explorer",
           "Hide in Plain Sight"
+        ],
+        "detail": [
+          {
+            "n": "Favoured Enemy",
+            "d": "Choose 1 additional Favoured Enemy"
+          },
+          {
+            "n": "Natural Explorer",
+            "d": "Choose 1 additional Natural Explorer"
+          },
+          {
+            "n": "Hide in Plain Sight",
+            "d": "Camouflage yourself with your environment to become Invisible and gain a +10 bonus on Stealth Checks, as long as you stand still."
+          }
         ]
       },
       {
@@ -949,6 +1647,12 @@ const CLASS_DATA = [
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -984,8 +1688,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": null,
     "saves": [
-      "int",
-      "dex"
+      "dex",
+      "int"
     ],
     "armour": [
       "Light Armour"
@@ -1007,6 +1711,16 @@ const CLASS_DATA = [
           "Expertise",
           "Sneak Attack (Melee)",
           "Sneak Attack (Ranged)"
+        ],
+        "detail": [
+          {
+            "n": "Sneak Attack (Melee)",
+            "d": "Deal an extra 1d6 damage to a foe you have Advantage against. ( Recharge: Per turn.)"
+          },
+          {
+            "n": "Sneak Attack (Ranged)",
+            "d": "Deal an extra 1d6 damage to a foe you have Advantage against. ( Recharge: Per turn.)"
+          }
         ]
       },
       {
@@ -1015,6 +1729,20 @@ const CLASS_DATA = [
           "Cunning Action: Dash",
           "Cunning Action: Disengage",
           "Cunning Action: Hide"
+        ],
+        "detail": [
+          {
+            "n": "Cunning Action: Dash",
+            "d": "Cover more distance this turn: double your movement speed."
+          },
+          {
+            "n": "Cunning Action: Disengage",
+            "d": "Retreat safely. Moving won't provoke Opportunity Attacks."
+          },
+          {
+            "n": "Cunning Action: Hide",
+            "d": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
+          }
         ]
       },
       {
@@ -1027,12 +1755,24 @@ const CLASS_DATA = [
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 5,
         "features": [
           "Uncanny Dodge"
+        ],
+        "detail": [
+          {
+            "n": "Uncanny Dodge",
+            "d": "Use your lightning-quick reflexes to protect yourself. When an attack hits you, you only take half the usual damage."
+          }
         ]
       },
       {
@@ -1045,12 +1785,24 @@ const CLASS_DATA = [
         "level": 7,
         "features": [
           "Evasion"
+        ],
+        "detail": [
+          {
+            "n": "Evasion",
+            "d": "Your agility lets you dodge out of the way of certain spells. When a spell or effect would deal half damage on a successful Dexterity Saving Throw, it deals no damage if you succeed, and only half damage if you fail."
+          }
         ]
       },
       {
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -1063,18 +1815,36 @@ const CLASS_DATA = [
         "level": 10,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 11,
         "features": [
           "Reliable Talent"
+        ],
+        "detail": [
+          {
+            "n": "Reliable Talent",
+            "d": "When you make an Ability Check with a Skill you are Proficient with, the lowest result you can roll on the die is 10."
+          }
         ]
       },
       {
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -1108,8 +1878,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 4,
     "spellAbility": "cha",
     "saves": [
-      "con",
-      "cha"
+      "cha",
+      "con"
     ],
     "armour": [],
     "weapons": [],
@@ -1125,6 +1895,22 @@ const CLASS_DATA = [
         "features": [
           "Spellcasting",
           "Choose a subclass"
+        ],
+        "detail": [
+          {
+            "n": "Spellcasting",
+            "d": "",
+            "opts": [
+              {
+                "n": "Level 1 Spell Slots Unlocked: 2",
+                "d": "You gain two Level 1 Spell Slots."
+              },
+              {
+                "n": "Cantrips Known: 4",
+                "d": "Choose 4 Cantrips from the Sorcerer Spell List."
+              }
+            ]
+          }
         ]
       },
       {
@@ -1133,18 +1919,40 @@ const CLASS_DATA = [
           "Metamagic",
           "Create Spell Slot",
           "Create Sorcery Points"
+        ],
+        "detail": [
+          {
+            "n": "Metamagic",
+            "d": "Choose 1 additional Metamagic"
+          },
+          {
+            "n": "Create Sorcery Points",
+            "d": "Spend Spell Slots to gain Sorcery Points. The level of spell slot spent creates the equivalent number of Sorcery Points."
+          }
         ]
       },
       {
         "level": 3,
         "features": [
           "Metamagic"
+        ],
+        "detail": [
+          {
+            "n": "Metamagic",
+            "d": "Choose 1 additional Metamagic"
+          }
         ]
       },
       {
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -1165,6 +1973,12 @@ const CLASS_DATA = [
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -1175,6 +1989,12 @@ const CLASS_DATA = [
         "level": 10,
         "features": [
           "Metamagic"
+        ],
+        "detail": [
+          {
+            "n": "Metamagic",
+            "d": "Choose 1 additional Metamagic"
+          }
         ]
       },
       {
@@ -1187,6 +2007,12 @@ const CLASS_DATA = [
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],
@@ -1236,18 +2062,36 @@ const CLASS_DATA = [
         "level": 2,
         "features": [
           "Eldritch Invocations (+2)"
+        ],
+        "detail": [
+          {
+            "n": "Eldritch Invocations (+2)",
+            "d": "Eldritch Invocations are a Warlock class feature first gained at Level 2. Invocations grant a variety of effects, ranging from powerful passive abilities to free uses of utility spells."
+          }
         ]
       },
       {
         "level": 3,
         "features": [
           "Pact Boon"
+        ],
+        "detail": [
+          {
+            "n": "Pact Boon",
+            "d": "Choose 1 Pact Boon"
+          }
         ]
       },
       {
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -1255,6 +2099,16 @@ const CLASS_DATA = [
         "features": [
           "Deepened Pact",
           "Eldritch Invocations (+1)"
+        ],
+        "detail": [
+          {
+            "n": "Deepened Pact",
+            "d": "Pleased with your service, your otherworldly patron added new boons to the terms of your pact."
+          },
+          {
+            "n": "Eldritch Invocations (+1)",
+            "d": "Eldritch Invocations are a Warlock class feature first gained at Level 2. Invocations grant a variety of effects, ranging from powerful passive abilities to free uses of utility spells."
+          }
         ]
       },
       {
@@ -1267,18 +2121,36 @@ const CLASS_DATA = [
         "level": 7,
         "features": [
           "Eldritch Invocations (+1)"
+        ],
+        "detail": [
+          {
+            "n": "Eldritch Invocations (+1)",
+            "d": "Eldritch Invocations are a Warlock class feature first gained at Level 2. Invocations grant a variety of effects, ranging from powerful passive abilities to free uses of utility spells."
+          }
         ]
       },
       {
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
         "level": 9,
         "features": [
           "Eldritch Invocations (+1)"
+        ],
+        "detail": [
+          {
+            "n": "Eldritch Invocations (+1)",
+            "d": "Eldritch Invocations are a Warlock class feature first gained at Level 2. Invocations grant a variety of effects, ranging from powerful passive abilities to free uses of utility spells."
+          }
         ]
       },
       {
@@ -1291,6 +2163,12 @@ const CLASS_DATA = [
         "level": 11,
         "features": [
           "Mystic Arcanum (6th level spell)"
+        ],
+        "detail": [
+          {
+            "n": "Mystic Arcanum (6th level spell)",
+            "d": "Your patron bestows upon you a magical secret called an arcanum. Choose one 6th Level spell from the Warlock Spell list. You can cast your arcanum spell once without expending a spell slot. You must finish a Long Rest before you can do so again."
+          }
         ]
       },
       {
@@ -1298,6 +2176,16 @@ const CLASS_DATA = [
         "features": [
           "Feat",
           "Eldritch Invocations (+1)"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          },
+          {
+            "n": "Eldritch Invocations (+1)",
+            "d": "Eldritch Invocations are a Warlock class feature first gained at Level 2. Invocations grant a variety of effects, ranging from powerful passive abilities to free uses of utility spells."
+          }
         ]
       }
     ],
@@ -1329,8 +2217,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 4,
     "spellAbility": "int",
     "saves": [
-      "int",
-      "wis"
+      "wis",
+      "int"
     ],
     "armour": [],
     "weapons": [],
@@ -1347,6 +2235,30 @@ const CLASS_DATA = [
           "Spellcasting",
           "Arcane Recovery",
           "Transcribing scrolls"
+        ],
+        "detail": [
+          {
+            "n": "Spellcasting",
+            "d": "",
+            "opts": [
+              {
+                "n": "Level 1 Spell Slots Unlocked: 2",
+                "d": "You gain two Level 1 Spell Slots."
+              },
+              {
+                "n": "Cantrips Known: 3",
+                "d": "Choose 3 Cantrips from the Wizard spell list."
+              }
+            ]
+          },
+          {
+            "n": "Arcane Recovery",
+            "d": "Replenish Spell Slots while out of combat. You cannot restore spell slots above 5th level."
+          },
+          {
+            "n": "Transcribing scrolls",
+            "d": "Transcribing scrolls is game mechanic which allows wizard characters to add wizard spells to their spellbook by using scrolls."
+          }
         ]
       },
       {
@@ -1363,6 +2275,12 @@ const CLASS_DATA = [
         "level": 4,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -1383,6 +2301,12 @@ const CLASS_DATA = [
         "level": 8,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       },
       {
@@ -1403,6 +2327,12 @@ const CLASS_DATA = [
         "level": 12,
         "features": [
           "Feat"
+        ],
+        "detail": [
+          {
+            "n": "Feat",
+            "d": "Feats are features that grant a character unique improvements. All classes select one feat at class levels 4, 8, and 12. Fighters select an additional feat at level 6; Rogues select an additional feat at level 10."
+          }
         ]
       }
     ],

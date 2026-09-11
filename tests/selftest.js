@@ -220,6 +220,59 @@ const SelfTest = (() => {
     // last column is his spell slots) and the monk with "+ 3 m / 10 ft" at level
     // 2 and "1d6" at level 3 — his movement and his martial-arts die. A feature
     // is a name; a measurement in that column means the column is wrong again.
+    // Every feature on the sheet opens its description on a click — except the
+    // level path, which had none to open, because the progression table gives
+    // only names. The descriptions come from elsewhere on the class page, so
+    // they can drift away from the names they belong to.
+    check("References", "class feature descriptions name a real feature", () => {
+      const bad = [];
+      Object.entries(CLASSES).forEach(([k, c]) => {
+        (c.progression || []).forEach((p) => {
+          (p.detail || []).forEach((d) => {
+            if (!(p.features || []).includes(d.n)) bad.push(k + " L" + p.level + ": " + d.n);
+          });
+        });
+      });
+      return bad;
+    });
+    // Some of those come from a feature's own wiki page, whose first paragraph is
+    // sometimes a sidebar: "Pact Magic" once described itself as "Lists of spells
+    // by level All spells Cantrips 1st level...". A description is a sentence.
+    check("Shape", "class feature descriptions are prose, not navigation", () => {
+      const bad = [];
+      Object.entries(CLASSES).forEach(([k, c]) => {
+        (c.progression || []).forEach((p) => {
+          (p.detail || []).forEach((d) => {
+            if (!d.d) return;
+            // Terse is fine — "Choose 1 Favoured Enemy" is a real description. What
+            // must never appear is a sidebar's table of contents, which is long,
+            // has no verb, and reads as a run of capitalised links.
+            if (/Lists of spells|Core actions Action|^(\w+ ){3,}(Cantrips|1st level)/.test(d.d)) {
+              bad.push(k + " / " + d.n + ": sidebar text");
+            } else if (d.d.length > 80 && !/[.!?]/.test(d.d)) {
+              bad.push(k + " / " + d.n + ": " + d.d.length + " chars, no sentence end");
+            }
+          });
+        });
+      });
+      return bad;
+    });
+    check("Shape", "most class features carry a description", () => {
+      const skip = new Set(["feat", "choose a subclass", "subclass feature", "fighting style"]);
+      let total = 0, described = 0;
+      Object.values(CLASSES).forEach((c) => {
+        (c.progression || []).forEach((p) => {
+          (p.features || []).forEach((f) => {
+            if (skip.has(String(f).toLowerCase())) return;
+            total++;
+            if ((p.detail || []).some((d) => d.n === f)) described++;
+          });
+        });
+      });
+      // 99 of 105 today; the four without are features the wiki has no page for.
+      return described / total < 0.9 ? [described + " of " + total + " described"] : [];
+    });
+
     check("Shape", "class features are names, not numbers", () => {
       const bad = [];
       Object.entries(CLASSES).forEach(([k, c]) => {

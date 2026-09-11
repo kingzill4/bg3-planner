@@ -11,6 +11,7 @@ param([switch]$Refresh)
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot "keep-icons.ps1")
 $cacheDir = Join-Path $root "cache"
 $UA = "bg3-planner personal build tool (contact: fmongeon@mongeonsolutions.ca)"
 
@@ -178,6 +179,8 @@ foreach ($name in $races) {
         $name, $speed, $darkvision, ($resistances -join ","), $traits.Count, ($armour -join ","), ($weapons -join ","))
 }
 
+$jsonPath = Join-Path $root "data\races.json"
+$results = Merge-ExistingIcons -Items $results -JsonPath $jsonPath
 $results | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $root "data\races.json") -Encoding utf8
 Write-Host "`n$($results.Count) races -> data\races.json"
 if ($missing) { Write-Host "Introuvables : $($missing -join ', ')" }
