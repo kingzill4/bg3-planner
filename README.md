@@ -25,6 +25,31 @@ pwsh -File scripts/serve.ps1
 
 then open http://localhost:8791
 
+## Checking it
+
+```
+http://localhost:8791/tests/index.html
+```
+
+56 assertions against the real data and the real functions — or call `runSelfTest()` from the
+console on any page. Every one of them started as a check run by hand and then forgotten, which is
+the problem: a one-off check finds a bug once, a named assertion finds it every time the scrapers
+rebuild 934 items and 579 spells from a wiki that moves underneath them.
+
+They are grouped by what they protect. **Identity**: ids unique and resolvable — including a guard
+against separator characters, because a variable collision in the spell scraper once overwrote 228
+ids with strings like `class|Paladin`, and only a stray icon count gave it away. **References**:
+every cross-reference resolves, and every tab group is marked up the same way. **Shape**: scraped
+values inside the ranges the game allows. **Arithmetic**: no NaN anywhere across all twelve classes,
+odds summing to exactly 1 in every roll state, and Advantage ≥ straight ≥ Disadvantage.
+**Rules**: the wiki-verified rules that must not drift — dual-wield legality, Sneak Attack withdrawn
+at Disadvantage, Action Surge being Fighter-only, Haste losing Extra Attack in Honour mode and only
+there, Wet's resistance-negation clause, and no natural-20 auto-success on saving throws.
+
+Several also guard UI regressions that were painful to find: that the picker takes focus without
+scrolling the page, that selecting an option does not rebuild the DOM mid-event, and that every
+script and stylesheet carries its content hash.
+
 ## Features
 
 - **Build Planner** — a paper doll with the 12 real BG3 slots (head, cloak, chest, gloves,
@@ -52,6 +77,22 @@ then open http://localhost:8791
   from. *By slot* is the same gear itemised, each piece with its full stat block. These were two
   panels in two columns answering one question; merging them freed a column and removed a second
   scroll region.
+- **Starter builds** — five complete characters at level 12, one click from the party bar, so the
+  first screen is something to pull apart rather than twelve empty fields. They are **worked
+  examples, not recommendations**, and the distinction is deliberate: everything else here is
+  checked against bg3.wiki, and "this build is strong" is not a claim a wiki can settle. Each is
+  chosen to demonstrate a part of the calculator — the Fighter shows Extra Attack and the −5/+10
+  trade, the Rogue the bonus-action off-hand and Sneak Attack dice, the Wizard spell projection
+  against resistances, the Cleric a build the damage figures deliberately say little about. Nothing
+  in them is typed from memory: ability scores come from the game's own recommended array applied in
+  the class's scraped priority order (all five land on exactly 27 of 27 points), and every class,
+  subclass, race, background, feat and item id is checked by a self-test, because hand-written ids
+  pointing into scraped data is precisely the pairing that rots in silence.
+- **Race in two steps** — race, then ancestry, the way character creation asks. A flat list worked
+  at 23 races and stopped working at 33, ten of them ending in the same word. The grouping is not
+  guesswork: the companion infoboxes record exactly this split — Astarion is "Elf" / "High elf",
+  Minthara "Drow" / "Lolth-sworn drow" — which is the game's own answer to which families exist, and
+  to Drow being a race rather than a kind of Elf.
 - **Origin companions** — pick Astarion, Shadowheart, Gale, Lae'zel, Wyll, Karlach, Halsin,
   Jaheira, Minsc or Minthara and they load with the ability scores the game ships them with.
   their shipped subrace, subclass, background and ability scores. "Respec" switches to the
