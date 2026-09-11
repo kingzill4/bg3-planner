@@ -325,7 +325,64 @@ function renderPartyBar() {
   });
   if (state.party.length < MAX_MEMBERS) {
     bar.appendChild(el("button", { class: "add-member-btn", onclick: addMember }, ["+ Add character"]));
+    // A blank sheet is a poor first screen. This adds one that is already whole,
+    // so the first thing you do is change something rather than fill everything.
+    bar.appendChild(el("button", {
+      class: "add-member-btn starter-btn",
+      title: "Add a complete example character to take apart",
+      // the document-level handler closes any popover on an outside click, and
+      // without this marker the very click that opens this one counts as outside
+      "data-popover": "",
+      onclick: openStarterPicker
+    }, ["✦ Starter build"]));
   }
+}
+
+// The starter list, as a popover rather than a panel: it is used once and then
+// never again, so it should not occupy the sheet permanently.
+function openStarterPicker(e) {
+  if (state.party.length >= MAX_MEMBERS) return;
+  const anchor = (e && (e.currentTarget || e.target)) ||
+    document.querySelector(".starter-btn");
+  const body = el("div", { class: "starter-list" });
+  body.appendChild(el("div", { class: "starter-intro" }, [
+    "Complete, legal characters at level " + MAX_LEVEL + ", each picked to show off a " +
+    "different part of the calculator. They are examples to pull apart, not " +
+    "recommendations — what makes a build good is an opinion, and everything else " +
+    "this tool tells you is checked against the wiki."
+  ]));
+  STARTER_BUILDS.forEach((b) => {
+    const cls = CLASSES[b.cls];
+    const sub = subclassById[b.subclass];
+    const race = raceById[b.race];
+    const row = el("div", {
+      class: "starter-row",
+      onclick: () => {
+        const m = memberFromStarter(b);
+        state.party.push(m);
+        // the field is activeMemberId, as addMember uses — writing activeId
+        // instead silently added the character without selecting it
+        state.activeMemberId = m.id;
+        saveCurrent();
+        closePopover();
+        renderPlanner();
+      }
+    });
+    if (cls && cls.icon) {
+      row.appendChild(el("span", { class: "starter-icon" },
+        [el("img", { src: cls.icon, alt: "", loading: "lazy" })]));
+    }
+    const text = el("div", { class: "starter-text" });
+    text.appendChild(el("div", { class: "starter-name" }, [b.name]));
+    text.appendChild(el("div", { class: "starter-meta" }, [
+      [race && race.name, sub && sub.name, (BACKGROUNDS[b.background] || {}).label]
+        .filter(Boolean).join(" · ")
+    ]));
+    text.appendChild(el("div", { class: "starter-shows" }, ["Shows " + b.shows]));
+    row.appendChild(text);
+    body.appendChild(row);
+  });
+  showPopover(anchor, "Starter builds", body);
 }
 
 function addMember() {

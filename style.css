@@ -1035,6 +1035,31 @@ footer.foot {
 }
 footer.foot a { color: var(--gold-dim); }
 footer.foot a:hover { color: var(--gold); }
+/* --- starter builds --- */
+.starter-btn { color: var(--gold-dim); }
+.starter-btn:hover { color: var(--gold-bright); border-color: var(--gold-dim); }
+.starter-intro {
+  font-size: 11px; line-height: 1.45; color: var(--text-dim);
+  margin-bottom: 10px; padding-bottom: 9px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.starter-list { display: flex; flex-direction: column; gap: 4px; min-width: 300px; }
+.starter-row {
+  display: flex; gap: 10px; align-items: flex-start; cursor: pointer;
+  padding: 8px 9px; border-radius: 5px;
+  border: 1px solid transparent; background: rgba(0,0,0,.22);
+}
+.starter-row:hover { border-color: var(--gold-dim); background: rgba(212,175,106,.08); }
+.starter-icon {
+  width: 32px; height: 32px; flex: 0 0 auto; border-radius: 4px; overflow: hidden;
+  background: radial-gradient(circle at 50% 35%, #1e2a38, #0d1219);
+}
+.starter-icon img { width: 100%; height: 100%; object-fit: cover; }
+.starter-text { min-width: 0; }
+.starter-name { font-family: var(--serif); color: var(--gold-bright); font-size: 13px; }
+.starter-meta { font-size: 11px; color: var(--text); opacity: .85; margin-top: 1px; }
+.starter-shows { font-size: 10.5px; color: var(--text-dim); font-style: italic; margin-top: 3px; }
+
 /* the second step of the race picker, indented under the first so it reads as
    part of that choice rather than as another top-level field */
 .subrace-picker {

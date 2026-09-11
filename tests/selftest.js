@@ -233,6 +233,77 @@ const SelfTest = (() => {
         ? true
         : "the family value does not fall back to m.raceFamily";
     });
+    // Starter builds are hand-written ids pointing into scraped data, which is
+    // exactly the pairing that rots silently: rename a subclass upstream and the
+    // starter still "works", producing a sheet with a missing subclass nobody
+    // notices. These fail loudly instead.
+    check("References", "every starter build's ids resolve", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        if (!CLASSES[b.cls]) bad.push(b.id + " class " + b.cls);
+        if (b.subclass && !subclassById[b.subclass]) bad.push(b.id + " subclass " + b.subclass);
+        if (!raceById[b.race]) bad.push(b.id + " race " + b.race);
+        if (!BACKGROUNDS[b.background]) bad.push(b.id + " background " + b.background);
+        (b.feats || []).forEach((f) => { if (!FEATS[f]) bad.push(b.id + " feat " + f); });
+        Object.entries(b.gear || {}).forEach(([slot, id]) => {
+          if (!itemsById[id]) bad.push(b.id + " " + slot + " " + id);
+        });
+      });
+      return bad;
+    });
+    check("References", "a starter's subclass belongs to its class", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        if (!b.subclass) return;
+        const sub = subclassById[b.subclass];
+        const cls = CLASSES[b.cls];
+        if (sub && cls && sub.class !== cls.label) {
+          bad.push(b.id + ": " + sub.name + " is a " + sub.class + ", not a " + cls.label);
+        }
+      });
+      return bad;
+    });
+    check("Shape", "every starter build produces a legal point-buy sheet", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        const m = memberFromStarter(b, "test-" + b.id);
+        const spent = spentPoints(m.scores);
+        if (spent > POINT_POOL) bad.push(b.id + " spends " + spent + " of " + POINT_POOL);
+        Object.entries(m.scores).forEach(([k, v]) => {
+          if (v < ABILITY_MIN || v > ABILITY_MAX) bad.push(b.id + " " + k + "=" + v);
+        });
+        if (totalLevel(m) > MAX_LEVEL) bad.push(b.id + " is level " + totalLevel(m));
+      });
+      return bad;
+    });
+    check("Arithmetic", "every starter build renders numbers without NaN", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        const m = memberFromStarter(b, "test-" + b.id);
+        const d = derivedStats(m);
+        ["ac", "hp", "initiative", "prof"].forEach((f) => {
+          if (!Number.isFinite(d[f])) bad.push(b.id + "." + f + "=" + d[f]);
+        });
+        const t = turnSummary(m, { targetAc: 15, ground: 0 });
+        if (t && !Number.isFinite(t.total)) bad.push(b.id + ".dpr=" + t.total);
+      });
+      return bad;
+    });
+    // A starter that ships a weapon in each hand must ship a pair the game would
+    // let you hold, or it demonstrates a turn nobody can take.
+    check("Rules", "a starter's two weapons may legally be dual-wielded", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        const main = itemsById[(b.gear || {}).weapon1];
+        const off = itemsById[(b.gear || {}).weapon2];
+        if (!main || !off) return;
+        const m = memberFromStarter(b, "test-" + b.id);
+        const check2 = dualWieldCheck(m, main, off);
+        if (!check2.ok) bad.push(b.id + ": " + check2.reason);
+      });
+      return bad;
+    });
+
     check("References", "Duergar is filed under Dwarf", () => {
       const r = RACES.find((x) => x.id === "duergar");
       if (!r) return true;

@@ -30,6 +30,106 @@ const companionById = {};
 COMPANION_LIST.forEach((c) => (companionById[c.id] = c));
 
 // ---------------------------------------------------------------
+// Starter builds
+// ---------------------------------------------------------------
+// A blank sheet is a bad first screen: twelve classes, fifty-eight subclasses and
+// thirty-three races, and nothing to react to. These give someone a complete,
+// legal character to look at and then pull apart.
+//
+// They are worked examples, not recommendations, and the difference matters here.
+// Everything this tool states is checked on bg3.wiki, and "this is a strong build"
+// is not the kind of claim a wiki can settle — it documents rules, not opinions.
+// So each of these is chosen to *demonstrate a mechanic the tool computes*, and
+// the UI says so rather than implying a tier list.
+//
+// Nothing in them is invented either:
+//   - every class, subclass, race and background id is checked against the data
+//     by a self-test, so a renamed subclass fails loudly instead of silently
+//     producing a broken sheet
+//   - ability scores come from presetScores(), which applies the game's own
+//     recommended array in the class's scraped priority order — not numbers typed
+//     from memory
+const STARTER_BUILDS = [
+  {
+    id: "greatsword-fighter",
+    name: "Greatsword Fighter",
+    shows: "Extra Attack, critical range and the −5/+10 trade",
+    cls: "fighter", subclass: "champion", race: "human", background: "soldier",
+    feats: ["greatWeaponMaster"],
+    // A starter with empty hands shows an empty damage panel, which is the one
+    // thing it exists to demonstrate. These are plain Act 1 weapons, not the
+    // legendaries — the point is to give the calculator something to chew on, not
+    // to hand out endgame gear. The rogue's pair is Light on both sides, so it
+    // dual-wields without the Dual Wielder feat.
+    gear: { weapon1: "reinforced-greatsword" }
+  },
+  {
+    id: "dual-wield-rogue",
+    name: "Dual-wielding Rogue",
+    shows: "the bonus-action off-hand attack and Sneak Attack dice",
+    cls: "rogue", subclass: "thief", race: "wood-elf", background: "urchin",
+    feats: [],
+    gear: { weapon1: "polished-dagger", weapon2: "githyanki-shortsword" }
+  },
+  {
+    id: "evocation-wizard",
+    name: "Evocation Wizard",
+    shows: "spell projection, save DCs and target resistances",
+    cls: "wizard", subclass: "evocation-school", race: "high-elf", background: "sage",
+    feats: [],
+    gear: {}
+  },
+  {
+    id: "vengeance-paladin",
+    name: "Vengeance Paladin",
+    shows: "Divine Smite spending a spell slot for damage",
+    cls: "paladin", subclass: "oath-of-vengeance", race: "zariel-tiefling",
+    background: "noble", feats: [],
+    gear: { weapon1: "githyanki-longsword" }
+  },
+  {
+    id: "life-cleric",
+    name: "Life Cleric",
+    shows: "a build the damage figures deliberately say little about",
+    cls: "cleric", subclass: "life-domain", race: "gold-dwarf", background: "acolyte",
+    feats: [],
+    gear: { weapon1: "crude-mace" }
+  }
+];
+
+// Build a full member from a starter. Kept beside the data so the shape stays in
+// one place: a starter that forgets a field would otherwise produce a sheet that
+// looks fine and misbehaves later.
+function memberFromStarter(build, id) {
+  const cls = CLASSES[build.cls];
+  const priority = (cls && cls.priority) || ["str", "dex", "con", "int", "wis", "cha"];
+  return {
+    id: id || ("m" + Date.now()),
+    name: build.name,
+    notes: "",
+    cls: build.cls,
+    subclass: build.subclass || null,
+    level: MAX_LEVEL,
+    classes: [{ cls: build.cls, levels: MAX_LEVEL, subclass: build.subclass || null }],
+    scores: presetScores(build.cls),
+    // the racial +2/+1 go on what the class leads with, the same order the
+    // recommended spread uses
+    racial2: priority[0],
+    racial1: priority[1],
+    race: build.race,
+    raceFamily: raceById[build.race] ? raceFamilyOf(raceById[build.race]) : null,
+    background: build.background,
+    skills: [], expertise: [],
+    feats: [...(build.feats || [])], featBoosts: {},
+    styles: [], subChoices: {},
+    // gear goes in Act 1 only: the later acts stay empty so "copy forward" still
+    // means something, and so the starter does not pretend to know your Act 3 kit
+    loadouts: { 1: { ...(build.gear || {}) }, 2: {}, 3: {} },
+    companion: null, useOrigin: false, originScores: null
+  };
+}
+
+// ---------------------------------------------------------------
 // Race families, for the two-step picker
 // ---------------------------------------------------------------
 // BG3's character creation asks for a race and then an ancestry, and the flat
