@@ -160,6 +160,11 @@ function renderRacePicker(m) {
   // "— none —" the instant you chose Dragonborn, as if the click had been
   // rejected, while the ancestry menu appeared underneath it.
   const family = current ? raceFamilyOf(current) : (m.raceFamily || "");
+  // raceFamily only exists to remember a half-made choice, so it must never
+  // contradict a race that *is* set. Loading a companion, or any other path that
+  // writes `race` directly, would otherwise leave the previous family behind —
+  // harmless while a race is chosen, and wrong the moment one is cleared.
+  if (current && m.raceFamily !== family) m.raceFamily = family;
   const families = raceFamilies();
 
   const describe = (r) => ({
