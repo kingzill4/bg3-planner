@@ -223,6 +223,16 @@ const SelfTest = (() => {
       const f = raceFamilyOf(r);
       return f === "Half-Elf" ? true : "filed under " + f;
     });
+    // Choosing a family that branches leaves `race` null on purpose, waiting for
+    // the ancestry — so the family field has to read from the remembered family
+    // and not from `race`, or the top field snaps back to "— none —" the instant
+    // you click Dragonborn, as if the click had been refused.
+    check("References", "the race field reads the family, not just the race", () => {
+      const src = renderRacePicker.toString();
+      return /m\.raceFamily/.test(src) && /current \? raceFamilyOf\(current\)\s*:\s*\(m\.raceFamily/.test(src)
+        ? true
+        : "the family value does not fall back to m.raceFamily";
+    });
     check("References", "Duergar is filed under Dwarf", () => {
       const r = RACES.find((x) => x.id === "duergar");
       if (!r) return true;

@@ -154,7 +154,12 @@ function renderRacePicker(m) {
   box.innerHTML = "";
 
   const current = raceById[m.race] || null;
-  const family = current ? raceFamilyOf(current) : "";
+  // Fall back to the remembered family, not to blank. Picking a family that has
+  // subraces deliberately leaves `race` null until the ancestry is chosen — so
+  // deriving the field purely from `race` made the top field snap back to
+  // "— none —" the instant you chose Dragonborn, as if the click had been
+  // rejected, while the ancestry menu appeared underneath it.
+  const family = current ? raceFamilyOf(current) : (m.raceFamily || "");
   const families = raceFamilies();
 
   const describe = (r) => ({
@@ -763,7 +768,14 @@ function renderPendingChoices() {
   const pending = [];
   const origin = !!(m.useOrigin && m.originScores);
 
-  if (!m.race) pending.push("Race not chosen");
+  // A family with subraces leaves `race` null until the ancestry is picked, and
+  // "Race not chosen" reads as though the first choice had not registered. Name
+  // the step that is actually outstanding, the way the subclass line below does.
+  if (!m.race) {
+    pending.push(m.raceFamily
+      ? m.raceFamily + " ancestry not chosen"
+      : "Race not chosen");
+  }
   if (!origin) {
     const spent = spentPoints(m.scores);
     if (spent < POINT_POOL) pending.push((POINT_POOL - spent) + " ability points unspent");
