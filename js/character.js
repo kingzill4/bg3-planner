@@ -56,12 +56,11 @@ const STARTER_BUILDS = [
     shows: "Extra Attack, critical range and the −5/+10 trade",
     cls: "fighter", subclass: "champion", race: "human", background: "soldier",
     feats: ["greatWeaponMaster"],
-    // A starter with empty hands shows an empty damage panel, which is the one
-    // thing it exists to demonstrate. These are plain Act 1 weapons, not the
-    // legendaries — the point is to give the calculator something to chew on, not
-    // to hand out endgame gear. The rogue's pair is Light on both sides, so it
-    // dual-wields without the Dual Wielder feat.
-    gear: { weapon1: "reinforced-greatsword" }
+    // The kit is a shape, not a shopping list: the best weapon of this type and
+    // the best armour of this category that the character may legally wear are
+    // resolved from the data at build time. Accessories stay empty — rings,
+    // amulet and gloves are where the decisions worth making live.
+    kit: { weapon: "Greatsword", armour: "Heavy Armour", style: "Great Weapon Fighting" }
   },
   {
     id: "dual-wield-rogue",
@@ -69,7 +68,9 @@ const STARTER_BUILDS = [
     shows: "the bonus-action off-hand attack and Sneak Attack dice",
     cls: "rogue", subclass: "thief", race: "wood-elf", background: "urchin",
     feats: [],
-    gear: { weapon1: "polished-dagger", weapon2: "githyanki-shortsword" }
+    // both hands Light, so it dual-wields without the Dual Wielder feat
+    kit: { weapon: "Shortsword", offhand: "Dagger", armour: "Light Armour",
+           style: "Two-Weapon Fighting" }
   },
   {
     id: "evocation-wizard",
@@ -77,7 +78,7 @@ const STARTER_BUILDS = [
     shows: "spell projection, save DCs and target resistances",
     cls: "wizard", subclass: "evocation-school", race: "high-elf", background: "sage",
     feats: [],
-    gear: {}
+    kit: { weapon: "Quarterstaff", armour: "Clothing" }
   },
   {
     id: "vengeance-paladin",
@@ -85,7 +86,7 @@ const STARTER_BUILDS = [
     shows: "Divine Smite spending a spell slot for damage",
     cls: "paladin", subclass: "oath-of-vengeance", race: "zariel-tiefling",
     background: "noble", feats: [],
-    gear: { weapon1: "githyanki-longsword" }
+    kit: { weapon: "Longsword", armour: "Heavy Armour", shield: true, style: "Duelling" }
   },
   {
     id: "life-cleric",
@@ -93,9 +94,72 @@ const STARTER_BUILDS = [
     shows: "a build the damage figures deliberately say little about",
     cls: "cleric", subclass: "life-domain", race: "gold-dwarf", background: "acolyte",
     feats: [],
-    gear: { weapon1: "crude-mace" }
+    kit: { weapon: "Mace", armour: "Heavy Armour", shield: true }
   }
 ];
+
+// The best item this character may legally wear, by a criterion we can defend.
+// Deriving beats listing ids: sixty hand-written ids would be sixty things to
+// re-check every time the scrapers run, and "highest AC I am proficient with" is
+// a rule rather than an opinion.
+function bestItemFor(member, filter, score) {
+  const usable = ITEMS.filter((i) => {
+    try { return filter(i) && !proficiencyIssue(member, i); } catch (e) { return false; }
+  });
+  if (!usable.length) return null;
+  return usable.sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name))[0];
+}
+
+const itemHasProp = (i, p) =>
+  (i.details || []).some((d) => new RegExp("\\b" + p + "\\b", "i").test(d));
+
+// Fill the sheet the way a player would before they start tuning it: armour they
+// can actually wear, a weapon of the shape the build is about, the fighting style
+// and feats that make it that build, and the class's own skills. The accessory
+// slots stay empty on purpose — rings, amulet, cloak and gloves are where the
+// interesting decisions live, and handing over a finished optimisation would skip
+// the part of the tool worth using.
+function equipStarter(member, build) {
+  const gear = {};
+  const spec = build.kit || {};
+
+  if (spec.weapon) {
+    const w = bestItemFor(member,
+      (i) => i.type === "weapon" && i.damage && (i.subtype || "") === spec.weapon,
+      (i) => enchantmentBonus(i));
+    if (w) gear.weapon1 = w.id;
+  }
+  if (spec.offhand) {
+    const off = bestItemFor(member,
+      (i) => i.type === "weapon" && i.damage && (i.subtype || "") === spec.offhand &&
+             itemHasProp(i, "Light") && i.id !== gear.weapon1,
+      (i) => enchantmentBonus(i));
+    if (off) gear.weapon2 = off.id;
+  }
+  if (spec.ranged) {
+    const r = bestItemFor(member,
+      (i) => i.type === "weapon" && i.damage && (i.subtype || "") === spec.ranged,
+      (i) => enchantmentBonus(i));
+    if (r) gear.ranged1 = r.id;
+  }
+  if (spec.armour) {
+    const a = bestItemFor(member,
+      (i) => i.type === "armor" && i.ac && (i.subtype || "") === spec.armour,
+      (i) => i.ac || 0);
+    if (a) gear.chest = a.id;
+  }
+  // A shield only helps a hand that is free, so it is skipped for a two-handed
+  // weapon or a second weapon — the same rule the damage panel already applies.
+  if (spec.shield && !gear.weapon2) {
+    const main = itemsById[gear.weapon1];
+    const twoHanded = main && itemHasProp(main, "Two-Handed");
+    if (!twoHanded) {
+      const s = bestItemFor(member, (i) => i.type === "shield", (i) => i.ac || 0);
+      if (s) gear.weapon2 = s.id;
+    }
+  }
+  return gear;
+}
 
 // Build a full member from a starter. Kept beside the data so the shape stays in
 // one place: a starter that forgets a field would otherwise produce a sheet that
@@ -103,7 +167,7 @@ const STARTER_BUILDS = [
 function memberFromStarter(build, id) {
   const cls = CLASSES[build.cls];
   const priority = (cls && cls.priority) || ["str", "dex", "con", "int", "wis", "cha"];
-  return {
+  const m = {
     id: id || ("m" + Date.now()),
     name: build.name,
     notes: "",
@@ -121,12 +185,48 @@ function memberFromStarter(build, id) {
     background: build.background,
     skills: [], expertise: [],
     feats: [...(build.feats || [])], featBoosts: {},
-    styles: [], subChoices: {},
-    // gear goes in Act 1 only: the later acts stay empty so "copy forward" still
-    // means something, and so the starter does not pretend to know your Act 3 kit
-    loadouts: { 1: { ...(build.gear || {}) }, 2: {}, 3: {} },
+    styles: [],
+    subChoices: {},
+    loadouts: { 1: {}, 2: {}, 3: {} },
     companion: null, useOrigin: false, originScores: null
   };
+
+  // Everything below needs the member to exist first: proficiency depends on the
+  // class, and the class's own skill list depends on the class too.
+
+  // A fighting style only if the class actually grants one. Writing the kit's
+  // style in unconditionally gave the Rogue a style it has no slot for — an
+  // illegal sheet that still rendered, which is the worst kind.
+  const styleRoom = styleSlots(m);
+  if (styleRoom > 0 && build.kit && build.kit.style) {
+    m.styles = [build.kit.style];
+  }
+
+  // Skills from this class's list, up to its budget. A starter that arrives with
+  // "0 / 4 skill picks" is not a character, it is a form to fill in.
+  const classSkills = (cls && cls.skills) || [];
+  const budget = skillPickBudget(m);
+  m.skills = classSkills.slice(0, budget);
+
+  // Remaining feat slots go to Ability Improvement, which the calculator actually
+  // uses. Leaving them empty left four of five starters with "3 feat slots empty"
+  // on a level 12 sheet.
+  const slots = featSlots(m);
+  while (m.feats.length < slots) {
+    m.feats.push("abilityImprovement");
+    if (m.feats.length > 8) break;
+  }
+  m.featBoosts = {};
+  m.feats.forEach((f, i) => {
+    if (f === "abilityImprovement") m.featBoosts[i] = priority[i % 2];
+  });
+
+  // Gear is derived from the kit spec, and the whole set lives in every act: a
+  // level 12 character carrying an Act 1 starter blade was the incoherence — the
+  // sheet said endgame and the hands said tutorial.
+  const gear = equipStarter(m, build);
+  m.loadouts = { 1: { ...gear }, 2: { ...gear }, 3: { ...gear } };
+  return m;
 }
 
 // ---------------------------------------------------------------

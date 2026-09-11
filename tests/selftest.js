@@ -290,6 +290,45 @@ const SelfTest = (() => {
       });
       return bad;
     });
+    // A starter that hands out something the class cannot have renders perfectly
+    // and is simply wrong — the Rogue arrived with a fighting style it has no slot
+    // for. Every budget the sheet enforces is checked here too.
+    check("Shape", "no starter exceeds its own feat, skill or style budget", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        const m = memberFromStarter(b, "test-" + b.id);
+        const s = styleSlots(m);
+        if ((m.styles || []).length > s) {
+          bad.push(b.id + ": " + m.styles.length + " styles, " + s + " slot(s)");
+        }
+        if ((m.feats || []).length > featSlots(m)) {
+          bad.push(b.id + ": " + m.feats.length + " feats, " + featSlots(m) + " slot(s)");
+        }
+        if ((m.skills || []).length > skillPickBudget(m)) {
+          bad.push(b.id + ": " + m.skills.length + " skills, " + skillPickBudget(m) + " pick(s)");
+        }
+      });
+      return bad;
+    });
+    // Deriving gear from the data is only better than listing ids if what comes
+    // back is actually wearable — a mis-specified category would silently equip
+    // nothing and drop the starter back to AC 11.
+    check("Shape", "every starter is armoured and armed without a proficiency problem", () => {
+      const bad = [];
+      STARTER_BUILDS.forEach((b) => {
+        const m = memberFromStarter(b, "test-" + b.id);
+        const gear = m.loadouts[1] || {};
+        if (!gear.chest) bad.push(b.id + ": no armour");
+        if ((b.kit || {}).weapon && !gear.weapon1) bad.push(b.id + ": no weapon");
+        Object.values(gear).forEach((id) => {
+          const it = itemsById[id];
+          const issue = it && proficiencyIssue(m, it);
+          if (issue) bad.push(b.id + ": " + it.name + " — " + issue);
+        });
+      });
+      return bad;
+    });
+
     check("Shape", "every starter build produces a legal point-buy sheet", () => {
       const bad = [];
       STARTER_BUILDS.forEach((b) => {
