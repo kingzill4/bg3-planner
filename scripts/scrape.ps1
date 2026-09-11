@@ -83,21 +83,21 @@ function Get-Section([string]$html, [string]$id) {
 # Carte lieu -> acte (couverture partielle, le reste reste null)
 $actMap = @{
     1 = @("Nautiloid","Ravaged Beach","Emerald Grove","Druid Grove","The Hollow","Blighted Village","Goblin Camp",
-          "Shattered Sanctum","Worg Pens","Risen Road","Waukeen's Rest","Underdark","Ebonlake","Myconid","Grymforge",
-          "Adamantine Forge","Zhentarim","Whispering Depths","Owlbear","Sunlit Wetlands","Putrid Bog","Dank Crypt",
+          "Shattered Sanctum","Worg Pens","Risen Road","Waukeen's Rest","Underdark","Ebonlake","Grymforge",
+          "Adamantine Forge","Whispering Depths","Sunlit Wetlands","Putrid Bog","Dank Crypt",
           "Riverside Teahouse","Selunite Outpost","Arcane Tower","Festering Cove","Defiled Temple","Rosymorn",
-          "Githyanki Creche","Creche Y","Mountain Pass","Rescue the Grand Duke","Overgrown Tunnel","Astral Plane",
-          "Astral Prism","Hag","Auntie Ethel","Grymforge","Philomeen","Duergar")
+          "Githyanki Creche","Creche Y","Mountain Pass","Overgrown Tunnel","Astral Plane",
+          "Astral Prism","Grymforge")
     2 = @("Shadow-Cursed","Last Light Inn","Moonrise","Gauntlet of Shar","Grand Mausoleum","House of Healing","Reithwin",
-          "Thorm","Mason's Guild","Shadowfell","Ruined Battlefield","Tollhouse","Whispering Masks","Oubliette",
-          "Cloister of Sombre Embrace","Highberry","Balthazar","Shadowlands","Toll House","Waning Moon","Sharran")
+          "Mason's Guild","Shadowfell","Ruined Battlefield","Tollhouse","Oubliette",
+          "Cloister of Sombre Embrace","Shadowlands","Toll House","Waning Moon")
     3 = @("Rivington","Lower City","Wyrm's Crossing","Wyrm's Rock","House of Hope","Sorcerous Sundries","Steel Watch",
-          "Iron Throne","Baldur's Gate","Cazador","Szarr Palace","Elfsong","Danthelon","Circus of the Last Days",
-          "Sewers","Undercity","Bhaal","Temple of Bhaal","Ramazith","Counting House","Forge of the Nine","Devil's Fee",
+          "Iron Throne","Baldur's Gate","Szarr Palace","Elfsong","Danthelon","Circus of the Last Days",
+          "Sewers","Undercity","Temple of Bhaal","Ramazith","Counting House","Forge of the Nine","Devil's Fee",
           "Facemaker","Stormshore","Water Queen","Dragon's Sanctum","Murder Tribunal","Philgrave","Mind Flayer Colony",
-          "Chromatic Scale","Quirkilious","Knights of the Shield","Sorcerous Vault","Durinbold","Elerrathin",
-          "Felogyr","Open Hand Temple","Angleiron","Lady Jannath","Lora's House","Golbraith","Jungle","Gortash",
-          "Orin","Netherbrain","Emperor","Rosymorn Monastery Trail","Upper City","Ansur","Balduran")
+          "Chromatic Scale","Knights of the Shield","Sorcerous Vault",
+          "Felogyr","Open Hand Temple","Angleiron","Lady Jannath","Lora's House","Jungle",
+          "Rosymorn Monastery Trail","Upper City")
 }
 
 # "Crèche Y'llek" -> "Creche Y'llek" : compare sans accents pour eviter les faux negatifs
@@ -113,7 +113,23 @@ function Remove-Diacritics([string]$s) {
     return $sb.ToString()
 }
 
+# Le wiki d'abord : il classe chaque lieu lui-meme, par Category:Act One/Two/Three
+# Locations (scripts/scrape-locations.ps1). La liste ecrite a la main ci-dessus ne
+# vient qu'apres, pour ce que le wiki ne classe pas — une formulation qui nomme un
+# personnage plutot qu'un lieu, par exemple.
+#
+# Cet ordre compte : la liste a la main se trompe. Elle rangeait "Rosymorn
+# Monastery Trail" en acte 3, ou le wiki le classe acte 1 — et c'est le wiki qui a
+# raison, Lady Esther y vend des sa premiere visite.
 $actMapFlat = @{}
+$locFile = Join-Path $root "data\locations.json"
+if (Test-Path $locFile) {
+    $locs = Get-Content $locFile -Raw -Encoding utf8 | ConvertFrom-Json
+    foreach ($prop in $locs.PSObject.Properties) {
+        $k = (Remove-Diacritics $prop.Name).ToLower()
+        if (-not $actMapFlat.ContainsKey($k)) { $actMapFlat[$k] = [int]$prop.Value }
+    }
+}
 foreach ($act in 1..3) {
     foreach ($kw in $actMap[$act]) {
         $k = (Remove-Diacritics $kw).ToLower()
@@ -121,14 +137,29 @@ foreach ($act in 1..3) {
     }
 }
 
+# Le plus petit acte cite gagne. La question qu'on pose a cette donnee est "a
+# partir de quand puis-je l'avoir", et la reponse est le premier acte ou l'objet
+# existe, pas le premier lieu nomme sur la page. Le Shield +1 est vendu a Moonrise
+# Towers (acte 2) et se trouve aussi dans trois endroits de l'acte 3 : le wiki
+# ouvre par l'acte 3, et prendre le premier nomme le classait acte 3 alors qu'on
+# peut l'avoir un acte plus tot.
+# Sur les limites de mots. "Hag" se trouvait dans "sarcop-hag-us", ce qui envoyait
+# le Shield +1 a l'acte 1 pour un sarcophage de l'acte 3. Un lieu est un mot, pas
+# une suite de lettres.
+$actMapRx = @{}
+foreach ($kw in $actMapFlat.Keys) {
+    $actMapRx[$kw] = [regex]::new('\b' + [regex]::Escape($kw) + '\b',
+        [Text.RegularExpressions.RegexOptions]::Compiled)
+}
+
 function Guess-Act([string]$text) {
     if (-not $text) { return $null }
     $t = (Remove-Diacritics $text).ToLower()
-    # l'acte le plus petit gagne quand plusieurs lieux sont cites (premier lieu = source principale)
-    $best = $null; $bestPos = [int]::MaxValue
+    $best = $null
     foreach ($kw in $actMapFlat.Keys) {
-        $pos = $t.IndexOf($kw)
-        if ($pos -ge 0 -and $pos -lt $bestPos) { $bestPos = $pos; $best = $actMapFlat[$kw] }
+        if (-not $actMapRx[$kw].IsMatch($t)) { continue }
+        $act = $actMapFlat[$kw]
+        if ($null -eq $best -or $act -lt $best) { $best = $act }
     }
     return $best
 }
