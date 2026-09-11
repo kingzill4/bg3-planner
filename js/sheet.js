@@ -218,7 +218,9 @@ function renderRacePicker(m) {
     sub.appendChild(el("div", { class: "subrace-label" }, [chosenFamily + " ancestry"]));
     sub.appendChild(optionPicker({
       label: chosenFamily + " subrace",
-      placeholder: "Choose a " + chosenFamily.toLowerCase() + "…",
+      // "Choose a dragonborn…" reads as though you were picking a creature; the
+      // thing being chosen is which ancestry, which the label above already names
+      placeholder: "Choose an ancestry…",
       value: m.race || "",
       options: members.map((r) => ({
         value: r.id,
@@ -984,7 +986,13 @@ function optionPicker(opts) {
 
   const commit = (value) => {
     setOpen(false);
-    opts.onSelect(value);
+    // onSelect rebuilds the whole sheet, and doing that synchronously tore the DOM
+    // out from under the click that was still propagating: the row vanished
+    // mid-dispatch and the freshly rendered toggle caught the same click, which
+    // re-opened the menu you had just chosen from. Choosing Dragonborn left the
+    // list hanging open over the result. Deferring by one turn lets the event
+    // finish against the DOM it was dispatched into, and only then replaces it.
+    setTimeout(() => opts.onSelect(value), 0);
   };
 
   // Each option needs an id so the listbox can point at the highlighted one with

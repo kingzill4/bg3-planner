@@ -415,6 +415,18 @@ const SelfTest = (() => {
       return /list\.focus\(\s*\{[^}]*preventScroll\s*:\s*true/.test(src)
         ? true : "list.focus() is called without preventScroll";
     });
+    // Choosing an option rebuilt the whole sheet synchronously, inside the click
+    // that was still propagating. The row vanished mid-dispatch and the freshly
+    // rendered toggle caught the same click, re-opening the menu you had just
+    // chosen from — so picking Dragonborn left the list hanging open over the
+    // result. The re-render has to wait for the event to finish.
+    check("Rules", "selecting an option does not re-render mid-event", () => {
+      const src = optionPicker.toString();
+      if (!/opts\.onSelect/.test(src)) return "onSelect is not called at all";
+      return /setTimeout\(\s*\(\)\s*=>\s*opts\.onSelect/.test(src)
+        ? true
+        : "onSelect is called synchronously from the click handler";
+    });
     check("Rules", "row scrolling stays inside the list", () => {
       const src = optionPicker.toString();
       return /scrollIntoView/.test(src)
