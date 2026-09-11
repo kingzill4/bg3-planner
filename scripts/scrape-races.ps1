@@ -72,6 +72,10 @@ function Get-Traits([string]$sectionHtml) {
     foreach ($m in [regex]::Matches($sectionHtml, '(?s)<dt[^>]*>(?<n>.*?)</dt>\s*<dd[^>]*>(?<d>.*?)</dd>')) {
         $n = Strip-Html $m.Groups['n'].Value
         $d = Strip-Html $m.Groups['d'].Value
+        # Le wiki ecrit parfois le nom et le texte d'un trait a la suite — "Fleet
+        # of Foot: Your Movement Speed is further increased" — et le deux-points
+        # reste colle au nom. Le trait s'appelle "Fleet of Foot".
+        $n = ($n -replace '\s*:\s*$', '').Trim()
         if ($n -and $n.Length -lt 60) { $out += [PSCustomObject]@{ n = $n; d = $d } }
     }
     return $out

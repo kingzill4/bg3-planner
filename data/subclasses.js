@@ -38,11 +38,12 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Intimidating Presence",
-        "d": "Menace an enemy and instil a terrible Fear within them."
+        "d": "Menace an enemy and instil a terrible Fear within them. · You can use Maintain Intimidating Presence to prolong the target's fear."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Berserker"
+    "wiki": "https://bg3.wiki/wiki/Berserker",
+    "icon": "icons/subclasses/berserker.png"
   },
   {
     "id": "giant-barbarian-subclass",
@@ -86,7 +87,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Giant_(barbarian_subclass)"
+    "wiki": "https://bg3.wiki/wiki/Giant_(barbarian_subclass)",
+    "icon": "icons/subclasses/giant-barbarian-subclass.png"
   },
   {
     "id": "wild-magic-barbarian-subclass",
@@ -135,7 +137,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(barbarian_subclass)"
+    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(barbarian_subclass)",
+    "icon": "icons/subclasses/wild-magic-barbarian-subclass.png"
   },
   {
     "id": "wildheart",
@@ -287,7 +290,8 @@ const SUBCLASSES = [
         ]
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Wildheart"
+    "wiki": "https://bg3.wiki/wiki/Wildheart",
+    "icon": "icons/subclasses/wildheart.png"
   },
   {
     "id": "college-of-glamour",
@@ -312,16 +316,17 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Mantle of Inspiration",
-        "d": "Bonus increases to 8 temporary hit points."
+        "d": "Bonus increases to 8 temporary hit points. · Number of targets increases to 3."
       },
       {
         "level": 10,
         "n": "Mantle of Inspiration",
-        "d": "Bonus increases to 11 temporary hit points."
+        "d": "Bonus increases to 11 temporary hit points. · Number of targets increases to 4."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Glamour"
+    "wiki": "https://bg3.wiki/wiki/College_of_Glamour",
+    "icon": "icons/subclasses/college-of-glamour.png"
   },
   {
     "id": "college-of-lore",
@@ -345,7 +350,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Lore"
+    "wiki": "https://bg3.wiki/wiki/College_of_Lore",
+    "icon": "icons/subclasses/college-of-lore.png"
   },
   {
     "id": "college-of-swords",
@@ -365,12 +371,17 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Fighting Style",
-        "d": "Duelling When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon."
-      },
-      {
-        "level": 3,
-        "n": "Two-Weapon Fighting",
-        "d": "When you make an offhand attack, you can add your Ability Score Modifier to the damage of the attack."
+        "d": "",
+        "opts": [
+          {
+            "n": "Duelling",
+            "d": "When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon."
+          },
+          {
+            "n": "Two-Weapon Fighting",
+            "d": "When you make an offhand attack, you can add your Ability Score Modifier to the damage of the attack."
+          }
+        ]
       },
       {
         "level": 6,
@@ -379,7 +390,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Swords"
+    "wiki": "https://bg3.wiki/wiki/College_of_Swords",
+    "icon": "icons/subclasses/college-of-swords.png"
   },
   {
     "id": "college-of-valour",
@@ -406,7 +418,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/College_of_Valour"
+    "wiki": "https://bg3.wiki/wiki/College_of_Valour",
+    "icon": "icons/subclasses/college-of-valour.png"
   },
   {
     "id": "death-domain",
@@ -465,7 +478,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Death_Domain"
+    "wiki": "https://bg3.wiki/wiki/Death_Domain",
+    "icon": "icons/subclasses/death-domain.png"
   },
   {
     "id": "knowledge-domain",
@@ -529,7 +543,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Knowledge_Domain"
+    "wiki": "https://bg3.wiki/wiki/Knowledge_Domain",
+    "icon": "icons/subclasses/knowledge-domain.png"
   },
   {
     "id": "life-domain",
@@ -588,7 +603,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Life_Domain"
+    "wiki": "https://bg3.wiki/wiki/Life_Domain",
+    "icon": "icons/subclasses/life-domain.png"
   },
   {
     "id": "light-domain",
@@ -647,7 +663,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Light_Domain"
+    "wiki": "https://bg3.wiki/wiki/Light_Domain",
+    "icon": "icons/subclasses/light-domain.png"
   },
   {
     "id": "nature-domain",
@@ -706,7 +723,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Nature_Domain"
+    "wiki": "https://bg3.wiki/wiki/Nature_Domain",
+    "icon": "icons/subclasses/nature-domain.png"
   },
   {
     "id": "tempest-domain",
@@ -721,17 +739,17 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "Wrath of the Storm",
-        "d": "As a Reaction, strike back at an attacking creature, dealing 2d8 Lightning or 2d8 Thunder damage. The target takes half damage on a successful Saving Throw."
-      },
-      {
-        "level": 1,
-        "n": "Wrath of the Storm: Lightning",
-        "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Lightning that deals 2d8 Lightning."
-      },
-      {
-        "level": 1,
-        "n": "Wrath of the Storm: Thunder",
-        "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Thunder that deals 2d8 Thunder."
+        "d": "As a Reaction, strike back at an attacking creature, dealing 2d8 Lightning or 2d8 Thunder damage. The target takes half damage on a successful Saving Throw.",
+        "opts": [
+          {
+            "n": "Wrath of the Storm: Lightning",
+            "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Lightning that deals 2d8 Lightning."
+          },
+          {
+            "n": "Wrath of the Storm: Thunder",
+            "d": "If a nearby enemy attacks you, you can retaliate with Wrath of the Storm: Thunder that deals 2d8 Thunder."
+          }
+        ]
       },
       {
         "level": 1,
@@ -775,7 +793,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Tempest_Domain"
+    "wiki": "https://bg3.wiki/wiki/Tempest_Domain",
+    "icon": "icons/subclasses/tempest-domain.png"
   },
   {
     "id": "trickery-domain",
@@ -834,7 +853,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Trickery_Domain"
+    "wiki": "https://bg3.wiki/wiki/Trickery_Domain",
+    "icon": "icons/subclasses/trickery-domain.png"
   },
   {
     "id": "war-domain",
@@ -849,7 +869,7 @@ const SUBCLASSES = [
       {
         "level": 1,
         "n": "War Priest Charges: 3",
-        "d": "Resource that allows the cleric to make extra attacks with a bonus action."
+        "d": "Resource that allows the cleric to make extra attacks with a bonus action. · Recharge: Long rest"
       },
       {
         "level": 1,
@@ -913,7 +933,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/War_Domain"
+    "wiki": "https://bg3.wiki/wiki/War_Domain",
+    "icon": "icons/subclasses/war-domain.png"
   },
   {
     "id": "circle-of-the-land",
@@ -933,7 +954,7 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Natural Recovery Charges: 1",
-        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
+        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore. · Replenished by Long Rest"
       },
       {
         "level": 2,
@@ -948,97 +969,85 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "2nd Level Circle of the Land Spells",
-        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare."
-      },
-      {
-        "level": 3,
-        "n": "Arctic",
-        "d": "Hold Person"
-      },
-      {
-        "level": 3,
-        "n": "Coast",
-        "d": "Mirror Image *"
-      },
-      {
-        "level": 3,
-        "n": "Desert",
-        "d": "Blur *"
-      },
-      {
-        "level": 3,
-        "n": "Forest",
-        "d": "Barkskin"
-      },
-      {
-        "level": 3,
-        "n": "Grassland",
-        "d": "Invisibility *"
-      },
-      {
-        "level": 3,
-        "n": "Mountain",
-        "d": "Mirror Image *"
-      },
-      {
-        "level": 3,
-        "n": "Swamp",
-        "d": "Melf's Acid Arrow *"
-      },
-      {
-        "level": 3,
-        "n": "Underdark",
-        "d": "Web *"
+        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare.",
+        "opts": [
+          {
+            "n": "Arctic",
+            "d": "Hold Person · Spike Growth"
+          },
+          {
+            "n": "Coast",
+            "d": "Mirror Image * · Misty Step *"
+          },
+          {
+            "n": "Desert",
+            "d": "Blur * · Silence *"
+          },
+          {
+            "n": "Forest",
+            "d": "Barkskin · Hold Person"
+          },
+          {
+            "n": "Grassland",
+            "d": "Invisibility * · Pass Without Trace"
+          },
+          {
+            "n": "Mountain",
+            "d": "Mirror Image * · Spike Growth"
+          },
+          {
+            "n": "Swamp",
+            "d": "Melf's Acid Arrow * · Darkness *"
+          },
+          {
+            "n": "Underdark",
+            "d": "Web * · Misty Step *"
+          }
+        ]
       },
       {
         "level": 5,
         "n": "Natural Recovery Charges: 3",
-        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
+        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore. · Replenished by Long Rest"
       },
       {
         "level": 5,
         "n": "3rd Level Circle of the Land Spells",
-        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare."
-      },
-      {
-        "level": 5,
-        "n": "Arctic",
-        "d": "Sleet Storm"
-      },
-      {
-        "level": 5,
-        "n": "Coast",
-        "d": "Sleet Storm"
-      },
-      {
-        "level": 5,
-        "n": "Desert",
-        "d": "Protection from Energy"
-      },
-      {
-        "level": 5,
-        "n": "Forest",
-        "d": "Call Lightning"
-      },
-      {
-        "level": 5,
-        "n": "Grassland",
-        "d": "Daylight"
-      },
-      {
-        "level": 5,
-        "n": "Mountain",
-        "d": "Lightning Bolt *"
-      },
-      {
-        "level": 5,
-        "n": "Swamp",
-        "d": "Stinking Cloud *"
-      },
-      {
-        "level": 5,
-        "n": "Underdark",
-        "d": "Gaseous Form *"
+        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare.",
+        "opts": [
+          {
+            "n": "Arctic",
+            "d": "Sleet Storm · Haste *"
+          },
+          {
+            "n": "Coast",
+            "d": "Sleet Storm · Call Lightning"
+          },
+          {
+            "n": "Desert",
+            "d": "Protection from Energy · Hypnotic Pattern *"
+          },
+          {
+            "n": "Forest",
+            "d": "Call Lightning · Plant Growth"
+          },
+          {
+            "n": "Grassland",
+            "d": "Daylight · Haste *"
+          },
+          {
+            "n": "Mountain",
+            "d": "Lightning Bolt * · Grant Flight *"
+          },
+          {
+            "n": "Swamp",
+            "d": "Stinking Cloud * · Vampiric Touch *"
+          },
+          {
+            "n": "Underdark",
+            "d": "Gaseous Form * · Stinking Cloud *"
+          }
+        ]
       },
       {
         "level": 6,
@@ -1058,102 +1067,90 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "Natural Recovery Charges: 4",
-        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
+        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore. · Replenished by Long Rest"
       },
       {
         "level": 7,
         "n": "4th Level Circle of the Land Spells",
-        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare."
-      },
-      {
-        "level": 7,
-        "n": "Arctic",
-        "d": "Conjure Minor Elemental"
-      },
-      {
-        "level": 7,
-        "n": "Coast",
-        "d": "Freedom of Movement"
-      },
-      {
-        "level": 7,
-        "n": "Desert",
-        "d": "Blight"
-      },
-      {
-        "level": 7,
-        "n": "Forest",
-        "d": "Conjure Minor Elemental"
-      },
-      {
-        "level": 7,
-        "n": "Grassland",
-        "d": "Freedom of Movement"
-      },
-      {
-        "level": 7,
-        "n": "Mountain",
-        "d": "Stoneskin"
-      },
-      {
-        "level": 7,
-        "n": "Swamp",
-        "d": "Blight"
-      },
-      {
-        "level": 7,
-        "n": "Underdark",
-        "d": "Greater Invisibility *"
+        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare.",
+        "opts": [
+          {
+            "n": "Arctic",
+            "d": "Conjure Minor Elemental · Ice Storm"
+          },
+          {
+            "n": "Coast",
+            "d": "Freedom of Movement · Confusion"
+          },
+          {
+            "n": "Desert",
+            "d": "Blight · Wall of Fire"
+          },
+          {
+            "n": "Forest",
+            "d": "Conjure Minor Elemental · Grasping Vine"
+          },
+          {
+            "n": "Grassland",
+            "d": "Freedom of Movement · Polymorph"
+          },
+          {
+            "n": "Mountain",
+            "d": "Stoneskin · Dominate Beast"
+          },
+          {
+            "n": "Swamp",
+            "d": "Blight · Grasping Vine"
+          },
+          {
+            "n": "Underdark",
+            "d": "Greater Invisibility * · Dominate Beast"
+          }
+        ]
       },
       {
         "level": 9,
         "n": "Natural Recovery Charges: 5",
-        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
+        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore. · Replenished by Long Rest"
       },
       {
         "level": 9,
         "n": "5th Level Circle of the Land Spells",
-        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare."
-      },
-      {
-        "level": 9,
-        "n": "Arctic",
-        "d": "Cone of Cold *"
-      },
-      {
-        "level": 9,
-        "n": "Coast",
-        "d": "Conjure Elemental"
-      },
-      {
-        "level": 9,
-        "n": "Desert",
-        "d": "Wall of Stone"
-      },
-      {
-        "level": 9,
-        "n": "Forest",
-        "d": "Mass Cure Wounds"
-      },
-      {
-        "level": 9,
-        "n": "Grassland",
-        "d": "Greater Restoration"
-      },
-      {
-        "level": 9,
-        "n": "Mountain",
-        "d": "Wall of Stone"
-      },
-      {
-        "level": 9,
-        "n": "Swamp",
-        "d": "Insect Plague"
-      },
-      {
-        "level": 9,
-        "n": "Underdark",
-        "d": "Contagion"
+        "d": "Gain access to Spells associated with one of eight Lands (even if those Spells are not Druid Spells). These Spells are always prepared and do not count against the number of Spells you can prepare.",
+        "opts": [
+          {
+            "n": "Arctic",
+            "d": "Cone of Cold * · Contagion"
+          },
+          {
+            "n": "Coast",
+            "d": "Conjure Elemental · Greater Restoration"
+          },
+          {
+            "n": "Desert",
+            "d": "Wall of Stone · Insect Plague"
+          },
+          {
+            "n": "Forest",
+            "d": "Mass Cure Wounds · Contagion"
+          },
+          {
+            "n": "Grassland",
+            "d": "Greater Restoration · Insect Plague"
+          },
+          {
+            "n": "Mountain",
+            "d": "Wall of Stone · Conjure Elemental"
+          },
+          {
+            "n": "Swamp",
+            "d": "Insect Plague · Cloudkill *"
+          },
+          {
+            "n": "Underdark",
+            "d": "Contagion · Cloudkill *"
+          }
+        ]
       },
       {
         "level": 10,
@@ -1163,11 +1160,12 @@ const SUBCLASSES = [
       {
         "level": 11,
         "n": "Natural Recovery Charges: 6",
-        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore."
+        "d": "The combined number and level of Spell Slots the Natural Recovery action can restore. · Replenished by Long Rest"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Land"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Land",
+    "icon": "icons/subclasses/circle-of-the-land.png"
   },
   {
     "id": "circle-of-the-moon",
@@ -1212,26 +1210,27 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Wild Shape: Air Myrmidon ( + 2 )",
-        "d": "Take the shape of an Air Myrmidon."
+        "d": "Take the shape of an Air Myrmidon. · Your air myrmidon shape has a starting health of 90 hit points that increases every two druid levels. It can cast Invisibility, Electrified Flail, and Raging Vortex."
       },
       {
         "level": 10,
         "n": "Wild Shape: Earth Myrmidon ( + 2 )",
-        "d": "Take the shape of an Earth Myrmidon."
+        "d": "Take the shape of an Earth Myrmidon. · Your earth myrmidon shape has a starting health of 103 hit points that increases every two druid levels. It can cast Muck to Metal, Sludgy Sling, and Burrow."
       },
       {
         "level": 10,
         "n": "Wild Shape: Fire Myrmidon ( + 2 )",
-        "d": "Take the shape of a Fire Myrmidon."
+        "d": "Take the shape of a Fire Myrmidon. · Your fire myrmidon shape has a starting health of 90 hit points that increases every two druid levels. It can cast Scorching Strike, Myrmidon's Immolation, and Cinderous Swipe."
       },
       {
         "level": 10,
         "n": "Wild Shape: Water Myrmidon ( + 2 )",
-        "d": "Take the shape of a Water Myrmidon."
+        "d": "Take the shape of a Water Myrmidon. · Your water myrmidon shape has a starting health of 90 hit points that increases every two druid levels. It can cast Hiemal Strike, Healing Vapours, and Explosive Icicle."
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Moon"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Moon",
+    "icon": "icons/subclasses/circle-of-the-moon.png"
   },
   {
     "id": "circle-of-the-spores",
@@ -1266,12 +1265,13 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Fungal Infestation",
-        "d": "Raises a mildewed, mould-encrusted zombie from a corpse."
-      },
-      {
-        "level": 6,
-        "n": "Fungal Infestation Charges: 4",
-        "d": "The number of times you can use Fungal Infestation. Replenished by Long Rest."
+        "d": "Raises a mildewed, mould-encrusted zombie from a corpse.",
+        "opts": [
+          {
+            "n": "Fungal Infestation Charges: 4",
+            "d": "The number of times you can use Fungal Infestation. Replenished by Long Rest."
+          }
+        ]
       },
       {
         "level": 7,
@@ -1290,7 +1290,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Spores"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Spores",
+    "icon": "icons/subclasses/circle-of-the-spores.png"
   },
   {
     "id": "circle-of-the-stars",
@@ -1330,27 +1331,25 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Cosmic Omen",
-        "d": "Whenever you Long Rest, you consult the stars for a Cosmic Omen of Weal or of Woe. The omen grants you the ability to increase (Weal) or decrease (Woe) Attack Rolls or Saving Throws, or (Weal only) to increase your allies' Ability Checks."
-      },
-      {
-        "level": 6,
-        "n": "Cosmic Omen of Weal: Attack Roll",
-        "d": "Add a +1d6 bonus to an Attack Roll."
-      },
-      {
-        "level": 6,
-        "n": "Cosmic Omen of Woe: Attack Roll",
-        "d": "Subtract 1d6 from an Attack Roll."
-      },
-      {
-        "level": 6,
-        "n": "Cosmic Omen of Weal: Saving Throw",
-        "d": "Add a +1d6 bonus to a Saving Throw."
-      },
-      {
-        "level": 6,
-        "n": "Cosmic Omen of Woe: Saving Throw",
-        "d": "Subtract 1d6 from a Saving Throw."
+        "d": "Whenever you Long Rest, you consult the stars for a Cosmic Omen of Weal or of Woe. The omen grants you the ability to increase (Weal) or decrease (Woe) Attack Rolls or Saving Throws, or (Weal only) to increase your allies' Ability Checks.",
+        "opts": [
+          {
+            "n": "Cosmic Omen of Weal: Attack Roll",
+            "d": "Add a +1d6 bonus to an Attack Roll."
+          },
+          {
+            "n": "Cosmic Omen of Woe: Attack Roll",
+            "d": "Subtract 1d6 from an Attack Roll."
+          },
+          {
+            "n": "Cosmic Omen of Weal: Saving Throw",
+            "d": "Add a +1d6 bonus to a Saving Throw."
+          },
+          {
+            "n": "Cosmic Omen of Woe: Saving Throw",
+            "d": "Subtract 1d6 from a Saving Throw."
+          }
+        ]
       },
       {
         "level": 6,
@@ -1369,7 +1368,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Stars"
+    "wiki": "https://bg3.wiki/wiki/Circle_of_the_Stars",
+    "icon": "icons/subclasses/circle-of-the-stars.png"
   },
   {
     "id": "arcane-archer",
@@ -1384,7 +1384,7 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Arcane Archer Lore",
-        "d": "Gain Arcana proficiency."
+        "d": "Gain Arcana proficiency. · Gain Nature proficiency."
       },
       {
         "level": 3,
@@ -1399,7 +1399,7 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Arcane Shots: 3",
-        "d": "Choose 3 Arcane Shots."
+        "d": "Choose 3 Arcane Shots. · One Arcane Shot option can be switched out at every level."
       },
       {
         "level": 7,
@@ -1433,7 +1433,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Arcane_Archer"
+    "wiki": "https://bg3.wiki/wiki/Arcane_Archer",
+    "icon": "icons/subclasses/arcane-archer.png"
   },
   {
     "id": "battle-master",
@@ -1448,7 +1449,7 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Superiority Dice: 4",
-        "d": "Your Superiority Dice are d8s. They fuel your Battle Master manoeuvres and are expended upon use."
+        "d": "Your Superiority Dice are d8s. They fuel your Battle Master manoeuvres and are expended upon use. · You regain expended Superiority Dice after either a Short Rest or a Long Rest."
       },
       {
         "level": 3,
@@ -1467,7 +1468,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Battle_Master"
+    "wiki": "https://bg3.wiki/wiki/Battle_Master",
+    "icon": "icons/subclasses/battle-master.png"
   },
   {
     "id": "champion",
@@ -1497,41 +1499,38 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Fighting Style",
-        "d": "Choose 1 additional fighting style"
-      },
-      {
-        "level": 10,
-        "n": "Archery",
-        "d": "You gain a +2 bonus to Attack Rolls you make with ranged Weapons."
-      },
-      {
-        "level": 10,
-        "n": "Defence",
-        "d": "You gain a +1 bonus to Armour Class while wearing armour."
-      },
-      {
-        "level": 10,
-        "n": "Duelling",
-        "d": "When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon."
-      },
-      {
-        "level": 10,
-        "n": "Great Weapon Fighting",
-        "d": "When you roll a 1 or 2 on a damage die for an attack with a Two-Handed melee weapon, that die is rerolled once."
-      },
-      {
-        "level": 10,
-        "n": "Protection",
-        "d": "When you have a Shield, impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5 m (5 ft). You must be able to see the enemy."
-      },
-      {
-        "level": 10,
-        "n": "Two-Weapon Fighting",
-        "d": "When you make an offhand attack, you can add your Ability Score Modifier to the damage of the attack."
+        "d": "Choose 1 additional fighting style",
+        "opts": [
+          {
+            "n": "Archery",
+            "d": "You gain a +2 bonus to Attack Rolls you make with ranged Weapons."
+          },
+          {
+            "n": "Defence",
+            "d": "You gain a +1 bonus to Armour Class while wearing armour."
+          },
+          {
+            "n": "Duelling",
+            "d": "When you are wielding a melee weapon that is not Two-Handed in one hand, and no weapon in the other, you deal an additional 2 damage with that weapon."
+          },
+          {
+            "n": "Great Weapon Fighting",
+            "d": "When you roll a 1 or 2 on a damage die for an attack with a Two-Handed melee weapon, that die is rerolled once."
+          },
+          {
+            "n": "Protection",
+            "d": "When you have a Shield, impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5 m (5 ft). You must be able to see the enemy."
+          },
+          {
+            "n": "Two-Weapon Fighting",
+            "d": "When you make an offhand attack, you can add your Ability Score Modifier to the damage of the attack."
+          }
+        ]
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Champion"
+    "wiki": "https://bg3.wiki/wiki/Champion",
+    "icon": "icons/subclasses/champion.png"
   },
   {
     "id": "eldritch-knight",
@@ -1551,12 +1550,17 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Spellcasting Ability",
-        "d": "Intelligence Level 1 Spell Slots Unlocked: 2 You gain two Level 1 Spell Slots."
-      },
-      {
-        "level": 3,
-        "n": "Cantrips Known: 2",
-        "d": "Choose 2 Cantrips from the Wizard spell list."
+        "d": "Intelligence",
+        "opts": [
+          {
+            "n": "Level 1 Spell Slots Unlocked: 2",
+            "d": "You gain two Level 1 Spell Slots."
+          },
+          {
+            "n": "Cantrips Known: 2",
+            "d": "Choose 2 Cantrips from the Wizard spell list."
+          }
+        ]
       },
       {
         "level": 3,
@@ -1566,12 +1570,33 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Known Spells",
-        "d": "Choose 2 Spells from the Wizard spell list (schools of Abjuration or Evocation only), up to Level 1. These spells are Always Prepared."
+        "d": "Choose 2 Spells from the Wizard spell list (schools of Abjuration or Evocation only), up to Level 1. These spells are Always Prepared. · Choose 1 Spell from the Wizard spell list (any spell school) up to Level 1. This spell is Always Prepared."
+      },
+      {
+        "level": 3,
+        "n": "New Cantrips available",
+        "d": ""
+      },
+      {
+        "level": 3,
+        "n": "New Level 1 Abjuration and Evocation spells available",
+        "d": ""
+      },
+      {
+        "level": 3,
+        "n": "New 1st Level Spells available",
+        "d": ""
       },
       {
         "level": 4,
         "n": "Spellcasting",
-        "d": "Level 1 Spell Slots Unlocked: 3 You gain an additional Level 1 Spell Slot."
+        "d": "",
+        "opts": [
+          {
+            "n": "Level 1 Spell Slots Unlocked: 3",
+            "d": "You gain an additional Level 1 Spell Slot."
+          }
+        ]
       },
       {
         "level": 4,
@@ -1596,12 +1621,17 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "Spellcasting",
-        "d": "Level 1 Spell Slots Unlocked: 4 You gain an additional Level 1 Spell Slot."
-      },
-      {
-        "level": 7,
-        "n": "Level 2 Spell Slots Unlocked: 2",
-        "d": "You gain two Level 2 Spell Slots."
+        "d": "",
+        "opts": [
+          {
+            "n": "Level 1 Spell Slots Unlocked: 4",
+            "d": "You gain an additional Level 1 Spell Slot."
+          },
+          {
+            "n": "Level 2 Spell Slots Unlocked: 2",
+            "d": "You gain two Level 2 Spell Slots."
+          }
+        ]
       },
       {
         "level": 7,
@@ -1614,9 +1644,29 @@ const SUBCLASSES = [
         "d": "Choose 2 Spells from the Wizard spell list (schools of Abjuration or Evocation only). These spells are Always Prepared."
       },
       {
+        "level": 7,
+        "n": "New Level 2 Abjuration and Evocation spells available",
+        "d": ""
+      },
+      {
+        "level": 7,
+        "n": "Replacement Spell (Optional)",
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 1. [ 1 ]"
+      },
+      {
         "level": 8,
         "n": "Known Spells",
         "d": "Choose 1 Spell from the Wizard spell list (any spell school) up to Level 2. This spell is Always Prepared."
+      },
+      {
+        "level": 8,
+        "n": "New Level 2 spells available",
+        "d": ""
+      },
+      {
+        "level": 8,
+        "n": "Replacement Spell (Optional)",
+        "d": "Choose 1 known spell and replace it with another Spell from the full Wizard spell list. The replacement spell must be Level 2 or below."
       },
       {
         "level": 9,
@@ -1631,12 +1681,17 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Spellcasting",
-        "d": "Level 2 Spell Slots Unlocked: 3 You gain an additional Level 2 Spell Slot."
-      },
-      {
-        "level": 10,
-        "n": "Cantrips Known: 3",
-        "d": "Choose 1 Cantrip from the Wizard spell list."
+        "d": "",
+        "opts": [
+          {
+            "n": "Level 2 Spell Slots Unlocked: 3",
+            "d": "You gain an additional Level 2 Spell Slot."
+          },
+          {
+            "n": "Cantrips Known: 3",
+            "d": "Choose 1 Cantrip from the Wizard spell list."
+          }
+        ]
       },
       {
         "level": 10,
@@ -1665,7 +1720,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Eldritch_Knight"
+    "wiki": "https://bg3.wiki/wiki/Eldritch_Knight",
+    "icon": "icons/subclasses/eldritch-knight.png"
   },
   {
     "id": "way-of-shadow",
@@ -1729,7 +1785,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_Shadow"
+    "wiki": "https://bg3.wiki/wiki/Way_of_Shadow",
+    "icon": "icons/subclasses/way-of-shadow.png"
   },
   {
     "id": "way-of-the-drunken-master",
@@ -1788,7 +1845,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_the_Drunken_Master"
+    "wiki": "https://bg3.wiki/wiki/Way_of_the_Drunken_Master",
+    "icon": "icons/subclasses/way-of-the-drunken-master.png"
   },
   {
     "id": "way-of-the-four-elements",
@@ -1808,11 +1866,12 @@ const SUBCLASSES = [
       {
         "level": 9,
         "n": "Improved Elemental Casting",
-        "d": "Your affinity with elemental ki deepens. Several of your offensive Four Elements features deal an additional dice of damage, your Clench of the North Wind can hold an additional creature, and your Embrace of the Inferno fires an extra ray."
+        "d": "Your affinity with elemental ki deepens. Several of your offensive Four Elements features deal an additional dice of damage, your Clench of the North Wind can hold an additional creature, and your Embrace of the Inferno fires an extra ray. · Chill of the Mountain damage increases to 2d10 Cold (from 1d10) Clench of the North Wind can hold an additional creature. Embrace of the Inferno fires an additional ray. Fist of Four Thunders damage increases to 3d8 Thunder (from 2d8) Fist of Unbroken Air damage increases to 4d10 Bludgeoning (from 3d10) Gong of the Summit damage increases to 4d8 Thunder (from 3d8) Sweeping Cinder Strike damage increases to 4d6 Fire (from 3d6) Touch of the Storm damage increases to 2d10 Lightning (from 1d10) Water Whip damage increases to 4d10 Bludgeoning (from 3d10)"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_the_Four_Elements"
+    "wiki": "https://bg3.wiki/wiki/Way_of_the_Four_Elements",
+    "icon": "icons/subclasses/way-of-the-four-elements.png"
   },
   {
     "id": "way-of-the-open-hand",
@@ -1881,7 +1940,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Way_of_the_Open_Hand"
+    "wiki": "https://bg3.wiki/wiki/Way_of_the_Open_Hand",
+    "icon": "icons/subclasses/way-of-the-open-hand.png"
   },
   {
     "id": "oath-of-devotion",
@@ -1935,7 +1995,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_Devotion"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_Devotion",
+    "icon": "icons/subclasses/oath-of-devotion.png"
   },
   {
     "id": "oath-of-the-ancients",
@@ -1989,7 +2050,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Ancients"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Ancients",
+    "icon": "icons/subclasses/oath-of-the-ancients.png"
   },
   {
     "id": "oath-of-the-crown",
@@ -2043,7 +2105,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Crown"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_the_Crown",
+    "icon": "icons/subclasses/oath-of-the-crown.png"
   },
   {
     "id": "oath-of-vengeance",
@@ -2097,7 +2160,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oath_of_Vengeance"
+    "wiki": "https://bg3.wiki/wiki/Oath_of_Vengeance",
+    "icon": "icons/subclasses/oath-of-vengeance.png"
   },
   {
     "id": "oathbreaker",
@@ -2146,7 +2210,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Oathbreaker"
+    "wiki": "https://bg3.wiki/wiki/Oathbreaker",
+    "icon": "icons/subclasses/oathbreaker.png"
   },
   {
     "id": "beast-master",
@@ -2164,9 +2229,19 @@ const SUBCLASSES = [
         "d": "Gain a beast companion that accompanies you on your adventures and fights alongside you. ( Recharge: Short rest.)"
       },
       {
+        "level": 3,
+        "n": "New abilities",
+        "d": "Bear Companion Boar Companion Dire Raven Companion Wolf Companion Wolf Spider Companion Goading Roar Claws Tusk Attack Boar Charge Beak Attack Rend Vision Fly Bite Lunging Bite Pack Tactics Venomous Bite Web Web Walker Darkvision"
+      },
+      {
         "level": 5,
         "n": "Companion's Bond",
-        "d": "Your Ranger's Companions receive a bonus to Armour Class and damage equal to its Proficiency Bonus."
+        "d": "Your Ranger's Companions receive a bonus to Armour Class and damage equal to its Proficiency Bonus. · Upgraded hit points and abilities for your companion and a new visual look."
+      },
+      {
+        "level": 5,
+        "n": "New abilities",
+        "d": "Bear Companion Boar Companion Dire Raven Companion Wolf Companion Wolf Spider Companion Honeyed Paws Rage Frenzied Strike Bad Omen Bite Infectious Bite Cocoon"
       },
       {
         "level": 7,
@@ -2176,11 +2251,17 @@ const SUBCLASSES = [
       {
         "level": 11,
         "n": "Bestial Fury",
-        "d": "Grants all your companions an extra attack."
+        "d": "Grants all your companions an extra attack. · Upgraded hit points and abilities for your companion and a new visual look."
+      },
+      {
+        "level": 11,
+        "n": "New abilities",
+        "d": "Bear Companion Boar Companion Dire Raven Companion Wolf Companion Wolf Spider Companion Ursine Reinforcements Kick Up Muck On Black Wings Raven Sight Fly Lupine Slash Infectious Bite Bursting Brood Eight Legged Waltz"
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Beast_Master"
+    "wiki": "https://bg3.wiki/wiki/Beast_Master",
+    "icon": "icons/subclasses/beast-master.png"
   },
   {
     "id": "gloom-stalker",
@@ -2200,27 +2281,25 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Superior Darkvision",
-        "d": "Can see in the dark up to 24 m (80 ft)."
-      },
-      {
-        "level": 3,
-        "n": "Dread Ambusher",
-        "d": "You specialise in taking out foes swiftly and ruthlessly. You gain a +3 bonus to Initiative. On the first turn of combat, your Movement Speed increases by 3 m (10 ft), and you can also make an extra weapon attack that deals an additional 1d8 damage"
-      },
-      {
-        "level": 3,
-        "n": "Dread Ambusher (Melee)",
-        "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat.)"
-      },
-      {
-        "level": 3,
-        "n": "Dread Ambusher (Ranged)",
-        "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat.)"
-      },
-      {
-        "level": 3,
-        "n": "Dread Ambusher: Hide",
-        "d": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
+        "d": "Can see in the dark up to 24 m (80 ft).",
+        "opts": [
+          {
+            "n": "Dread Ambusher",
+            "d": "You specialise in taking out foes swiftly and ruthlessly. You gain a +3 bonus to Initiative. On the first turn of combat, your Movement Speed increases by 3 m (10 ft), and you can also make an extra weapon attack that deals an additional 1d8 damage"
+          },
+          {
+            "n": "Dread Ambusher (Melee)",
+            "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat.)"
+          },
+          {
+            "n": "Dread Ambusher (Ranged)",
+            "d": "On the first turn of each combat, ambush a target with an additional swift and precise attack. ( Recharge: Per combat.)"
+          },
+          {
+            "n": "Dread Ambusher: Hide",
+            "d": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location."
+          }
+        ]
       },
       {
         "level": 7,
@@ -2234,7 +2313,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Gloom_Stalker"
+    "wiki": "https://bg3.wiki/wiki/Gloom_Stalker",
+    "icon": "icons/subclasses/gloom-stalker.png"
   },
   {
     "id": "hunter",
@@ -2293,7 +2373,8 @@ const SUBCLASSES = [
         ]
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Hunter"
+    "wiki": "https://bg3.wiki/wiki/Hunter",
+    "icon": "icons/subclasses/hunter.png"
   },
   {
     "id": "swarmkeeper",
@@ -2313,67 +2394,57 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Gathered Swarm",
-        "d": "Choose the swarm of nature spirits you've formed a bond with. You can change your swarm whenever you level up. An ability for the chosen swarm can be used once per round after landing an attack."
-      },
-      {
-        "level": 3,
-        "n": "Cloud of Jellyfish",
-        "d": "You gain a swarm of jellyfish that fights on your side. Once per round, the swarm can assist you in one of three ways after you attack an enemy: it can attack and deal additional Lightning damage, Shock your enemy, or teleport you to a safer location."
-      },
-      {
-        "level": 3,
-        "n": "Flurry of Moths",
-        "d": "You gain a swarm of moths that fights on your side. Once per round, the swarm can assist you in one of three ways after you attack an enemy: it can attack and deal additional Psychic damage, Blind your enemy, or teleport you to a safer location."
-      },
-      {
-        "level": 3,
-        "n": "Legion of Bees",
-        "d": "You gain a swarm of bees that fights on your side. Once per round, the swarm can assist you in one of three ways after you attack an enemy: it can attack and deal additional Piercing damage, push the enemy away from you, or teleport you to a safer location."
-      },
-      {
-        "level": 3,
-        "n": "Cloud of Jellyfish: Attack",
-        "d": "Use your swarm to attack the same target and deal 1d6 Lightning damage."
-      },
-      {
-        "level": 3,
-        "n": "Cloud of Jellyfish: Teleport",
-        "d": "Use your swarm to Teleport you to a new location."
-      },
-      {
-        "level": 3,
-        "n": "Cloud of Jellyfish: Shocking Sting",
-        "d": "Use your swarm Shock your target."
-      },
-      {
-        "level": 3,
-        "n": "Flurry of Moths: Attack",
-        "d": "Use your swarm to attack the same target and deal 1d6 Psychic damage."
-      },
-      {
-        "level": 3,
-        "n": "Flurry of Moths: Teleport",
-        "d": "Use your swarm to Teleport you to a new location."
-      },
-      {
-        "level": 3,
-        "n": "Flurry of Moths: Blinding Swarm",
-        "d": "Use your swarm to Blind your target."
-      },
-      {
-        "level": 3,
-        "n": "Legion of Bees: Attack",
-        "d": "Use your swarm to attack the same target and deal 1d6 Piercing damage."
-      },
-      {
-        "level": 3,
-        "n": "Legion of Bees: Teleport",
-        "d": "Use your swarm to Teleport you to a new location."
-      },
-      {
-        "level": 3,
-        "n": "Legion of Bees: Knockback",
-        "d": "Use your swarm to push your target back 5 m (17 ft)"
+        "d": "Choose the swarm of nature spirits you've formed a bond with. You can change your swarm whenever you level up. An ability for the chosen swarm can be used once per round after landing an attack.",
+        "opts": [
+          {
+            "n": "Cloud of Jellyfish",
+            "d": "You gain a swarm of jellyfish that fights on your side. Once per round, the swarm can assist you in one of three ways after you attack an enemy: it can attack and deal additional Lightning damage, Shock your enemy, or teleport you to a safer location."
+          },
+          {
+            "n": "Flurry of Moths",
+            "d": "You gain a swarm of moths that fights on your side. Once per round, the swarm can assist you in one of three ways after you attack an enemy: it can attack and deal additional Psychic damage, Blind your enemy, or teleport you to a safer location."
+          },
+          {
+            "n": "Legion of Bees",
+            "d": "You gain a swarm of bees that fights on your side. Once per round, the swarm can assist you in one of three ways after you attack an enemy: it can attack and deal additional Piercing damage, push the enemy away from you, or teleport you to a safer location."
+          },
+          {
+            "n": "Cloud of Jellyfish: Attack",
+            "d": "Use your swarm to attack the same target and deal 1d6 Lightning damage."
+          },
+          {
+            "n": "Cloud of Jellyfish: Teleport",
+            "d": "Use your swarm to Teleport you to a new location."
+          },
+          {
+            "n": "Cloud of Jellyfish: Shocking Sting",
+            "d": "Use your swarm Shock your target."
+          },
+          {
+            "n": "Flurry of Moths: Attack",
+            "d": "Use your swarm to attack the same target and deal 1d6 Psychic damage."
+          },
+          {
+            "n": "Flurry of Moths: Teleport",
+            "d": "Use your swarm to Teleport you to a new location."
+          },
+          {
+            "n": "Flurry of Moths: Blinding Swarm",
+            "d": "Use your swarm to Blind your target."
+          },
+          {
+            "n": "Legion of Bees: Attack",
+            "d": "Use your swarm to attack the same target and deal 1d6 Piercing damage."
+          },
+          {
+            "n": "Legion of Bees: Teleport",
+            "d": "Use your swarm to Teleport you to a new location."
+          },
+          {
+            "n": "Legion of Bees: Knockback",
+            "d": "Use your swarm to push your target back 5 m (17 ft)"
+          }
+        ]
       },
       {
         "level": 3,
@@ -2408,56 +2479,50 @@ const SUBCLASSES = [
       {
         "level": 11,
         "n": "Mighty Swarm",
-        "d": "Your swarm has grown stronger. The swarm's regular attack now deals 1d8 damage, its special attack has one additional feature, and teleporting with your swarm now also increases your Armour Class for the rest of the round."
-      },
-      {
-        "level": 11,
-        "n": "Cloud of Jellyfish: Attack",
-        "d": "Use your swarm to attack the same target and deal 1d6 Lightning damage."
-      },
-      {
-        "level": 11,
-        "n": "Cloud of Jellyfish: Mighty Teleport",
-        "d": "Use your swarm to Teleport to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class."
-      },
-      {
-        "level": 11,
-        "n": "Cloud of Jellyfish: Mighty Shocking Sting",
-        "d": "Use your swarm to Shock and Disarm your target."
-      },
-      {
-        "level": 11,
-        "n": "Flurry of Moths: Attack",
-        "d": "Use your swarm to attack the same target and deal 1d6 Psychic damage."
-      },
-      {
-        "level": 11,
-        "n": "Flurry of Moths: Mighty Teleport",
-        "d": "Use your swarm to Teleport you to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class."
-      },
-      {
-        "level": 11,
-        "n": "Flurry of Moths: Mighty Blinding Swarm",
-        "d": "Use your swarm to Blind and Slow your target."
-      },
-      {
-        "level": 11,
-        "n": "Legion of Bees: Attack",
-        "d": "Use your swarm to attack the same target and deal 1d6 Piercing damage."
-      },
-      {
-        "level": 11,
-        "n": "Legion of Bees: Mighty Teleport",
-        "d": "Use your swarm to Teleport you to a new location."
-      },
-      {
-        "level": 11,
-        "n": "Legion of Bees: Mighty Knockback",
-        "d": "Use your swarm to push your target back 5 m (17 ft) and knock them Prone."
+        "d": "Your swarm has grown stronger. The swarm's regular attack now deals 1d8 damage, its special attack has one additional feature, and teleporting with your swarm now also increases your Armour Class for the rest of the round.",
+        "opts": [
+          {
+            "n": "Cloud of Jellyfish: Attack",
+            "d": "Use your swarm to attack the same target and deal 1d6 Lightning damage."
+          },
+          {
+            "n": "Cloud of Jellyfish: Mighty Teleport",
+            "d": "Use your swarm to Teleport to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class."
+          },
+          {
+            "n": "Cloud of Jellyfish: Mighty Shocking Sting",
+            "d": "Use your swarm to Shock and Disarm your target."
+          },
+          {
+            "n": "Flurry of Moths: Attack",
+            "d": "Use your swarm to attack the same target and deal 1d6 Psychic damage."
+          },
+          {
+            "n": "Flurry of Moths: Mighty Teleport",
+            "d": "Use your swarm to Teleport you to a new location within 5 m (17 ft) and gain a temporary +2 bonus to your Armour Class."
+          },
+          {
+            "n": "Flurry of Moths: Mighty Blinding Swarm",
+            "d": "Use your swarm to Blind and Slow your target."
+          },
+          {
+            "n": "Legion of Bees: Attack",
+            "d": "Use your swarm to attack the same target and deal 1d6 Piercing damage."
+          },
+          {
+            "n": "Legion of Bees: Mighty Teleport",
+            "d": "Use your swarm to Teleport you to a new location."
+          },
+          {
+            "n": "Legion of Bees: Mighty Knockback",
+            "d": "Use your swarm to push your target back 5 m (17 ft) and knock them Prone."
+          }
+        ]
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Swarmkeeper"
+    "wiki": "https://bg3.wiki/wiki/Swarmkeeper",
+    "icon": "icons/subclasses/swarmkeeper.png"
   },
   {
     "id": "arcane-trickster",
@@ -2477,12 +2542,17 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Spellcasting Ability",
-        "d": "Intelligence Level 1 Spell Slots Unlocked: 2 You gain two Level 1 Spell Slots."
-      },
-      {
-        "level": 3,
-        "n": "Cantrips Known: 2",
-        "d": "Choose 2 Cantrips from the Wizard spell list."
+        "d": "Intelligence",
+        "opts": [
+          {
+            "n": "Level 1 Spell Slots Unlocked: 2",
+            "d": "You gain two Level 1 Spell Slots."
+          },
+          {
+            "n": "Cantrips Known: 2",
+            "d": "Choose 2 Cantrips from the Wizard spell list."
+          }
+        ]
       },
       {
         "level": 3,
@@ -2492,12 +2562,33 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Known Spells",
-        "d": "Choose 2 Spells from the Wizard spell list (schools of Enchantment or Illusion only) up to Level 1. These spells are Always Prepared."
+        "d": "Choose 2 Spells from the Wizard spell list (schools of Enchantment or Illusion only) up to Level 1. These spells are Always Prepared. · Choose 1 Spell from the Wizard spell list (any spell school) up to Level 1. This spell is Always Prepared."
+      },
+      {
+        "level": 3,
+        "n": "New Cantrips available",
+        "d": ""
+      },
+      {
+        "level": 3,
+        "n": "New Level 1 Enchantment and Illusion spells available",
+        "d": ""
+      },
+      {
+        "level": 3,
+        "n": "New 1st Level Spells available",
+        "d": ""
       },
       {
         "level": 4,
         "n": "Spellcasting",
-        "d": "Level 1 Spell Slots Unlocked: 3 You gain an additional Level 1 Spell Slot."
+        "d": "",
+        "opts": [
+          {
+            "n": "Level 1 Spell Slots Unlocked: 3",
+            "d": "You gain an additional Level 1 Spell Slot."
+          }
+        ]
       },
       {
         "level": 4,
@@ -2522,12 +2613,17 @@ const SUBCLASSES = [
       {
         "level": 7,
         "n": "Spellcasting",
-        "d": "Level 1 Spell Slots Unlocked: 4 You gain an additional Level 1 Spell Slot."
-      },
-      {
-        "level": 7,
-        "n": "Level 2 Spell Slots Unlocked: 2",
-        "d": "You gain two Level 2 Spell Slots."
+        "d": "",
+        "opts": [
+          {
+            "n": "Level 1 Spell Slots Unlocked: 4",
+            "d": "You gain an additional Level 1 Spell Slot."
+          },
+          {
+            "n": "Level 2 Spell Slots Unlocked: 2",
+            "d": "You gain two Level 2 Spell Slots."
+          }
+        ]
       },
       {
         "level": 7,
@@ -2572,12 +2668,17 @@ const SUBCLASSES = [
       {
         "level": 10,
         "n": "Spellcasting",
-        "d": "6 Level 1 Spell Slots Unlocked: 6 You gain two additional Level 1 Spell Slots."
-      },
-      {
-        "level": 10,
-        "n": "Cantrips Known: 3",
-        "d": "Choose 1 Cantrip from the Wizard spell list."
+        "d": "",
+        "opts": [
+          {
+            "n": "6 Level 1 Spell Slots Unlocked: 6",
+            "d": "You gain two additional Level 1 Spell Slots."
+          },
+          {
+            "n": "Cantrips Known: 3",
+            "d": "Choose 1 Cantrip from the Wizard spell list."
+          }
+        ]
       },
       {
         "level": 10,
@@ -2596,7 +2697,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Arcane_Trickster"
+    "wiki": "https://bg3.wiki/wiki/Arcane_Trickster",
+    "icon": "icons/subclasses/arcane-trickster.png"
   },
   {
     "id": "assassin",
@@ -2630,7 +2732,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Assassin"
+    "wiki": "https://bg3.wiki/wiki/Assassin",
+    "icon": "icons/subclasses/assassin.png"
   },
   {
     "id": "swashbuckler",
@@ -2650,37 +2753,36 @@ const SUBCLASSES = [
       {
         "level": 3,
         "n": "Rakish Audacity",
-        "d": "You gain a +2 bonus to initiative rolls. This scales with your rogue level. You no longer need Advantage to trigger Sneak Attack as long as you are within 1.5 m (5 ft) of the target and don't have Disadvantage. [ See: Bugs ]"
-      },
-      {
-        "level": 3,
-        "n": "Rakish Sneak Attack (Melee)",
-        "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
-      },
-      {
-        "level": 3,
-        "n": "Rakish Sneak Attack (Ranged)",
-        "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
+        "d": "You gain a +2 bonus to initiative rolls. This scales with your rogue level. You no longer need Advantage to trigger Sneak Attack as long as you are within 1.5 m (5 ft) of the target and don't have Disadvantage. [ See: Bugs ] · Normal Sneak Attack is replaced by Rakish Sneak Attack.",
+        "opts": [
+          {
+            "n": "Rakish Sneak Attack (Melee)",
+            "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
+          },
+          {
+            "n": "Rakish Sneak Attack (Ranged)",
+            "d": "Deal extra damage to a foe you have Advantage against. You can also use this attack without Advantage if there are no other combatants within 2 m (7 ft) of the target, or if you have an ally within that range. ( Recharge: Per turn.)"
+          }
+        ]
       },
       {
         "level": 4,
         "n": "Dirty Tricks",
-        "d": "Learn the following Dirty Tricks."
-      },
-      {
-        "level": 4,
-        "n": "Dirty Trick: Flick o' the Wrist",
-        "d": "Flick your weapon at a target and possibly Disarm them."
-      },
-      {
-        "level": 4,
-        "n": "Dirty Trick: Sand Toss",
-        "d": "Toss a handful of sand at your enemy and possibly Blind them."
-      },
-      {
-        "level": 4,
-        "n": "Dirty Trick: Vicious Mockery",
-        "d": "Insult a creature: it has Disadvantage on its next Attack Roll."
+        "d": "Learn the following Dirty Tricks. · Charisma is the spellcasting modifier used for these abilities, except Sand Toss, which uses Dexterity.",
+        "opts": [
+          {
+            "n": "Dirty Trick: Flick o' the Wrist",
+            "d": "Flick your weapon at a target and possibly Disarm them."
+          },
+          {
+            "n": "Dirty Trick: Sand Toss",
+            "d": "Toss a handful of sand at your enemy and possibly Blind them."
+          },
+          {
+            "n": "Dirty Trick: Vicious Mockery",
+            "d": "Insult a creature: it has Disadvantage on its next Attack Roll."
+          }
+        ]
       },
       {
         "level": 9,
@@ -2689,7 +2791,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Swashbuckler"
+    "wiki": "https://bg3.wiki/wiki/Swashbuckler",
+    "icon": "icons/subclasses/swashbuckler.png"
   },
   {
     "id": "thief",
@@ -2718,7 +2821,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Thief"
+    "wiki": "https://bg3.wiki/wiki/Thief",
+    "icon": "icons/subclasses/thief.png"
   },
   {
     "id": "draconic-bloodline",
@@ -2739,6 +2843,11 @@ const SUBCLASSES = [
         "level": 1,
         "n": "Draconic Resilience: Hit Points",
         "d": "Your Hit Point maximum increases by 1 for each Sorcerer level."
+      },
+      {
+        "level": 1,
+        "n": "Draconic Ancestry (Choose 1)",
+        "d": ""
       },
       {
         "level": 6,
@@ -2844,7 +2953,8 @@ const SUBCLASSES = [
         ]
       }
     ],
-    "wiki": "https://bg3.wiki/wiki/Draconic_Bloodline"
+    "wiki": "https://bg3.wiki/wiki/Draconic_Bloodline",
+    "icon": "icons/subclasses/draconic-bloodline.png"
   },
   {
     "id": "shadow-magic",
@@ -2888,7 +2998,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Shadow_Magic"
+    "wiki": "https://bg3.wiki/wiki/Shadow_Magic",
+    "icon": "icons/subclasses/shadow-magic.png"
   },
   {
     "id": "storm-sorcery",
@@ -2908,17 +3019,17 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Heart of the Storm",
-        "d": "When you cast a Spell of Level 1 or higher that deals Lightning or Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer Level / 2) Lightning or (Sorcerer Level / 2) Thunder."
-      },
-      {
-        "level": 6,
-        "n": "Heart of the Storm: Lightning",
-        "d": "When you cast a spell of Level 1 or higher that deals Lightning damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Lightning."
-      },
-      {
-        "level": 6,
-        "n": "Heart of the Storm: Thunder",
-        "d": "When you cast a spell of Level 1 or higher that deals Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Thunder."
+        "d": "When you cast a Spell of Level 1 or higher that deals Lightning or Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer Level / 2) Lightning or (Sorcerer Level / 2) Thunder.",
+        "opts": [
+          {
+            "n": "Heart of the Storm: Lightning",
+            "d": "When you cast a spell of Level 1 or higher that deals Lightning damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Lightning."
+          },
+          {
+            "n": "Heart of the Storm: Thunder",
+            "d": "When you cast a spell of Level 1 or higher that deals Thunder damage, you cause a small, local storm. All enemies within 6 m (20 ft) take (Sorcerer level / 2) Thunder."
+          }
+        ]
       },
       {
         "level": 6,
@@ -2937,7 +3048,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Storm_Sorcery"
+    "wiki": "https://bg3.wiki/wiki/Storm_Sorcery",
+    "icon": "icons/subclasses/storm-sorcery.png"
   },
   {
     "id": "wild-magic-sorcerer-subclass",
@@ -2971,7 +3083,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(sorcerer_subclass)"
+    "wiki": "https://bg3.wiki/wiki/Wild_Magic_(sorcerer_subclass)",
+    "icon": "icons/subclasses/wild-magic-sorcerer-subclass.png"
   },
   {
     "id": "the-archfey",
@@ -3025,7 +3138,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Archfey"
+    "wiki": "https://bg3.wiki/wiki/The_Archfey",
+    "icon": "icons/subclasses/the-archfey.png"
   },
   {
     "id": "the-fiend",
@@ -3079,7 +3193,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Fiend"
+    "wiki": "https://bg3.wiki/wiki/The_Fiend",
+    "icon": "icons/subclasses/the-fiend.png"
   },
   {
     "id": "the-great-old-one",
@@ -3138,7 +3253,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Great_Old_One"
+    "wiki": "https://bg3.wiki/wiki/The_Great_Old_One",
+    "icon": "icons/subclasses/the-great-old-one.png"
   },
   {
     "id": "the-hexblade",
@@ -3205,7 +3321,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/The_Hexblade"
+    "wiki": "https://bg3.wiki/wiki/The_Hexblade",
+    "icon": "icons/subclasses/the-hexblade.png"
   },
   {
     "id": "abjuration-school",
@@ -3225,7 +3342,7 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Arcane Ward",
-        "d": "The residual magic of your spells forms a ward around you that protects you from harm."
+        "d": "The residual magic of your spells forms a ward around you that protects you from harm. · Each time you cast an Abjuration spell, the intensity of the ward increases by the amount of the spell's Level, up to a maximum of 2x your Wizard level. Each time you take damage, the ward blocks an amount of damage equal to its intensity, and its intensity decreases by 1. After each Long Rest, the ward's intensity resets, and becomes the same as your Wizard level."
       },
       {
         "level": 6,
@@ -3239,7 +3356,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Abjuration_School"
+    "wiki": "https://bg3.wiki/wiki/Abjuration_School",
+    "icon": "icons/subclasses/abjuration-school.png"
   },
   {
     "id": "bladesinging",
@@ -3300,7 +3418,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Bladesinging"
+    "wiki": "https://bg3.wiki/wiki/Bladesinging",
+    "icon": "icons/subclasses/bladesinging.png"
   },
   {
     "id": "conjuration-school",
@@ -3334,7 +3453,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Conjuration_School"
+    "wiki": "https://bg3.wiki/wiki/Conjuration_School",
+    "icon": "icons/subclasses/conjuration-school.png"
   },
   {
     "id": "divination-school",
@@ -3373,7 +3493,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Divination_School"
+    "wiki": "https://bg3.wiki/wiki/Divination_School",
+    "icon": "icons/subclasses/divination-school.png"
   },
   {
     "id": "enchantment-school",
@@ -3393,7 +3514,7 @@ const SUBCLASSES = [
       {
         "level": 2,
         "n": "Hypnotic Gaze",
-        "d": "Charm and Incapacitates a creature. It cannot attack you. It cannot act. ( Recharge: Long rest.)"
+        "d": "Charm and Incapacitates a creature. It cannot attack you. It cannot act. ( Recharge: Long rest.) · You can Maintain Hypnotic Gaze your Hypnotic Gaze each turn to extend its duration."
       },
       {
         "level": 6,
@@ -3407,7 +3528,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Enchantment_School"
+    "wiki": "https://bg3.wiki/wiki/Enchantment_School",
+    "icon": "icons/subclasses/enchantment-school.png"
   },
   {
     "id": "evocation-school",
@@ -3441,7 +3563,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Evocation_School"
+    "wiki": "https://bg3.wiki/wiki/Evocation_School",
+    "icon": "icons/subclasses/evocation-school.png"
   },
   {
     "id": "illusion-school",
@@ -3475,7 +3598,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Illusion_School"
+    "wiki": "https://bg3.wiki/wiki/Illusion_School",
+    "icon": "icons/subclasses/illusion-school.png"
   },
   {
     "id": "necromancy-school",
@@ -3519,7 +3643,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Necromancy_School"
+    "wiki": "https://bg3.wiki/wiki/Necromancy_School",
+    "icon": "icons/subclasses/necromancy-school.png"
   },
   {
     "id": "transmutation-school",
@@ -3544,47 +3669,41 @@ const SUBCLASSES = [
       {
         "level": 6,
         "n": "Transmuter's Stone",
-        "d": "You can create Transmuter's Stones."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone",
-        "d": "Variants: Transmuter's Stone: Constitution Create a stone that grants the carrier Proficiency in Constitution Saving Throws."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone: Darkvision",
-        "d": "Create a stone that lets the carrier see in the dark out to a range of 18 m (60 ft)."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone: Speed",
-        "d": "Create a stone that increases the carrier's movement speed by 3 m (10 ft)."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone: Acid Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Acid."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone: Cold Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Cold."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone: Fire Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Fire."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone: Lightning Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Lightning."
-      },
-      {
-        "level": 6,
-        "n": "Transmuter's Stone: Thunder Resistance",
-        "d": "Create a stone that grants the carrier Resistance to Thunder."
+        "d": "You can create Transmuter's Stones. · Once you have created a stone, you need to cast a Transmutation spell of Level 1 or higher or take a Long Rest before you can create another one.",
+        "opts": [
+          {
+            "n": "Transmuter's Stone: Constitution",
+            "d": "Create a stone that grants the carrier Proficiency in Constitution Saving Throws."
+          },
+          {
+            "n": "Transmuter's Stone: Darkvision",
+            "d": "Create a stone that lets the carrier see in the dark out to a range of 18 m (60 ft)."
+          },
+          {
+            "n": "Transmuter's Stone: Speed",
+            "d": "Create a stone that increases the carrier's movement speed by 3 m (10 ft)."
+          },
+          {
+            "n": "Transmuter's Stone: Acid Resistance",
+            "d": "Create a stone that grants the carrier Resistance to Acid."
+          },
+          {
+            "n": "Transmuter's Stone: Cold Resistance",
+            "d": "Create a stone that grants the carrier Resistance to Cold."
+          },
+          {
+            "n": "Transmuter's Stone: Fire Resistance",
+            "d": "Create a stone that grants the carrier Resistance to Fire."
+          },
+          {
+            "n": "Transmuter's Stone: Lightning Resistance",
+            "d": "Create a stone that grants the carrier Resistance to Lightning."
+          },
+          {
+            "n": "Transmuter's Stone: Thunder Resistance",
+            "d": "Create a stone that grants the carrier Resistance to Thunder."
+          }
+        ]
       },
       {
         "level": 10,
@@ -3593,7 +3712,8 @@ const SUBCLASSES = [
       }
     ],
     "choices": [],
-    "wiki": "https://bg3.wiki/wiki/Transmutation_School"
+    "wiki": "https://bg3.wiki/wiki/Transmutation_School",
+    "icon": "icons/subclasses/transmutation-school.png"
   }
 ]
 ;

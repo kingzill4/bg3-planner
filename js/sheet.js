@@ -577,52 +577,108 @@ function renderClassRows(m) {
         byName.get(stem).steps.push({ value: m2[2], level: f.level, d: f.d });
       });
 
-      const list = el("div", { class: "sub-features" });
-      grouped.forEach((item) => {
+      // Flatten the groups back into one entry per thing to show, each carrying the
+      // level it arrives at. Grouping happens by level below.
+      const entriesToShow = grouped.map((item) => {
         if (item.single) {
           const f = item.single;
-          const earned = f.level == null || entry.levels >= f.level;
-          const row = el("div", { class: "sub-feature" + (earned ? "" : " locked") });
-          row.appendChild(el("span", { class: "sub-feature-level" },
-            [f.level == null ? "—" : "L" + f.level]));
-          row.appendChild(el("span", { class: "sub-feature-name" }, [f.n]));
-          list.appendChild(withDetail(row, f.n, f.d, [
-            chosen.name,
-            f.level == null ? null : (earned ? "Gained at level " + f.level
-              : "Unlocks at level " + f.level + " — you are level " + entry.levels)
-          ]));
-          return;
+          // The wiki nests: the eight Lands are options of "2nd Level Circle of the
+          // Land Spells", the six fighting styles options of "Fighting Style". They
+          // belong inside their parent, not beside it as features of their own —
+          // read flat, one druid subclass claimed 48 features instead of 16.
+          const opts = f.opts || [];
+          return {
+            level: f.level, label: f.n, desc: f.d, count: opts.length,
+            extras: opts.map((o) => o.n + (o.d ? " — " + o.d : ""))
+          };
         }
         const g = item.group;
         if (g.steps.length === 1) {
-          const s = g.steps[0];
-          const earned = s.level == null || entry.levels >= s.level;
-          const row = el("div", { class: "sub-feature" + (earned ? "" : " locked") });
-          row.appendChild(el("span", { class: "sub-feature-level" },
-            [s.level == null ? "—" : "L" + s.level]));
-          row.appendChild(el("span", { class: "sub-feature-name" }, [g.stem + ": " + s.value]));
-          list.appendChild(withDetail(row, g.stem, s.d, [chosen.name]));
-          return;
+          return { level: g.steps[0].level, label: g.stem + ": " + g.steps[0].value,
+            desc: g.steps[0].d, extras: [] };
         }
-        const first = g.steps[0];
         const reached = g.steps.filter((s) => s.level == null || entry.levels >= s.level);
         const current = reached.length ? reached[reached.length - 1] : null;
-        const earned = !!current;
-        const row = el("div", { class: "sub-feature" + (earned ? "" : " locked") });
-        row.appendChild(el("span", { class: "sub-feature-level" },
-          [first.level == null ? "—" : "L" + first.level]));
-        const name = el("span", { class: "sub-feature-name" }, [g.stem]);
-        // the value you have now, then where it goes
-        name.appendChild(el("span", { class: "sub-feature-scale" }, [
-          g.steps.map((s) => s.value).join(" → ")
-        ]));
-        row.appendChild(name);
-        list.appendChild(withDetail(row, g.stem, first.d, [
-          chosen.name,
-          g.steps.map((s) => s.value + " at level " + s.level).join(" · "),
-          current ? "You have " + current.value : null
-        ]));
+        return {
+          level: g.steps[0].level, label: g.stem, desc: g.steps[0].d,
+          scale: g.steps.map((s) => s.value).join(" → "),
+          extras: [
+            g.steps.map((s) => s.value + " at level " + s.level).join(" · "),
+            current ? "You have " + current.value : null
+          ]
+        };
       });
+
+      // One row per *level*, not per feature. A Circle of the Land druid listed 48
+      // rows, 32 of which were the same eight terrains repeated at levels 3, 5, 7
+      // and 9 — the data is nested (level → land → spells) and the list was flat,
+      // so the shape of the subclass was invisible under its own length. Gathering
+      // each level's features onto one line puts that shape back: seven rows, and
+      // the repetition is now legible as repetition.
+      const byLevel = new Map();
+      entriesToShow.forEach((e) => {
+        const key = e.level == null ? "—" : e.level;
+        if (!byLevel.has(key)) byLevel.set(key, []);
+        byLevel.get(key).push(e);
+      });
+
+      // "Land's Stride: Difficult Terrain", ": Advantage", ": Plants" are one
+      // feature the wiki writes on three lines because each part is its own game
+      // entry. On a level's row they read as three things gained; folded back into
+      // "Land's Stride", they read as the one thing they are, and the three parts
+      // are a hover away.
+      const foldPrefixes = (items) => {
+        const out = [];
+        const byStem = new Map();
+        items.forEach((e) => {
+          const m2 = /^(.+?):\s+(.+)$/.exec(e.label);
+          if (!m2 || e.scale || e.count) { out.push(e); return; }
+          const stem = m2[1].trim();
+          if (!byStem.has(stem)) {
+            const folded = { ...e, label: stem, parts: [], extras: [...e.extras] };
+            byStem.set(stem, folded);
+            out.push(folded);
+          }
+          byStem.get(stem).parts.push(m2[2].trim() + (e.desc ? " — " + e.desc : ""));
+        });
+        return out.map((e) => {
+          if (!e.parts || e.parts.length < 2) {
+            // un seul morceau : le nom complet reste plus clair que le tronc seul
+            return e.parts ? items.find((i) => i.label.startsWith(e.label + ":")) || e : e;
+          }
+          return { ...e, count: e.parts.length, countLabel: "part", extras: [...e.extras, ...e.parts] };
+        });
+      };
+
+      const list = el("div", { class: "sub-features" });
+      [...byLevel.entries()]
+        .sort((a, b) => (a[0] === "—" ? -1 : b[0] === "—" ? 1 : a[0] - b[0]))
+        .forEach(([level, rawItems]) => {
+          const items = foldPrefixes(rawItems);
+          const earned = level === "—" || entry.levels >= level;
+          const row = el("div", { class: "sub-feature" + (earned ? "" : " locked") });
+          row.appendChild(el("span", { class: "sub-feature-level" },
+            [level === "—" ? "—" : "L" + level]));
+          const bag = el("span", { class: "sub-feature-set" });
+          items.forEach((e) => {
+            const chip = el("span", { class: "sub-chip" }, [e.label]);
+            if (e.scale) chip.appendChild(el("span", { class: "sub-feature-scale" }, [e.scale]));
+            // A chip that hides eight choices should say so, otherwise the one that
+            // matters most on this level looks like the one that matters least.
+            // "1 option" is noise — the tooltip already carries it.
+            if (e.count > 1) chip.appendChild(el("span", { class: "sub-chip-count" }, [
+              e.count + " " + (e.countLabel || "option") + (e.count > 1 ? "s" : "")
+            ]));
+            bag.appendChild(withDetail(chip, e.label, e.desc, [
+              chosen.name,
+              ...e.extras.filter(Boolean),
+              level === "—" ? null : (earned ? "Gained at level " + level
+                : "Unlocks at level " + level + " — you are level " + entry.levels)
+            ]));
+          });
+          row.appendChild(bag);
+          list.appendChild(row);
+        });
       box.appendChild(list);
     }
 

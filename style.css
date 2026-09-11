@@ -1373,8 +1373,30 @@ footer.foot a:hover { color: var(--gold); }
 .sub-features { display: flex; flex-direction: column; gap: 2px; margin: 5px 0 2px; }
 .sub-feature {
   display: grid; grid-template-columns: 26px 1fr; gap: 7px; align-items: baseline;
-  font-size: 10.5px; padding: 2px 6px; border-radius: 3px; cursor: help;
+  font-size: 10.5px; padding: 3px 6px; border-radius: 3px;
 }
+/* Everything a level grants, wrapping on one row. The Circle of the Land druid
+   came to 48 rows because eight terrain options were listed separately at four
+   levels; as chips the repetition reads as repetition, instead of burying the
+   seven things that actually happen. */
+.sub-feature-set { display: flex; flex-wrap: wrap; gap: 4px 5px; align-items: baseline; }
+.sub-chip {
+  display: inline-flex; align-items: baseline; cursor: help;
+  padding: 2px 7px; border-radius: 3px;
+  background: rgba(0,0,0,.28); border: 1px solid var(--border-soft);
+  color: var(--text-dim); line-height: 1.45;
+}
+.sub-chip:hover { border-color: var(--gold-dim); color: var(--gold-bright); }
+.sub-feature:not(.locked) .sub-chip { color: var(--text); }
+
+/* Une pastille qui cache huit choix doit le dire. */
+.sub-chip-count {
+  margin-left: 6px; padding: 0 5px; border-radius: 8px;
+  background: rgba(198,162,90,.16); border: 1px solid var(--gold-dim);
+  color: var(--gold-dim); font-size: 10px; letter-spacing: .02em;
+  white-space: nowrap;
+}
+.sub-chip:hover .sub-chip-count { color: var(--gold-bright); }
 .sub-feature-level {
   font-size: 8.5px; letter-spacing: .06em; color: var(--gold-dim); text-align: right;
 }

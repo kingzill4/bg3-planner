@@ -526,7 +526,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Wood_Elf",
-    "icon": "icons/races/high-elf.png"
+    "icon": "icons/races/wood-elf.png"
   },
   {
     "id": "half-elf",
@@ -598,7 +598,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/High_Half-Elf",
-    "icon": "icons/races/half-elf.png"
+    "icon": "icons/races/high-half-elf.png"
   },
   {
     "id": "wood-half-elf",
@@ -633,12 +633,12 @@ const RACES = [
         "d": "The Feywild casts a veil over your mind. You have Advantage on Saving Throws against being Charmed , and magic can't put you to Sleep ."
       },
       {
-        "n": "Fleet of Foot :",
+        "n": "Fleet of Foot",
         "d": "Your Movement Speed is further increased by 1.5 m (5 ft)."
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Wood_Half-Elf",
-    "icon": "icons/races/half-elf.png"
+    "icon": "icons/races/high-half-elf.png"
   },
   {
     "id": "drow-half-elf",
@@ -674,7 +674,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Drow_Half-Elf",
-    "icon": "icons/races/half-elf.png"
+    "icon": "icons/races/high-half-elf.png"
   },
   {
     "id": "lolth-sworn-drow",
@@ -772,7 +772,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Seldarine_Drow",
-    "icon": "icons/races/lolth-sworn-drow.jpg"
+    "icon": "icons/races/seldarine-drow.jpg"
   },
   {
     "id": "lightfoot-halfling",
@@ -840,7 +840,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Strongheart_Halfling",
-    "icon": "icons/races/lightfoot-halfling.jpg"
+    "icon": "icons/races/strongheart-halfling.jpg"
   },
   {
     "id": "gold-dwarf",
@@ -931,7 +931,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Shield_Dwarf",
-    "icon": "icons/races/gold-dwarf.jpg"
+    "icon": "icons/races/shield-dwarf.jpg"
   },
   {
     "id": "duergar",
@@ -987,7 +987,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Duergar",
-    "icon": "icons/races/gold-dwarf.jpg"
+    "icon": "icons/races/shield-dwarf.jpg"
   },
   {
     "id": "forest-gnome",
@@ -1061,7 +1061,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Rock_Gnome",
-    "icon": "icons/races/forest-gnome.png"
+    "icon": "icons/races/rock-gnome.png"
   },
   {
     "id": "deep-gnome",
@@ -1098,7 +1098,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Deep_Gnome",
-    "icon": "icons/races/forest-gnome.png"
+    "icon": "icons/races/rock-gnome.png"
   },
   {
     "id": "asmodeus-tiefling",
@@ -1160,7 +1160,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Mephistopheles_Tiefling",
-    "icon": "icons/races/asmodeus-tiefling.png"
+    "icon": "icons/races/mephistopheles-tiefling.png"
   },
   {
     "id": "zariel-tiefling",
@@ -1191,7 +1191,7 @@ const RACES = [
       }
     ],
     "wiki": "https://bg3.wiki/wiki/Zariel_Tiefling",
-    "icon": "icons/races/asmodeus-tiefling.png"
+    "icon": "icons/races/mephistopheles-tiefling.png"
   }
 ]
 ;

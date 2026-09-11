@@ -6,6 +6,7 @@
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot "wiki-table.ps1")
 $cacheDir = Join-Path $root "cache"
 $UA = "bg3-planner personal build tool (contact: fmongeon@mongeonsolutions.ca)"
 
@@ -155,27 +156,30 @@ foreach ($name in $classes) {
     # 12" sans jamais voir ce qu'on gagne en route, ni ce qu'un split multiclasse
     # retarde. Les cellules vides heritent du niveau precedent (le bonus de maitrise
     # n'est repete que lorsqu'il change).
+    # On lit la colonne par son intitule, pas par sa position. "La derniere colonne
+    # non vide" marchait pour le barbare, dont le tableau s'arrete a Rage Damage,
+    # et se trompait partout ailleurs : le barde ressortait sans une seule capacite
+    # (la derniere colonne est son nombre d'emplacements de sorts), le moine avec
+    # "+ 3 m / 10 ft" au niveau 2 et "1d6" au niveau 3 — sa vitesse et son de
+    # d'arts martiaux au lieu de ses capacites.
     $progression = @()
-    $tbl = [regex]::Match($html, '(?s)<table[^>]*wikitable.*?</table>').Value
-    if ($tbl) {
-        $rows = [regex]::Matches($tbl, '(?s)<tr[^>]*>(?<r>.*?)</tr>')
-        foreach ($row in $rows) {
-            $cells = @()
-            foreach ($c in [regex]::Matches($row.Groups['r'].Value, '(?s)<t[hd][^>]*>(?<c>.*?)</t[hd]>')) {
-                $cells += Strip-Html $c.Groups['c'].Value
-            }
-            if ($cells.Count -lt 2) { continue }
-            $lvlM = [regex]::Match($cells[0], '^(?<n>\d+)(?:st|nd|rd|th)$')
-            if (-not $lvlM.Success) { continue }
-            # la colonne "Features" est la derniere non vide de la ligne
-            $features = ""
-            for ($k = $cells.Count - 1; $k -ge 1; $k--) {
-                if ($cells[$k] -and $cells[$k] -notmatch '^\+?\d+$') { $features = $cells[$k]; break }
-            }
-            if (-not $features) { continue }
-            $progression += [PSCustomObject]@{
-                level = [int]$lvlM.Groups['n'].Value
-                features = @($features -split '\s*,\s*' | Where-Object { $_ })
+    $tblM = [regex]::Match($html, '(?si)id="Class_progression".*?(<table.*?</table>)')
+    if (-not $tblM.Success) { $tblM = [regex]::Match($html, '(?s)(<table[^>]*wikitable.*?</table>)') }
+    if ($tblM.Success) {
+        $table = Read-WikiTable $tblM.Groups[1].Value
+        $featCol = Find-WikiColumn $table "Features"
+        if ($featCol -lt 0) { Write-Warning "$name : pas de colonne Features" }
+        else {
+            foreach ($row in $table.body) {
+                $lvlM = [regex]::Match([string]$row.cells[0], '^(?<n>\d+)(?:st|nd|rd|th)$')
+                if (-not $lvlM.Success) { continue }
+                $features = [string]$row.cells[$featCol]
+                # "-" est la facon dont le wiki ecrit "rien a ce niveau".
+                if (-not $features -or $features -eq "-") { $features = "" }
+                $progression += [PSCustomObject]@{
+                    level = [int]$lvlM.Groups['n'].Value
+                    features = @(Split-WikiFeatures $features)
+                }
             }
         }
     }

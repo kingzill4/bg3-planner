@@ -8,8 +8,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 7,
     "spellAbility": null,
     "saves": [
-      "str",
-      "con"
+      "con",
+      "str"
     ],
     "armour": [
       "Light Armour",
@@ -147,68 +147,69 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Spellcasting",
+          "Bardic Inspiration (d6)"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Song of Rest",
+          "Jack of All Trades"
         ]
       },
       {
         "level": 3,
         "features": [
-          "-"
+          "Choose a subclass",
+          "Expertise"
         ]
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 5,
         "features": [
-          "-"
+          "Improved Bardic Inspiration (d8)",
+          "Font of Inspiration"
         ]
       },
       {
         "level": 6,
         "features": [
-          "-"
+          "Countercharm",
+          "Subclass feature"
         ]
       },
       {
         "level": 7,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 9,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 10,
         "features": [
-          "-"
+          "Improved Bardic Inspiration (d10)",
+          "Expertise",
+          "Magical Secrets"
         ]
       },
       {
         "level": 11,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 12,
@@ -274,73 +275,63 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Spellcasting"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Turn Undead"
         ]
       },
       {
         "level": 3,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 5,
         "features": [
-          "-"
+          "Destroy Undead"
         ]
       },
       {
         "level": 6,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 7,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 9,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 10,
         "features": [
-          "-"
+          "Divine Intervention"
         ]
       },
       {
         "level": 11,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 12,
         "features": [
-          "-"
+          "Feat"
         ]
       }
     ],
@@ -397,68 +388,64 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Spellcasting"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Wild Shape",
+          "Choose a subclass"
         ]
       },
       {
         "level": 3,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat",
+          "Wild Shape Improvement"
         ]
       },
       {
         "level": 5,
         "features": [
-          "-"
+          "Wild Strike"
         ]
       },
       {
         "level": 6,
         "features": [
-          "-"
+          "Subclass feature"
         ]
       },
       {
         "level": 7,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat",
+          "Wild Shape Improvement"
         ]
       },
       {
         "level": 9,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 10,
         "features": [
-          "-"
+          "Subclass feature",
+          "Improved Wild Strike"
         ]
       },
       {
         "level": 11,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 12,
@@ -497,8 +484,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 6,
     "spellAbility": null,
     "saves": [
-      "str",
-      "con"
+      "con",
+      "str"
     ],
     "armour": [
       "Light Armour",
@@ -619,8 +606,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 5,
     "spellAbility": null,
     "saves": [
-      "str",
-      "dex"
+      "dex",
+      "str"
     ],
     "armour": [],
     "weapons": [
@@ -634,19 +621,27 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Unarmoured Defence",
+          "Martial Arts: Dextrous Attacks",
+          "Martial Arts: Deft Strikes",
+          "Martial Arts: Bonus Unarmed Strike",
+          "Flurry of Blows"
         ]
       },
       {
         "level": 2,
         "features": [
-          "+ 3 m / 10 ft"
+          "Unarmoured Movement",
+          "Patient Defence",
+          "Step of the Wind: Dash",
+          "Step of the Wind: Disengage"
         ]
       },
       {
         "level": 3,
         "features": [
-          "1d6"
+          "Choose a subclass",
+          "Deflect Missiles"
         ]
       },
       {
@@ -667,7 +662,9 @@ const CLASS_DATA = [
       {
         "level": 6,
         "features": [
-          "+ 4.5 m / 15 ft"
+          "Ki-Empowered Strikes",
+          "Subclass feature",
+          "Improved Unarmoured Movement"
         ]
       },
       {
@@ -686,13 +683,15 @@ const CLASS_DATA = [
       {
         "level": 9,
         "features": [
-          "1d8"
+          "Advanced Unarmoured Movement",
+          "Subclass feature"
         ]
       },
       {
         "level": 10,
         "features": [
-          "+ 6 m / 20 ft"
+          "Purity of Body",
+          "Improved Unarmoured Movement"
         ]
       },
       {
@@ -754,49 +753,55 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Divine Sense",
+          "Lay on Hands",
+          "Channel Oath",
+          "Choose a subclass"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Fighting Style",
+          "Spellcasting",
+          "Divine Smite"
         ]
       },
       {
         "level": 3,
         "features": [
-          "-"
+          "Divine Health",
+          "Subclass Feature"
         ]
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 5,
         "features": [
-          "-"
+          "Extra Attack"
         ]
       },
       {
         "level": 6,
         "features": [
-          "-"
+          "Aura of Protection"
         ]
       },
       {
         "level": 7,
         "features": [
-          "-"
+          "Subclass Feature"
         ]
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
@@ -854,8 +859,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 6,
     "spellAbility": "wis",
     "saves": [
-      "str",
-      "dex"
+      "dex",
+      "str"
     ],
     "armour": [
       "Light Armour",
@@ -872,56 +877,59 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Favoured Enemy",
+          "Natural Explorer"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Fighting Style",
+          "Spellcasting"
         ]
       },
       {
         "level": 3,
         "features": [
-          "-"
+          "Choose a subclass"
         ]
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 5,
         "features": [
-          "-"
+          "Extra Attack",
+          "Subclass Feature"
         ]
       },
       {
         "level": 6,
         "features": [
-          "-"
+          "Favoured Enemy",
+          "Natural Explorer"
         ]
       },
       {
         "level": 7,
         "features": [
-          "-"
+          "Subclass Feature"
         ]
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat",
+          "Land's Stride: Difficult Terrain"
         ]
       },
       {
         "level": 9,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 10,
@@ -996,7 +1004,9 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "1d6"
+          "Expertise",
+          "Sneak Attack (Melee)",
+          "Sneak Attack (Ranged)"
         ]
       },
       {
@@ -1010,7 +1020,7 @@ const CLASS_DATA = [
       {
         "level": 3,
         "features": [
-          "2d6"
+          "Choose a subclass"
         ]
       },
       {
@@ -1022,7 +1032,7 @@ const CLASS_DATA = [
       {
         "level": 5,
         "features": [
-          "3d6"
+          "Uncanny Dodge"
         ]
       },
       {
@@ -1034,7 +1044,7 @@ const CLASS_DATA = [
       {
         "level": 7,
         "features": [
-          "4d6"
+          "Evasion"
         ]
       },
       {
@@ -1046,7 +1056,7 @@ const CLASS_DATA = [
       {
         "level": 9,
         "features": [
-          "5d6"
+          "Subclass feature"
         ]
       },
       {
@@ -1058,7 +1068,7 @@ const CLASS_DATA = [
       {
         "level": 11,
         "features": [
-          "6d6"
+          "Reliable Talent"
         ]
       },
       {
@@ -1098,8 +1108,8 @@ const CLASS_DATA = [
     "hpOnLevelUp": 4,
     "spellAbility": "cha",
     "saves": [
-      "cha",
-      "con"
+      "con",
+      "cha"
     ],
     "armour": [],
     "weapons": [],
@@ -1113,61 +1123,58 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Spellcasting",
+          "Choose a subclass"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Metamagic",
+          "Create Spell Slot",
+          "Create Sorcery Points"
         ]
       },
       {
         "level": 3,
         "features": [
-          "-"
+          "Metamagic"
         ]
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 5,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 6,
         "features": [
-          "-"
+          "Subclass feature"
         ]
       },
       {
         "level": 7,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 9,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 10,
         "features": [
-          "-"
+          "Metamagic"
         ]
       },
       {
@@ -1221,73 +1228,76 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Pact Magic",
+          "Choose a Subclass"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Eldritch Invocations (+2)"
         ]
       },
       {
         "level": 3,
         "features": [
-          "-"
+          "Pact Boon"
         ]
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 5,
         "features": [
-          "-"
+          "Deepened Pact",
+          "Eldritch Invocations (+1)"
         ]
       },
       {
         "level": 6,
         "features": [
-          "-"
+          "Subclass feature"
         ]
       },
       {
         "level": 7,
         "features": [
-          "-"
+          "Eldritch Invocations (+1)"
         ]
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 9,
         "features": [
-          "-"
+          "Eldritch Invocations (+1)"
         ]
       },
       {
         "level": 10,
         "features": [
-          "-"
+          "Subclass feature"
         ]
       },
       {
         "level": 11,
         "features": [
-          "-"
+          "Mystic Arcanum (6th level spell)"
         ]
       },
       {
         "level": 12,
         "features": [
-          "-"
+          "Feat",
+          "Eldritch Invocations (+1)"
         ]
       }
     ],
@@ -1334,68 +1344,60 @@ const CLASS_DATA = [
       {
         "level": 1,
         "features": [
-          "-"
+          "Spellcasting",
+          "Arcane Recovery",
+          "Transcribing scrolls"
         ]
       },
       {
         "level": 2,
         "features": [
-          "-"
+          "Choose a subclass"
         ]
       },
       {
         "level": 3,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 4,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 5,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 6,
         "features": [
-          "-"
+          "Subclass feature"
         ]
       },
       {
         "level": 7,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 8,
         "features": [
-          "-"
+          "Feat"
         ]
       },
       {
         "level": 9,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 10,
         "features": [
-          "-"
+          "Subclass feature"
         ]
       },
       {
         "level": 11,
-        "features": [
-          "-"
-        ]
+        "features": []
       },
       {
         "level": 12,

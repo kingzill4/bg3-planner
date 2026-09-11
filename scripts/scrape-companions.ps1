@@ -24,6 +24,16 @@ $companions = @(
     @{ id = "minsc";      page = "Minsc" }
 )
 
+# L'infobox d'un compagnon ecrit "High elf", la page de la race ecrit "High Elf" —
+# meme wiki, deux casses. On garde celle de la page de la race : c'est elle qui
+# nomme les races partout ailleurs dans l'outil, et c'est sur ce nom que le preset
+# d'origine retrouve la race a appliquer.
+$racesFile = Join-Path $root "data\races.json"
+$RACE_NAMES = @()
+if (Test-Path $racesFile) {
+    $RACE_NAMES = @((Get-Content $racesFile -Raw -Encoding utf8 | ConvertFrom-Json).name)
+}
+
 function Strip-Html([string]$s) {
     if (-not $s) { return "" }
     $s = [regex]::Replace($s, '(?s)<!--.*?-->', '')
@@ -95,6 +105,11 @@ foreach ($c in $companions) {
             try { Invoke-WebRequest -Uri $url -UserAgent $UA -OutFile $dest -TimeoutSec 30; Start-Sleep -Milliseconds 200 } catch {}
         }
         if (Test-Path $dest) { $portrait = "assets/portraits/$($c.id).webp" }
+    }
+
+    if ($subrace -and $RACE_NAMES.Count) {
+        $canon = $RACE_NAMES | Where-Object { $_ -ieq $subrace } | Select-Object -First 1
+        if ($canon) { $subrace = $canon }
     }
 
     $results += [PSCustomObject]@{

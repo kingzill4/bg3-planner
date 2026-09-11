@@ -214,6 +214,52 @@ const SelfTest = (() => {
       });
       return bad;
     });
+    // The scraper used to take "the last non-empty column" of the wiki's
+    // progression table as the feature list. That is the right column only for
+    // the barbarian. The bard came out with no class features at any level (his
+    // last column is his spell slots) and the monk with "+ 3 m / 10 ft" at level
+    // 2 and "1d6" at level 3 — his movement and his martial-arts die. A feature
+    // is a name; a measurement in that column means the column is wrong again.
+    check("Shape", "class features are names, not numbers", () => {
+      const bad = [];
+      Object.entries(CLASSES).forEach(([k, c]) => {
+        (c.progression || []).forEach((p) => {
+          (p.features || []).forEach((f) => {
+            if (/^[+\-]?\s*[\d.]+\s*(m|ft|d\d+)?\s*(\/.*)?$/i.test(f)) bad.push(k + " L" + p.level + ": " + f);
+          });
+        });
+      });
+      return bad;
+    });
+    check("Shape", "every class gains named features before level 4", () =>
+      Object.entries(CLASSES)
+        .filter(([, c]) => !(c.progression || []).some((p) => p.level <= 3 && (p.features || []).length))
+        .map(([k]) => k));
+
+    // The wiki nests: the eight Lands are options of one spell feature, the six
+    // fighting styles options of "Fighting Style". Read flat, Circle of the Land
+    // claimed 48 features instead of 16 and the same eight terrain names appeared
+    // four times over. No subclass has that many features; a count this high means
+    // the nesting was lost again.
+    check("Shape", "no subclass lists more than 30 top-level features", () =>
+      SUBCLASS_LIST.filter((s) => (s.features || []).length > 30)
+        .map((s) => s.name + ": " + s.features.length));
+    check("Shape", "a subclass never repeats a feature name at one level", () => {
+      const bad = [];
+      SUBCLASS_LIST.forEach((s) => {
+        const seen = new Set();
+        (s.features || []).forEach((f) => {
+          const key = f.level + "|" + f.n;
+          if (seen.has(key)) bad.push(s.name + " L" + f.level + ": " + f.n);
+          seen.add(key);
+        });
+      });
+      return bad;
+    });
+    check("Shape", "every nested option carries a name", () =>
+      SUBCLASS_LIST.flatMap((s) => (s.features || []).flatMap((f) =>
+        (f.opts || []).filter((o) => !o.n).map(() => s.name + " / " + f.n))));
+
     check("Shape", "every weapon's damage string parses", () =>
       ITEMS.filter((i) => i.type === "weapon" && i.damage)
         .filter((i) => { const p = parseWeaponDamage(i.damage, false); return !p || !p.main || !p.main.count; })
