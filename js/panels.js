@@ -93,7 +93,10 @@ function renderItemCard(it) {
   const typeLabel = TYPE_LABELS[it.type] || it.type;
   const metaParts = [typeLabel];
   if (it.subtype && it.subtype.toLowerCase() !== typeLabel.toLowerCase()) metaParts.push(it.subtype);
-  metaParts.push(it.act ? "Act " + it.act : "Act ?");
+    // "Act ?" is an admission of ignorance. For 68 items the wiki gives an answer —
+  // "In chests and carried by characters throughout the game", "Sold by any trader
+  // using the magic melee table" — and the answer is that they belong to no act.
+  metaParts.push(it.act ? "Act " + it.act : it.anyAct ? "Any act" : "Act ?");
   if (it.attunement) metaParts.push("Attunement");
   titleBox.appendChild(el("div", { class: "meta" }, [metaParts.join(" · ")]));
   header.appendChild(titleBox);
@@ -187,7 +190,8 @@ function openItemDetail(it) {
   const titleBox = el("div", {});
   titleBox.appendChild(el("h3", { class: "detail-name", "data-rarity": it.rarity }, [it.name]));
   const typeLabel = TYPE_LABELS[it.type] || it.type;
-  const meta = [RARITY_LABELS[it.rarity] || it.rarity, it.subtype || typeLabel, it.act ? "Act " + it.act : "Act ?"];
+  const meta = [RARITY_LABELS[it.rarity] || it.rarity, it.subtype || typeLabel,
+    it.act ? "Act " + it.act : it.anyAct ? "Any act" : "Act ?"];
   if (it.attunement) meta.push("Attunement");
   titleBox.appendChild(el("div", { class: "meta" }, [meta.join(" · ")]));
   header.appendChild(titleBox);

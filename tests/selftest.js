@@ -246,6 +246,17 @@ const SelfTest = (() => {
         : [];
     });
 
+    // "Act ?" reads as a gap in our data. For some items it is not one: the wiki
+    // says they are found "throughout the game", sold by "any trader using the
+    // magic melee table", or are random loot. Those belong to no act, and saying
+    // so is an answer rather than a shrug — but only where the wiki says it.
+    check("Shape", "an item is act-specific or explicitly not, never both", () =>
+      ITEMS.filter((i) => i.act && i.anyAct).map((i) => i.name));
+    check("Shape", "items marked as any-act say so in their own location text", () => {
+      const said = /throughout the game|random loot|any trader|levelled magic|magic (melee|armour|ranged) table|traders? using|in chests and carried/i;
+      return ITEMS.filter((i) => i.anyAct && !said.test(i.location || "")).map((i) => i.name);
+    });
+
     check("References", "every icon path is set", () =>
       [...ITEMS, ...SPELLS].filter((x) => !x.icon).map((x) => x.id));
     // GitHub Pages serves everything with max-age=600, so for ten minutes after a

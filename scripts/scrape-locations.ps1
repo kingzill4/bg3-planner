@@ -31,12 +31,10 @@ $cats = @(
 # Des noms trop generiques pour servir de mot-cle : ils apparaissent dans le texte
 # d'objets qu'on trouve ailleurs, et rattacheraient a un acte des objets qui n'y
 # sont pas. Le lieu existe, il est simplement inutilisable comme indice.
-$tooGeneric = @(
-    "Campsite", "Astral Plane", "Ancient Temple", "Abandoned Refuge", "Ancient Lair",
-    "Alarm Machine", "Brain Mapping Puzzle", "Basement", "Cellar", "Attic", "Kitchen",
-    "Graveyard", "Sewers", "Jungle", "Chapel", "Crypt", "Camp", "House", "Tower",
-    "Temple", "Prison", "Library", "Garden", "Barn", "Well", "Cave", "Mill"
-)
+# Seuls ceux qui existent VRAIMENT dans plusieurs actes, ou dont le nom est un mot
+# courant qu'un autre texte emploiera. "Ancient Lair" ou "Heapside Prison" sont des
+# lieux uniques : les avoir ecartes par prudence retirait de la donnee juste.
+$tooGeneric = @("Campsite", "Astral Plane", "Camp")
 
 $byName = [ordered]@{}
 foreach ($c in $cats) {

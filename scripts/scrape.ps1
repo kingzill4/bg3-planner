@@ -336,6 +336,15 @@ foreach ($item in $index) {
 
     $act = Guess-Act ("$location $summary")
 
+    # Certains objets n'appartiennent a AUCUN acte, et le wiki le dit lui-meme :
+    # "In chests and carried by characters throughout the game", "Sold by any
+    # trader using the magic melee table", "Random loot". Les laisser vides les
+    # faisait lire "Act ?" — un aveu d'ignorance la ou le wiki donne une reponse.
+    $anyAct = $false
+    if (-not $act -and $location -match '(?i)(throughout the game|random loot|any trader|levelled magic|magic (melee|armour|ranged) table|traders? using|in chests and carried)') {
+        $anyAct = $true
+    }
+
     # Le nom interne de l'objet, celui que le jeu porte dans ses fichiers et dans
     # une sauvegarde : "MAG_ElementalGish_ArcaneAcuity_Helmet" pour le Helmet of
     # Arcane Acuity. Une sauvegarde .lsv ne contient QUE ce nom-la, jamais le nom
@@ -355,7 +364,7 @@ foreach ($item in $index) {
         id = $item.id; name = $item.name; type = $item.type; subtype = $subtype; rarity = $rarity
         act = $act; attunement = [bool]$attunement; summary = $summary; location = $location
         damage = $damage; ac = $acValue; details = $details; special = $special
-        cut = $cut; icon = $icon; wiki = $item.wiki; stats = $stats; uuid = $uuid
+        cut = $cut; icon = $icon; wiki = $item.wiki; stats = $stats; uuid = $uuid; anyAct = $anyAct
     })
 }
 

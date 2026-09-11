@@ -72,7 +72,7 @@ foreach ($it in $scraped) {
             "summary: $(JsStr $summary), location: $(JsStr $location), wiki: $(JsStr $it.wiki), " +
             # Le nom interne de l'objet : la seule chose qu'une sauvegarde .lsv porte
             # de lui. Sans ce champ, rien dans une partie ne peut etre relie a sa fiche.
-            "stats: $(JsStr $it.stats) },"
+            "stats: $(JsStr $it.stats), anyAct: $(if ($it.anyAct) { 'true' } else { 'false' }) },"
     [void]$sb.AppendLine($line)
     $kept++
 }
