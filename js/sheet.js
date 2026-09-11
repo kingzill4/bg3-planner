@@ -874,6 +874,23 @@ function renderStyles() {
 // ids have to be unique across the page, and several pickers are rendered at once
 let optionPickerSeq = 0;
 
+// Bring a row into view *inside its own list*, and nowhere else.
+//
+// scrollIntoView cannot do this: it walks up and scrolls every scrollable
+// ancestor, so opening a picker scrolled the whole character panel by ~118px and
+// the field you had just clicked slid out from under the cursor. The list is the
+// only thing that should move, so its scrollTop is set directly.
+function scrollRowIntoList(list, row) {
+  if (!list || !row) return;
+  // Measured from rectangles rather than offsetTop: offsetTop is relative to the
+  // nearest *positioned* ancestor, which is not necessarily the list, and the
+  // resulting drift left End stopping short of the last row.
+  const lr = list.getBoundingClientRect();
+  const rr = row.getBoundingClientRect();
+  if (rr.top < lr.top) list.scrollTop += rr.top - lr.top;
+  else if (rr.bottom > lr.bottom) list.scrollTop += rr.bottom - lr.bottom;
+}
+
 function optionPicker(opts) {
   const wrap = el("div", { class: "opt-picker" });
   const current = opts.options.find((o) => o.value === opts.value);
@@ -946,7 +963,7 @@ function optionPicker(opts) {
     rows.forEach((r, n) => r.classList.toggle("active", n === active));
     // the same move, announced: the class is for eyes, this is for everything else
     list.setAttribute("aria-activedescendant", rows[active].id);
-    rows[active].scrollIntoView({ block: "nearest" });
+    scrollRowIntoList(list, rows[active]);
   }
 
   function setOpen(open) {
@@ -955,7 +972,12 @@ function optionPicker(opts) {
     if (open) {
       openPicker(wrap);
       highlight(active);
-      list.focus();
+      // preventScroll matters more than it looks: focus() scrolls the element into
+      // view by default, walking up and moving every scrollable ancestor. That is
+      // what yanked the character panel 118px the instant a picker opened, sliding
+      // the field out from under the cursor mid-click. The list still takes focus,
+      // it just does not drag the page with it.
+      list.focus({ preventScroll: true });
     }
   }
 

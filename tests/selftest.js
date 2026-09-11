@@ -394,6 +394,24 @@ const SelfTest = (() => {
       return v === 0 ? true : "immune + Wet gave x" + v;
     });
 
+    // Opening a picker used to scroll the character panel ~118px, sliding the
+    // field out from under the cursor mid-click. The cause was focus(), which
+    // scrolls its element into view by default and walks every scrollable
+    // ancestor doing it. Both guards below are cheap and catch the regression in
+    // source rather than needing the DOM.
+    check("Rules", "the picker takes focus without scrolling the page", () => {
+      const src = optionPicker.toString();
+      if (!/list\.focus\(/.test(src)) return true;
+      return /list\.focus\(\s*\{[^}]*preventScroll\s*:\s*true/.test(src)
+        ? true : "list.focus() is called without preventScroll";
+    });
+    check("Rules", "row scrolling stays inside the list", () => {
+      const src = optionPicker.toString();
+      return /scrollIntoView/.test(src)
+        ? "a row still uses scrollIntoView, which scrolls ancestors too"
+        : true;
+    });
+
     check("Rules", "binary conditions have max 1, stacking ones more", () => {
       const expect = { acuity: 10, bless: 1, charges: 5, reverb: 5, bane: 1,
         restrained: 1, prone: 1, wet: 1, orb: 10 };
