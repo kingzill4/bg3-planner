@@ -337,8 +337,16 @@ const SelfTest = (() => {
         if ((b.kit || {}).weapon && !gear.weapon1) bad.push(b.id + ": no weapon");
         Object.values(gear).forEach((id) => {
           const it = itemsById[id];
-          const issue = it && proficiencyIssue(m, it);
+          if (!it) return;
+          const issue = proficiencyIssue(m, it);
           if (issue) bad.push(b.id + ": " + it.name + " — " + issue);
+          // A "starter" carrying Helldusk Armour is not a starter. The first pass
+          // at these put endgame gear on a level 12 sheet, which is the opposite
+          // of what the word means.
+          if (it.act !== 1) bad.push(b.id + ": " + it.name + " is act " + it.act);
+          if (it.rarity !== "common" && it.rarity !== "uncommon") {
+            bad.push(b.id + ": " + it.name + " is " + it.rarity);
+          }
         });
       });
       return bad;

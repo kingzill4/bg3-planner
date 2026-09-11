@@ -102,9 +102,24 @@ const STARTER_BUILDS = [
 // Deriving beats listing ids: sixty hand-written ids would be sixty things to
 // re-check every time the scrapers run, and "highest AC I am proficient with" is
 // a rule rather than an opinion.
+// Level 5, not 12. The first version of these sat at 12 with Helldusk Armour and
+// Balduran's Giantslayer, which is the opposite of a starter — nobody starts
+// there. Five is where a character has just come into its own: Extra Attack for
+// the martials, third-level spells for the casters, and still Act 1.
+const STARTER_LEVEL = 5;
+
+// Only gear you could actually be holding at that point. "Act 1, common or
+// uncommon" is a rule the data can answer; "what a guide recommends" is not
+// something the wiki could settle, and this tool does not make claims it cannot
+// check. Items whose act the wiki never records are left out rather than guessed
+// at — an unknown act is not evidence of an early one.
+const isEarlyGame = (i) =>
+  i.act === 1 && (i.rarity === "common" || i.rarity === "uncommon");
+
 function bestItemFor(member, filter, score) {
   const usable = ITEMS.filter((i) => {
-    try { return filter(i) && !proficiencyIssue(member, i); } catch (e) { return false; }
+    try { return filter(i) && isEarlyGame(i) && !proficiencyIssue(member, i); }
+    catch (e) { return false; }
   });
   if (!usable.length) return null;
   return usable.sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name))[0];
@@ -143,10 +158,18 @@ function equipStarter(member, build) {
     if (r) gear.ranged1 = r.id;
   }
   if (spec.armour) {
-    const a = bestItemFor(member,
-      (i) => i.type === "armor" && i.ac && (i.subtype || "") === spec.armour,
-      (i) => i.ac || 0);
-    if (a) gear.chest = a.id;
+    // Fall back down the categories: the Life Cleric asked for Heavy Armour and
+    // got nothing, because the base class is not proficient with it and the
+    // starter then stood there in its shirt. Ask for the heaviest wanted, take
+    // the heaviest allowed.
+    const ladder = ["Heavy Armour", "Medium Armour", "Light Armour", "Clothing"];
+    const from = Math.max(0, ladder.indexOf(spec.armour));
+    for (const cat of ladder.slice(from)) {
+      const a = bestItemFor(member,
+        (i) => i.type === "armor" && i.ac && (i.subtype || "") === cat,
+        (i) => i.ac || 0);
+      if (a) { gear.chest = a.id; break; }
+    }
   }
   // A shield only helps a hand that is free, so it is skipped for a two-handed
   // weapon or a second weapon — the same rule the damage panel already applies.
@@ -173,8 +196,8 @@ function memberFromStarter(build, id) {
     notes: "",
     cls: build.cls,
     subclass: build.subclass || null,
-    level: MAX_LEVEL,
-    classes: [{ cls: build.cls, levels: MAX_LEVEL, subclass: build.subclass || null }],
+    level: STARTER_LEVEL,
+    classes: [{ cls: build.cls, levels: STARTER_LEVEL, subclass: build.subclass || null }],
     scores: presetScores(build.cls),
     // the racial +2/+1 go on what the class leads with, the same order the
     // recommended spread uses

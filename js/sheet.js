@@ -558,19 +558,69 @@ function renderClassRows(m) {
     // what is still ahead, not one undifferentiated list.
     const chosen = subclassById[entry.subclass];
     if (chosen && (chosen.features || []).length) {
-      const list = el("div", { class: "sub-features" });
+      // Several subclasses list the same feature once per level just to restate a
+      // bigger number: an Arcane Archer showed "Arcane Arrows: 4", then ": 7", then
+      // ": 10", and the same for Arcane Shots — six of its ten rows were one
+      // feature counting up twice. Those collapse into one row that shows the
+      // progression, which is what the numbers were saying all along.
+      const grouped = [];
+      const byName = new Map();
       chosen.features.forEach((f) => {
-        const earned = f.level == null || entry.levels >= f.level;
-        const row = el("div", {
-          class: "sub-feature" + (earned ? "" : " locked")
-        });
+        const m2 = /^(.*?):\s*([\d.]+)$/.exec(f.n || "");
+        if (!m2) { grouped.push({ single: f }); return; }
+        const stem = m2[1].trim();
+        if (!byName.has(stem)) {
+          const g = { stem, steps: [] };
+          byName.set(stem, g);
+          grouped.push({ group: g });
+        }
+        byName.get(stem).steps.push({ value: m2[2], level: f.level, d: f.d });
+      });
+
+      const list = el("div", { class: "sub-features" });
+      grouped.forEach((item) => {
+        if (item.single) {
+          const f = item.single;
+          const earned = f.level == null || entry.levels >= f.level;
+          const row = el("div", { class: "sub-feature" + (earned ? "" : " locked") });
+          row.appendChild(el("span", { class: "sub-feature-level" },
+            [f.level == null ? "—" : "L" + f.level]));
+          row.appendChild(el("span", { class: "sub-feature-name" }, [f.n]));
+          list.appendChild(withDetail(row, f.n, f.d, [
+            chosen.name,
+            f.level == null ? null : (earned ? "Gained at level " + f.level
+              : "Unlocks at level " + f.level + " — you are level " + entry.levels)
+          ]));
+          return;
+        }
+        const g = item.group;
+        if (g.steps.length === 1) {
+          const s = g.steps[0];
+          const earned = s.level == null || entry.levels >= s.level;
+          const row = el("div", { class: "sub-feature" + (earned ? "" : " locked") });
+          row.appendChild(el("span", { class: "sub-feature-level" },
+            [s.level == null ? "—" : "L" + s.level]));
+          row.appendChild(el("span", { class: "sub-feature-name" }, [g.stem + ": " + s.value]));
+          list.appendChild(withDetail(row, g.stem, s.d, [chosen.name]));
+          return;
+        }
+        const first = g.steps[0];
+        const reached = g.steps.filter((s) => s.level == null || entry.levels >= s.level);
+        const current = reached.length ? reached[reached.length - 1] : null;
+        const earned = !!current;
+        const row = el("div", { class: "sub-feature" + (earned ? "" : " locked") });
         row.appendChild(el("span", { class: "sub-feature-level" },
-          [f.level == null ? "—" : "L" + f.level]));
-        row.appendChild(el("span", { class: "sub-feature-name" }, [f.n]));
-        list.appendChild(withDetail(row, f.n, f.d, [
+          [first.level == null ? "—" : "L" + first.level]));
+        const name = el("span", { class: "sub-feature-name" }, [g.stem]);
+        // the value you have now, then where it goes
+        name.appendChild(el("span", { class: "sub-feature-scale" }, [
+          g.steps.map((s) => s.value).join(" → ")
+        ]));
+        row.appendChild(name);
+        list.appendChild(withDetail(row, g.stem, first.d, [
           chosen.name,
-          f.level == null ? null : (earned ? "Gained at level " + f.level
-            : "Unlocks at level " + f.level + " — you are level " + entry.levels)
+          g.steps.map((s) => s.value + " at level " + s.level).join(" · "),
+          current ? "You have " + current.value : null
         ]));
       });
       box.appendChild(list);

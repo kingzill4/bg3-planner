@@ -346,10 +346,11 @@ function openStarterPicker(e) {
     document.querySelector(".starter-btn");
   const body = el("div", { class: "starter-list" });
   body.appendChild(el("div", { class: "starter-intro" }, [
-    "Complete, legal characters at level " + MAX_LEVEL + ", each picked to show off a " +
-    "different part of the calculator. They are examples to pull apart, not " +
-    "recommendations — what makes a build good is an opinion, and everything else " +
-    "this tool tells you is checked against the wiki."
+    "Complete characters at level " + STARTER_LEVEL + " in Act 1 gear — where you " +
+    "actually start, not where you finish. Each is picked to show a different part " +
+    "of the calculator. They are examples to pull apart, not recommendations: what " +
+    "makes a build good is an opinion, and everything else this tool tells you is " +
+    "checked against the wiki."
   ]));
   STARTER_BUILDS.forEach((b) => {
     const cls = CLASSES[b.cls];
