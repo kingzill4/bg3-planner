@@ -595,6 +595,30 @@ const gear = (m, act) => {
   return m.loadouts[a];
 };
 
+// Clear empties the character, not the act on screen. The example builds fill all
+// three acts, so emptying only Act 1 left Acts 2 and 3 full while the doll looked
+// empty — and the pickup list, which spans the playthrough, kept listing them.
+function clearAllActs(m) {
+  ACTS.forEach((a) => { m.loadouts[a] = {}; });
+}
+
+// Every item any party member has planned in any act, with who carries it where.
+function plannedPickups(party) {
+  const wanted = new Map();
+  party.forEach((m) => {
+    ACTS.forEach((act) => {
+      SLOT_DEFS.forEach((s) => {
+        const id = gear(m, act)[s.key];
+        if (!id || !itemsById[id]) return;
+        if (!wanted.has(id)) wanted.set(id, []);
+        const who = m.name + " · " + s.label + " (Act " + act + ")";
+        if (!wanted.get(id).includes(who)) wanted.get(id).push(who);
+      });
+    });
+  });
+  return wanted;
+}
+
 const slotsForItem = (it) =>
   SLOT_DEFS.filter((s) => slotAccepts(s, it)).map((s) => s.key);
 

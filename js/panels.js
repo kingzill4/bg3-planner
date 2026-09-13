@@ -487,6 +487,15 @@ function renderSlots() {
 
   const equipped = SLOT_DEFS.filter((s) => gear(member)[s.key]).length;
   center.appendChild(el("div", { class: "doll-count" }, [equipped + " / " + SLOT_DEFS.length + " equipped"]));
+  // An empty doll is not an empty character: the other acts keep their own gear,
+  // and the pickup list counts it. Say so where the doll would otherwise mislead.
+  const elsewhere = ACTS.filter((a) => a !== state.activeAct &&
+    Object.values(gear(member, a)).some(Boolean));
+  if (elsewhere.length) {
+    center.appendChild(el("div", { class: "doll-elsewhere" },
+      [(elsewhere.length > 1 ? "Acts " : "Act ") + elsewhere.join(" & ") + " also " +
+        (elsewhere.length > 1 ? "have" : "has") + " gear"]));
+  }
 
   const rightCol = el("div", { class: "doll-col" });
   SLOT_DEFS.filter((s) => s.col === "right").forEach((s) => rightCol.appendChild(renderSlot(member, s)));

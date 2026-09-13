@@ -395,18 +395,7 @@ function renderPickupList() {
   container.innerHTML = "";
 
   // the shopping list spans the whole playthrough, not just the act on screen
-  const wanted = new Map();
-  state.party.forEach((m) => {
-    ACTS.forEach((act) => {
-      SLOT_DEFS.forEach((s) => {
-        const id = gear(m, act)[s.key];
-        if (!id || !itemsById[id]) return;
-        if (!wanted.has(id)) wanted.set(id, []);
-        const who = m.name + " · " + s.label + " (Act " + act + ")";
-        if (!wanted.get(id).includes(who)) wanted.get(id).push(who);
-      });
-    });
-  });
+  const wanted = plannedPickups(state.party);
 
   if (!wanted.size) {
     container.appendChild(el("div", { class: "empty-hint" }, ["Equip items in the build planner and they will show up here, sorted by where you find them."]));
@@ -743,7 +732,7 @@ function initPlannerControls() {
   });
 
   document.getElementById("clear-build-btn").addEventListener("click", () => {
-    Object.keys(gear(activeMember())).forEach((k) => delete gear(activeMember())[k]);
+    clearAllActs(activeMember());
     saveCurrent();
     renderPlanner();
   });

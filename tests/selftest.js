@@ -291,6 +291,16 @@ const SelfTest = (() => {
         : [];
     });
 
+    check("Shape", "Clear leaves nothing on the pickup list", () => {
+      const armour = ITEMS.find((i) => i.type === "armor");
+      const m = scratchMember("fighter", 5);
+      ACTS.forEach((a) => { m.loadouts[a] = { chest: armour.id }; });
+      if (plannedPickups([m]).size !== 1) return "the scratch gear was not planned at all";
+      clearAllActs(m);
+      const left = plannedPickups([m]).size;
+      return left === 0 || left + " item(s) still listed after Clear";
+    });
+
     check("References", "every icon path is set", () =>
       [...ITEMS, ...SPELLS].filter((x) => !x.icon).map((x) => x.id));
     // GitHub Pages serves everything with max-age=600, so for ten minutes after a
